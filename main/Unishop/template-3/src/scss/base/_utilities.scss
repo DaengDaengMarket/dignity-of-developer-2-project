@@ -1,0 +1,250 @@
+//
+// Utilities
+// Classes with a purpose to reduce the frequency of 
+// highly repetitive declarations
+// --------------------------------------------------
+
+// Close
+.close {
+  transition: opacity .25s;
+  border: 0;
+  background: 0;
+  color: $gray-dark;
+  font: {
+    family: sans-serif;
+    size: 20px;
+  }
+  cursor: pointer;
+  &:hover { opacity: .6; }
+}
+
+// Position
+.position-relative { position: relative !important; }
+.position-absolute { position: absolute !important; }
+.position-fixed { position: fixed !important; }
+.position-static { position: static !important; }
+.top-0 { top: 0; }
+.right-0 { right: 0; }
+.bottom-0 { bottom: 0; }
+.left-0 { left: 0; }
+
+// Popular Width
+.w-90 { width: 90px !important; }
+.w-110 { width: 110px !important; }
+.w-150 { width: 150px !important; }
+.w-200 { width: 200px !important; }
+.w-250 { width: 250px !important; }
+.w-270 { width: 270px !important; }
+.w-300 { width: 300px !important; }
+.w-400 { width: 400px !important; }
+
+// Borders
+.border-default {
+  border: 1px solid $border-color;
+  &.border-light { border-color: $border-light-color; }
+}
+.border-0 { border: 0 !important; }
+.border-top-0 { border-top: 0 !important; }
+.border-right-0 { border-right: 0 !important; }
+.border-bottom-0 { border-bottom: 0 !important; }
+.border-left-0 { border-left: 0 !important; }
+
+// Border Radius
+.rounded { border-radius: $border-radius-base; }
+.rounded-top {
+  border-top-left-radius: $border-radius-base;
+  border-top-right-radius: $border-radius-base;
+}
+.rounded-right {
+  border-top-right-radius: $border-radius-base;
+  border-bottom-right-radius: $border-radius-base;
+}
+.rounded-bottom {
+  border-bottom-left-radius: $border-radius-base;
+  border-bottom-right-radius: $border-radius-base;
+}
+.rounded-left {
+  border-top-left-radius: $border-radius-base;
+  border-bottom-left-radius: $border-radius-base;
+}
+.rounded-circle { border-radius: 50%; }
+.rounded-0 { border-radius: 0 !important; }
+.rounded-top-0 {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.rounded-right-0 {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.rounded-bottom-0 {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.rounded-left-0 {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+// Box Shadow
+.box-shadow {
+  box-shadow: 0 7px 22px -5px rgba(darken($gray-darker, 4%), .2);
+}
+
+// Overflow
+.overflow-hidden { overflow: hidden !important; }
+
+// Image thumbnail
+.img-thumbnail {
+  padding: 5px !important;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-base;
+  background-color: $white-color;
+  &.rounded-circle { border-radius: 50%; }
+}
+
+// Cover Image
+.img-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+[class^='col-'] .img-cover {
+  left: 15px;
+  width: calc(100% - 30px);
+}
+
+// Opacity values
+.opacity-100 { opacity: 1 !important; }
+.opacity-90 { opacity: .9 !important; }
+.opacity-80 { opacity: .8 !important; }
+.opacity-75 { opacity: .75 !important; }
+.opacity-70 { opacity: .7 !important; }
+.opacity-60 { opacity: .6 !important; }
+.opacity-50 { opacity: .5 !important; }
+.opacity-25 { opacity: .25 !important; }
+.opacity-15 { opacity: .15 !important; }
+
+// Clearfix
+.clearfix { @include clearfix; }
+
+// Text Colors
+.text-muted { color: $gray !important; }
+.text-primary { color: $brand-primary !important; }
+.text-info { color: $brand-info !important; }
+.text-warning { color: $brand-warning !important; }
+.text-success { color: $brand-success !important; }
+.text-danger { color: $brand-danger !important; }
+.text-gray-dark { color: $gray-darker !important; }
+.text-body { color: $gray-dark !important; }
+.text-light,
+.text-white { color: $white-color !important; }
+.text-highlighted { background-color: $highlight-color !important; }
+.text-decoration-none { text-decoration: none !important; }
+
+// Text decorations
+.text-crossed { text-decoration: line-through !important; }
+.text-shadow { text-shadow: 0 1px rgba($black-color, .5) !important; }
+
+// Font Weight
+.text-black { font-weight: 900 !important; }
+.text-bold { font-weight: bold !important; }
+.text-medium { font-weight: 500 !important; }
+.text-normal { font-weight: normal !important; }
+.text-thin { font-weight: 300 !important; }
+.text-uppercase { letter-spacing: .025em; }
+
+// Background Colors
+.bg-primary { background-color: $brand-primary !important; }
+.bg-success { background-color: $brand-success !important; }
+.bg-info { background-color: $brand-info !important; }
+.bg-warning { background-color: $brand-warning !important; }
+.bg-danger { background-color: $brand-danger !important; }
+.bg-inverse { background-color: $gray-darker !important; }
+.bg-faded,
+.bg-secondary { background-color: $gray-lighter !important; }
+.bg-dark { background-color: $gray-darker !important; }
+.bg-white { background-color: $white-color !important; }
+
+// Background Properties
+.bg-no-repeat { background-repeat: no-repeat; }
+.bg-repeat { background-repeat: repeat; }
+.bg-center { background-position: center; }
+.bg-cover { background-size: cover; }
+
+// Border Colors
+.border-primary { border-color: $brand-primary !important; }
+.border-success { border-color: $brand-success !important; }
+.border-info { border-color: $brand-info !important; }
+.border-warning { border-color: $brand-warning !important; }
+.border-danger { border-color: $brand-danger !important; }
+.border-secondary { border-color: $gray-lighter !important; }
+.border-dark { border-color: $gray-darker !important; }
+
+// Vertical Space classes
+@include block-padding-top(1, 10);
+@include block-padding-bottom(1, 10);
+@include block-margin-top(1, 10);
+@include block-margin-bottom(1, 10);
+.mb-30 { margin-bottom: 30px !important; }
+.mt-30 { margin-top: 30px !important; }
+.pt-30 { padding-top: 30px !important; }
+.pb-30 { padding-bottom: 30px !important; }
+
+// Hide elements under different screen sizes
+.hidden-xs-up {
+  display: none !important;
+}
+@media (max-width: 575px) {
+  .hidden-xs-down {
+    display: none !important;
+  }
+}
+@media (min-width: 576px) {
+  .hidden-sm-up {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .hidden-sm-down {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .hidden-md-up {
+    display: none !important;
+  }
+}
+@media (max-width: 991px) {
+  .hidden-md-down {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .hidden-lg-up {
+    display: none !important;
+  }
+}
+@media (max-width: 1199px) {
+  .hidden-lg-down {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-xl-up {
+    display: none !important;
+  }
+}
+.hidden-xl-down {
+  display: none !important;
+}
+
+// IE11 fix
+.d-inline-block img { width: 100%; }

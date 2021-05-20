@@ -1,0 +1,86 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Pills'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Pills'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Pills with Dropdown
+        hr.margin-bottom-1x
+        ul.nav.nav-pills
+          li.nav-item: a(href='#' class='nav-link active') Active
+          li.nav-item: a(href='#' class='nav-link') Link
+          li.nav-item.dropdown
+            a(href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' role='button') Dropdown
+            .dropdown-menu
+              a(href='#' class='dropdown-item') Action
+              a(href='#' class='dropdown-item') Another Action
+              a(href='#' class='dropdown-item') Something else here
+              .dropdown-divider
+              a(href='#' class='dropdown-item') Separated link
+          li.nav-item.hidden-sm-down: a(href='#' class='nav-link disabled') Disabled
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Switching Content
+        hr.margin-bottom-1x
+        ul(class='nav nav-pills' role='tablist')
+          li.nav-item: a(href='#home' class='nav-link active' data-toggle='tab' role='tab') Home
+          li.nav-item: a(href='#profile' class='nav-link' data-toggle='tab' role='tab') Profile
+          li.nav-item: a(href='#settings' class='nav-link' data-toggle='tab' role='tab') Settings
+        .tab-content
+          div(id='home' class='tab-pane fade show active' role='tabpanel')
+            p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+          div(id='profile' class='tab-pane fade' role='tabpanel')
+            p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+          div(id='settings' class='tab-pane fade' role='tabpanel')
+            p Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Pills with Icons
+        hr.margin-bottom-1x
+        ul(class='nav nav-pills')
+          li.nav-item
+            a(href='#' class='nav-link active')
+              i.icon-help
+              | Help
+          li.nav-item
+            a(href='#' class='nav-link')
+              i.icon-head
+              | Profile
+          li.nav-item
+            a(href='#' class='nav-link')
+              i.icon-cog
+              | Settings
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Justified Pills
+        hr.margin-bottom-1x
+        ul(class='nav nav-pills nav-justified')
+          li.nav-item: a(href='#' class='nav-link active') Home
+          li.nav-item: a(href='#' class='nav-link') Profile
+          li.nav-item: a(href='#' class='nav-link') Settings
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Align Center
+        hr.margin-bottom-1x
+        ul(class='nav nav-pills justify-content-center')
+          li.nav-item: a(href='#' class='nav-link active') Home
+          li.nav-item: a(href='#' class='nav-link') Profile
+          li.nav-item: a(href='#' class='nav-link') Settings
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Align Right
+        hr.margin-bottom-1x
+        ul(class='nav nav-pills justify-content-end')
+          li.nav-item: a(href='#' class='nav-link active') Home
+          li.nav-item: a(href='#' class='nav-link') Profile
+          li.nav-item: a(href='#' class='nav-link') Settings
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Vertical Pills
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4.col-md-5.col-sm-6
+            ul(class='nav nav-pills flex-column')
+              li.nav-item: a(href='#' class='nav-link active') Home
+              li.nav-item: a(href='#' class='nav-link') Profile
+              li.nav-item: a(href='#' class='nav-link') Settings
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

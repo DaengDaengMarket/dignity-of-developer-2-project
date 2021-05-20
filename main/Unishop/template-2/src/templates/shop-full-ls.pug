@@ -1,0 +1,286 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Shop Full Width Left Sidebar'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Full Width Left Sidebar'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop Full Width Left Sidebar'}]
+
+//- Page Content
+block content
+  .container-fluid.padding-bottom-3x.mb-1
+    .row
+
+      // Content
+      .col-xl-10.col-lg-9.col-md-8.order-md-2
+        
+        // Search
+        .d-flex.flex-wrap-reverse.flex-md-nowrap.justify-content-center.justify-content-sm-between.align-items-center.mb-30
+          .pt-3.pb-1.pb-sm-3.text-sm.text-center.text-sm-left
+            span.text-muted.mr-2 Showing
+            | 1- 12 items
+          form(method='get').input-group.shop-search-box
+            span.input-group-btn
+              button(type='submit')
+                i.material-icons.search
+            input(type='search' placeholder='Search shop').form-control
+        
+        // Products Grid
+        .row.mb-2
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb 
+                span.product-badge.text-danger Sale
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th01.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Storage Box
+                h4.product-card-price
+                  del $49.00
+                  | $38.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb 
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th04.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') File Cabinet
+                h4.product-card-price $265.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                span.product-rating.text-warning
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star_half
+                  i.material-icons.star_border
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th03.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Hook Basket
+                h4.product-card-price $112.50
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th05.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Lounge Chair
+                h4.product-card-price $1420.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                span.product-badge.text-muted Out of stock
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th06.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  a(hre='shop-single.html').btn.btn-white.btn-sm View Details
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') LED Lighting
+                h4.product-card-price $130.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                span.product-rating.text-warning
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star_border
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th07.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Lounge Chair
+                h4.product-card-price $1099.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th08.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Tissue Holder
+                h4.product-card-price $76.40
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th09.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Campfire Table
+                h4.product-card-price $1087.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th11.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Stylish Chair
+                h4.product-card-price $417.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb 
+                span.product-badge.text-danger Sale
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th10.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Pendant Lamp
+                h4.product-card-price
+                  del $54.00
+                  | $27.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                span.product-rating.text-warning
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th14.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Paper Table
+                h4.product-card-price $289.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th13.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Office Chair
+                h4.product-card-price $329.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th12.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Adjustable Table
+                h4.product-card-price $849.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th15.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Concrete Lamp
+                h4.product-card-price $85.90
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                span.product-badge.text-muted Out of stock
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th16.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  a(hre='shop-single.html').btn.btn-white.btn-sm View Details
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Navy Box Bench
+                h4.product-card-price $75.00
+          // Item
+          .col-xl-3.col-lg-4.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                a(href='shop-single.html').product-card-link
+                img(src='img/shop/th17.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='shop-single.html') Desktop Light
+                h4.product-card-price $243.00
+        
+        include partials/pagination
+
+      // Sidebar          
+      .col-xl-2.col-lg-3.col-md-4.order-md-1
+        include partials/shop-sidebar

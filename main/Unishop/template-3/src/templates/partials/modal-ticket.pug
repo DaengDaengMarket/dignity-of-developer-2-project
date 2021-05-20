@@ -1,0 +1,40 @@
+// Open Ticket Modal
+form(method='post' id='openTicket' tabindex='-1').modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Submit New Ticket
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        p.text-muted We normally respond tickets within 2 business days.
+        .form-group
+          label(for='ticket-subject') Subject
+          input(type='text' id='ticket-subject' required).form-control
+        .row
+          .col-sm-6
+            .form-group
+              label(for='ticket-type') Type
+              select(id='ticket-type').form-control
+                option Choose type
+                option Website problem
+                option Partner request
+                option Complaint
+                option Info inquiry
+          .col-sm-6
+            .form-group
+              label(for='ticket-priority') Priority
+              select(id='ticket-priority').form-control
+                option How urgent is your issue?
+                option Urgent
+                option High
+                option Medium
+                option Low
+        .form-group
+          label(for='ticket-description') Description
+          textarea(id='ticket-description' rows='8' required).form-control
+        .custom-file.mb-3
+          input(type='file' id='file-input').custom-file-input
+          label(for='file-input').custom-file-label Choose file...
+      .modal-footer
+        button(type='submit' class='btn btn-primary') Submit Ticket

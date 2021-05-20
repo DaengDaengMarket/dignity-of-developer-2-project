@@ -1,0 +1,26 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Video Player'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Video Player'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Video Embed (Vimeo)
+        hr.margin-bottom-1x
+        .embed-responsive.embed-responsive-16by9
+          iframe(src='https://player.vimeo.com/video/123101124?color=0da9ef&title=0&byline=0&portrait=0' allowfullscreen).embed-responsive-item
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Video Embed (YouTube)
+        hr.margin-bottom-1x
+        .embed-responsive.embed-responsive-16by9
+          iframe(src='//www.youtube.com/embed/IvGDlkbl5wo?rel=0' allowfullscreen).embed-responsive-item
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

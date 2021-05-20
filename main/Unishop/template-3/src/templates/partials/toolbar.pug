@@ -1,0 +1,102 @@
+// Toolbar
+.toolbar.d-flex
+  .toolbar-item.visible-on-mobile.mobile-menu-toggle
+    a(href='#')
+      div
+        i.icon-menu
+        span.text-label Menu
+  .toolbar-item.hidden-on-mobile
+    a(href='#')
+      div
+        i.flag-icon
+          +image('img/flags/EN.png', 'English')
+        span.text-label Eng / Usd
+    ul.toolbar-dropdown.lang-dropdown
+      li.px-3.pt-1.pb-2
+        select.form-control.form-control-sm
+          option(value='usd') $ USD
+          option(value='usd') € EUR
+          option(value='usd') £ UKP
+          option(value='usd') ¥ JPY
+      li
+        a(href='#')
+          i.flag-icon
+            +image('img/flags/FR.png', 'Français')
+          | &nbsp;Français
+      li
+        a(href='#')
+          i.flag-icon
+            +image('img/flags/DE.png', 'Deutsch')
+          | &nbsp;Deutsch
+      li
+        a(href='#')
+          i.flag-icon
+            +image('img/flags/IT.png', 'Italiano')
+          | &nbsp;Italiano
+  .toolbar-item.hidden-on-mobile
+    a()&attributes(isNestedFile ? {'href': '../product-comparison.html'} : {'href': 'product-comparison.html'})
+      div
+        span.compare-icon
+          i.icon-repeat
+          span.count-label 3
+        span.text-label Compare
+  .toolbar-item.hidden-on-mobile
+    a()&attributes(isNestedFile ? {'href': '../account-login.html'} : {'href': 'account-login.html'})
+      div
+        i.icon-user
+        span.text-label Sign In / Up
+    .toolbar-dropdown.text-center.px-3
+      p.text-xs.mb-3.pt-2 Sign in to your account or register new one to have full control over your orders, receive bonuses and more.
+      a()&attributes(isNestedFile ? {'href': '../account-login.html'} : {'href': 'account-login.html'}).btn.btn-primary.btn-sm.btn-block Sign In
+      p.text-xs.text-muted.mb-2
+        | New customer?&nbsp;
+        a()&attributes(isNestedFile ? {'href': '../account-login.html'} : {'href': 'account-login.html'}) Register
+
+  .toolbar-item
+    a()&attributes(isNestedFile ? {'href': '../cart.html'} : {'href': 'cart.html'})
+      div
+        span.cart-icon
+          i.icon-shopping-cart
+          span.count-label 3   
+        span.text-label Cart
+    .toolbar-dropdown.cart-dropdown.widget-cart.hidden-on-mobile
+      // Entry
+      .entry
+        .entry-thumb
+          a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+            +image('img/shop/widget/04.jpg', 'Product')
+        .entry-content
+          h4.entry-title
+            a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) Canon EOS M50 Mirrorless Camera
+          span.entry-meta 1 x $910.00
+        .entry-delete
+          i.icon-x
+      // Entry
+      .entry
+        .entry-thumb
+          a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+            +image('img/shop/widget/05.jpg', 'Product')
+        .entry-content
+          h4.entry-title
+            a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) Apple iPhone X 256 GB Space Gray
+          span.entry-meta 1 x $1,450.00
+        .entry-delete
+          i.icon-x
+      // Entry
+      .entry
+        .entry-thumb
+          a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+            +image('img/shop/widget/06.jpg', 'Product')
+        .entry-content
+          h4.entry-title
+            a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) HP LaserJet Pro Laser Printer
+          span.entry-meta 1 x $188.50
+        .entry-delete
+          i.icon-x
+      .text-right
+        p.text-gray-dark.py-2.mb-0 <span class='text-muted'>Subtotal:</span> &nbsp;$2,548.50
+      .d-flex
+        .pr-2.w-50
+          a()&attributes(isNestedFile ? {'href': '../cart.html'} : {'href': 'cart.html'}).btn.btn-secondary.btn-sm.btn-block.mb-0 Expand Cart
+        .pl-2.w-50
+          a()&attributes(isNestedFile ? {'href': '../checkout.html'} : {'href': 'checkout.html'}).btn.btn-primary.btn-sm.btn-block.mb-0 Checkout

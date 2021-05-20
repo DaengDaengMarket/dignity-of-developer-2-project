@@ -1,0 +1,75 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Steps'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Steps'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-lg.text-uppercase Checkout Steps
+        hr.margin-bottom-1x.pb-2
+        .steps.flex-sm-nowrap
+          a(href='#').step.active
+            h4.step-title 1. Address
+          a(href='#').step
+            h4.step-title 2. Shipping
+          a(href='#').step
+            h4.step-title 3. Payment
+          a(href='#').step
+            h4.step-title 4. Review
+        h6.text-muted.text-lg.text-uppercase.padding-top-1x.mt-4 Completed Steps
+        hr.margin-bottom-1x.pb-2
+        .steps.flex-sm-nowrap
+          a(href='#').step
+            h4.step-title
+              i.icon-check-circle
+              | 1. Address
+          a(href='#').step
+            h4.step-title
+              i.icon-check-circle
+              | 2. Shipping
+          a(href='#').step.active
+            h4.step-title 3. Payment
+          a(href='#').step
+            h4.step-title 4. Review
+        h6.text-muted.text-lg.text-uppercase.padding-top-1x.mt-4 Order Tracking Steps
+        hr.margin-bottom-1x.pb-2
+        .steps.flex-sm-nowrap
+          .step
+            i.icon-shopping-bag
+            h4.step-title Confirmed Order
+          .step
+            i.icon-settings
+            h4.step-title Processing Order
+          .step
+            i.icon-award
+            h4.step-title Quality Check
+          .step
+            i.icon-truck
+            h4.step-title Product Dispatched
+        h6.text-muted.text-lg.text-uppercase.padding-top-1x.mt-4 Completed Steps
+        hr.margin-bottom-1x.pb-2
+        .steps.flex-sm-nowrap
+          .step.active
+            i.icon-shopping-bag
+            h4.step-title Confirmed Order
+          .step.active
+            i.icon-settings
+            h4.step-title Processing Order
+          .step
+            i.icon-award
+            h4.step-title Quality Check
+          .step
+            i.icon-truck
+            h4.step-title Product Dispatched
+          
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

@@ -1,0 +1,85 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Sources and Credits'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Sources and Credits
+        p.mb-4 While making this theme I used third party plugins, images, icons, fonts, etc... and want to thank their creators:
+        h3 Plugins, Libraries and Frameworks:
+        ul.list-unstyled
+          li
+            span.text-medium Node.js - 
+            a(href='https://nodejs.org/en/' target='_blank') https://nodejs.org/en/
+          li
+            span.text-medium Grunt - 
+            a(href='https://gruntjs.com/' target='_blank') https://gruntjs.com/
+          li
+            span.text-medium Pug - 
+            a(href='https://pugjs.org/api/getting-started.html' target='_blank') https://pugjs.org/api/getting-started.html
+          li
+            span.text-medium Sass - 
+            a(href='http://sass-lang.com/' target='_blank') http://sass-lang.com/
+          li
+            span.text-medium jQuery - 
+            a(href='https://jquery.com/' target='_blank') https://jquery.com/
+          li
+            span.text-medium Bootstrap 4 - 
+            a(href='https://v4-alpha.getbootstrap.com/' target='_blank') https://v4-alpha.getbootstrap.com/
+          li
+            span.text-medium Isotope - 
+            a(href='https://isotope.metafizzy.co/' target='_blank') https://isotope.metafizzy.co/
+          li
+            span.text-medium OWL Carousel 2 - 
+            a(href='https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html' target='_blank') https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html
+          li
+            span.text-medium Photoswipe - 
+            a(href='http://photoswipe.com/' target='_blank') http://photoswipe.com/
+          li
+            span.text-medium Velocity - 
+            a(href='http://velocityjs.org/' target='_blank') http://velocityjs.org/
+          li
+            span.text-medium noUiSlider - 
+            a(href='https://refreshless.com/nouislider/' target='_blank') https://refreshless.com/nouislider/
+          li
+            span.text-medium GMAP3 - 
+            a(href='http://gmap3.net/' target='_blank') http://gmap3.net/
+          li
+            span.text-medium iziToast - 
+            a(href='http://izitoast.marcelodolce.com/' target='_blank') http://izitoast.marcelodolce.com/
+          li
+            span.text-medium Tether - 
+            a(href='http://tether.io/' target='_blank') http://tether.io/
+          li
+            span.text-medium imagesLoaded - 
+            a(href='https://imagesloaded.desandro.com/' target='_blank') https://imagesloaded.desandro.com/
+          li
+            span.text-medium downCount - 
+            a(href='http://sonnyt.com/downCount/' target='_blank') http://sonnyt.com/downCount/
+
+        h3.pt-1 Graphic Assets, Fonts, Icons:
+        ul.list-unstyled
+          li: a(href='https://fonts.google.com/specimen/Maven+Pro' target='_blank') https://fonts.google.com/specimen/Maven+Pro
+          li: a(href='https://feathericons.com/' target='_blank') https://feathericons.com/
+          li: a(href='http://www.socicon.com/chart.php' target='_blank') http://www.socicon.com/chart.php
+          li: a(href='https://www.flaticon.com/' target='_blank') https://www.flaticon.com/
+          li: a(href='http://www.6pm.com/' target='_blank') http://www.6pm.com/
+          li: a(href='https://www.pinterest.com/pin/399483429432280028/' target='_blank') https://www.pinterest.com/pin/399483429432280028/
+          li: a(href='https://www.shutterstock.com/ru/image-vector/flat-line-icon-concept-404-error-644143255?irgwc=1&utm_medium=Affiliate&utm_campaign=Graphic%20resources%20SL&utm_source=39422&utm_term=1378509080.1480185675' target='_blank') https://www.shutterstock.com/ru/image-vector/flat-line-icon-concept-404-error-644143255?irgwc=1&utm_medium=Affiliate&utm_campaign=Graphic%20resources%20SL&utm_source=39422&utm_term=1378509080.1480185675
+          li: a(href='http://www.freepik.com/free-vector/e-commerce-icon-set_1185394.htm' target='_blank') http://www.freepik.com/free-vector/e-commerce-icon-set_1185394.htm
+          li: a(href='http://www.freepik.com/free-photo/empty-shelf-cafe-building-timbered_1066969.htm#term=wood&page=3&position=20' target='_blank') http://www.freepik.com/free-photo/empty-shelf-cafe-building-timbered_1066969.htm#term=wood&page=3&position=20
+          li: a(href='http://www.braun-clocks.com/watches/' target='_blank') http://www.braun-clocks.com/watches/
+          li: a(href='https://unsplash.com/photos/fr0J5-GIVyg' target='_blank') https://unsplash.com/photos/fr0J5-GIVyg
+
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

@@ -1,0 +1,27 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Checkout - Complete'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Complete'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Checkout - Complete'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .card.text-center.border-default
+      .card-body.padding-top-2x
+        h3.card-title.mb-4 Thank you for your order!
+        p.text-sm.mb-2 Your order has been placed and will be processed as soon as possible.
+        p.text-sm.mb-2
+          | Make sure you make note of your order number, which is 
+          span.text-medium 34VB5540K83
+        p.text-sm.mb-2
+          | You will be receiving an email shortly with confirmation of your order. 
+          u You can now:
+        .padding-top-1x.padding-bottom-1x
+          a(href='shop-boxed-ls.html').btn.btn-outline-secondary Go Back Shopping
+          a(href='order-tracking.html').btn.btn-outline-primary
+            i.material-icons.my_location
+            | &nbsp;Track order

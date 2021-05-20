@@ -1,0 +1,75 @@
+// Main Navigation
+nav.site-menu
+  ul
+    li()&attributes((parentMenu === 'Home') ? {'class': 'active'} : '')
+      +menu-link('index.html', 'Home')
+      ul.sub-menu
+        li()&attributes((menuTitle === 'Hero Slider') ? {'class': 'active has-children'} : {'class': 'has-children'})
+          +menu-link('index.html', 'Hero Slider')
+          ul.sub-menu.w-400.p-0
+            li
+              a&attributes(isNestedFile ? {'href': '../index.html'} : {'href': 'index.html'}).p-0
+                +image('img/banners/home01.jpg', 'Hero Slider Home')
+        li()&attributes((menuTitle === 'Categories Grid') ? {'class': 'active has-children'} : {'class': 'has-children'})
+          +menu-link('home-featured-categories.html', 'Categories Grid')
+          ul.sub-menu.w-400.p-0
+            li
+              a&attributes(isNestedFile ? {'href': '../home-featured-categories.html'} : {'href': 'home-featured-categories.html'}).p-0
+                +image('img/banners/home02.jpg', 'Categories Grid Home')
+
+    li()&attributes((parentMenu === 'Shop') ? {'class': 'active'} : '')
+      +menu-link('shop-boxed-ls.html', 'Shop')
+      ul.sub-menu
+        +submenu-item('shop-categories.html', 'Shop Categories')
+        li()&attributes((menuTitle === 'Boxed Right Sidebar' || menuTitle === 'Boxed Left Sidebar' || menuTitle === 'Boxed Filters Top' || menuTitle === 'Full Width Left Sidebar' || menuTitle === 'Full Width Right Sidebar' || menuTitle === 'Full Width Filters Top') ? {'class': 'active has-children'} : {'class': 'has-children'})
+          +menu-link('shop-boxed-ls.html', 'Shop Layout')
+          ul.sub-menu
+            +submenu-item('shop-boxed-ls.html', 'Boxed Left Sidebar')
+            +submenu-item('shop-boxed-rs.html', 'Boxed Right Sidebar')
+            +submenu-item('shop-boxed-ft.html', 'Boxed Filters Top')
+            +submenu-item('shop-full-ls.html', 'Full Width Left Sidebar')
+            +submenu-item('shop-full-rs.html', 'Full Width Right Sidebar')
+            +submenu-item('shop-full-ft.html', 'Full Width Filters Top')
+        +submenu-item('shop-single.html', 'Single Product')
+        +submenu-item('cart.html', 'Cart')
+        li()&attributes((menuTitle === 'Address' || menuTitle === 'Shipping' || menuTitle === 'Payment' || menuTitle === 'Review' || menuTitle === 'Complete') ? {'class': 'active has-children'} : {'class': 'has-children'})
+          +menu-link('checkout-address.html', 'Checkout')
+          ul.sub-menu              
+            +submenu-item('checkout-address.html', 'Address')
+            +submenu-item('checkout-shipping.html', 'Shipping')
+            +submenu-item('checkout-payment.html', 'Payment')
+            +submenu-item('checkout-review.html', 'Review')
+            +submenu-item('checkout-complete.html', 'Complete')
+    li
+      a(href='#'): span  Mega Menu
+      include mega-menu
+    li()&attributes((parentMenu === 'Account') ? {'class': 'active'} : '')
+      +menu-link('account-orders.html', 'Account')
+      ul.sub-menu
+        +submenu-item('account-orders.html', 'Orders List')
+        +submenu-item('account-wishlist.html', 'Wishlist')
+        +submenu-item('account-profile.html', 'Profile Page')
+        +submenu-item('account-address.html', 'Contact / Shipping Address')
+        +submenu-item('account-tickets.html', 'My Tickets')
+        +submenu-item('account-single-ticket.html', 'Single Ticket')
+        +submenu-item('account-password-recovery.html', 'Password Recovery')
+    li()&attributes((parentMenu === 'Blog') ? {'class': 'active'} : '')
+      +menu-link('blog.html', 'Blog List')
+      ul.sub-menu
+        +submenu-item('blog.html', 'Blog List')
+        +submenu-item('blog-single.html', 'Single Post')
+    li()&attributes((parentMenu === 'Pages') ? {'class': 'active'} : '')
+      a(href='#'): span Pages
+      ul.sub-menu
+        +submenu-item('about.html', 'About Us')
+        +submenu-item('contacts.html', 'Contacts')
+        +submenu-item('faq.html', 'Help / FAQ')
+        +submenu-item('order-tracking.html', 'Order Tracking')
+        +submenu-item('404.html', '404 Not Found')
+        +submenu-item('coming-soon.html', 'Coming Soon')
+        li
+          a(class='text-danger')&attributes(isNestedFile ? {'href': '../docs/dev-setup.html'} : {'href': 'docs/dev-setup.html'}) Documentation
+
+    li()&attributes((parentMenu === 'Components') ? {'class': 'active'} : '')
+      +menu-link('components/accordion.html', 'Components')
+      include mega-menu-components

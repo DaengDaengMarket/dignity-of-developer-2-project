@@ -1,0 +1,260 @@
+//
+// Placeholders
+// --------------------------------------------------
+
+// Sub Menu
+%sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: $sub-menu-width;
+  padding: 13px 0 !important;
+  border: 1px solid $border-color;
+  background-color: $white-color;
+  box-shadow: $sub-menu-shadow;
+  > li {
+    display: block;
+    position: relative;
+    > a {
+      display: block;
+      padding: 4px 20px;
+      font-size: $sub-menu-link-font-size;
+    }
+    &.has-children {
+      > a::after {
+        display: inline-block;
+        margin: {
+          top: -3px;
+          left: 8px;
+        }
+        font: {
+          family: 'Material Icons';
+          size: .9em;
+        }
+        content: '\e037';
+        vertical-align: middle;
+      }
+      > .sub-menu {
+        top: -2px;
+        left: 100%;
+        margin-top: -12px !important;
+        margin-left: -15px;
+      }
+      &:hover > .sub-menu {
+        display: block;
+        animation: slideRight .35s;
+      }
+    }
+  }
+  &.p-0 { padding: 0 !important; }
+}
+
+// Mega Menu
+%mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid $border-color;
+  background-color: $white-color;
+  box-shadow: $sub-menu-shadow;
+  > li {
+    display: table-cell;
+    min-width: $sub-menu-width;
+    padding: 13px 0 !important;
+    border-left: 1px solid $border-color;
+    vertical-align: top;
+    &:first-child { border: 0; }
+    > .mega-menu-title {
+      display: block;
+      margin-bottom: 12px;
+      padding: {
+        right: 20px;
+        bottom: 10px;
+        left: 20px;
+      }
+      border-bottom: 1px solid $border-color;
+      color: $gray;
+      font-size: $font-size-sm;
+    }
+    ul > li > a {
+      display: block;
+      padding: 4px 20px;
+      font-size: $sub-menu-link-font-size;
+    }
+    &.banner-column {
+      position: relative;
+      padding: 0 !important;
+      > a {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: {
+          position: center;
+          repeat: no-repeat;
+          size: cover;
+        }
+      }
+    }
+  }
+  .widget {
+    > ul > li {
+      margin-bottom: 0;
+      &:first-child { margin-top: 0; }
+    }
+    padding: 0;
+    border: 0;
+  }
+}
+
+// Slideable Menu
+%slideable-menu {
+  position: relative;
+  margin: {
+    right: -30px;
+    left: -30px;
+  }
+  border-top: 1px solid $border-color;
+  overflow: hidden;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .menu {
+    display: block;
+    position: relative;
+    transform: translate3d(0, 0, 0);
+    transition: all .4s cubic-bezier(.86, 0, .07, 1);
+    &.off-view { transform: translate3d(-100%, 0, 0); }
+    &.in-view { transform: translate3d(0, 0, 0); }
+    li {
+      display: block;
+      a {
+        display: block;
+        padding: 15px 20px;
+        transition: color .3s;
+        border: {
+          bottom: 1px solid $border-color;
+          left: 2px solid transparent;
+        }
+        color: $nav-link-color;
+        font-size: $nav-link-font-size;
+        letter-spacing: .025em;
+        text: {
+          transform: uppercase;
+          decoration: none;
+        }
+        &:hover { color: $nav-link-hover-color; }
+      }
+      &.active > a,
+      &.active > span > a {
+        border-left-color: $nav-link-active-color;
+        color: $nav-link-active-color;
+      }
+      &.has-children {
+        > span {
+          display: block;
+          position: relative;
+          width: 100%;
+        }
+        .sub-menu-toggle {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 60px;
+          height: 100%;
+          height: calc(100% - 1px);
+          transition: background-color .3s;
+          border-left: 1px solid $border-color;
+          color: $nav-link-color !important;
+          cursor: pointer;
+          z-index: 1;
+          &::before {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            margin-top: -11px;
+            font: {
+              family: 'Material Icons';
+              size: 22px;
+            }
+            line-height: 1;
+            text-align: center;
+            content: '\e315';
+          }
+          &:hover { background-color: $gray-lighter; }
+        }
+        .slideable-submenu {
+          position: absolute;
+          top: 0;
+          right: -100%;
+          width: 100%;
+          height: auto;
+          transform: translate3d(100%, 0, 0);
+          transition: all .4s cubic-bezier(.86, 0, .07, 1);
+          &.in-view { transform: translate3d(0, 0, 0); }
+          &.off-view { transform: translate3d(-100%, 0, 0); }
+        }
+      }
+      &.back-btn > a {
+        background-color: $gray-lighter;
+        &:hover { color: $nav-link-color; }
+        &::before {
+          display: inline-block;
+          margin-right: 2px;
+          font: {
+            family: 'Material Icons';
+            size: 22px;
+          }
+          line-height: 1;
+          content: '\e314';
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+// Sub Menu Animations
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes slideDown {
+  0% {
+    transform: translate3d(0, -15px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes slideUpLong {
+  0% {
+    transform: translate3d(0, 25px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translate3d(-15px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}

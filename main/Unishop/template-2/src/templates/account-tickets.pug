@@ -1,0 +1,99 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'My Tickets'
+  - var parentMenu = 'Account'
+  - var isModalTicket = true
+  - var menuTitle = 'My Tickets'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}, {'title': 'My Tickets'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-4
+        aside.user-info-wrapper
+          .user-cover(style='background-image: url(img/account/user-cover-img.jpg);')
+            .info-label(data-toggle='tooltip', title='You currently have 622 Reward Points to spend')
+              i.material-icons.redeem
+              | 622 points
+          .user-info
+            .user-avatar
+              a(href='#').edit-avatar
+                i.material-icons.edit
+                | Edit
+              img(src='img/account/user-ava.jpg', alt='User')
+            .user-data
+              h5 Daniel Adams
+              span Joined February 06, 2017
+        nav.list-group
+          a(href='account-orders.html').list-group-item.with-badge
+            i.icon-bag
+            | Orders
+            span.badge.badge-default.badge-pill 6
+          a(href='account-profile.html').list-group-item
+            i.icon-head
+            | Profile
+          a(href='account-address.html').list-group-item
+            i.icon-map
+            | Addresses
+          a(href='account-wishlist.html').list-group-item.with-badge
+            i.icon-heart
+            | Wishlist
+            span.badge.badge-default.badge-pill 3
+          a(href='account-tickets.html').list-group-item.with-badge.active
+            i.icon-tag
+            | My Tickets
+            span.badge.badge-default.badge-pill 4
+      .col-lg-8
+        .padding-top-2x.mt-2.hidden-lg-up
+        .table-responsive.text-sm
+          table.table.table-hover.margin-bottom-none
+            thead
+              tr
+                th Ticket Subject
+                th Date Submitted | Updated
+                th Type
+                th Priority
+                th Status
+            tbody
+              tr
+                td.align-middle
+                  a(href='account-single-ticket.html').text-medium.navi-link My new ticket
+                td.align-middle 08/08/2017 | 08/14/2017
+                td.align-middle Website problem
+                td.align-middle
+                  span.d-inline-block.bg-warning.text-white.text-xs.p-1 High
+                td.align-middle
+                  span.d-inline-block.bg-success.text-white.text-xs.p-1 Open
+              tr
+                td.align-middle
+                  a(href='account-single-ticket.html').text-medium.navi-link Another ticket
+                td.align-middle 07/21/2017 | 07/23/2017
+                td.align-middle Partner request
+                td.align-middle
+                  span.d-inline-block.bg-info.text-white.text-xs.p-1 Medium
+                td.align-middle
+                  span.d-inline-block.bg-secondary.text-muted.text-xs.p-1 Closed
+              tr
+                td.align-middle
+                  a(href='account-single-ticket.html').text-medium.navi-link Yet another ticket
+                td.align-middle 05/19/2017 | 05/20/2017
+                td.align-middle Complaint
+                td.align-middle
+                  span.d-inline-block.bg-danger.text-white.text-xs.p-1 Urgent
+                td.align-middle
+                  span.d-inline-block.bg-secondary.text-muted.text-xs.p-1 Closed
+              tr
+                td.align-middle
+                  a(href='account-single-ticket.html').text-medium.navi-link My old ticket
+                td.align-middle 05/19/2017 | 05/20/2017
+                td.align-middle Info inquiry
+                td.align-middle
+                  span.d-inline-block.bg-success.text-white.text-xs.p-1 Low
+                td.align-middle
+                  span.d-inline-block.bg-secondary.text-muted.text-xs.p-1 Closed
+        hr.mb-4
+        .text-right
+          button(class='btn btn-primary margin-bottom-none' data-toggle='modal' data-target='#openTicket') Submit New Ticket

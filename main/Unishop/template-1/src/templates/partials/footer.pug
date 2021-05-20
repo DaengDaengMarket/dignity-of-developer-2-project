@@ -1,0 +1,91 @@
+// Site Footer
+footer.site-footer
+  .container
+    .row
+      .col-lg-3.col-md-6
+        // Contact Info
+        section.widget.widget-light-skin
+          h3.widget-title Get In Touch With Us
+          p.text-white Phone: 00 33 169 7720
+          ul.list-unstyled.text-sm.text-white
+            li
+              span.opacity-50 Monday-Friday:
+              | 9.00 am - 8.00 pm
+            li
+              span.opacity-50 Saturday:
+              | 10.00 am - 6.00 pm
+          p: a(href='#').navi-link-light support@unishop.com
+          a(href='#').social-button.shape-circle.sb-facebook.sb-light-skin
+            i.socicon-facebook
+          a(href='#').social-button.shape-circle.sb-twitter.sb-light-skin
+            i.socicon-twitter
+          a(href='#').social-button.shape-circle.sb-instagram.sb-light-skin
+            i.socicon-instagram
+          a(href='#').social-button.shape-circle.sb-google-plus.sb-light-skin
+            i.socicon-googleplus
+
+      .col-lg-3.col-md-6
+        // Mobile App Buttons
+        section.widget.widget-light-skin
+          h3.widget-title Our Mobile App
+          a(href='#').market-button.apple-button.mb-light-skin
+            span.mb-subtitle Download on the
+            span.mb-title App Store
+          a(href='#').market-button.google-button.mb-light-skin
+            span.mb-subtitle Download on the
+            span.mb-title Google Play
+          a(href='#').market-button.windows-button.mb-light-skin
+            span.mb-subtitle Download on the
+            span.mb-title Windows Store
+      .col-lg-3.col-md-6
+        // About Us
+        section.widget.widget-links.widget-light-skin
+          h3.widget-title About Us
+          ul
+            li: a(href='#') Careers
+            li: a(href='#') About Unishop
+            li: a(href='#') Our Story
+            li: a(href='#') Services
+            li: a(href='#') Our Blog
+            
+      .col-lg-3.col-md-6
+        // Account / Shipping Info
+        section.widget.widget-links.widget-light-skin
+          h3.widget-title Account &amp; Shipping Info
+          ul
+            li: a(href='#') Your Account
+            li: a(href='#') Shipping Rates & Policies
+            li: a(href='#') Refunds & Replacements
+            li: a(href='#') Taxes
+            li: a(href='#') Delivery Info
+            li: a(href='#') Affiliate Program
+    
+    hr.hr-light.mt-2.margin-bottom-2x
+
+    .row
+      .col-md-7.padding-bottom-1x
+        // Payment Methods
+        div(style='max-width: 615px;').margin-bottom-1x
+          +image('img/payment_methods.png', 'Payment Methods')
+
+      .col-md-5.padding-bottom-1x
+        .margin-top-1x.hidden-md-up
+        //Subscription
+        form(action='//rokaux.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;id=1194bb7544' method='post' target='_blank' novalidate).subscribe-form
+          .clearfix
+            .input-group.input-light
+              input(type='email' name='EMAIL' placeholder='Your e-mail').form-control
+              span.input-group-addon
+                i.icon-mail
+            // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            div(style='position: absolute; left: -5000px;' aria-hidden='true')
+              input(type='text' name='b_c7103e2c981361a6639545bd5_1194bb7544' tabindex='-1')
+            button(type='submit').btn.btn-primary
+              i.icon-check
+          span.form-text.text-sm.text-white.opacity-50 Subscribe to our Newsletter to receive early discount offers, latest news, sales and promo information.
+    
+    // Copyright
+    p.footer-copyright
+      | © All rights reserved. Made with &nbsp;
+      i.icon-heart.text-danger
+      a(href='http://rokaux.com/' target='_blank')  &nbsp;by rokaux

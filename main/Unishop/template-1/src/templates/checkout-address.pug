@@ -1,0 +1,110 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Checkout'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Address'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Checkout'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+
+      // Checkout Adress
+      .col-xl-9.col-lg-8
+        .checkout-steps
+          a(href='checkout-review.html') 4. Review
+          a(href='checkout-payment.html')
+            span.angle
+            | 3. Payment
+          a(href='checkout-shipping.html')
+            span.angle
+            | 2. Shipping
+          a(href='checkout-address.html' class='active')
+            span.angle
+            | 1. Address
+        
+        h4 Billing Address
+        hr.padding-bottom-1x
+        .row
+          .col-sm-6
+            .form-group
+              label(for='checkout-fn') First Name
+              input(type='text' id='checkout-fn').form-control
+          .col-sm-6
+            .form-group
+              label(for='checkout-ln') Last Name
+              input(type='text' id='checkout-ln').form-control
+        .row
+          .col-sm-6
+            .form-group
+              label(for='checkout-email') E-mail Address
+              input(type='email' id='checkout-email').form-control
+          .col-sm-6
+            .form-group
+              label(for='checkout-phone') Phone Number
+              input(type='text' id='checkout-phone').form-control
+        .row
+          .col-sm-6
+            .form-group
+              label(for='checkout-company') Company
+              input(type='text' id='checkout-company').form-control
+          .col-sm-6
+            .form-group
+              label(for='checkout-country') Country
+              select(id='checkout-country').form-control
+                option Choose country
+                option Australia
+                option Canada
+                option France
+                option Germany
+                option Switzerland
+                option USA
+        .row
+          .col-sm-6
+            .form-group
+              label(for='checkout-city') City
+              select(id='checkout-city').form-control
+                option Choose city
+                option Amsterdam
+                option Berlin
+                option Geneve
+                option New York
+                option Paris
+          .col-sm-6
+            .form-group
+              label(for='checkout-zip') ZIP Code
+              input(type='text' id='checkout-zip').form-control
+        .row.padding-bottom-1x
+          .col-sm-6
+            .form-group
+              label(for='checkout-address1') Address 1
+              input(type='text' id='checkout-address1').form-control
+          .col-sm-6
+            .form-group
+              label(for='checkout-address2') Address 2
+              input(type='text' id='checkout-address2').form-control
+
+        h4 Shipping Address
+        hr.padding-bottom-1x
+        .form-group
+          .custom-control.custom-checkbox
+            input(type='checkbox' id='same_address' checked).custom-control-input
+            label(for='same_address').custom-control-label Same as billing address
+        
+        .checkout-footer
+          .column
+            a(href='cart.html' class='btn btn-outline-secondary')
+              i.icon-arrow-left
+              span.hidden-xs-down &nbsp;Back To Cart
+          .column
+            a(href='checkout-shipping.html' class='btn btn-primary')
+              span.hidden-xs-down Continue&nbsp;
+              i.icon-arrow-right
+
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        include partials/checkout-sidebar

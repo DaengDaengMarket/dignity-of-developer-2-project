@@ -1,0 +1,139 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Gallery'
+  - var isNestedFile = true
+  - var isGallery = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Gallery'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase With Gap (Bootstrap Grid)
+        hr.margin-bottom-1x
+        .gallery-wrapper
+          .row
+            .col-md-4.col-sm-6
+              .gallery-item
+                a(href='../img/gallery/03.jpg' data-size='1000x667')
+                  img(src='../img/gallery/th03.jpg' alt='Image')
+                span.caption Never War Bag
+            .col-md-4.col-sm-6
+              .gallery-item
+                a(href='../img/gallery/02.jpg' data-size='1000x667')
+                  img(src='../img/gallery/th02.jpg' alt='Image')
+                span.caption BRXTN Cap
+            .col-md-4.col-sm-6
+              .gallery-item
+                a(href='#'  data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube-nocookie.com/embed/n2CCz4x2xGE?rel=0" frameborder="0" allowfullscreen></iframe></div></div>')
+                  img(src='../img/gallery/th01.jpg' alt='Image')
+                span.caption Converse by Nike
+            .col-md-4.col-sm-6
+              .gallery-item
+                a(href='../img/gallery/04.jpg' data-size='1000x667')
+                  img(src='../img/gallery/th04.jpg' alt='Image')
+                span.caption T-Shirt Collection
+            .col-md-4.col-sm-6
+              .gallery-item
+                a(href='#' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://player.vimeo.com/video/70022464?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe></div></div>')
+                  img(src='../img/gallery/th05.jpg' alt='Image')
+                span.caption Summer Dress
+            .col-md-4.col-sm-6
+              .gallery-item
+                a(href='../img/gallery/06.jpg' data-size='1000x667')
+                  img(src='../img/gallery/th06.jpg' alt='Image')
+                span.caption Hoodie
+
+        h6.text-muted.text-normal.text-uppercase.padding-top-1x.mt-1 No Gap (Isotope Grid)
+        hr.margin-bottom-1x
+        .gallery-wrapper.isotope-grid.cols-3.grid-no-gap
+          .gutter-sizer
+          .grid-sizer
+          .grid-item.gallery-item
+              a(href='../img/gallery/03.jpg' data-size='1000x667')
+                img(src='../img/gallery/th03.jpg' alt='Image')
+              span.caption Never War Bag
+          .grid-item.gallery-item
+            a(href='../img/gallery/02.jpg' data-size='1000x667')
+              img(src='../img/gallery/th02.jpg' alt='Image')
+            span.caption BRXTN Cap
+          .grid-item.gallery-item
+            a(href='#'  data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube-nocookie.com/embed/n2CCz4x2xGE?rel=0" frameborder="0" allowfullscreen></iframe></div></div>')
+              img(src='../img/gallery/th01.jpg' alt='Image')
+            span.caption Converse by Nike
+          .grid-item.gallery-item
+            a(href='../img/gallery/04.jpg' data-size='1000x667')
+              img(src='../img/gallery/th04.jpg' alt='Image')
+            span.caption T-Shirt Collection
+          .grid-item.gallery-item
+            a(href='#' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://player.vimeo.com/video/70022464?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe></div></div>')
+              img(src='../img/gallery/th05.jpg' alt='Image')
+            span.caption Summer Dress
+          .grid-item.gallery-item
+            a(href='../img/gallery/06.jpg' data-size='1000x667')
+              img(src='../img/gallery/th06.jpg' alt='Image')
+            span.caption Hoodie
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Masonry (Isotope Grid)
+        hr.margin-bottom-1x
+        .gallery-wrapper.isotope-grid.cols-3
+          .gutter-sizer
+          .grid-sizer
+          .grid-item.gallery-item
+            a(href='#'  data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube-nocookie.com/embed/n2CCz4x2xGE?rel=0" frameborder="0" allowfullscreen></iframe></div></div>')
+              img(src='../img/gallery/th01.jpg' alt='Image')
+            span.caption Converse by Nike
+          .grid-item.gallery-item
+            a(href='../img/gallery/07.jpg' data-size='1000x1000')
+              img(src='../img/gallery/th07.jpg' alt='Image')
+            span.caption T-Shirt Collection
+          .grid-item.gallery-item
+              a(href='../img/gallery/03.jpg' data-size='1000x667')
+                img(src='../img/gallery/th03.jpg' alt='Image')
+              span.caption Never War Bag
+          .grid-item.gallery-item
+            a(href='../img/gallery/08.jpg' data-size='1000x1000')
+              img(src='../img/gallery/th08.jpg' alt='Image')
+            span.caption White Snickers
+          .grid-item.gallery-item
+            a(href='#' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://player.vimeo.com/video/70022464?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe></div></div>')
+              img(src='../img/gallery/th05.jpg' alt='Image')
+            span.caption Summer Dress
+          .grid-item.gallery-item
+            a(href='../img/gallery/06.jpg' data-size='1000x667')
+              img(src='../img/gallery/th06.jpg' alt='Image')
+            span.caption Hoodie
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Inside Carousel
+        hr.margin-bottom-1x
+        .gallery-wrapper.owl-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "autoplay": false, "responsive": {"0":{"items":1},"576":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+          .gallery-item
+              a(href='../img/gallery/03.jpg' data-size='1000x667')
+                img(src='../img/gallery/th03.jpg' alt='Image')
+              span.caption Never War Bag
+          .gallery-item
+            a(href='../img/gallery/02.jpg' data-size='1000x667')
+              img(src='../img/gallery/th02.jpg' alt='Image')
+            span.caption BRXTN Cap
+          .gallery-item
+            a(href='#'  data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube-nocookie.com/embed/n2CCz4x2xGE?rel=0" frameborder="0" allowfullscreen></iframe></div></div>')
+              img(src='../img/gallery/th01.jpg' alt='Image')
+            span.caption Converse by Nike
+          .gallery-item
+            a(href='../img/gallery/04.jpg' data-size='1000x667')
+              img(src='../img/gallery/th04.jpg' alt='Image')
+            span.caption T-Shirt Collection
+          .gallery-item
+            a(href='#' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://player.vimeo.com/video/70022464?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe></div></div>')
+              img(src='../img/gallery/th05.jpg' alt='Image')
+            span.caption Summer Dress
+          .gallery-item
+            a(href='../img/gallery/06.jpg' data-size='1000x667')
+              img(src='../img/gallery/th06.jpg' alt='Image')
+            span.caption Hoodie
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

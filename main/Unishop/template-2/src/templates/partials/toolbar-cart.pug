@@ -1,0 +1,71 @@
+// Shopping Cart Section
+#cart.toolbar-section
+  .table-responsive.shopping-cart.mb-0
+    table.table
+      thead
+        tr
+          th(colspan='2')
+            .d-flex.justify-content-between.align-items-center
+              | Products
+              a&attributes(isNestedFile ? {'href': '../cart.html'} : {'href': 'cart.html'}).navi-link.text-uppercase
+                span.text-xxs Expand Cart
+                i.material-icons.keyboard_arrow_right
+      tbody
+        tr
+          td
+            .product-item
+              a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}).product-thumb
+                +image('img/shop/cart/01.jpg', 'Product')
+              .product-info
+                h4.product-title
+                  a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+                    | 3-Drawer File Cabinet
+                span
+                  em Price:
+                  |  $257.00
+                span
+                  em Quantity:
+                  |  1
+          td.text-center
+            a(href='#').remove-from-cart
+              i.material-icons.icon_close
+        tr
+          td
+            .product-item
+              a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}).product-thumb
+                +image('img/shop/cart/02.jpg', 'Product')
+              .product-info
+                h4.product-title
+                  a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+                    | Plastic Tissue Holder
+                span
+                  em Price:
+                  |  $76.40
+                span
+                  em Quantity:
+                  |  2
+          td.text-center
+            a(href='#').remove-from-cart
+              i.material-icons.icon_close
+        tr
+          td
+            .product-item
+              a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}).product-thumb
+                +image('img/shop/cart/03.jpg', 'Product')
+              .product-info
+                h4.product-title
+                  a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+                    | Campfire Paper Table
+                span
+                  em Price:
+                  |  $289.00
+                span
+                  em Quantity:
+                  |  1
+          td.text-center
+            a(href='#').remove-from-cart
+              i.material-icons.icon_close
+  hr.mb-3
+  .d-flex.flex-wrap.justify-content-between.align-items-center
+    .pr-2.py-1.text-sm Subtotal: <span class='text-dark text-medium'>$622.40</span>
+    a&attributes(isNestedFile ? {'href': '../checkout-address.html'} : {'href': 'checkout-address.html'}).btn.btn-sm.btn-success.mb-0.mr-0 Checkout

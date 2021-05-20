@@ -1,0 +1,255 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Search Results for: Lorem ipsum'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Search Results'
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      // Results
+      .col-xl-9.col-lg-8
+        .card.mb-4
+          .card-body
+            span.badge.badge-primary Product
+            .d-flex.pt-3
+              a(href='shop-single.html').w-200.pr-4.hidden-xs-down
+                img(src='img/shop/cart/01.jpg' alt='Product')
+              div
+                h6: a(href='shop-single.html').navi-link.text-gray-dark Canon EOS M50 Mirrorless Camera 
+                span.d-block.mb-2.text-lg
+                  del.text-muted $945.00
+                  | &nbsp;&nbsp;$910.00
+                p Consequatur omnis <span class='text-highlighted'>lorem ipsum</span> reprehenderit suscipit voluptatem blanditiis aliquid rerum animi aliquam, dicta quas nesciunt commodi sequi minima totam architecto.
+        .card.bg-secondary.mb-4
+          .card-body
+            span.badge.badge-warning Blog post
+            .pt-3
+              h6: a(href='blog-single-rs.html').navi-link.text-gray-dark What Apps Will Increase Your Productivity
+              p <span class='text-highlighted'>Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <span class='text-highlighted'>lorem ipsum</span> aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. Aliquid id nobis, amet dolorum earum maxime.
+        .card.mb-4
+          .card-body
+            span.badge.badge-primary Product
+            .d-flex.pt-3
+              a(href='shop-single.html').w-200.pr-4.hidden-xs-down
+                img(src='img/shop/cart/02.jpg' alt='Product')
+              div
+                h6: a(href='shop-single.html').navi-link.text-gray-dark Apple iPhone X 256 GB Space Gray
+                span.d-block.mb-2.text-lg $1,450.00
+                p Consequatur omnis <span class='text-highlighted'>lorem ipsum</span> reprehenderit suscipit voluptatem blanditiis aliquid rerum animi aliquam, dicta quas nesciunt commodi sequi minima totam architecto.
+        .card.bg-secondary.mb-4
+          .card-body
+            span.badge.badge-warning Blog post
+            .pt-3
+              h6: a(href='blog-single-rs.html').navi-link.text-gray-dark <span class='text-highlighted'>Lorem Ipsum</span> Photography Changed My Life
+              p Ut enim ad minim veniam, <span class='text-highlighted'>lorem ipsum</span> reprehenderit suscipit voluptatem blanditiis aliquid rerum animi aliquam, dicta quas nesciunt commodi sequi minima totam architecto.
+        .card.mb-4
+          .card-body
+            span.badge.badge-primary Product
+            .d-flex.pt-3
+              a(href='shop-single.html').w-200.pr-4.hidden-xs-down
+                img(src='img/shop/cart/03.jpg' alt='Product')
+              div
+                h6: a(href='shop-single.html').navi-link.text-gray-dark HP LaserJet Pro Laser Printer
+                span.d-block.mb-2.text-lg $188.50
+                p Consequatur omnis <span class='text-highlighted'>lorem ipsum</span> reprehenderit suscipit voluptatem blanditiis aliquid rerum animi aliquam, dicta quas nesciunt commodi sequi minima totam architecto.
+
+        include partials/pagination
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        //- To use only with sidebar-offcanvas
+        .sidebar-toggle.position-left
+          i.icon-menu
+        aside.sidebar.sidebar-offcanvas.position-left
+          //- To use only with sidebar-offcanvas
+          span.sidebar-close
+            i.icon-x
+
+          // Shop Categories
+          section.widget.widget-categories
+            h3.widget-title Shop Categories
+            ul
+              li.has-children.expanded
+                a(href='#') Computers &amp; Accessories
+                span (1138)
+                ul
+                  li
+                    a(href='#') Desktop PCs
+                    span (508)
+                    ul
+                      li: a(href='#') Office PC
+                      li: a(href='#') Gaming PC
+                      li: a(href='#') PC for Learning
+                  li
+                    a(href='#') Laptops
+                    span (423)
+                    ul
+                      li: a(href='#') 15' Screens 
+                      li: a(href='#') 13' Screens
+                      li: a(href='#') Touch Screens
+                  li
+                    a(href='#') Nettops
+                    span (97)
+                  li
+                    a(href='#') PC Accessories
+                    span (110)
+              li.has-children
+                a(href='#') Smartphones &amp; Tablets
+                span (2356)
+                ul
+                  li
+                    a(href='#') Smartphones
+                    span (1032)
+                    ul
+                      li: a(href='#') Android
+                      li: a(href='#') iOS
+                      li: a(href='#') QHD Screen
+                      li: a(href='#') WQHD Screen
+                      li: a(href='#') Full HD Screen
+                      li: a(href='#') Super Amoled
+                  li
+                    a(href='#') Tablets
+                    span (937)
+                    ul
+                      li: a(href='#') Wifi only
+                      li: a(href='#') Wifi + 3G
+                      li: a(href='#') Android
+                      li: a(href='#') iOS
+                  li
+                    a(href='#') Phablets
+                    span (386)
+              li.has-children
+                a(href='#') TV, Video &amp; Audio
+                span (420)
+                ul
+                  li
+                    a(href='#') Smart TV Sets
+                    span (180)
+                  li
+                    a(href='#') Blue-Ray Players
+                    span (132)
+                  li
+                    a(href='#') Sound Systems
+                    span (47)
+                  li
+                    a(href='#') Home Theaters
+                    span (61)
+              li.has-children
+                a(href='#') Cameras, Photo &amp; Video
+                span (874)
+                ul
+                  li
+                    a(href='#') Photo Cameras
+                    span (211)
+                  li
+                    a(href='#') Video Cameras
+                    span (195)
+                  li
+                    a(href='#') Action Cameras
+                    span (159)
+                  li
+                    a(href='#') Tripods &amp; Stands
+                    span (203)
+                  li
+                    a(href='#') Lenses
+                    span (106)
+              li.has-children
+                a(href='#') Headphones
+                span (1239)
+                ul
+                  li
+                    a(href='#') Earbud Headphones
+                    span (752)
+                  li
+                    a(href='#') Over-Ear Headphones
+                    span (487)
+                  li
+                    a(href='#') Bluetooth Headphones
+                    span (205)
+                  li
+                    a(href='#') Sports &amp; Fitness Headphones
+                    span (96)
+                  li
+                    a(href='#') Noise-Cancelling Headphones
+                    span (113)
+              li.has-children
+                a(href='#') Wearable Electronics
+                span (340)
+                ul
+                  li
+                    a(href='#') Smart Watches
+                    span (175)
+                  li
+                    a(href='#') Fitness Trackers
+                    span (123)
+                  li
+                    a(href='#') Smart Glasses
+                    span (42)
+              li.has-children
+                a(href='#') Printers &amp; Ink
+                span (512)
+                ul
+                  li
+                    a(href='#') All-In-One
+                    span (304)
+                  li
+                    a(href='#') Copying
+                    span (115)
+                  li
+                    a(href='#') Faxing
+                    span (211)
+                  li
+                    a(href='#') Photo Printing
+                    span (68)
+                  li
+                    a(href='#') Printing Only
+                    span (143)
+                  li
+                    a(href='#') Scanning
+                    span (122)
+              li.has-children
+                a(href='#') Video Games
+                span (656)
+                ul
+                  li
+                    a(href='#') PlayStation 4
+                    span (100)
+                  li
+                    a(href='#') Xbox One
+                    span (92)
+                  li
+                    a(href='#') Nintendo Switch
+                    span (19)
+                  li
+                    a(href='#') Games
+                    span (397)
+                  li
+                    a(href='#') Accessories
+                    span (48)
+
+          // Blog Categories
+          section.widget.widget-categories.margin-bottom-none
+            h3.widget-title Blog Categories
+            ul
+              li
+                a(href='#') Editor's Choice
+                <span>(24)</span>
+              li
+                a(href='#') Electronics
+                <span>(12)</span>
+              li
+                a(href='#') Industrial Design
+                <span>(5)</span>
+              li
+                a(href='#') Secure Payments Online
+                <span>(2)</span>
+              li
+                a(href='#') Smart Gadgets
+                <span>(19)</span>
+              li
+                a(href='#') Online Shopping
+                <span>(7)</span>

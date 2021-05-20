@@ -1,0 +1,85 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Contacts'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Contacts'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Contacts'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-2x.mb-2
+    .row
+      .col-md-7
+        .display-3.text-muted.opacity-75.mb-30 Customer Service
+      .col-md-5
+        ul.list-icon
+          li 
+            i.icon-mail.text-muted
+            a(href='mailto:customer.service@unishop.com').navi-link customer.service@unishop.com
+          li 
+            i.icon-phone.text-muted
+            | +1 (080) 44 357 260
+          li 
+            i.icon-clock.text-muted
+            | 1 - 2 business days
+    hr.margin-top-2x
+    .row.margin-top-2x
+      .col-md-7
+        .display-3.text-muted.opacity-75.mb-30 Tech Support
+      .col-md-5
+        ul.list-icon
+          li 
+            i.icon-mail.text-muted
+            a(href='mailto:support@unishop.com').navi-link support@unishop.com
+          li 
+            i.icon-phone.text-muted
+            | 00 33 169 7720
+          li 
+            i.icon-clock.text-muted
+            | 1 - 2 business days
+    h3.margin-top-3x.text-center.mb-30 Outlet Stores
+    .row
+      .col-md-4.col-sm-6
+        .card.mb-30
+          img(src='img/contacts/orlando.jpg' alt='Orlando').card-img-top
+          .card-body
+            ul.list-icon
+              li 
+                i.icon-map-pin.text-muted
+                | 514 S. Magnolia St. Orlando, FL 32806, USA
+              li 
+                i.icon-phone.text-muted
+                | +1 (786) 322 560 40
+              li 
+                i.icon-mail.text-muted
+                a(href='mailto:orlando.store@unishop.com').navi-link orlando.store@unishop.com
+      .col-md-4.col-sm-6
+        .card.mb-30
+          img(src='img/contacts/chicago.jpg' alt='Chicago').card-img-top
+          .card-body
+            ul.list-icon
+              li 
+                i.icon-map-pin.text-muted
+                | 44 Shirley Ave. West Chicago, IL 60185, USA
+              li 
+                i.icon-phone.text-muted
+                | +1 (847) 252 765 33
+              li 
+                i.icon-mail.text-muted
+                a(href='mailto:chicago.store@unishop.comm').navi-link chicago.store@unishop.com
+      .col-md-4.col-sm-6
+        .card.mb-30
+          img(src='img/contacts/new-york.jpg' alt='New York').card-img-top
+          .card-body
+            ul.list-icon
+              li 
+                i.icon-map-pin.text-muted
+                | 89 Clinton Dr. Holbrook, NY 11741, USA
+              li 
+                i.icon-phone.text-muted
+                | +1 (212) 477 690 000
+              li 
+                i.icon-mail.text-muted
+                a(href='mailto:newyork.store@unishop.com').navi-link newyork.store@unishop.com

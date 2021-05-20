@@ -1,0 +1,105 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Sources and Credits'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Sources and Credits
+        p.mb-4 While making this theme I used third party plugins, images, icons, fonts, etc... and want to thank their creators:
+        h3 Plugins, Libraries and Frameworks:
+        ul.list-unstyled
+          li
+            span.text-medium Node.js - 
+            a(href='https://nodejs.org/en/' target='_blank') https://nodejs.org/en/
+          li
+            span.text-medium Grunt - 
+            a(href='https://gruntjs.com/' target='_blank') https://gruntjs.com/
+          li
+            span.text-medium Pug - 
+            a(href='https://pugjs.org/api/getting-started.html' target='_blank') https://pugjs.org/api/getting-started.html
+          li
+            span.text-medium Sass - 
+            a(href='http://sass-lang.com/' target='_blank') http://sass-lang.com/
+          li
+            span.text-medium jQuery - 
+            a(href='https://jquery.com/' target='_blank') https://jquery.com/
+          li
+            span.text-medium Bootstrap 4 - 
+            a(href='https://v4-alpha.getbootstrap.com/' target='_blank') https://v4-alpha.getbootstrap.com/
+          li
+            span.text-medium Isotope - 
+            a(href='https://isotope.metafizzy.co/' target='_blank') https://isotope.metafizzy.co/
+          li
+            span.text-medium OWL Carousel 2 - 
+            a(href='https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html' target='_blank') https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html
+          li
+            span.text-medium Photoswipe - 
+            a(href='http://photoswipe.com/' target='_blank') http://photoswipe.com/
+          li
+            span.text-medium Velocity - 
+            a(href='http://velocityjs.org/' target='_blank') http://velocityjs.org/
+          li
+            span.text-medium noUiSlider - 
+            a(href='https://refreshless.com/nouislider/' target='_blank') https://refreshless.com/nouislider/
+          li
+            span.text-medium GMAP3 - 
+            a(href='http://gmap3.net/' target='_blank') http://gmap3.net/
+          li
+            span.text-medium iziToast - 
+            a(href='http://izitoast.marcelodolce.com/' target='_blank') http://izitoast.marcelodolce.com/
+          li
+            span.text-medium Tether - 
+            a(href='http://tether.io/' target='_blank') http://tether.io/
+          li
+            span.text-medium imagesLoaded - 
+            a(href='https://imagesloaded.desandro.com/' target='_blank') https://imagesloaded.desandro.com/
+          li
+            span.text-medium downCount - 
+            a(href='http://sonnyt.com/downCount/' target='_blank') http://sonnyt.com/downCount/
+
+        h3.pt-1 Graphic Assets, Fonts, Icons:
+        ul.list-unstyled
+          li: a(href='https://fonts.google.com/specimen/Maven+Pro' target='_blank') https://fonts.google.com/specimen/Maven+Pro
+          li: a(href='https://feathericons.com/' target='_blank') https://feathericons.com/
+          li: a(href='http://www.socicon.com/chart.php' target='_blank') http://www.socicon.com/chart.php
+          li: a(href='https://www.flaticon.com/' target='_blank') https://www.flaticon.com/
+          li: a(href='https://www.amazon.com' target='_blank') https://www.amazon.com
+          li: a(href='https://unsplash.com/photos/KjyrxSHwqTg' target='_blank') https://unsplash.com/photos/KjyrxSHwqTg
+          li: a(href='https://unsplash.com/photos/VtIQwaUn-GE' target='_blank') https://unsplash.com/photos/VtIQwaUn-GE
+          li: a(href='https://unsplash.com/photos/_8S9nEmCZK' target='_blank') https://unsplash.com/photos/_8S9nEmCZK
+          li: a(href='https://unsplash.com/photos/vJ3GRQ9VCwk' target='_blank') https://unsplash.com/photos/vJ3GRQ9VCwk
+          li: a(href='https://unsplash.com/photos/pWtNPCpvVA8' target='_blank') https://unsplash.com/photos/pWtNPCpvVA8
+          li: a(href='https://unsplash.com/photos/ngMtsE5r9eI' target='_blank') https://unsplash.com/photos/ngMtsE5r9eI
+          li: a(href='https://unsplash.com/photos/9TF54VdG0ws' target='_blank') https://unsplash.com/photos/9TF54VdG0ws
+          li: a(href='https://unsplash.com/photos/ofUXJt4EssI' target='_blank') https://unsplash.com/photos/ofUXJt4EssI
+          li: a(href='https://unsplash.com/photos/sDCvV1qC0yM' target='_blank') https://unsplash.com/photos/sDCvV1qC0yM
+          li: a(href='https://unsplash.com/photos/T6fDN60bMWY' target='_blank') https://unsplash.com/photos/T6fDN60bMWY
+          li: a(href='https://unsplash.com/photos/UtzrcidfCsk' target='_blank') https://unsplash.com/photos/UtzrcidfCsk
+          li: a(href='https://unsplash.com/photos/aOC7TSLb1o8' target='_blank') https://unsplash.com/photos/aOC7TSLb1o8
+          li: a(href='https://unsplash.com/photos/PFTvPyTe8UU' target='_blank') https://unsplash.com/photos/PFTvPyTe8UU
+          li: a(href='https://unsplash.com/photos/Bs-zngH79Ds' target='_blank') https://unsplash.com/photos/Bs-zngH79Ds
+          li: a(href='https://unsplash.com/photos/xzV9lfNVSmY' target='_blank') https://unsplash.com/photos/xzV9lfNVSmY
+          li: a(href='https://unsplash.com/photos/A5-Xr7WyktQ' target='_blank') https://unsplash.com/photos/A5-Xr7WyktQ
+          li: a(href='https://unsplash.com/photos/Qrspubmx6kE' target='_blank') https://unsplash.com/photos/Qrspubmx6kE
+          li: a(href='https://unsplash.com/photos/LrL45dXXvJ8' target='_blank') https://unsplash.com/photos/LrL45dXXvJ8
+          li: a(href='https://unsplash.com/photos/9e9PD9blAto' target='_blank') https://unsplash.com/photos/9e9PD9blAto
+          li: a(href='https://unsplash.com/photos/Nxu2OhFMp1Q' target='_blank') https://unsplash.com/photos/Nxu2OhFMp1Q
+          li: a(href='https://unsplash.com/photos/fHmszcSNBM4' target='_blank') https://unsplash.com/photos/fHmszcSNBM4
+          li: a(href='https://unsplash.com/photos/YKW0JjP7rlU' target='_blank') https://unsplash.com/photos/YKW0JjP7rlU
+          li: a(href='https://unsplash.com/photos/6MT4_Ut8a3Y' target='_blank') https://unsplash.com/photos/6MT4_Ut8a3Y
+          li: a(href='https://unsplash.com/photos/VFrcRtEQKL8' target='_blank') https://unsplash.com/photos/VFrcRtEQKL8
+          li: a(href='https://unsplash.com/photos/HbyYFFokvm0' target='_blank') https://unsplash.com/photos/HbyYFFokvm0
+          li: a(href='https://unsplash.com/photos/uPYpcsbICI4' target='_blank') https://unsplash.com/photos/uPYpcsbICI4
+
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

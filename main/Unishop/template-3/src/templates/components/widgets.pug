@@ -1,0 +1,351 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Widgets'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Widgets'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-lg.text-uppercase General Widgets
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4
+            // Widget Contacts
+            section.widget
+              h3.widget-title Contacts Widget
+              p Phone: 00 33 169 7720
+              ul.list-unstyled.text-sm
+                li
+                  span.text-muted Monday-Friday:
+                  | &nbsp;9.00 am - 8.00 pm
+                li
+                  span.text-muted Saturday:
+                  | &nbsp;10.00 am - 6.00 pm
+              p: a(href='#').navi-link support@unishop.com
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-circle.sb-facebook
+                i.socicon-facebook
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+                i.socicon-twitter
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-circle.sb-instagram
+                i.socicon-instagram
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-circle.sb-google-plus
+                i.socicon-googleplus
+
+          .col-lg-4
+            // Widget Links
+            section.widget.widget-links
+              h3.widget-title Links Widget
+              ul
+                li: a(href='#') Careers
+                li: a(href='#') About Unishop
+                li: a(href='#') Our Story
+                li: a(href='#') Services
+                li: a(href='#') Our Blog
+
+          .col-lg-4
+            // Widget Search
+            section.widget.widget-links
+              h3.widget-title Search Widget
+              form(method='get').input-group.form-group
+                span.input-group-btn
+                  button(type='submit')
+                    i.icon-search
+                input(type='search' placeholder='Search site').form-control
+
+        h6.text-muted.text-lg.text-uppercase.padding-top-1x Blog Widgets
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4
+            // Widget Categories
+            section.widget.widget-categories
+              h3.widget-title Categories Widget
+              ul
+                li
+                  a(href='#') Editor's Choice
+                  <span>(24)</span>
+                li
+                  a(href='#') Electronics
+                  <span>(12)</span>
+                li
+                  a(href='#') Industrial Design
+                  <span>(5)</span>
+                li
+                  a(href='#') Online Shopping
+                  <span>(7)</span>
+                li
+                  a(href='#') Hardware &amp; Software
+                  <span>(3)</span>
+
+          .col-lg-4
+            // Widget Featured Posts
+            section.widget.widget-featured-posts
+              h3.widget-title Featured Posts Widget
+              // Entry
+              .entry
+                .entry-thumb
+                  a(href='#')
+                    img(src='../img/blog/widget/01.jpg', alt='Post')
+                .entry-content
+                  h4.entry-title
+                    a(href='#') Factors Behind Wearable Gadgets Popularity
+                  span.entry-meta by Olivia Reyes
+              // Entry
+              .entry
+                .entry-thumb
+                  a(href='#')
+                    img(src='../img/blog/widget/02.jpg', alt='Post')
+                .entry-content
+                  h4.entry-title
+                    a(href='#') Smartphones in Every Day Life 
+                  span.entry-meta by Logan Coleman
+              // Entry
+              .entry
+                .entry-thumb
+                  a(href='#')
+                    img(src='../img/blog/widget/03.jpg', alt='Post')
+                .entry-content
+                  h4.entry-title
+                    a(href='#') Retro Cameras are Trending. Why so Popular?
+                  span.entry-meta by Cynthia Gomez
+
+          .col-lg-4
+            // Widget Tags
+            section.widget.widget-tags
+              h3.widget-title Tags Widget
+              a(href='#').tag #electronics
+              a(href='#').tag #cpu
+              a(href='#').tag #gadgets
+              span.tag.active #active tag
+              a(href='#').tag #smartphones
+
+        h6.text-muted.text-lg.text-uppercase.padding-top-1x Shop Widgets
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4
+            // Widget Categories
+            section.widget.widget-categories
+              h3.widget-title Shop Categories Widget
+              ul
+                li.has-children.expanded
+                  a(href='#') Computers &amp; Accessories
+                  span (1138)
+                  ul
+                    li
+                      a(href='#') Desktop PCs
+                      span (508)
+                      ul
+                        li: a(href='#') Office PC
+                        li: a(href='#') Gaming PC
+                    li
+                      a(href='#') Laptops
+                      span (423)
+                      ul
+                        li: a(href='#') 15' Screens 
+                        li: a(href='#') 13' Screens 
+                    li
+                      a(href='#') Nettops
+                      span (97)
+                    li
+                      a(href='#') PC Accessories
+                      span (110)
+                li.has-children
+                  a(href='#') Smartphones &amp; Tablets
+                  span (2356)
+                  ul
+                    li
+                      a(href='#') Smartphones
+                      span (1032)
+                      ul
+                        li: a(href='#') QHD Screen
+                        li: a(href='#') WQHD Screen
+                        li: a(href='#') Full HD Screen
+                        li: a(href='#') Super Amoled
+                    li
+                      a(href='#') Tablets
+                      span (937)
+                      ul
+                        li: a(href='#') Wifi only
+                        li: a(href='#') Wifi + 3G
+                        li: a(href='#') Android
+                        li: a(href='#') iOS
+                    li
+                      a(href='#') Phablets
+                      span (386)
+                li.has-children
+                  a(href='#') TV, Video &amp; Audio
+                  span (420)
+                  ul
+                    li
+                      a(href='#') Smart TV Sets
+                      span (180)
+                    li
+                      a(href='#') Blue-Ray Players
+                      span (132)
+                    li
+                      a(href='#') Sound Systems
+                      span (47)
+                    li
+                      a(href='#') Home Theaters
+                      span (61)
+                li.has-children
+                  a(href='#') Cameras, Photo &amp; Video
+                  span (874)
+                  ul
+                    li
+                      a(href='#') Photo Cameras
+                      span (211)
+                    li
+                      a(href='#') Video Cameras
+                      span (195)
+                    li
+                      a(href='#') Action Cameras
+                      span (159)
+                    li
+                      a(href='#') Tripods &amp; Stands
+                      span (203)
+                    li
+                      a(href='#') Lenses
+                      span (106)
+          .col-lg-4
+            // Widget Brand Filter
+            section.widget
+              h3.widget-title Filter Widget
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='apple').custom-control-input
+                label(for='apple').custom-control-label
+                  | Apple&nbsp;
+                  span.text-muted (254)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='bosh').custom-control-input
+                label(for='bosh').custom-control-label
+                  | Bosh&nbsp;
+                  span.text-muted (39)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='canon').custom-control-input
+                label(for='canon').custom-control-label
+                  | Canon Inc.&nbsp;
+                  span.text-muted (128)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='dell').custom-control-input
+                label(for='dell').custom-control-label
+                  | Dell&nbsp;
+                  span.text-muted (310)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='hewlet').custom-control-input
+                label(for='hewlet').custom-control-label
+                  | Hewlett-Packard&nbsp;
+                  span.text-muted (42)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='hitachi').custom-control-input
+                label(for='hitachi').custom-control-label
+                  | Hitachi&nbsp;
+                  span.text-muted (217)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='lg').custom-control-input
+                label(for='lg').custom-control-label
+                  | LG Electronics&nbsp;
+                  span.text-muted (310)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='panasonic').custom-control-input
+                label(for='panasonic').custom-control-label
+                  | Panasonic&nbsp;
+                  span.text-muted (74)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='siemens').custom-control-input
+                label(for='siemens').custom-control-label
+                  | Siemens&nbsp;
+                  span.text-muted (86)
+          .col-lg-4
+            // Widget Price Range
+            section.widget.widget-categories
+              h3.widget-title Price Range Widget
+              form(method='post' data-start-min='250' data-start-max='650' data-min='0' data-max='1000' data-step='1').price-range-slider
+                .ui-range-slider
+                footer.ui-range-slider-footer
+                  .column
+                    button(type='submit').btn.btn-outline-primary.btn-sm Filter
+                  .column
+                    .ui-range-values
+                      .ui-range-value-min
+                        | $<span></span>
+                        input(type='hidden')
+                      | &nbsp;-&nbsp;
+                      .ui-range-value-max
+                        | $<span></span>
+                        input(type='hidden')
+
+        h6.text-muted.text-lg.text-uppercase.padding-top-1x On Dark Background
+        hr.margin-bottom-1x
+        div(style='padding: 30px 20px 0;').bg-dark
+          .row
+            .col-lg-4
+              // Widget Categories
+              section.widget.widget-categories.widget-light-skin
+                h3.widget-title Categories Widget
+                ul
+                  li
+                    a(href='#') Editor's Choice
+                    <span>(24)</span>
+                  li
+                    a(href='#') Electronics
+                    <span>(12)</span>
+                  li
+                    a(href='#') Industrial Design
+                    <span>(5)</span>
+                  li
+                    a(href='#') Online Shopping
+                    <span>(7)</span>
+                  li
+                    a(href='#') Hardware &amp; Software
+                    <span>(3)</span>
+            .col-lg-4
+              // Featured Products Widget
+              section.widget.widget-featured-products.widget-light-skin
+                h3.widget-title Featured Products Widget
+                // Entry
+                .entry
+                  .entry-thumb
+                    a(href='#')
+                      img(src='../img/shop/widget/01.jpg', alt='Product')
+                  .entry-content
+                    h4.entry-title
+                      a(href='#') GoPro Hero4 Silver
+                    span.entry-meta $287.99
+                // Entry
+                .entry
+                  .entry-thumb
+                    a(href='#')
+                      img(src='../img/shop/widget/02.jpg', alt='Product')
+                  .entry-content
+                    h4.entry-title
+                      a(href='#') Puro Sound Labs BT2200
+                    span.entry-meta $95.99
+                // Entry
+                .entry
+                  .entry-thumb
+                    a(href='#')
+                      img(src='../img/shop/widget/03.jpg', alt='Product')
+                  .entry-content
+                    h4.entry-title
+                      a(href='#') HP OfficeJet Pro 8710
+                    span.entry-meta $89.70
+            .col-lg-4
+              // Widget Tags
+              section.widget.widget-tags.widget-light-skin
+                h3.widget-title Tags Widget
+                a(href='#').tag #electronics
+                a(href='#').tag #cpu
+                a(href='#').tag #gadgets
+                span.tag.active #active tag
+                a(href='#').tag #smarphones
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu
+        .mb-2.hidden-md-up

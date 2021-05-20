@@ -1,0 +1,187 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Single Post'
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'Single Post'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Our Blog', 'link': 'blog.html'}, {'title': 'Single Post'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-2x.mb-4
+    .row.justify-content-center
+      .col-lg-10
+
+        // Post Meta
+        .blog-post-meta
+          .column
+            span by&nbsp;
+            a(href='#') Rokaux
+            span.divider
+            span in&nbsp;
+            a(href='#') Category name
+          .column
+            span
+              i.material-icons.date_range
+              | &nbsp;Jul 24, 2017
+            span.divider
+            a(href='#comments').scroll-to
+              i.material-icons.chat_bubble_outline
+              | &nbsp;13
+
+        // Image Carousel
+        .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true }')
+          figure
+            img(src='img/blog/single01.jpg', alt='Image')
+          figure
+            img(src='img/blog/single02.jpg', alt='Image')
+          figure
+            img(src='img/blog/single03.jpg', alt='Image')
+
+        // Post Content     
+        h2.margin-top-2x Modern stylish home interiors
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minima veniam, quis nostrum exercitationem.
+        p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        .row
+          .col-xl-10.offset-xl-1.mb-3
+            blockquote.margin-top-1x.margin-bottom-1x
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.
+              cite Someone famous
+        p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+
+        // Post Tags + Share
+        .d-flex.flex-wrap.justify-content-between.align-items-center.pt-3.pb-4
+          .pb-2
+            a(href='#').text-sm.text-muted.navi-link #furniture,
+            a(href='#').text-sm.text-muted.navi-link &nbsp;#interiors&nbsp;
+          .pb-2
+            span.d-inline-block.align-middle.text-sm.text-muted Share post:&nbsp;&nbsp;&nbsp;
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-rounded.sb-facebook
+              i.socicon-facebook
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-rounded.sb-twitter
+              i.socicon-twitter
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-rounded.sb-instagram
+              i.socicon-instagram
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-rounded.sb-google-plus
+              i.socicon-googleplus
+
+        // Post Navigation
+        .entry-navigation
+          .column.text-left
+            a(href='#' class='btn btn-outline-secondary btn-sm')
+              i.material-icons.keyboard_arrow_left
+              | &nbsp;Prev
+          .column
+            a(href='blog.html' class='btn btn-outline-secondary view-all' data-toggle='tooltip' data-placement='top' title='All entries')
+              i.material-icons.menu
+          .column.text-right
+            a(href='#' class='btn btn-outline-secondary btn-sm')
+              | Next&nbsp;
+              i.material-icons.keyboard_arrow_right
+        
+        // Relevant Products
+        h3.padding-top-3x.padding-bottom-1x Relevant products from our shop
+        .row
+          .col-md-3.col-sm-6
+            .widget.widget-featured-products.py-0
+              .entry
+                .entry-thumb
+                  a(href='shop-single.html')
+                    img(src='img/shop/widget/01.png', alt='Product')
+                .entry-content
+                  h4.entry-title
+                    a(href='shop-single.html') Max Task Chair
+                  span.entry-meta $299.00
+          .col-md-3.col-sm-6
+            .widget.widget-featured-products.py-0
+              .entry
+                .entry-thumb
+                  a(href='shop-single.html')
+                    img(src='img/shop/widget/02.png', alt='Product')
+                .entry-content
+                  h4.entry-title
+                    a(href='shop-single.html') Drawer File Cabinet
+                  span.entry-meta $265.00
+          .col-md-3.col-sm-6
+            .widget.widget-featured-products.py-0
+              .entry
+                .entry-thumb
+                  a(href='shop-single.html')
+                    img(src='img/shop/widget/03.png', alt='Product')
+                .entry-content
+                  h4.entry-title
+                    a(href='shop-single.html') Campfire Paper Table
+                  span.entry-meta $570.00
+          .col-md-3.col-sm-6
+            .widget.widget-featured-products.py-0
+              .entry
+                .entry-thumb
+                  a(href='shop-single.html')
+                    img(src='img/shop/widget/04.png', alt='Product')
+                .entry-content
+                  h4.entry-title
+                    a(href='shop-single.html') Party Lounge Chair
+                  span.entry-meta $985.00
+        
+        // Comments
+        section#comments.padding-top-3x
+          h3.padding-bottom-1x Comments
+          // Comment
+          .comment
+            .comment-author-ava
+              img(src='img/reviews/01.jpg' alt='Comment author')
+            .comment-body
+              .comment-header
+                h4.comment-title Francis Burton
+              p.comment-text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+              .comment-footer
+                .column
+                  span.comment-meta 2 days ago
+                .column
+                  a(href='#' class='reply-link')
+                    i.material-icons.reply
+                    | Reply
+              // Comment reply
+              .comment.comment-reply
+                .comment-author-ava
+                  img(src='img/reviews/02.jpg' alt='Comment author')
+                .comment-body
+                  .comment-header
+                    h4.comment-title Maggie Scott
+                  p.comment-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  .comment-footer
+                    span.comment-meta 1 day ago
+          // Comment
+          .comment
+            .comment-author-ava
+              img(src='img/reviews/03.jpg' alt='Comment author')
+            .comment-body
+              .comment-header
+                h4.comment-title Jacob Hammond
+              p.comment-text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+              .comment-footer
+                .column
+                  span.comment-meta 5 days ago
+                .column
+                  a(href='#' class='reply-link')
+                    i.material-icons.reply
+                    | Reply
+
+        // Comment Form
+        h4.padding-top-2x.padding-bottom-1x Leave a Comment
+        form(method='post').row
+          .col-sm-6
+            .form-group
+              label(for='comment-name') Name
+              input(type='text' id='comment-name' placeholder='John Doe' required).form-control
+          .col-sm-6
+            .form-group
+              label(for='comment-email') E-mail
+              input(type='email' id='comment-email' placeholder='johndoe@email.com' required).form-control
+          .col-12
+            .form-group
+              label(for='comment-text') Comment
+              textarea(rows='7' id='comment-text' placeholder='Write your comment here...' required).form-control
+          .col-12.text-right
+            button(type='submit').btn.btn-primary Post Comment

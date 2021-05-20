@@ -1,0 +1,37 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Global Colors'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Global Colors
+        p 
+          u There are 3 options to customize Unishop global colors:
+        ul
+          li Use predefined color skin. Choose one of 4 existed color .css files.
+          li Customize global colors via Sass variables
+          li Replace global colors in CSS
+        h3.mb-3 Using predefined color skin
+        p Unishop comes with 4 predefined color schemes. They are found inside <code>Unishop/dist/css</code> folder. Each file ends with <strong>hex number of primary color</strong> except for default blue scheme which is <code>styles.min.css</code>.
+        p.mb-4 To use chosen color scheme you need to replace link to <code>styles.min.css</code> in the <code>head</code> tag of the document. The easiest and fastest way to do that is using <strong>.pug templates</strong>. Head section is found in <code>Unishop/src/templates/partials/head.pug</code>. See <a href='using-preprocessors.html'>Using Preprocessors</a> section for <code>.pug</code> compilation instructions.
+        h3.mb-3 Customize global colors via Sass variables
+        p In case you want to create your own color scheme - the fastest and painless way to do that is via Sass variables.
+        p You need to edit <code>Unishop/src/scss/helpers/_variables.scss</code> file and re-compile new <code>styles.min.css</code> file either using <strong>Prepross</strong> or <strong>Grunt</strong>. Check <a href='using-preprocessors.html'>Using Preprocessors</a> and <a href='working-with-grunt.html'>Working with Grunt</a> sections for instructions.
+        p
+          u Blelow is the screenshot of the part of Sass variables file responsible for global colors:
+        img(src='../img/docs/sass_variables.jpg' alt='Sass Variables').d-block.img-thumbnail.rounded.mb-4
+        h3.mb-3 Replace global colors in CSS
+        p This is the hardest way to do things done. I don't recommend it but if you prefer vanilla CSS you can replace all color hex values inside <code>Unishop/dist/css/styles.min.css</code> with your own using "find and replace" panel of you code editor. Refer to the image above as a guidance.
+
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

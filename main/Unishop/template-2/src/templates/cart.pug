@@ -1,0 +1,131 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Cart'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Cart'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Cart'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+
+    // Alert
+    div(style='margin-bottom: 30px;').alert.alert-info.alert-dismissible.fade.show.text-center
+      span(data-dismiss='alert').alert-close
+      i.material-icons.redeem.lead
+      | &nbsp;&nbsp;With this purchase you will earn <strong>622</strong> Reward Points.
+    
+    // Shopping Cart
+    .table-responsive.shopping-cart
+        table.table
+          thead
+            tr
+              th Product Name
+              th.text-center Quantity
+              th.text-center Subtotal
+              th.text-center Discount
+              th.text-center
+                a(href='#').btn.btn-sm.btn-outline-danger Clear Cart
+          tbody
+            tr
+              td
+                .product-item
+                  a(href='shop-single.html').product-thumb
+                    img(src='img/shop/cart/01.jpg', alt='Product')
+                  .product-info
+                    h4.product-title
+                      a(href='shop-single.html') 3-Drawer File Cabinet
+                    span
+                      em Color:
+                      |  Aqua
+                    span
+                      em Accent Color:
+                      |  White
+              td.text-center
+                .count-input
+                  select.form-control
+                    option 1
+                    option 2
+                    option 3
+                    option 4
+                    option 5
+              td.text-center.text-lg.text-medium $269.00
+              td.text-center.text-lg.text-medium $12.00
+              td.text-center
+                a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+                  i.material-icons.icon_close
+            tr
+              td
+                .product-item
+                  a(href='shop-single.html').product-thumb
+                    img(src='img/shop/cart/02.jpg', alt='Product')
+                  .product-info
+                    h4.product-title
+                      a(href='shop-single.html') Plastic Tissue Holder
+                    span
+                      em Size:
+                      |  Medium
+                    span
+                      em Color:
+                      |  White
+              td.text-center
+                .count-input
+                  select.form-control
+                    option 1
+                    option(selected) 2
+                    option 3
+                    option 4
+                    option 5
+              td.text-center.text-lg.text-medium $152.80
+              td.text-center &mdash;
+              td.text-center
+                a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+                  i.material-icons.icon_close
+            tr
+              td
+                .product-item
+                  a(href='shop-single.html').product-thumb
+                    img(src='img/shop/cart/03.jpg', alt='Product')
+                  .product-info
+                    h4.product-title
+                      a(href='shop-single.html') Campfire Paper Table
+                    span
+                      em Color:
+                      |  Walnut
+                    span
+                      em Accent Color:
+                      |  White
+              td.text-center
+                .count-input
+                  select.form-control
+                    option 1
+                    option 2
+                    option 3
+                    option 4
+                    option 5
+              td.text-center.text-lg.text-medium $289.00
+              td.text-center &mdash;
+              td.text-center
+                a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+                  i.material-icons.icon_close
+    .shopping-cart-footer
+      .column
+        form(method='post').coupon-form
+          input(type='text' placeholder='Coupon code' required).form-control.form-control-sm
+          button(type='submit' class='btn btn-outline-primary btn-sm') Apply Coupon
+      .column.text-lg
+        | Subtotal: 
+        span.text-medium.text-dark $622.40
+    .shopping-cart-footer
+      .column
+        a(href='shop-boxed-ls.html' class='btn btn-outline-secondary')
+          i.icon-arrow-left
+          | &nbsp;Back to Shopping
+      .column
+        a(href='#' class='btn btn-primary' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Your cart' data-toast-message='is updated successfully!') Update Cart
+        a(href='checkout-address.html' class='btn btn-success') Checkout
+
+    include partials/related-products-carousel
+    

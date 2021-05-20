@@ -1,0 +1,61 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Working With Grunt'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Working With Grunt
+        p As has been mentioned in previous section, <strong>Grunt</strong> is a JavaScript task runner. It helps with performing repetitive tasks like minification, compilation, unit testing, linting, etc. This is possible thanks to extensive Grunt Plugins library.
+        p
+          | Grunt tasks are already set up for you. They are stored inside <code>Unishop/gruntfile.js</code>. But in order to have access to them via you Command Line tool you will need to install <strong>grunt-cli node package</strong>. Grunt CLI stands for Grunt Command Line Interface. 
+          u To do that type following line in your terminal:
+        kbd.d-inline-block.mb-3 npm install -g grunt-cli
+        span.d-block.text-info.mb-4 * if you are on Mac make sure to use <span class='text-medium'>sudo</span> to install packages globally otherwise you may runt into error.
+        h3 Grunt CLI commands
+        ul.list-icon
+          li 
+            i.icon-arrow-right
+            kbd grunt
+            |  - this main command will fire default grunt task which includes: launching BrowserSync, vendor files concatination, javascript minification, sass compilation and lanching watch task. BrowserSync will create dev server and sync your browser with your code editor. Note: to use other separate tasks explained below you will need to open other Terminal window and leave this one with running server intact.
+          li 
+            i.icon-arrow-right
+            kbd grunt concat
+            |  - concatination vendor .css / .js files found inside <code>vendor</code> folder in one vendor.min.css / vendor.min.js file which are linked to your HTML document.
+          li 
+            i.icon-arrow-right
+            kbd grunt uglify
+            |  - minify and uglify main <code>scripts.js</code> file from <code>src</code> folder to <code>dist/js/scripts.min.js</code> file which linked to your HTML document.
+          li 
+            i.icon-arrow-right
+            kbd grunt pug
+            |  - compiles <code>.pug</code> template files into HTML. Again from <code>src</code> to <code>dist</code> folder.
+          li 
+            i.icon-arrow-right
+            kbd grunt sass:expanded
+            |  - compiles <code>.scss</code> files into non-minified CSS (css/styles.css). From <code>src</code> to <code>dist</code> folder.
+          li 
+            i.icon-arrow-right
+            kbd grunt sass:minified
+            |  - compiles <code>.scss</code> files into minified CSS (css/styles.min.css). From <code>src</code> to <code>dist</code> folder.
+          li 
+            i.icon-arrow-right
+            kbd grunt watch
+            |  - launches <code>watch</code> task. It will watch changes of your .scss / .js / .pug files and automatically compile them into .css / .js / .html.
+        h3 Next steps
+        p Now you when you are equiped with all necessary tools and dev invironment is all set you are ready to dive into Unishop customization. 
+        p
+          | Take some time to familiarize yourself with 
+          a(href='project-structure.html') Project structure.
+
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

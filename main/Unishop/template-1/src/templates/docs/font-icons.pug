@@ -1,0 +1,37 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Font Icons'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Font Icons
+        p.mb-4 I used multiple packs of font icons in this template.
+        h6.mb-3 Adding Feather Icons:
+        pre.mb-4
+          | &lt;i class="icon-<strong>iconName</strong>"&gt;&lt;/i&gt;
+        h6.mb-3 Adding Socicon Icons (Social networks):
+        pre.mb-4
+          | &lt;a href="#" class="sb-<strong>brandName</strong>"&gt;&lt;i class="socicon-<strong>brandName</strong>"&gt;&lt;/i&gt;&lt;/a&gt;
+          br
+          span.text-muted &lt;!-- For example --&gt;
+          br
+          | &lt;a href="#" class="sb-facebook"&gt;&lt;i class="socicon-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+        h6.mb-3 Adding Pixeden 7 Stroke Icons:
+        pre.mb-4
+          | &lt;i class="pe-7s-<strong>iconName</strong>"&gt;&lt;/i&gt;
+        p: a(href='feather-icons' target='_blank') Complete list of Feather Icons
+        p: a(href='http://www.socicon.com/chart.php' target='_blank') Complete list of Socicon Icons
+        a(href='http://themes-pixeden.com/font-demos/7-stroke/' target='_blank') Complete list of Pixeden 7 Stroke Icons
+
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

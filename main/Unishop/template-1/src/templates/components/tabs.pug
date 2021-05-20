@@ -1,0 +1,129 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Tabs'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Tabs'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Tabs with Dropdown
+        hr.margin-bottom-1x
+        ul(class='nav nav-tabs' role='tablist')
+          li.nav-item: a(href='#home1' class='nav-link active' data-toggle='tab' role='tab') Home
+          li.nav-item: a(href='#profile1' class='nav-link' data-toggle='tab' role='tab') Profile
+          li.nav-item.dropdown
+            a(href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' role='button') Dropdown
+            .dropdown-menu
+              a(href='#messages1' class='dropdown-item' data-toggle='tab' role='tab') Messages
+              a(href='#settings1' class='dropdown-item' data-toggle='tab' role='tab') Settings
+        .tab-content
+          div(id='home1' class='tab-pane fade show active' role='tabpanel')
+            p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+          div(id='profile1' class='tab-pane fade' role='tabpanel')
+            p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+          div(id='messages1' class='tab-pane fade' role='tabpanel')
+            p Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+          div(id='settings1' class='tab-pane fade' role='tabpanel')
+            p Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Transition Effects
+        hr.margin-bottom-1x
+        ul(class='nav nav-tabs' role='tablist')
+          li.nav-item: a(href='#fade' class='nav-link active' data-toggle='tab' role='tab') Fade
+          li.nav-item: a(href='#scaleup' class='nav-link' data-toggle='tab' role='tab') Scale Up
+          li.nav-item: a(href='#scaledown' class='nav-link' data-toggle='tab' role='tab') Scale Down
+          li.nav-item: a(href='#left' class='nav-link' data-toggle='tab' role='tab') Left
+        .tab-content
+          div(id='fade' class='tab-pane transition fade show active' role='tabpanel')
+            p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+          div(id='scaleup' class='tab-pane transition fade scale' role='tabpanel')
+            p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+          div(id='scaledown' class='tab-pane transition fade scaledown' role='tabpanel')
+            p Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+          div(id='left' class='tab-pane transition fade left' role='tabpanel')
+            p Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.
+        .padding-top-1x.mt-2
+        ul(class='nav nav-tabs' role='tablist')
+          li.nav-item: a(href='#right' class='nav-link active' data-toggle='tab' role='tab') Right
+          li.nav-item: a(href='#top' class='nav-link' data-toggle='tab' role='tab') Top
+          li.nav-item: a(href='#bottom' class='nav-link' data-toggle='tab' role='tab') Bottom
+          li.nav-item: a(href='#flip' class='nav-link' data-toggle='tab' role='tab') Flip
+        .tab-content
+          div(id='right' class='tab-pane transition fade right show active' role='tabpanel')
+            p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+          div(id='top' class='tab-pane transition fade top' role='tabpanel')
+            p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+          div(id='bottom' class='tab-pane transition fade bottom' role='tabpanel')
+            p Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+          div(id='flip' class='tab-pane transition fade flip' role='tabpanel')
+            p Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Tabs with Icons
+        hr.margin-bottom-1x
+        ul(class='nav nav-tabs' role='tablist')
+          li.nav-item
+            a(href='#archive' class='nav-link active' data-toggle='tab' role='tab')
+              i.icon-help
+              | Help
+          li.nav-item
+            a(href='#profile5' class='nav-link' data-toggle='tab' role='tab')
+              i.icon-head
+              | Profile
+          li.nav-item
+            a(href='#settings5' class='nav-link' data-toggle='tab' role='tab')
+              i.icon-cog 
+              | Settings
+        .tab-content
+          div(id='archive' class='tab-pane fade show active' role='tabpanel')
+            p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+          div(id='profile5' class='tab-pane fade' role='tabpanel')
+            p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+          div(id='settings5' class='tab-pane fade' role='tabpanel')
+            p Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Justified Tabs
+        hr.margin-bottom-1x
+        ul(class='nav nav-tabs nav-justified' role='tablist')
+          li.nav-item: a(href='#home2' class='nav-link active' data-toggle='tab' role='tab') Home
+          li.nav-item: a(href='#profile2' class='nav-link' data-toggle='tab' role='tab') Profile
+          li.nav-item: a(href='#settings2' class='nav-link' data-toggle='tab' role='tab') Settings
+        .tab-content
+          div(id='home2' class='tab-pane fade show active' role='tabpanel')
+            p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+          div(id='profile2' class='tab-pane fade' role='tabpanel')
+            p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+          div(id='settings2' class='tab-pane fade' role='tabpanel')
+            p Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Align Center
+        hr.margin-bottom-1x
+        ul(class='nav nav-tabs justify-content-center' role='tablist')
+          li.nav-item: a(href='#home3' class='nav-link active' data-toggle='tab' role='tab') Home
+          li.nav-item: a(href='#profile3' class='nav-link' data-toggle='tab' role='tab') Profile
+          li.nav-item: a(href='#settings3' class='nav-link' data-toggle='tab' role='tab') Settings
+        .tab-content
+          div(id='home3' class='tab-pane fade show active' role='tabpanel')
+            p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+          div(id='profile3' class='tab-pane fade' role='tabpanel')
+            p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+          div(id='settings3' class='tab-pane fade' role='tabpanel')
+            p Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Align Right
+        hr.margin-bottom-1x
+        ul(class='nav nav-tabs justify-content-end' role='tablist')
+          li.nav-item: a(href='#home4' class='nav-link active' data-toggle='tab' role='tab') Home
+          li.nav-item: a(href='#profile4' class='nav-link' data-toggle='tab' role='tab') Profile
+          li.nav-item: a(href='#settings4' class='nav-link' data-toggle='tab' role='tab') Settings
+        .tab-content
+          div(id='home4' class='tab-pane fade show active' role='tabpanel')
+            p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+          div(id='profile4' class='tab-pane fade' role='tabpanel')
+            p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+          div(id='settings4' class='tab-pane fade' role='tabpanel')
+            p Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

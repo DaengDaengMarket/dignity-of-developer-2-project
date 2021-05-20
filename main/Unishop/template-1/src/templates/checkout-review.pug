@@ -1,0 +1,131 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Checkout'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Review'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Checkout'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+
+      // Checkout Adress
+      .col-xl-9.col-lg-8
+        .checkout-steps
+          a(href='checkout-review.html' class='active') 4. Review
+          a(href='checkout-payment.html' class='completed')
+            span.step-indicator.icon-circle-check
+            span.angle
+            | 3. Payment
+          a(href='checkout-shipping.html' class='completed')
+            span.step-indicator.icon-circle-check
+            span.angle
+            | 2. Shipping
+          a(href='checkout-address.html' class='completed')
+            span.step-indicator.icon-circle-check
+            span.angle
+            | 1. Address
+
+        h4 Review Your Order
+        hr.padding-bottom-1x
+        .table-responsive.shopping-cart
+          table.table
+            thead
+              tr
+                th Product Name
+                th.text-center Subtotal
+                th
+            tbody
+              tr
+                td
+                  .product-item
+                    a(href='shop-single.html').product-thumb
+                      img(src='img/shop/cart/01.jpg', alt='Product')
+                    .product-info
+                      h4.product-title
+                        a(href='shop-single.html')
+                          | Unionbay Park
+                          small x 1
+                      span
+                        em Size:
+                        |  10.5
+                      span
+                        em Color:
+                        |  Dark Blue
+                td.text-center.text-lg.text-medium $43.90
+                td.text-center: a(href='cart.html').btn.btn-outline-primary.btn-sm Edit
+              tr
+                td
+                  .product-item
+                    a(href='shop-single.html').product-thumb
+                      img(src='img/shop/cart/02.jpg', alt='Product')
+                    .product-info
+                      h4.product-title
+                        a(href='shop-single.html')
+                          | Daily Fabric Cap
+                          small x 2
+                      span
+                        em Size:
+                        |  XL
+                      span
+                        em Color:
+                        |  Black
+                td.text-center.text-lg.text-medium $24.89
+                td.text-center: a(href='cart.html').btn.btn-outline-primary.btn-sm Edit
+              tr
+                td
+                  .product-item
+                    a(href='shop-single.html').product-thumb
+                      img(src='img/shop/cart/03.jpg', alt='Product')
+                    .product-info
+                      h4.product-title
+                        a(href='shop-single.html')
+                          | Cole Haan Crossbody
+                          small x 1
+                      span
+                        em Size:
+                        |  -
+                      span
+                        em Color:
+                        |  Turquoise
+                td.text-center.text-lg.text-medium $200.00
+                td.text-center: a(href='cart.html').btn.btn-outline-primary.btn-sm Edit
+        .shopping-cart-footer
+          .column
+          .column.text-lg
+            | Subtotal: 
+            span.text-medium $289.68
+        .row.padding-top-1x.mt-3
+          .col-sm-6
+            h5 Shipping to:
+            ul.list-unstyled
+              li
+                span.text-muted Client:
+                | Daniel Adams
+              li
+                span.text-muted Address:
+                | 44 Shirley Ave. West Chicago, IL 60185, USA
+              li
+                span.text-muted Phone:
+                | +1(808) 764 554 330
+          .col-sm-6
+            h5 Payment method:
+            ul.list-unstyled
+              li
+                span.text-muted Credit Card:
+                | **** **** **** 5300
+        .checkout-footer.margin-top-1x
+          .column.hidden-xs-down
+            a(href='checkout-payment.html' class='btn btn-outline-secondary')
+              i.icon-arrow-left
+              | &nbsp;Back
+          .column
+            a(href='checkout-complete.html' class='btn btn-primary') Complete Order
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        include partials/checkout-sidebar    
+    

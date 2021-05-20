@@ -1,0 +1,328 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Widgets'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Widgets'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase General Widgets
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4
+            // Widget Contacts
+            section.widget
+              h3.widget-title Contacts Widget
+              p Phone: 00 33 169 7720
+              ul.list-unstyled.text-sm
+                li
+                  span.text-muted Monday-Friday:
+                  | 9.00 am - 8.00 pm
+                li
+                  span.text-muted Saturday:
+                  | 10.00 am - 6.00 pm
+              p: a(href='#').navi-link support@unishop.com
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-circle.sb-facebook
+                i.socicon-facebook
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+                i.socicon-twitter
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-circle.sb-instagram
+                i.socicon-instagram
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-circle.sb-google-plus
+                i.socicon-googleplus
+
+          .col-lg-4
+            // Widget Links
+            section.widget.widget-links
+              h3.widget-title Links Widget
+              ul
+                li: a(href='#') Careers
+                li: a(href='#') About Unishop
+                li: a(href='#') Our Story
+                li: a(href='#') Services
+                li: a(href='#') Our Blog
+
+          .col-lg-4
+            // Widget Search
+            section.widget.widget-links
+              h3.widget-title Search Widget
+              form(method='get').input-group.form-group
+                span.input-group-btn
+                  button(type='submit')
+                    i.icon-search
+                input(type='search' placeholder='Search site').form-control
+
+        h6.text-muted.text-normal.text-uppercase.padding-top-1x Blog Widgets
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4
+            // Widget Categories
+            section.widget.widget-categories
+              h3.widget-title Categories Widget
+              ul
+                li
+                  a(href='#') Editor's Choice
+                  <span>(24)</span>
+                li
+                  a(href='#') Fashion
+                  <span>(12)</span>
+                li
+                  a(href='#') Travel
+                  <span>(5)</span>
+                li
+                  a(href='#') Online Shopping
+                  <span>(7)</span>
+                li
+                  a(href='#') Closing Design
+                  <span>(3)</span>
+
+          .col-lg-4
+            // Widget Featured Posts
+            section.widget.widget-featured-posts
+              h3.widget-title Featured Posts Widget
+              // Entry
+              .entry
+                .entry-thumb
+                  a(href='#')
+                    img(src='../img/blog/widget/01.jpg', alt='Post')
+                .entry-content
+                  h4.entry-title
+                    a(href='#') Trending Winter Boots
+                  span.entry-meta by Olivia Reyes
+              // Entry
+              .entry
+                .entry-content
+                  h4.entry-title
+                    a(href='#') Global Travel And Vacations Luxury Travel On A Tight Budget
+                  span.entry-meta by Logan Coleman
+              // Entry
+              .entry
+                .entry-thumb
+                  a(href='#')
+                    img(src='../img/blog/widget/02.jpg', alt='Post')
+                .entry-content
+                  h4.entry-title
+                    a(href='#') Hoop Earrings A Style From History
+                  span.entry-meta by Cynthia Gomez
+
+          .col-lg-4
+            // Widget Tags
+            section.widget.widget-tags
+              h3.widget-title Tags Widget
+              a(href='#').tag #design
+              a(href='#').tag #fashion
+              a(href='#').tag #travelling
+              span.tag.active #active tag
+              a(href='#').tag #shopping
+
+        h6.text-muted.text-normal.text-uppercase.padding-top-1x Shop Widgets
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4
+            // Widget Categories
+            section.widget.widget-categories
+              h3.widget-title Shop Categories Widget
+              ul
+                li.has-children.expanded
+                  a(href='#') Shoes
+                  span (1138)
+                  ul
+                    li
+                      a(href='#') Women's
+                      span (508)
+                      ul
+                        li: a(href='#') Sneakers
+                        li: a(href='#') Heels
+                    li
+                      a(href='#') Men's
+                      span (423)
+                      ul
+                        li: a(href='#') Boots
+                        li: a(href='#') Oxfords
+                    li
+                      a(href='#') Boy's Shoes
+                      span (97)
+                    li
+                      a(href='#') Girl's Shoes
+                      span (110)
+                li.has-children
+                  a(href='#') Clothing
+                  span (2356)
+                  ul
+                    li
+                      a(href='#') Women's
+                      span (1032)
+                      ul
+                        li: a(href='#') Dresses
+                        li: a(href='#') Shirts &amp; Tops
+                        li: a(href='#') Swimwear
+                        li: a(href='#') Shorts
+                    li
+                      a(href='#') Men's
+                      span (937)
+                      ul
+                        li: a(href='#') Shirts &amp; Tops
+                        li: a(href='#') Shorts
+                        li: a(href='#') Swimwear
+                        li: a(href='#') Pants
+                    li
+                      a(href='#') Kid's Clothing
+                      span (386)
+                li.has-children
+                  a(href='#') Bags
+                  span (420)
+                  ul
+                    li
+                      a(href='#') Handbags
+                      span (180)
+                    li
+                      a(href='#') Backpacks
+                      span (132)
+                    li
+                      a(href='#') Wallets &amp; Accessories
+                      span (47)
+                    li
+                      a(href='#') Luggage
+                      span (61)
+                li.has-children
+                  a(href='#') Accessories
+                  span (874)
+                  ul
+                    li
+                      a(href='#') Sunglasses
+                      span (211)
+                    li
+                      a(href='#') Hats
+                      span (195)
+                    li
+                      a(href='#') Watches
+                      span (159)
+                    li
+                      a(href='#') Jewelry
+                      span (203)
+                    li
+                      a(href='#') Belts
+                      span (106)
+          .col-lg-4
+            // Widget Brand Filter
+            section.widget
+              h3.widget-title Filter Widget
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='adidas').custom-control-input
+                label(for='adidas').custom-control-label
+                  | Adidas&nbsp;
+                  span.text-muted (254)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='bilabong').custom-control-input
+                label(for='bilabong').custom-control-label
+                  | Bilabong&nbsp;
+                  span.text-muted (39)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='klein').custom-control-input
+                label(for='klein').custom-control-label
+                  | Calvin Klein&nbsp;
+                  span.text-muted (128)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='nike').custom-control-input
+                label(for='nike').custom-control-label
+                  | Nike&nbsp;
+                  span.text-muted (310)
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='bahama').custom-control-input
+                label(for='bahama').custom-control-label
+                  | Tommy Bahama&nbsp;
+                  span.text-muted (42)
+          .col-lg-4
+            // Widget Price Range
+            section.widget.widget-categories
+              h3.widget-title Price Range Widget
+              form(method='post' data-start-min='250' data-start-max='650' data-min='0' data-max='1000' data-step='1').price-range-slider
+                .ui-range-slider
+                footer.ui-range-slider-footer
+                  .column
+                    button(type='submit').btn.btn-outline-primary.btn-sm Filter
+                  .column
+                    .ui-range-values
+                      .ui-range-value-min
+                        | $<span></span>
+                        input(type='hidden')
+                      | &nbsp;-&nbsp;
+                      .ui-range-value-max
+                        | $<span></span>
+                        input(type='hidden')
+
+        h6.text-muted.text-normal.text-uppercase.padding-top-1x On Dark Background
+        hr.margin-bottom-1x
+        div(style='padding: 30px 20px 0;').bg-dark
+          .row
+            .col-lg-4
+              // Widget Categories
+              section.widget.widget-categories.widget-light-skin
+                h3.widget-title Categories Widget
+                ul
+                  li
+                    a(href='#') Editor's Choice
+                    <span>(24)</span>
+                  li
+                    a(href='#') Fashion
+                    <span>(12)</span>
+                  li
+                    a(href='#') Travel
+                    <span>(5)</span>
+                  li
+                    a(href='#') Online Shopping
+                    <span>(7)</span>
+                  li
+                    a(href='#') Closing Design
+                    <span>(3)</span>
+            .col-lg-4
+              // Featured Products Widget
+              section.widget.widget-featured-products.widget-light-skin
+                h3.widget-title Featured Products Widget
+                // Entry
+                .entry
+                  .entry-thumb
+                    a(href='#')
+                      img(src='../img/shop/widget/01.jpg', alt='Product')
+                  .entry-content
+                    h4.entry-title
+                      a(href='#') Oakley Kickback
+                    span.entry-meta $155.00
+                // Entry
+                .entry
+                  .entry-thumb
+                    a(href='#')
+                      img(src='../img/shop/widget/02.jpg', alt='Product')
+                  .entry-content
+                    h4.entry-title
+                      a(href='#') Top-Sider Fathom
+                    span.entry-meta $90.00
+                // Entry
+                .entry
+                  .entry-thumb
+                    a(href='#')
+                      img(src='../img/shop/widget/03.jpg', alt='Product')
+                  .entry-content
+                    h4.entry-title
+                      a(href='#') Vented Straw Fedora
+                    span.entry-meta $49.50
+            .col-lg-4
+              // Widget Tags
+              section.widget.widget-tags.widget-light-skin
+                h3.widget-title Tags Widget
+                a(href='#').tag #design
+                a(href='#').tag #fashion
+                a(href='#').tag #travel
+                span.tag.active #active
+                a(href='#').tag #shopping
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu
+        .mb-2.hidden-md-up

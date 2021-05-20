@@ -1,0 +1,38 @@
+// Site Footer
+footer.site-footer
+  .column.text-center
+    p.text-sm.mb-4
+      | Need Support? Call
+      span.text-primary &nbsp;001 (917) 555-4836
+    a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-button.sb-skype
+      i.socicon-skype
+    a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.sb-facebook
+      i.socicon-facebook
+    a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.sb-google-plus
+      i.socicon-googleplus
+    a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.sb-twitter
+      i.socicon-twitter
+    a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.sb-instagram
+      i.socicon-instagram
+    p.text-xxs.text-muted.mb-0.mt-3
+      | © All rights reserved. Made with <i class='material-icons favorite text-danger'></i> by rokaux
+
+  .column
+    h3.widget-title.text-center
+      | Subscription
+      small To receive latest offers and discounts from the shop.
+    form(action='//rokaux.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&id=1194bb7544' method='post' target='_blank' novalidate).subscribe-form.input-group
+      span.input-group-btn
+        button(type='submit')
+          i.material-icons.send
+      input(type='email' name='EMAIL' placeholder='Your e-mail').form-control
+      // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+      div(style='position: absolute; left: -5000px;' aria-hidden='true')
+        input(type='text' name='b_c7103e2c981361a6639545bd5_1194bb7544' tabindex='-1' value)
+
+  .column
+    h3.widget-title.text-center
+      | Payment Methods
+      small We support one of the following payment methods.
+    .footer-cards
+      +image('img/cards.png', 'Payment Methods')

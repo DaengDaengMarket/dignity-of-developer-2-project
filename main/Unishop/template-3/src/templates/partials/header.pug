@@ -1,0 +1,105 @@
+// Header
+// Remove "navbar-sticky" class to make navigation bar scrollable with the page.
+header.site-header.navbar-sticky
+
+  // Topbar
+  .topbar.d-flex.justify-content-between
+
+    // Logo
+    .site-branding.d-flex
+      a()&attributes(isNestedFile ? {'href': '../index.html'} : {'href': 'index.html'}).site-logo.align-self-center
+        +image('img/logo/logo.png', 'Unishop')
+
+    // Search / Categories
+    .search-box-wrap.d-flex
+      .search-box-inner.align-self-center
+        .search-box.d-flex
+          .btn-group.categories-btn
+            button(data-toggle='dropdown').btn.btn-secondary.dropdown-toggle
+              i.icon-menu.text-lg
+              | &nbsp;Categories
+            //- mega-dropdown.pug template
+            include mega-dropdown
+          form(method='get').input-group
+            span.input-group-btn
+              button(type='submit')
+                i.icon-search
+            input(type='search' placeholder='Search for anything').form-control
+
+    //- toolbar.pug template
+    include toolbar
+  
+    //- mobile-menu.pug template
+    include mobile-menu
+
+  // Navbar
+  .navbar
+    .btn-group.categories-btn
+      button(data-toggle='dropdown').btn.btn-secondary.dropdown-toggle
+        i.icon-menu.text-lg
+        | &nbsp;Categories
+      //- mega-dropdown.pug template
+      include mega-dropdown
+  
+    //- menu.pug template
+    include menu
+
+    // Toolbar ( Put toolbar here only if you enable sticky navbar )
+    .toolbar
+      .toolbar-inner
+        .toolbar-item
+          a()&attributes(isNestedFile ? {'href': '../product-comparison.html'} : {'href': 'product-comparison.html'})
+            div
+              span.compare-icon
+                i.icon-repeat
+                span.count-label 3
+              span.text-label Compare
+
+        .toolbar-item
+          a()&attributes(isNestedFile ? {'href': '../cart.html'} : {'href': 'cart.html'})
+            div
+              span.cart-icon
+                i.icon-shopping-cart
+                span.count-label 3   
+              span.text-label Cart
+          .toolbar-dropdown.cart-dropdown.widget-cart
+            // Entry
+            .entry
+              .entry-thumb
+                a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+                  +image('img/shop/widget/04.jpg', 'Product')
+              .entry-content
+                h4.entry-title
+                  a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) Canon EOS M50 Mirrorless Camera
+                span.entry-meta 1 x $910.00
+              .entry-delete
+                i.icon-x
+            // Entry
+            .entry
+              .entry-thumb
+                a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+                  +image('img/shop/widget/05.jpg', 'Product')
+              .entry-content
+                h4.entry-title
+                  a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) Apple iPhone X 256 GB Space Gray
+                span.entry-meta 1 x $1,450.00
+              .entry-delete
+                i.icon-x
+            // Entry
+            .entry
+              .entry-thumb
+                a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+                  +image('img/shop/widget/06.jpg', 'Product')
+              .entry-content
+                h4.entry-title
+                  a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) HP LaserJet Pro Laser Printer
+                span.entry-meta 1 x $188.50
+              .entry-delete
+                i.icon-x
+            .text-right
+              p.text-gray-dark.py-2.mb-0 <span class='text-muted'>Subtotal:</span> &nbsp;$2,548.50
+            .d-flex
+              .pr-2.w-50
+                a()&attributes(isNestedFile ? {'href': '../cart.html'} : {'href': 'cart.html'}).btn.btn-secondary.btn-sm.btn-block.mb-0 Expand Cart
+              .pl-2.w-50
+                a()&attributes(isNestedFile ? {'href': '../checkout.html'} : {'href': 'checkout.html'}).btn.btn-primary.btn-sm.btn-block.mb-0 Checkout

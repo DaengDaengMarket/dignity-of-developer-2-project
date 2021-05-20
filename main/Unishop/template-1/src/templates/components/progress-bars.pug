@@ -1,0 +1,77 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Progress Bars'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Progress Bars'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Progress Thick with Labels
+        hr.margin-bottom-1x
+        .progress.margin-bottom-1x
+          .progress-bar(role='progressbar' style='width: 55%' aria-valuenow='55' aria-valuemin='0' aria-valuemax='100') 55%
+        .progress.margin-bottom-1x
+          .progress-bar.bg-success(role='progressbar' style='width: 33%' aria-valuenow='33' aria-valuemin='0' aria-valuemax='100') 33%
+        .progress.margin-bottom-1x
+          .progress-bar.bg-info(role='progressbar' style='width: 70%' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100') 70%
+        .progress.margin-bottom-1x
+          .progress-bar.bg-warning(role='progressbar' style='width: 50%' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100') 50%
+        .progress
+          .progress-bar.bg-danger(role='progressbar' style='width: 40%' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100') 40%
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Progress Thin with Labels
+        hr.margin-bottom-1x
+        label.text-medium Delivery - 55%
+        .progress.margin-bottom-1x
+          .progress-bar(role='progressbar' style='width: 55%; height: 2px;' aria-valuenow='55' aria-valuemin='0' aria-valuemax='100')
+        label.text-medium Consulting - 33%
+        .progress.margin-bottom-1x
+          .progress-bar.bg-success(role='progressbar' style='width: 33%; height: 2px;' aria-valuenow='33' aria-valuemin='0' aria-valuemax='100')
+        label.text-medium Personal shopper - 70%
+        .progress.margin-bottom-1x
+          .progress-bar.bg-info(role='progressbar' style='width: 70%; height: 2px;' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100')
+        label.text-medium Taxes refund - 70%
+        .progress.margin-bottom-1x
+          .progress-bar.bg-warning(role='progressbar' style='width: 50%; height: 2px;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+        label.text-medium Packaging damages - 40%
+        .progress
+          .progress-bar.bg-danger(role='progressbar' style='width: 40%; height: 2px;' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100')
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Multiple bars
+        hr.margin-bottom-1x
+        .progress
+          .progress-bar(role='progressbar' style='width: 15%;' aria-valuenow='15' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-success(role='progressbar' style='width: 30%;' aria-valuenow='30' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-warning(role='progressbar' style='width: 20%;' aria-valuenow='20' aria-valuemin='0' aria-valuemax='100')
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Striped bars
+        hr.margin-bottom-1x
+        .progress.margin-bottom-1x
+          .progress-bar.progress-bar-striped(role='progressbar' style='width: 15%;' aria-valuenow='15' aria-valuemin='0' aria-valuemax='100')
+        .progress.margin-bottom-1x
+          .progress-bar.progress-bar-striped.bg-success(role='progressbar' style='width: 25%;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+        .progress.margin-bottom-1x
+          .progress-bar.progress-bar-striped.bg-info(role='progressbar' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+        .progress.margin-bottom-1x
+          .progress-bar.progress-bar-striped.bg-warning(role='progressbar' style='width: 75%;' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+        .progress
+          .progress-bar.progress-bar-striped.bg-danger(role='progressbar' style='width: 100%;' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100')
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Animated Stripes
+        hr.margin-bottom-1x
+        .progress.margin-bottom-1x
+          .progress-bar.progress-bar-striped.progress-bar-animated(role='progressbar' style='width: 15%;' aria-valuenow='15' aria-valuemin='0' aria-valuemax='100')
+        .progress.margin-bottom-1x
+          .progress-bar.progress-bar-striped.progress-bar-animated.bg-success(role='progressbar' style='width: 25%;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+        .progress.margin-bottom-1x
+          .progress-bar.progress-bar-striped.progress-bar-animated.bg-info(role='progressbar' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+        .progress.margin-bottom-1x
+          .progress-bar.progress-bar-striped.progress-bar-animated.bg-warning(role='progressbar' style='width: 75%;' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+        .progress
+          .progress-bar.progress-bar-striped.progress-bar-animated.bg-danger(role='progressbar' style='width: 100%;' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100')
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

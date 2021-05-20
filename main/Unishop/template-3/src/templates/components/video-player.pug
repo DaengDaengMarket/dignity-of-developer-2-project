@@ -1,0 +1,34 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Video Player'
+  - var isNestedFile = true
+  - var isGallery = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Video Player'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-lg.text-uppercase Video Popup
+        hr.margin-bottom-1x
+        .fw-section(style='background-image: url(../img/components/video_popup.jpg);').padding-top-6x.padding-bottom-6x
+          .gallery-wrapper.text-center
+            .gallery-item.video-btn.text-center
+              a(href='#' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube.com/embed/d8WNn3QbJek" frameborder="0" allowfullscreen></iframe></div></div>')
+              span.caption.text-center Unishop - your reliable partner
+        h6.text-muted.text-lg.text-uppercase.padding-top-2x.mt-2 Video Embed (Vimeo)
+        hr.margin-bottom-1x
+        .embed-responsive.embed-responsive-16by9
+          iframe(src='https://player.vimeo.com/video/81633576?color=0055ff&title=0&byline=0&portrait=0' allowfullscreen).embed-responsive-item
+        h6.text-muted.text-lg.text-uppercase.padding-top-2x.mt-2 Video Embed (YouTube)
+        hr.margin-bottom-1x
+        .embed-responsive.embed-responsive-16by9
+          iframe(src='https://www.youtube.com/embed/d8WNn3QbJek' allowfullscreen).embed-responsive-item
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

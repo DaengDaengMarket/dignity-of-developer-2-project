@@ -1,0 +1,206 @@
+// Mobile Menu Section
+#mobileMenu.toolbar-section
+
+  // Currency / Language Siwtcher
+  .text-center.mb-4
+    .lang-currency-switcher
+      .lang-currency-toggle
+        +image('img/flags/GB.png', 'English')
+        span USD
+        i.material-icons.arrow_drop_down
+        ul.lang-currency-dropdown
+          li
+            select.form-control.form-control-sm
+              option(value='usd') $ USD
+              option(value='usd') € EUR
+              option(value='usd') £ UKP
+              option(value='usd') ¥ JPY
+          li
+            a(href='#')
+              img()&attributes(isNestedFile ? {'src': '../img/flags/FR.png', 'alt': 'Français'} : {'src': 'img/flags/FR.png', 'alt': 'Français'})
+              | Français
+          li
+            a(href='#')
+              img()&attributes(isNestedFile ? {'src': '../img/flags/DE.png', 'alt': 'Deutsch'} : {'src': 'img/flags/DE.png', 'alt': 'Deutsch'})
+              | Deutsch
+          li
+            a(href='#')
+              img()&attributes(isNestedFile ? {'src': '../img/flags/IT.png', 'alt': 'Italiano'} : {'src': 'img/flags/IT.png', 'alt': 'Italiano'})
+              | Italiano
+
+  // Search Box
+  form(method='get').input-group.form-group
+    span.input-group-btn
+      button(type='submit')
+        i.material-icons.search
+    input(type='search' class='form-control' placeholder='Search website')
+
+  // Slideable (Mobile) Menu
+  nav.slideable-menu.mt-4
+    ul.menu
+      li()&attributes((parentMenu === 'Home') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          +menu-link('index.html', 'Home')
+          span.sub-menu-toggle
+        ul.slideable-submenu
+          +submenu-item('index.html', 'Hero Slider')
+          +submenu-item('home-featured-categories.html', 'Categories Grid')
+      li()&attributes((parentMenu === 'Shop') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          +menu-link('shop-boxed-ls.html', 'Shop')
+          span.sub-menu-toggle
+        ul.slideable-submenu
+          +submenu-item('shop-categories.html', 'Shop Categories')
+          li()&attributes((menuTitle === 'Boxed Right Sidebar' || menuTitle === 'Boxed Left Sidebar' || menuTitle === 'Boxed Filters Top' || menuTitle === 'Full Width Left Sidebar' || menuTitle === 'Full Width Right Sidebar' || menuTitle === 'Full Width Filters Top') ? {'class': 'active has-children'} : {'class': 'has-children'})
+            span
+              +menu-link('shop-boxed-ls.html', 'Shop Layout')
+              span.sub-menu-toggle
+            ul.slideable-submenu
+              +submenu-item('shop-boxed-ls.html', 'Boxed Left Sidebar')
+              +submenu-item('shop-boxed-rs.html', 'Boxed Right Sidebar')
+              +submenu-item('shop-boxed-ft.html', 'Boxed Filters Top')
+              +submenu-item('shop-full-ls.html', 'Full Width Left Sidebar')
+              +submenu-item('shop-full-rs.html', 'Full Width Right Sidebar')
+              +submenu-item('shop-full-ft.html', 'Full Width Filters Top')
+          +submenu-item('shop-single.html', 'Single Product')
+          +submenu-item('cart.html', 'Cart')
+          li()&attributes((menuTitle === 'Address' || menuTitle === 'Shipping' || menuTitle === 'Payment' || menuTitle === 'Review' || menuTitle === 'Complete') ? {'class': 'active has-children'} : {'class': 'has-children'})
+            span
+              +menu-link('checkout-address.html', 'Checkout')
+              span.sub-menu-toggle
+            ul.slideable-submenu
+              +submenu-item('checkout-address.html', 'Address')
+              +submenu-item('checkout-shipping.html', 'Shipping')
+              +submenu-item('checkout-payment.html', 'Payment')
+              +submenu-item('checkout-review.html', 'Review')
+              +submenu-item('checkout-complete.html', 'Complete')
+      li.has-children
+        span
+          a(href='#') Categories
+          span.sub-menu-toggle
+        ul.slideable-submenu
+          li.has-children
+            span
+              a(href='#') Desks &amp; Benching
+              span.sub-menu-toggle
+            ul.slideable-submenu
+              li: a(href='#') Executive Desks
+              li: a(href='#') Standing Desks
+              li: a(href='#') Benching Desks
+              li: a(href='#') Single Desks
+              li: a(href='#') View All
+          li.has-children
+            span
+              a(href='#') Office Furniture
+              span.sub-menu-toggle
+            ul.slideable-submenu
+              li: a(href='#') File Cabinets
+              li: a(href='#') Office Chairs
+              li: a(href='#') Adjustable Tables
+              li: a(href='#') Stools
+              li: a(href='#') View All
+          li.has-children
+            span
+              a(href='#') Lounge Seating
+              span.sub-menu-toggle
+            ul.slideable-submenu
+              li: a(href='#') Benches
+              li: a(href='#') Chairs
+              li: a(href='#') Pillows
+              li: a(href='#') Sofas
+              li: a(href='#') View All
+          li.has-children
+            span
+              a(href='#') Storage Units
+              span.sub-menu-toggle
+            ul.slideable-submenu
+              li: a(href='#') Bookcases
+              li: a(href='#') Box Seats &amp; Benches
+              li: a(href='#') Credenza
+              li: a(href='#') View All
+          li.has-children
+            span
+              a(href='#') Lighting
+              span.sub-menu-toggle
+            ul.slideable-submenu
+              li: a(href='#') Ceiling Lights
+              li: a(href='#') Kitchen Lights
+              li: a(href='#') Wall Lights
+              li: a(href='#') Lamps
+              li: a(href='#') View All
+          li.has-children
+            span
+              a(href='#') Furniture Accessories
+              span.sub-menu-toggle
+            ul.slideable-submenu
+              li: a(href='#') Power Management
+              li: a(href='#') Desk Add Ons
+              li: a(href='#') Lamps
+              li: a(href='#') Monitor Arms
+              li: a(href='#') Desk Risers
+              li: a(href='#') View All
+      li()&attributes((parentMenu === 'Account') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          +menu-link('account-orders.html', 'Account')
+          span.sub-menu-toggle
+        ul.slideable-submenu
+          +submenu-item('account-orders.html', 'Orders List')
+          +submenu-item('account-wishlist.html', 'Wishlist')
+          +submenu-item('account-profile.html', 'Profile Page')
+          +submenu-item('account-address.html', 'Contact / Shipping Address')
+          +submenu-item('account-open-ticket.html', 'Open Ticket')
+          +submenu-item('account-tickets.html', 'My Tickets')
+          +submenu-item('account-single-ticket.html', 'Single Ticket')
+          +submenu-item('account-password-recovery.html', 'Password Recovery')
+      li()&attributes((parentMenu === 'Blog') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          +menu-link('blog.html', 'Blog List')
+          span.sub-menu-toggle
+        ul.slideable-submenu
+          +submenu-item('blog.html', 'Blog List')
+          +submenu-item('blog-single.html', 'Single Post')
+      li()&attributes((parentMenu === 'Pages') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          a(href='#') Pages
+          span.sub-menu-toggle
+        ul.slideable-submenu
+          +submenu-item('about.html', 'About Us')
+          +submenu-item('contacts.html', 'Contacts')
+          +submenu-item('faq.html', 'Help / FAQ')
+          +submenu-item('order-tracking.html', 'Order Tracking')
+          +submenu-item('404.html', '404 Not Found')
+          +submenu-item('coming-soon.html', 'Coming Soon')
+          li
+            a(class='text-danger')&attributes(isNestedFile ? {'href': '../docs/dev-setup.html'} : {'href': 'docs/dev-setup.html'}) Documentation
+      li()&attributes((parentMenu === 'Components') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          +menu-link('components/accordion.html', 'Components')
+          span.sub-menu-toggle
+        ul.slideable-submenu
+          +submenu-component-item('accordion.html', 'Accordion')
+          +submenu-component-item('alerts.html', 'Alerts')
+          +submenu-component-item('buttons.html', 'Buttons')
+          +submenu-component-item('cards.html', 'Cards')
+          +submenu-component-item('carousel.html', 'Carousel')
+          +submenu-component-item('countdown.html', 'Countdown')
+          +submenu-component-item('forms.html', 'Forms')
+          +submenu-component-item('gallery.html', 'Gallery')
+          +submenu-component-item('google-maps.html', 'Google Maps')
+          +submenu-component-item('images.html', 'Images & Figures')
+          +submenu-component-item('list-group.html', 'List Group')
+          +submenu-component-item('market-social-buttons.html', 'Market & Social Buttons')
+          +submenu-component-item('media.html', 'Media Object')
+          +submenu-component-item('modal.html', 'Modal')
+          +submenu-component-item('pagination.html', 'Pagination')
+          +submenu-component-item('pills.html', 'Pills')
+          +submenu-component-item('progress-bars.html', 'Progress Bars')
+          +submenu-component-item('shop-items.html', 'Shop Items')
+          +submenu-component-item('steps.html', 'Steps')
+          +submenu-component-item('tables.html', 'Tables')
+          +submenu-component-item('tabs.html', 'Tabs')
+          +submenu-component-item('team.html', 'Team')
+          +submenu-component-item('toasts.html', 'Toast Notifications')
+          +submenu-component-item('tooltips-popovers.html', 'Tooltips & Popovers')
+          +submenu-component-item('typography.html', 'Typography')
+          +submenu-component-item('video-player.html', 'Video Player')
+          +submenu-component-item('widgets.html', 'Widgets')

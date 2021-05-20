@@ -1,0 +1,73 @@
+//
+// Card
+// --------------------------------------------------
+
+.card:not([class*='border-']) {
+  border: 0;
+  background-color: $gray-lighter;
+}
+.card { border-radius: 0; }
+.card-img-top,
+.card-img-bottom { border-radius: 0; }
+.card-text {
+  margin-bottom: floor($grid-vertical-step / 2); //~12px
+  color: $gray;
+  font-size: $font-size-sm;
+}
+.card-header,
+.card-footer {
+  border: 0;
+  border-radius: 0 !important;
+  background-color: darken($gray-lighter, 3%);
+  h1, .h1, h2, .h2, h3, .h3,
+  h4, .h4, h5, .h5, h6, .h6 { margin-bottom: 0; }
+}
+.card-body {
+  p, ol, ul {
+    &:last-child { margin-bottom: 0; }
+  }
+  .tab-content {
+    padding: 0;
+    border: 0;
+  }
+}
+
+// Background variants
+.card.bg-primary .card-header {
+  background-color: darken($brand-primary, 4%);
+}
+.card.bg-secondary,
+.card.bg-faded {
+  .card-header {
+    background-color: darken($gray-lighter, 4%);
+  }
+}
+.card.bg-success .card-header {
+  background-color: darken($brand-success, 7%);
+}
+.card.bg-info .card-header {
+  background-color: darken($brand-info, 8%);
+}
+.card.bg-warning .card-header {
+  background-color: darken($brand-warning, 12%);
+}
+.card.bg-danger .card-header {
+  background-color: darken($brand-danger, 6%);
+}
+.card.bg-dark .card-header {
+  background-color: darken($gray-darker, 6%);
+}
+
+// Light skin
+.text-white,
+.text-light {
+  .card-title { color: $white-color; }
+  .card-text { color: rgba($white-color, .85); }
+}
+
+// Card Group
+.card-group .card {
+  .card-footer { border-radius: 0; }
+  &:first-child .card-footer { border-bottom-left-radius: $border-radius-lg; }
+  &:last-child .card-footer { border-bottom-right-radius: $border-radius-lg; }
+}

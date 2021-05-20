@@ -1,0 +1,121 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Checkout'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Review'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Checkout - Review'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+
+      // Checkout Shipping
+      .col-xl-9.col-lg-8
+        .steps.flex-sm-nowrap.mb-5
+          a(href='checkout-address.html').step
+            h4.step-title
+              i.material-icons.check_circle
+              | 1. Address
+          a(href='checkout-shipping.html').step
+            h4.step-title
+              i.material-icons.check_circle
+              | 2. Shipping
+          a(href='checkout-payment.html').step
+            h4.step-title
+              i.material-icons.check_circle
+              | 3. Payment
+          a(href='checkout-review.html').step.active
+            h4.step-title 4. Review
+        
+        h4 Review Your Order
+        hr.padding-bottom-1x
+        .table-responsive.shopping-cart.mb-0
+          table.table
+            thead
+              tr
+                th Product Name
+                th.text-center Subtotal
+                th
+            tbody
+              tr
+                td
+                  .product-item
+                    a(href='shop-single.html').product-thumb
+                      img(src='img/shop/cart/01.jpg', alt='Product')
+                    .product-info
+                      h4.product-title
+                        a(href='shop-single.html')
+                          | 3-Drawer File Cabinet
+                          small x 1
+                      span
+                        em Color:
+                        |  Aqua
+                      span
+                        em Accent Color:
+                        |  White
+                td.text-center.text-lg.text-medium $257.00
+                td.text-center
+                  a(href='cart.html').btn.btn-outline-secondary.btn-sm Edit
+              tr
+                td
+                  .product-item
+                    a(href='shop-single.html').product-thumb
+                      img(src='img/shop/cart/02.jpg', alt='Product')
+                    .product-info
+                      h4.product-title
+                        a(href='shop-single.html')
+                          | Plastic Tissue Holder
+                          small x 2
+                      span
+                        em Size:
+                        |  Medium
+                      span
+                        em Color:
+                        |  White
+                td.text-center.text-lg.text-medium $152.80
+                td.text-center
+                  a(href='cart.html').btn.btn-outline-secondary.btn-sm Edit
+              tr
+                td
+                  .product-item
+                    a(href='shop-single.html').product-thumb
+                      img(src='img/shop/cart/03.jpg', alt='Product')
+                    .product-info
+                      h4.product-title
+                        a(href='shop-single.html')
+                          | Campfire Paper Table
+                          small x 1
+                      span
+                        em Color:
+                        |  Walnut
+                      span
+                        em Accent Color:
+                        |  Turquoise
+                td.text-center.text-lg.text-medium $289.00
+                td.text-center
+                  a(href='cart.html').btn.btn-outline-secondary.btn-sm Edit
+        hr.padding-bottom-1x
+        .text-right.padding-bottom-1x Subtotal: <span class='text-medium text-dark'>$622.40</span>
+        .row.padding-top-1x.mt-3.mb-4
+          .col-sm-6
+            h5 Shipping to:
+            ul.list-unstyled.text-sm
+              li <span class='text-muted'>Client:</span> Daniel Adams
+              li <span class='text-muted'>Address:</span> 44 Shirley Ave. West Chicago, IL 60185, USA
+              li <span class='text-muted'>Phone:</span> +1(808) 764 554 330
+          .col-sm-6
+            h5 Payment method:
+            ul.list-unstyled.text-sm
+              li <span class='text-muted'>Credit Card:</span> **** **** **** 5300
+
+        hr.padding-bottom-1x
+        .d-flex.justify-content-between
+          a(href='checkout-payment.html' class='btn btn-outline-secondary m-0') Back
+          a(href='checkout-complete.html' class='btn btn-primary m-0') Complete Order
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        include partials/checkout-sidebar

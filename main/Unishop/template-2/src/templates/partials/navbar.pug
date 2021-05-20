@@ -1,0 +1,40 @@
+// Navbar
+// Remove "navbar-sticky" class to make navigation bar scrollable with the page.
+header.navbar.navbar-sticky
+
+  // Site Branding
+  .site-branding
+    a()&attributes(isNestedFile ? {'href': '../index.html'} : {'href': 'index.html'}).site-logo.hidden-xs-down
+      +image('img/logo/logo.png', 'Unishop')
+    a()&attributes(isNestedFile ? {'href': '../index.html'} : {'href': 'index.html'}).site-logo.logo-sm.hidden-sm-up
+      +image('img/logo/logo-sm.png', 'Unishop')
+    .lang-currency-switcher
+      .lang-currency-toggle
+        +image('img/flags/GB.png', 'English')
+        span USD
+        i.material-icons.arrow_drop_down
+        ul.lang-currency-dropdown
+          li
+            select.form-control.form-control-sm
+              option(value='usd') $ USD
+              option(value='usd') € EUR
+              option(value='usd') £ UKP
+              option(value='usd') ¥ JPY
+          li
+            a(href='#')
+              img()&attributes(isNestedFile ? {'src': '../img/flags/FR.png', 'alt': 'Français'} : {'src': 'img/flags/FR.png', 'alt': 'Français'})
+              | Français
+          li
+            a(href='#')
+              img()&attributes(isNestedFile ? {'src': '../img/flags/DE.png', 'alt': 'Deutsch'} : {'src': 'img/flags/DE.png', 'alt': 'Deutsch'})
+              | Deutsch
+          li
+            a(href='#')
+              img()&attributes(isNestedFile ? {'src': '../img/flags/IT.png', 'alt': 'Italiano'} : {'src': 'img/flags/IT.png', 'alt': 'Italiano'})
+              | Italiano
+
+  //-Site Menu
+  include menu
+
+  //-Toolbar
+  include toolbar

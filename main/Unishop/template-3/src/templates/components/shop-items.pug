@@ -1,0 +1,152 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Shop Items'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Shop Items'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-2x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-lg.text-uppercase Product Card
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4.col-md-6.col-sm-6
+            .product-card.mb-30
+              .product-badge.bg-danger Sale
+              a(href='#').product-thumb
+                img(src='../img/shop/products/01.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Smart home
+                h3.product-title
+                  a(href='#') Echo Dot (2nd Generation)
+                h4.product-price
+                  del $62.00
+                  | $49.99
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-lg-4.col-md-6.col-sm-6
+            .product-card.mb-30
+              +rating-stars([
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star'}
+              ])
+              a(href='#').product-thumb
+                img(src='../img/shop/products/02.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Photo cameras
+                h3.product-title
+                  a(href='#') Aberg Best 21 Mega Pixels
+                h4.product-price $35.00
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-lg-4.col-md-6.col-sm-6
+            .product-card.mb-30
+              .product-badge.bg-secondary.border-default.text-body Out of stock
+              a(href='#').product-thumb
+                img(src='../img/shop/products/03.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Computers, laptops
+                h3.product-title
+                  a(href='#') Microsoft Surface Pro 4
+                h4.product-price $1,049.10
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#').product-button
+                  i.icon-arrow-right
+                  span Details
+        h6.text-muted.text-lg.text-uppercase.padding-top-1x.mt-1 Product List View
+        hr.margin-bottom-1x
+        .product-card.product-list
+          a(href='#').product-thumb
+            img(src='../img/shop/products/04.jpg' alt='Product')
+          .product-card-inner
+            .product-card-body
+              +rating-stars([
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'}
+              ])
+              .product-category
+                a(href='#') Smartphones
+              h3.product-title
+                a(href='#') Apple iPhone X 256 GB Space Gray
+              h4.product-price $1,450.00
+              p.text-sm.text-muted.hidden-xs-down.my-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore odit officiis illo perferendis deserunt, ipsam dolor ad dolorem eaque veritatis.
+            .product-button-group
+              a( href='#').product-button.btn-wishlist
+                i.icon-heart
+                span Wishlist
+              a( href='#').product-button.btn-compare
+                i.icon-repeat
+                span Compare
+              a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                i.icon-shopping-cart
+                span To Cart
+        h6.text-muted.text-lg.text-uppercase.padding-top-2x.mt-2 Category Card
+        hr.margin-bottom-1x
+        .row
+          .col-sm-6.mb-30
+            .card
+              a(href='#').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='../img/shop/categories/01.jpg' alt='Category')
+                  .thumblist
+                    img(src='../img/shop/categories/02.jpg' alt='Category')
+                    img(src='../img/shop/categories/03.jpg' alt='Category')
+              .card-body.text-center
+                h4.h6.card-title Computers &amp; Accessories
+                p.text-xs.text-muted Starting from &nbsp;<span class='card-label'>$149.80</span>
+                a(href='#').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6.mb-30
+            .card
+              a(href='#').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='../img/shop/categories/13.jpg' alt='Category')
+                  .thumblist
+                    img(src='../img/shop/categories/14.jpg' alt='Category')
+                    img(src='../img/shop/categories/15.jpg' alt='Category')
+              .card-body.text-center
+                h4.h6.card-title Headphones
+                p.text-xs.text-muted Starting from &nbsp;<span class='card-label'>$35.99</span>
+                a(href='#').btn.btn-outline-primary.btn-sm View Products
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu
+        .padding-bottom-1x.hidden-md-up

@@ -1,0 +1,60 @@
+section(data-offset-top='60')#comments.padding-top-3x
+  h3.padding-bottom-1x Comments
+  // Comment
+  .comment
+    .comment-author-ava
+      img(src='img/reviews/01.jpg' alt='Comment author')
+    .comment-body
+      .comment-header
+        h4.comment-title Francis Burton
+      p.comment-text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+      .comment-footer
+        .column
+          span.comment-meta 2 days ago
+        .column
+          a(href='#' class='reply-link')
+            i.icon-corner-up-left
+            | Reply
+      // Comment reply
+      .comment.comment-reply
+        .comment-author-ava
+          img(src='img/reviews/02.jpg' alt='Comment author')
+        .comment-body
+          .comment-header
+            h4.comment-title Maggie Scott
+          p.comment-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          .comment-footer
+            span.comment-meta 1 day ago
+  // Comment
+  .comment
+    .comment-author-ava
+      img(src='img/reviews/03.jpg' alt='Comment author')
+    .comment-body
+      .comment-header
+        h4.comment-title Jacob Hammond
+      p.comment-text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+      .comment-footer
+        .column
+          span.comment-meta 5 days ago
+        .column
+          a(href='#' class='reply-link')
+            i.icon-corner-up-left
+            | Reply
+
+// Comment Form
+h4.padding-top-2x.padding-bottom-1x Leave a Comment
+form(method='post').row
+  .col-sm-6
+    .form-group
+      label(for='comment-name') Name
+      input(type='text' id='comment-name' placeholder='John Doe' required).form-control.form-control-rounded
+  .col-sm-6
+    .form-group
+      label(for='comment-email') E-mail
+      input(type='email' id='comment-email' placeholder='johndoe@email.com' required).form-control.form-control-rounded
+  .col-12
+    .form-group
+      label(for='comment-text') Comment
+      textarea(rows='7' id='comment-text' placeholder='Write your comment here...' required).form-control.form-control-rounded
+  .col-12.text-right
+    button(type='submit').btn.btn-primary Post Comment

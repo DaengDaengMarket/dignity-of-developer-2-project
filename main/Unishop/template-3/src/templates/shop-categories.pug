@@ -1,0 +1,192 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Shop Categories'
+  - var parentMenu = 'Shop'
+  - var isModalShopCategories = true
+  - var menuTitle = 'Shop Categories'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop Categories'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-2x.mb-2
+    .row
+
+      // Sidebar          
+      .col-lg-3
+        //- To use only with sidebar-offcanvas
+        .sidebar-toggle.position-left
+          i.icon-menu
+        aside.sidebar.sidebar-offcanvas.position-left
+          //- To use only with sidebar-offcanvas
+          span.sidebar-close
+            i.icon-x
+
+          section.widget.widget-categories
+            h3.widget-title Popular Brands
+            ul
+              li
+                a(href='#') Apple
+                <span>(254)</span>
+              li
+                a(href='#') Bosh
+                <span>(39)</span>
+              li
+                a(href='#') Canon Inc.
+                <span>(205)</span>
+              li
+                a(href='#') Dell
+                <span>(128)</span>
+              li
+                a(href='#') IBM
+                <span>(104)</span>
+              li
+                a(href='#') Hewlett-Packard
+                <span>(35)</span>
+              li
+                a(href='#') Hitachi
+                <span>(217)</span>
+              li
+                a(href='#') Lenovo
+                <span>(95)</span>
+              li
+                a(href='#') LG Electronics
+                <span>(310)</span>
+              li
+                a(href='#') Nikon
+                <span>(28)</span>
+              li
+                a(href='#') Nokia
+                <span>(134)</span>
+              li
+                a(href='#') Panasonic
+                <span>(73)</span>
+              li
+                a(href='#') Samsung Electronics
+                <span>(1446)</span>
+              li
+                a(href='#') Siemens
+                <span>(87)</span>
+              li
+                a(href='#') Sharp Corporation
+                <span>(41)</span>
+              li
+                a(href='#') Sony
+                <span>(386)</span>
+              li
+                a(href='#') Toshiba
+                <span>(62)</span>
+
+      // Categories
+      .col-lg-9
+
+        // Promo banner
+        include partials/shop-banner
+
+        .row
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/01.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/02.jpg' alt='Category')
+                    img(src='img/shop/categories/03.jpg' alt='Category')
+              .card-body.text-center
+                h4.h6.card-title Computers &amp; Accessories
+                p.text-xs.text-muted Starting from &nbsp;<span class='card-label'>$149.80</span>
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/07.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/08.jpg' alt='Category')
+                    img(src='img/shop/categories/09.jpg' alt='Category')
+              .card-body.text-center
+                h4.h6.card-title TV, Video &amp; Audio
+                p.text-xs.text-muted Starting from &nbsp;<span class='card-label'>$127.00</span>
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/04.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/05.jpg' alt='Category')
+                    img(src='img/shop/categories/06.jpg' alt='Category')
+              .card-body.text-center
+                h4.h6.card-title Smartphones &amp; Tablets
+                p.text-xs.text-muted Starting from &nbsp;<span class='card-label'>$78.00</span>
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/10.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/11.jpg' alt='Category')
+                    img(src='img/shop/categories/12.jpg' alt='Category')
+              .card-body.text-center
+                h4.h6.card-title Cameras, Photo &amp; Video
+                p.text-xs.text-muted Starting from &nbsp;<span class='card-label'>$310.00</span>
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/13.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/14.jpg' alt='Category')
+                    img(src='img/shop/categories/15.jpg' alt='Category')
+              .card-body.text-center
+                h4.h6.card-title Headphones
+                p.text-xs.text-muted Starting from &nbsp;<span class='card-label'>$35.99</span>
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/16.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/17.jpg' alt='Category')
+                    img(src='img/shop/categories/18.jpg' alt='Category')
+              .card-body.text-center
+                h4.h6.card-title Wearable Electronics
+                p.text-xs.text-muted Starting from &nbsp;<span class='card-label'>$79.99</span>
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/19.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/20.jpg' alt='Category')
+                    img(src='img/shop/categories/21.jpg' alt='Category')
+              .card-body.text-center
+                h4.h6.card-title Printers &amp; Ink
+                p.text-xs.text-muted Starting from &nbsp;<span class='card-label'>$54.00</span>
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/22.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/23.jpg' alt='Category')
+                    img(src='img/shop/categories/24.jpg' alt='Category')
+              .card-body.text-center
+                h4.h6.card-title Video Games
+                p.text-xs.text-muted Starting from &nbsp;<span class='card-label'>$18.50</span>
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          

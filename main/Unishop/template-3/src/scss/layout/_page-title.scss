@@ -1,0 +1,114 @@
+//
+// Page Title & Breadcrumbs
+// --------------------------------------------------
+
+// Page Title
+.page-title {
+  width: 100%;
+  margin-bottom: ceil($grid-vertical-step * 2.5); //~60px
+  padding: floor($grid-vertical-step * 1.5) 0; //~36px 0
+  background-color: $white-color;
+  box-shadow: 0 7px 30px -6px rgba(0, 0, 0, .12);
+  > .container,
+  > .container-fluid { display: table; }
+  .column {
+    display: table-cell;
+    vertical-align: middle;
+    &:first-child {
+      width: 60%;
+      padding-right: 20px;
+    }
+  }
+  h1, h2, h3 {
+    margin: 0;
+    font-size: $font-size-h4;
+    line-height: $line-height-h4;
+  }
+}
+
+// Breadcrumbs
+.breadcrumbs {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+  > li {
+    display: inline-block;
+    margin-left: -4px;
+    padding: 5px 0;
+    color: $gray;
+    font-size: $font-size-sm;
+    cursor: default;
+    vertical-align: middle;
+    &.separator {
+      margin: {
+        top: 2px;
+        left: 3px;
+      }
+      color: $nav-link-color;
+      font: {
+        family: feather;
+        size: $font-size-md;
+      }
+      &::before {
+        content: '\e930';
+      }
+    }
+    > a {
+      transition: color .25s;
+      color: $nav-link-color;
+      text-decoration: none;
+      &:hover { color: $nav-link-hover-color; }
+    }
+    &:first-child > a::before {
+      display: inline-block;
+      margin: {
+        top: -1px;
+        right: 6px;
+      }
+      font: {
+        family: feather;
+        size: $font-size-md;
+      }
+      content: '\e979';
+      vertical-align: middle;
+    }
+  }
+}
+
+// Firefox fix
+@-moz-document url-prefix() {
+  .breadcrumbs > li {
+    &.separator { margin-top: 1px; }
+    &:first-child > a::before { margin-top: -2px; }
+  }
+}
+
+// Media query (max-width: 768px)
+@media (max-width: $screen-lg) {
+  .page-title {
+    margin-bottom: ceil($grid-vertical-step * 2.2);
+    > .container,
+    > .container-fluid { display: block; }
+    .column {
+      display: block;
+      width: 100%;
+      text-align: center;
+      &:first-child {
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+  }
+  .breadcrumbs {
+    padding-top: 15px;
+    text-align: center;
+    > li {
+      margin: {
+        left: 3px;
+        margin-right: 3px;
+      }
+    }
+  }
+}

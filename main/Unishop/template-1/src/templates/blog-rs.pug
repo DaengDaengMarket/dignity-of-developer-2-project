@@ -1,0 +1,137 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Blog Right Sidebar'
+  - var isModalBlogSidebar = true
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'Blog Right Sidebar'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Blog Right Sidebar'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+
+      // Blog Posts
+      .col-xl-9.col-lg-8
+
+        // Post
+        article.row
+          .col-md-3
+            ul.post-meta
+              li
+                i.icon-clock
+                a(href='blog-single-rs.html')
+                  | &nbsp;Feb 11, 2017
+              li
+                i.icon-head
+                | &nbsp;John Doe
+              li
+                i.icon-tag
+                a(href='#')
+                  | &nbsp;Fashion,
+                a(href='#')
+                  | &nbsp;Travel
+              li
+                i.icon-speech-bubble
+                a(href='#')
+                  | &nbsp;3 Comments
+          .col-md-9.blog-post
+            a(href='blog-single-rs.html').post-thumb
+              img(src='img/blog/01.jpg', alt='Post')
+            h3.post-title
+              a(href='blog-single-rs.html') High Fashion On The Lake Shore
+            p
+              | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo... <a href='blog-single-rs.html' class='text-medium'>Read More</a>
+
+        // Post
+        article.row
+          .col-md-3
+            ul.post-meta
+              li
+                i.icon-clock
+                a(href='blog-single-rs.html')
+                  | &nbsp;Feb 03, 2017
+              li
+                i.icon-head
+                | &nbsp;Susan Mayer
+              li
+                i.icon-tag
+                a(href='#')
+                  | &nbsp;Fashion,
+                a(href='#')
+                  | &nbsp;Travel
+              li
+                i.icon-speech-bubble
+                a(href='#')
+                  | &nbsp;1 Comment
+          .col-md-9.blog-post
+            h3.post-title
+              a(href='blog-single-rs.html') Must Have Clothing On Your Next Trip
+            p 
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. Aliquid id nobis, amet dolorum earum maxime.
+            p
+              | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo... <a href='blog-single-rs.html' class='text-medium'>Read More</a>
+
+        // Post
+        article.row
+          .col-md-3
+            ul.post-meta
+              li
+                i.icon-clock
+                a(href='blog-single-rs.html')
+                  | &nbsp;Jan 18, 2017
+              li
+                i.icon-head
+                | &nbsp;Mike Jordan
+              li
+                i.icon-tag
+                a(href='#')
+                  | &nbsp;Fashion,
+                a(href='#')
+                  | &nbsp;Casual
+              li
+                i.icon-speech-bubble
+                a(href='#')
+                  | &nbsp;15 Comments
+          .col-md-9.blog-post
+            a(href='blog-single-rs.html').post-thumb
+              img(src='img/blog/02.jpg', alt='Post')
+            h3.post-title
+              a(href='blog-single-rs.html') New Trends in Suburban Fashion
+            p
+              | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo... <a href='blog-single-rs.html' class='text-medium'>Read More</a>
+
+        // Post
+        article.row
+          .col-md-3
+            ul.post-meta
+              li
+                i.icon-clock
+                a(href='blog-single-rs.html')
+                  | &nbsp;Dec 26, 2016
+              li
+                i.icon-head
+                | &nbsp;Paul Goodrich
+              li
+                i.icon-tag
+                a(href='#')
+                  | &nbsp;Fashion
+              li
+                i.icon-speech-bubble
+                a(href='#')
+                  | &nbsp;1 Comment
+          .col-md-9.blog-post
+            h3.post-title
+              a(href='blog-single-rs.html') How To Choose Perfect Summer Suit
+            p 
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. Aliquid id nobis, amet dolorum earum maxime.
+            p
+              | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo... <a href='blog-single-rs.html' class='text-medium'>Read More</a>
+
+        include partials/pagination
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        include partials/blog-sidebar

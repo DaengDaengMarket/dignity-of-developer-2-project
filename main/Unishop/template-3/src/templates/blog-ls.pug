@@ -1,0 +1,162 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Blog Left Sidebar'
+  - var isModalBlogSidebar = true
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'Blog Left Sidebar'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Blog Left Sidebar'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+
+      // Blog Posts
+      .col-lg-9.order-lg-2
+        .isotope-grid.cols-2.mb-4
+          .gutter-sizer
+          .grid-sizer
+          
+          // Post
+          .grid-item
+            .blog-post
+              a(href='blog-single-ls.html').post-thumb
+                img(src='img/blog/02.jpg' alt='Blog Post')
+              .post-body
+                ul.post-meta
+                  li
+                    i.icon-clock
+                    a(href='#') Mar 30, 2018
+                  li
+                    i.icon-user
+                    a(href='#') Paul Goodrich
+                  li
+                    i.icon-tag
+                    a(href='#') Video Games
+                h3.post-title
+                  a(href='blog-single-ls.html') VR: Next Level of Video Gaming
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam... <a href='blog-single-ls.html'>Read more</a>
+          
+          // Post
+          .grid-item
+            .blog-post
+              .post-body
+                ul.post-meta
+                  li
+                    i.icon-clock
+                    a(href='#') Mar 15, 2018
+                  li
+                    i.icon-user
+                    a(href='#') Gregory Smith
+                  li
+                    i.icon-tag
+                    a(href='#') Ecommerce
+                h3.post-title
+                  a(href='blog-single-ls.html') Different Ways Ecommerce Companies Can Capitalize on Apps
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... <a href='blog-single-ls.html'>Read more</a>
+
+          // Post
+          .grid-item
+            .blog-post
+              a(href='blog-single-ls.html').post-thumb
+                img(src='img/blog/03.jpg' alt='Blog Post')
+              .post-body
+                ul.post-meta
+                  li
+                    i.icon-clock
+                    a(href='#') Feb 23, 2018
+                  li
+                    i.icon-user
+                    a(href='#') Cedric Diggory
+                  li
+                    i.icon-tag
+                    a(href='#') Gadgets
+                h3.post-title
+                  a(href='blog-single-ls.html') What Apps Will Increase Your Productivity
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam... <a href='blog-single-ls.html'>Read more</a>
+
+          // Post
+          .grid-item
+            .blog-post
+              a(href='blog-single-ls.html').post-thumb
+                img(src='img/blog/01.jpg' alt='Blog Post')
+              .post-body
+                ul.post-meta
+                  li
+                    i.icon-clock
+                    a(href='#') Feb 06, 2018
+                  li
+                    i.icon-user
+                    a(href='#') Olivia Reyes
+                  li
+                    i.icon-tag
+                    a(href='#') Drones
+                h3.post-title
+                  a(href='blog-single-ls.html') The Complete Guide: How To Make Professional Video With Drones
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque... <a href='blog-single-ls.html'>Read more</a>
+
+          // Post
+          .grid-item
+            .blog-post
+              a(href='blog-single-ls.html').post-thumb
+                img(src='img/blog/04.jpg' alt='Blog Post')
+              .post-body
+                ul.post-meta
+                  li
+                    i.icon-clock
+                    a(href='#') Jan 11, 2018
+                  li
+                    i.icon-user
+                    a(href='#') Cynthia Gomez
+                  li
+                    i.icon-tag
+                    a(href='#') Photography
+                h3.post-title
+                  a(href='blog-single-ls.html') How Photography Changed My Life
+                p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores... <a href='blog-single-ls.html'>Read more</a>
+
+          // Post
+          .grid-item
+            .blog-post
+              a(href='blog-single-ls.html').post-thumb
+                img(src='img/blog/05.jpg' alt='Blog Post')
+              .post-body
+                ul.post-meta
+                  li
+                    i.icon-clock
+                    a(href='#') Dec 29, 2017
+                  li
+                    i.icon-user
+                    a(href='#') Logan Coleman
+                  li
+                    i.icon-tag
+                    a(href='#') Gadgets
+                h3.post-title
+                  a(href='blog-single-ls.html') Perfect Freelancer's Working Desk
+                p Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore cum... <a href='blog-single-ls.html'>Read more</a>
+          
+          // Post
+          .grid-item
+            .blog-post
+              .post-body
+                ul.post-meta
+                  li
+                    i.icon-clock
+                    a(href='#') Dec 18, 2017
+                  li
+                    i.icon-user
+                    a(href='#') Andy Williams
+                  li
+                    i.icon-tag
+                    a(href='#') Ecommerce
+                h3.post-title
+                  a(href='blog-single-ls.html') Tips &amp; Tricks: Make Your Ecommerce Startup Stand Out
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim... <a href='blog-single-ls.html'>Read more</a>
+
+        include partials/pagination
+
+      // Sidebar          
+      .col-lg-3.order-lg-1
+        include partials/blog-sidebar

@@ -1,0 +1,127 @@
+//
+// List Group
+// ----------------------------------------------------
+
+.list-group-item {
+  border: 0;
+  border: {
+    top: 2px solid $white-color;
+    bottom: 2px solid $white-color;
+  }
+  border-radius: 0 !important;
+  background-color: $gray-lighter;
+  font-size: $nav-link-font-size;
+  text: {
+    transform: uppercase;
+    letter-spacing: .025em;
+    decoration: none;
+  }
+  i {
+    margin-top: -4px;
+    margin-right: 8px;
+    font-size: 1.1em;
+  }
+  p, ul, ol, li, span, small {
+    font-weight: normal !important;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  h1, .h1, h2, .h2, h3, .h3,
+  h4, .h4, h5, .h5, h6, .h6 {
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: transparent;
+    content: '';
+  }
+}
+a.list-group-item,
+.list-group-item-action {
+  transition: all .25s;
+  color: $nav-link-color;
+  &:hover,
+  &:focus, &:active {
+    background-color: $gray-lighter;
+    color: $nav-link-hover-color;
+  }
+}
+a.list-group-item {
+  padding: {
+    top: .87rem;
+    bottom: .87rem;
+  }
+}
+
+// With badges
+.with-badge {
+  position: relative;
+  padding-right: 3.3rem;
+  .badge {
+    position: absolute;
+    top: 50%;
+    right: 1.15rem;
+    transform: translateY(-50%);
+  }
+}
+
+// Badges
+.badge {
+  color: $white-color;
+  font: {
+    size: 90%;
+    weight: 500;
+  }
+  &.badge-default {
+    background-color: $white-color;
+    color: $gray-dark;
+  }
+  &.badge-primary { background-color: $brand-primary; }
+  &.badge-info { background-color: $brand-info; }
+  &.badge-success { background-color: $brand-success; }
+  &.badge-warning { background-color: $brand-warning; }
+  &.badge-danger { background-color: $brand-danger; }
+}
+
+// Active state
+.list-group-item.active {
+  border-color: $white-color;
+  background-color: $gray-lighter;
+  color: $nav-link-active-color;
+  cursor: default;
+  pointer-events: none;
+  &::before { background-color: $nav-link-active-color; }
+  p, ul, ol, li, span, small,
+  h1, .h1, h2, .h2, h3, .h3,
+  h4, .h4, h5, .h5, h6, .h6 { color: $body-color; }
+}
+
+// Contextual classes
+.list-group-item-info {
+  @include list-group-variant($brand-info, rgba($brand-info, .15));
+}
+.list-group-item-success {
+  @include list-group-variant(darken($brand-success, 3%), rgba($brand-success, .15));
+}
+.list-group-item-warning {
+  @include list-group-variant(darken($brand-warning, 3%), rgba($brand-warning, .15));
+}
+.list-group-item-danger {
+  @include list-group-variant($brand-danger, rgba($brand-danger, .15));
+}
+.list-group-item-action:hover,
+.list-group-item-action.active {
+  &.list-group-item-info { background-color: rgba($brand-info, .3); }
+  &.list-group-item-success { background-color: rgba($brand-success, .3); }
+  &.list-group-item-warning { background-color: rgba($brand-warning, .3); }
+  &.list-group-item-danger { background-color: rgba($brand-danger, .3); }
+}
+
+// Next to card
+.card:not([class*='mb-']):not([class*='margin-bottom-']) + .list-group { margin-top: 1px; }

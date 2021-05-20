@@ -1,0 +1,63 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isHeader = false
+  - var isPageTitle = false
+  - var isFooter = false
+  - var isCustomizer = false
+
+//- Page Content
+block content
+  .row.no-gutters
+    div(style='background-image: url(img/coming-soon-bg.jpg);').col-md-6.fh-section
+      span(style='background-color: #000; opacity: .7;').overlay
+      .d-flex.flex-column.fh-section.py-5.px-3.justify-content-between
+        .w-100.text-center
+          .d-inline-block.mb-5(style='width: 136px;')
+            img(src='img/logo/logo-light.png' alt='Unishop').d-block
+          h1.text-white.text-normal.mb-3 Coming Soon...
+          h6.text-white.opacity-80.mb-4 Our website is currently under construction. It goes live in:
+          .countdown.countdown-inverse(data-date-time='12/30/2019 12:00:00')
+            .item
+              .days 00
+              span.days_ref Days
+            .item
+              .hours 00
+              span.hours_ref Hours
+            .item
+              .minutes 00
+              span.minutes_ref Mins
+            .item
+              .seconds 00
+              span.seconds_ref Secs
+          .pt-3.hidden-md-up
+            a(href='#notify').btn.btn-primary.scroll-to
+              i.icon-bell
+              | &nbsp;Notify Me!
+        .w-100.text-center
+          p.text-white.mb-2 00 33 169 7720
+          a(href='mailto:support@unishop.com').navi-link-light support@unishop.com
+          .pt-3
+            a(href='#').social-button.shape-circle.sb-facebook.sb-light-skin
+              i.socicon-facebook
+            a(href='#').social-button.shape-circle.sb-twitter.sb-light-skin
+              i.socicon-twitter
+            a(href='#').social-button.shape-circle.sb-instagram.sb-light-skin
+              i.socicon-instagram
+            a(href='#').social-button.shape-circle.sb-google-plus.sb-light-skin
+              i.socicon-googleplus
+
+    #notify.col-md-6.fh-section(data-offset-top='-1')
+      .d-flex.flex-column.fh-section.py-5.px-3.justify-content-center.align-items-center
+        .text-center(style='max-width: 500px;')
+          .h1.text-normal.mb-3 Notify Me!
+          h6.text-muted.mb-4 Let me know when your website is live and I can start order goods. Here is my:
+          form
+            .form-group
+              input(type='text' placeholder='Name' required).form-control
+            .form-group
+              input(type='email' placeholder='Email Address' required).form-control
+            button(type='submit').btn.btn-primary
+              i.icon-mail
+              | &nbsp;Submit

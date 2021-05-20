@@ -1,0 +1,123 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'About Us'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'About Us'
+  - var isGallery = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'About Us'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-2x.mb-2
+    .row.align-items-center.padding-bottom-2x
+      .col-md-5
+        img(src='img/banners/about-01.jpg' alt='Online Shopping').d-block.m-auto.img-thumbnail
+      .col-md-7.text-md-left.text-center
+        .mt-30.hidden-md-up
+        h2 Search, Select, Buy Online.
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor, tristique nec placerat nec.
+        a(href='shop-grid-ls.html').text-decoration-none
+          | View Products&nbsp;
+          i.icon-arrow-right.d-inline-block.align-middle
+    hr
+    .row.align-items-center.padding-top-2x.padding-bottom-2x
+      .col-md-5.order-md-2
+        img(src='img/banners/about-02.jpg' alt='Delivery').d-block.m-auto.img-thumbnail
+      .col-md-7.order-md-1.text-md-left.text-center
+        .mt-30.hidden-md-up
+        h2 Fast Delivery Worldwide.
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor, tristique nec placerat nec.
+        a(href='#').text-decoration-none
+          | Shipping Details&nbsp;
+          i.icon-arrow-right.d-inline-block.align-middle
+    hr
+    .row.align-items-center.padding-top-2x.padding-bottom-2x
+      .col-md-5
+        img(src='img/banners/about-03.jpg' alt='Mobile App').d-block.m-auto.img-thumbnail
+      .col-md-7.text-md-left.text-center
+        .mt-30.hidden-md-up
+        h2 Great Mobile App. Shop On The Go.
+        p.text-muted.mb-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor.
+        a(href='#').market-button.apple-button
+          span.mb-subtitle Download on the
+          span.mb-title App Store
+        a(href='#').market-button.google-button
+          span.mb-subtitle Download on the
+          span.mb-title Google Play
+        a(href='#').market-button.windows-button
+          span.mb-subtitle Download on the
+          span.mb-title Windows Store
+    hr
+    .row.align-items-center.padding-top-2x.padding-bottom-2x
+      .col-md-5.order-md-2
+        img(src='img/banners/about-04.jpg' alt='Stores').d-block.m-auto.img-thumbnail
+      .col-md-7.order-md-1.text-md-left.text-center
+        .mt-30.hidden-md-up
+        h2 Shop Offline. Modern Outlet Stores.
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor, tristique nec placerat nec.
+        a(href='contacts.html').text-decoration-none
+          | See Outlet Stores&nbsp;
+          i.icon-arrow-right.d-inline-block.align-middle
+    hr
+    .row.align-items-center.padding-top-2x.padding-bottom-2x
+      .col-md-5
+        .position-relative
+          img(src='img/banners/about-05.jpg' alt='Partner').d-block.m-auto.img-thumbnail
+          div(style='top: 50%; left: 50%; margin: -43px 0 0 -40px;').gallery-wrapper.text-center.position-absolute
+            .gallery-item.video-btn.text-center
+              a(href='#' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube.com/embed/d8WNn3QbJek" frameborder="0" allowfullscreen></iframe></div></div>')
+      .col-md-7.text-md-left.text-center
+        .mt-30.hidden-md-up
+        h2 Unishop - Your Reliable Partner.
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor, tristique nec placerat nec.
+    hr
+    .text-center.padding-top-3x.mb-30
+      h2.mb-3 Our Core Team
+      p.text-muted People behind your awesome shopping experience.
+    .row
+      .col-md-3.col-sm-6.mb-30.text-center
+        img(src='img/team/01.jpg' alt='Team').d-block.w-150.mx-auto.img-thumbnail.rounded-circle.mb-2
+        h6 Grace Wright
+        p.text-muted.mb-2 Founder, CEO
+        .social-bar
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-circle.sb-facebook
+            i.socicon-facebook
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+            i.socicon-twitter
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-circle.sb-google-plus
+            i.socicon-googleplus
+      .col-md-3.col-sm-6.mb-30.text-center
+        img(src='img/team/02.jpg' alt='Team').d-block.w-150.mx-auto.img-thumbnail.rounded-circle.mb-2
+        h6 Taylor Jackson
+        p.text-muted.mb-2 Financial Director
+        .social-bar
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-button.shape-circle.sb-skype
+            i.socicon-skype
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-circle.sb-facebook
+            i.socicon-facebook
+          a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-button.shape-circle.sb-paypal
+            i.socicon-paypal
+      .col-md-3.col-sm-6.mb-30.text-center
+        img(src='img/team/03.jpg' alt='Team').d-block.w-150.mx-auto.img-thumbnail.rounded-circle.mb-2
+        h6 Quinton Cross
+        p.text-muted.mb-2 Marketing Director
+        .social-bar
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+            i.socicon-twitter
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-circle.sb-google-plus
+            i.socicon-googleplus
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Email').social-button.shape-circle.sb-email
+            i.socicon-mail
+      .col-md-3.col-sm-6.mb-30.text-center
+        img(src='img/team/04.jpg' alt='Team').d-block.w-150.mx-auto.img-thumbnail.rounded-circle.mb-2
+        h6 Liana Mullen
+        p.text-muted.mb-2 Lead Designer
+        .social-bar
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-button.shape-circle.sb-behance
+            i.socicon-behance
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-button.shape-circle.sb-dribbble
+            i.socicon-dribbble
+          a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-circle.sb-instagram
+            i.socicon-instagram

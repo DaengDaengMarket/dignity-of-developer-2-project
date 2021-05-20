@@ -1,0 +1,125 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Team'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Team'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Simple Vertical
+        hr.margin-bottom-1x
+        .row
+          .col-sm-4.text-center.mb-4
+            img(src='../img/team/01.jpg' alt='Team').d-block.w-150.mx-auto.img-thumbnail.rounded-circle.mb-2
+            h6 Grace Wright
+            p.text-muted.mb-2 Founder, CEO
+            .social-bar
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-circle.sb-facebook
+                i.socicon-facebook
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+                i.socicon-twitter
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-circle.sb-google-plus
+                i.socicon-googleplus
+          .col-sm-4.text-center.mb-4
+            img(src='../img/team/02.jpg' alt='Team').d-block.w-150.mx-auto.img-thumbnail.rounded-circle.mb-2
+            h6 Taylor Jackson
+            p.text-muted.mb-2 Financial Director
+            .social-bar
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Skype').social-button.shape-circle.sb-skype
+                i.socicon-skype
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-circle.sb-facebook
+                i.socicon-facebook
+              a(href='#' data-toggle='tooltip' data-placement='top' title='PayPal').social-button.shape-circle.sb-paypal
+                i.socicon-paypal
+          .col-sm-4.text-center.mb-4
+            img(src='../img/team/03.jpg' alt='Team').d-block.w-150.mx-auto.img-thumbnail.rounded-circle.mb-2
+            h6 Quinton Cross
+            p.text-muted.mb-2 Marketing Director
+            .social-bar
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+                i.socicon-twitter
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-circle.sb-google-plus
+                i.socicon-googleplus
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Email').social-button.shape-circle.sb-email
+                i.socicon-mail
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Simple Horizontal
+        hr.margin-bottom-1x
+        .row
+          .col-sm-6.mb-4
+            .d-table
+              img(src='../img/team/04.jpg' alt='Team').d-block.w-150.mx-auto.img-thumbnail.rounded-circle.d-table-cell.align-middle
+              div.pl-3.d-table-cell.align-middle
+                h6 Liana Mullen
+                p.text-muted.mb-2 Lead Designer
+                .social-bar
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-button.shape-circle.sb-behance
+                    i.socicon-behance
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-button.shape-circle.sb-dribbble
+                    i.socicon-dribbble
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-circle.sb-instagram
+                    i.socicon-instagram
+          .col-sm-6.mb-4
+            .d-table
+              img(src='../img/team/05.jpg' alt='Team').d-block.w-150.mx-auto.img-thumbnail.rounded-circle.d-table-cell.align-middle
+              div.pl-3.d-table-cell.align-middle
+                h6 Mason Ross
+                p.text-muted.mb-2 Software Engeneer
+                .social-bar
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-button.shape-circle.sb-github
+                    i.socicon-github
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+                    i.socicon-twitter
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-button.shape-circle.sb-stackoverflow
+                    i.socicon-stackoverflow
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Cards Example
+        hr.margin-bottom-1x
+        .row
+          .col-sm-4.mb-4
+            .card.text-center
+              img(src='../img/team/06.jpg' alt='Team').card-img-top
+              .card-body
+                h5.card-title.mb-2 Kane Montoya
+                p.text-muted.mb-2 Founder, CEO
+                .social-bar
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-circle.sb-facebook
+                    i.socicon-facebook
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+                    i.socicon-twitter
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-circle.sb-google-plus
+                    i.socicon-googleplus
+          .col-sm-4.mb-4
+            .card.text-center
+              img(src='../img/team/07.jpg' alt='Team').card-img-top
+              .card-body
+                h5.card-title.mb-2 Clare Barrera
+                p.text-muted.mb-2 Art Director
+                .social-bar
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Behance').social-button.shape-circle.sb-behance
+                    i.socicon-behance
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Dribbble').social-button.shape-circle.sb-dribbble
+                    i.socicon-dribbble
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-circle.sb-instagram
+                    i.socicon-instagram
+          .col-sm-4.mb-4
+            .card.text-center
+              img(src='../img/team/08.jpg' alt='Team').card-img-top
+              .card-body
+                h5.card-title.mb-2 Joshua Andrews
+                p.text-muted.mb-2 Software Engeneer
+                .social-bar
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='GitHub').social-button.shape-circle.sb-github
+                    i.socicon-github
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+                    i.socicon-twitter
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Stack Overflow').social-button.shape-circle.sb-stackoverflow
+                    i.socicon-stackoverflow
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

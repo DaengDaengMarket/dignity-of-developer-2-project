@@ -1,0 +1,57 @@
+//
+// Blog Styles
+// --------------------------------------------------
+
+// Post meta
+.blog-post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: floor($font-size-base * 1.125); //~18px
+  color: $blog-post-meta-color;
+  font-size: $blog-post-meta-font-size;
+  a:not(.read-more) {
+    transition: color .25s;
+    color: $blog-post-meta-color;
+    text-decoration: none;
+    &:hover { color: $blog-post-hover-color; }
+  }
+  .divider {
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 0 10px;
+    background-color: rgba($blog-post-meta-color, .5);
+    vertical-align: middle;
+  }
+  i {
+    margin-top: -2px;
+    vertical-align: middle;
+  }
+}
+
+// Post Title
+.blog-post-title {
+  font: {
+    size: $font-size-h4;
+    weight: normal;
+  }
+  line-height: $line-height-h4;
+  > a {
+    transition: color .3s;
+    color: $blog-post-color;
+    text-decoration: none;
+  }
+  &:hover > a { color: $blog-post-hover-color; }
+}
+
+// Post Thumbnail
+.blog-post-thumb {
+  display: block;
+  margin-bottom: $grid-vertical-step;
+  > img {
+    display: block;
+    width: 100%;
+  }
+}

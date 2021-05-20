@@ -1,0 +1,117 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Shop Items'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Shop Items'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Product Card
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4.col-md-6.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb 
+                span.product-badge.text-danger Sale
+                a(href='#').product-card-link
+                img(src='../img/shop/th01.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='#') Storage Box
+                h4.product-card-price
+                  del $49.00
+                  | $38.00
+          .col-lg-4.col-md-6.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb 
+                span.product-badge.text-muted Out of stock
+                a(href='#').product-card-link
+                img(src='../img/shop/th02.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  a(hre='#').btn.btn-white.btn-sm View Details
+              .product-card-details
+                h3.product-card-title
+                  a(href='#') Stylish Chair
+                h4.product-card-price $417.00
+          .col-lg-4.col-md-6.col-sm-6
+            .product-card.mb-30
+              .product-card-thumb
+                span.product-rating.text-warning
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star_half
+                  i.material-icons.star_border
+                a(href='#').product-card-link
+                img(src='../img/shop/th03.jpg', alt='Product')
+                .product-card-buttons
+                  button(data-toggle='tooltip' title='Wishlist').btn.btn-white.btn-sm.btn-wishlist
+                    i.material-icons.favorite_border
+                  button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='material-icons check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary.btn-sm Add to Cart
+              .product-card-details
+                h3.product-card-title
+                  a(href='#') Hook Basket
+                h4.product-card-price $112.50
+
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Category Card
+        hr.margin-bottom-1x
+        .row
+          .col-lg-8.col-sm-6.mb-30
+            a(href='#').category-card.flex-wrap
+              .category-card-info.align-self-center
+                h3.category-card-title Furniture
+                h4.category-card-subtitle Starting from $126.00
+              .category-card-thumb
+                img(src='../img/shop/categories/01.jpg', alt='Category')
+          .col-lg-4.col-sm-6.mb-30
+            a(href='#').category-card.flex-wrap.text-center
+              span.product-badge.text-danger Special Offer
+              .category-card-thumb
+                img(src='../img/shop/categories/02.jpg', alt='Category')
+              .category-card-info
+                h3.category-card-title Lighting
+                h4.category-card-subtitle Starting from $95.99
+
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Promo Card
+        hr.margin-bottom-1x
+        .bg-faded.padding-top-2x.padding-bottom-2x.px-4.text-center
+          h2
+            | Special Offer&nbsp;
+            span.text-danger -50%
+          a(href='#').d-block.mb-2
+            img(src='../img/shop/special-offer01.jpg', alt='Image')
+          h3.lead.text-normal.mb-3
+            a(href='#').navi-link Living Room Sofa Transformer
+          del.lead.text-normal.text-muted $1900.00
+          span.h4.text-normal.text-danger &nbsp;$950.00
+          .mt-4
+            .countdown.countdown-alt(data-date-time='12/30/2019 12:00:00')
+              .item
+                .days 00
+                span.days_ref Days
+              .item
+                .hours 00
+                span.hours_ref Hours
+              .item
+                .minutes 00
+                span.minutes_ref Mins
+              .item
+                .seconds 00
+                span.seconds_ref Secs
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu
+        .padding-bottom-1x.hidden-md-up

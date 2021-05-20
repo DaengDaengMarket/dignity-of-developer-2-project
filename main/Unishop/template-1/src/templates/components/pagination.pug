@@ -1,0 +1,33 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Pagination'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Pagination'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase.margin-bottom-1x Pagination
+        include ../partials/pagination
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2.margin-bottom-1x Entry Navigation
+        .entry-navigation
+          .column.text-left
+            a(href='#' class='btn btn-outline-secondary btn-sm')
+              i.icon-arrow-left
+              | &nbsp;Prev
+          .column
+            a(href='#' class='btn btn-outline-secondary view-all' data-toggle='tooltip' data-placement='top' title='All entries')
+              i.icon-menu
+          .column.text-right
+            a(href='#' class='btn btn-outline-secondary btn-sm')
+              | Next&nbsp;
+              i.icon-arrow-right
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

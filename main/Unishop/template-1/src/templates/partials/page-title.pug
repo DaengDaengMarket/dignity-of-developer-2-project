@@ -1,0 +1,15 @@
+// Page Title
+.page-title
+  .container
+    .column: h1 #{pageTitle}
+    .column
+      if breadcrumbs.length
+        ul.breadcrumbs
+          each breadcrumb in breadcrumbs
+            if breadcrumb.link
+              li
+                - var linkatts = {'href': breadcrumb.link}
+                a()&attributes(linkatts)= breadcrumb.title
+              li.separator &nbsp;
+            else
+              li= breadcrumb.title

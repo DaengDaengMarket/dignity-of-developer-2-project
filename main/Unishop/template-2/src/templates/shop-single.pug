@@ -1,0 +1,202 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = false
+  - var isGallery = true
+  - var isModalReview = true
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Single Product'
+
+//- Page Content
+block content
+  .bg-secondary.pb-4.padding-top-3x
+    .container
+      .row
+
+        // Product Gallery
+        .col-md-6.mb-30
+          .product-gallery
+            span.product-badge.text-danger Sale
+            .product-carousel.owl-carousel.gallery-wrapper
+              .gallery-item(data-hash='one')
+                a(href='img/shop/single/01.jpg' data-size='555x480')
+                  img(src='img/shop/single/01.jpg' alt='Product')
+              .gallery-item(data-hash='two')
+                a(href='img/shop/single/02.jpg' data-size='555x480')
+                  img(src='img/shop/single/02.jpg' alt='Product')
+              .gallery-item(data-hash='three')
+                a(href='img/shop/single/03.jpg' data-size='555x480')
+                  img(src='img/shop/single/03.jpg' alt='Product')
+              .gallery-item(data-hash='four')
+                a(href='img/shop/single/04.jpg' data-size='555x480')
+                  img(src='img/shop/single/04.jpg' alt='Product')
+            ul.product-thumbnails
+              li.active
+                a(href='#one'): img(src='img/shop/single/th01.jpg' alt='Product')
+              li
+                a(href='#two'): img(src='img/shop/single/th02.jpg' alt='Product')
+              li
+                a(href='#three'): img(src='img/shop/single/th03.jpg' alt='Product')
+              li
+                a(href='#four'): img(src='img/shop/single/th04.jpg' alt='Product')
+
+        // Product Info
+        .col-md-6.mb-30
+          .card.border-default.bg-white.pt-2.box-shadow
+            .card-body
+              h2.mb-3 Stow 3-Drawer File Cabinet
+              h3.text-normal <del class='text-muted'>$265.00</del> $230.00
+              p.text-sm.text-muted At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+              .row
+                .col-sm-6
+                  .form-group
+                    label(for='sp-color') Color:
+                    select(id='sp-color').form-control
+                      option Light Gray
+                      option Charcoal
+                      option(selected) Aqua
+                      option Orange
+                      option Navi
+                      option Yellow
+                .col-sm-6
+                  .form-group
+                    label(for='sp-accent-color') Accent Color:
+                    select(id='sp-accent-color').form-control
+                      option(selected) White
+                      option Light Gray
+                      option Black
+              .row.align-items-end.mb-4
+                .col-sm-4
+                  .form-group.mb-0
+                    label(for='sp-quantity') Quantity:
+                    select(id='sp-quantity').form-control
+                      option 1
+                      option 2
+                      option 3
+                      option 4
+                      option 5
+                .col-sm-8
+                  .pt-4.hidden-sm-up
+                  button.btn.btn-primary.btn-block.my-0 Add To Cart
+              ul.list-unstyled.text-sm.mb-4
+                li <span class='text-dark text-medium'>SKU:</span> #994587623
+                li <span class='text-dark text-medium'>Categories:</span> <a href='#' class='navi-link'>Furniture</a>, <a href='#' class='navi-link'>File Cabinets</a>
+              .d-flex.flex-wrap.justify-content-between.align-items-center
+                a(href='#').btn.btn-outline-secondary.btn-sm.text-danger
+                  i.material-icons.favorite_border
+                  | &nbsp;Save To Wishlist
+                div.py-2
+                  span.d-inline-block.align-middle.text-sm.text-muted.mr-2 Share:
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-rounded.sb-facebook
+                    i.socicon-facebook
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-rounded.sb-twitter
+                    i.socicon-twitter
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-rounded.sb-instagram
+                    i.socicon-instagram
+                  a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-rounded.sb-google-plus
+                    i.socicon-googleplus
+
+  .container.padding-bottom-3x.pt-5.mb-1
+
+    // Details
+    .row.pt-2
+      .col-md-6
+        h3 Details
+        p.text-sm.mb-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        h3 Features
+        ul.text-sm.mb-4
+          li Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          li Ut enim ad minima veniam, quis nostrum exercitationem
+          li Nor again is there anyone who loves or pursues
+          li At vero eos et accusamus et iusto odio dignissimos ducimus
+          li Nam libero tempore, cum soluta nobis est eligendi 
+      .col-md-6
+        h3 Specifications
+        ul.list-unstyled.text-sm.mb-4
+          li <strong>Weight:</strong> 6.25 kg
+          li <strong>Dimensions:</strong> 120 x 75 x 90 cm
+          li <strong>Materials:</strong> 40% steel, 37% wood, 23% plastic
+          li <strong>Colors:</strong> White, Gray, Aqua, Charcoal, Orange, Navy, Yellow
+          li <strong>Manufacturer:</strong> Poppin, NY, USA
+        h3 Shipping Options:
+        ul.list-unstyled.text-sm.mb-4
+          li <strong>Courier:</strong> 2 - 4 days, $22.50
+          li <strong>Local Shipping:</strong> up to one week, $10.00
+          li <strong>UPS Ground Shipping:</strong> 4 - 6 days, $18.00
+          li <strong>Unishop Global Export:</strong> 3 - 4 days, $25.00
+    
+    // Reviews
+    .row.mt-30
+      .col-md-4.mb-4
+        .card.border-default
+          .card-body
+            .text-center
+              .d-inline.align-baseline.display-2.mr-1 4.6
+              .d-inline.align-baseline.text-sm.text-warning.mr-1
+                i.material-icons.star
+                i.material-icons.star
+                i.material-icons.star
+                i.material-icons.star
+                i.material-icons.star_half
+            .pt-3
+              label.text-medium.text-sm 5 stars <span class='text-muted'>- 38</span>
+              .progress.margin-bottom-1x
+                .progress-bar.bg-warning(role='progressbar' style='width: 75%; height: 2px;' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+              label.text-medium.text-sm 4 stars <span class='text-muted'>- 10</span>
+              .progress.margin-bottom-1x
+                .progress-bar.bg-warning(role='progressbar' style='width: 20%; height: 2px;' aria-valuenow='20' aria-valuemin='0' aria-valuemax='100')
+              label.text-medium.text-sm 3 stars <span class='text-muted'>- 3</span>
+              .progress.margin-bottom-1x
+                .progress-bar.bg-warning(role='progressbar' style='width: 7%; height: 2px;' aria-valuenow='7' aria-valuemin='0' aria-valuemax='100')
+              label.text-medium.text-sm 2 stars <span class='text-muted'>- 1</span>
+              .progress.margin-bottom-1x
+                .progress-bar.bg-warning(role='progressbar' style='width: 3%; height: 2px;' aria-valuenow='3' aria-valuemin='0' aria-valuemax='100')
+              label.text-medium.text-sm 1 star <span class='text-muted'>- 0</span>
+              .progress.mb-2
+                .progress-bar.bg-warning(role='progressbar' style='width: 0; height: 2px;' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100')
+            .pt-2
+              a(href='#' data-toggle='modal' data-target='#leaveReview').btn.btn-warning.btn-block Leave a Review
+      .col-md-8
+        h3.padding-bottom-1x Latest Reviews
+        // Review
+        .comment
+          .comment-author-ava
+            img(src='img/reviews/02.jpg' alt='Comment author')
+          .comment-body
+            .comment-header.d-flex.flex-wrap.justify-content-between
+              h4.comment-title My husband love his new...
+
+              .mb-2
+                .product-rating.text-warning
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+            p.comment-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            .comment-footer
+              span.comment-meta Maggie Scott
+        // Review
+        .comment
+          .comment-author-ava
+            img(src='img/reviews/03.jpg' alt='Comment author')
+          .comment-body
+            .comment-header.d-flex.flex-wrap.justify-content-between
+              h4.comment-title Awesome quality for the price
+
+              .mb-2
+                .product-rating.text-warning
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star
+                  i.material-icons.star_border
+            p.comment-text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+            .comment-footer
+              span.comment-meta Jacob Hammond
+        // View All Button
+        a(href='#').btn.btn-outline-secondary.btn-block View All Reviews
+
+    include partials/related-products-carousel
+    

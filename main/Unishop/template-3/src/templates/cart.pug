@@ -1,0 +1,131 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Cart'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Cart'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Cart'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+
+    // Alert
+    div(style='margin-bottom: 30px;').alert.alert-info.alert-dismissible.fade.show.text-center
+      span(data-dismiss='alert').alert-close
+      i.icon-award
+      | &nbsp;&nbsp;With this purchase you will earn <span class='text-medium'>2,549</span> Reward Points.
+    
+    // Shopping Cart
+    .table-responsive.shopping-cart
+        table.table
+          thead
+            tr
+              th Product Name
+              th.text-center Quantity
+              th.text-center Subtotal
+              th.text-center Discount
+              th.text-center
+                a(href='#').btn.btn-sm.btn-outline-danger Clear Cart
+          tbody
+            tr
+              td
+                .product-item
+                  a(href='shop-single.html').product-thumb
+                    img(src='img/shop/cart/01.jpg', alt='Product')
+                  .product-info
+                    h4.product-title
+                      a(href='shop-single.html') Canon EOS M50 Mirrorless Camera
+                    span
+                      em Type:
+                      |  Mirrorless
+                    span
+                      em Color:
+                      |  Black
+              td.text-center
+                .count-input
+                  select.form-control
+                    option 1
+                    option 2
+                    option 3
+                    option 4
+                    option 5
+              td.text-center.text-lg $910.00
+              td.text-center.text-lg $35.00
+              td.text-center
+                a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+                  i.icon-x
+            tr
+              td
+                .product-item
+                  a(href='shop-single.html').product-thumb
+                    img(src='img/shop/cart/02.jpg', alt='Product')
+                  .product-info
+                    h4.product-title
+                      a(href='shop-single.html') Apple iPhone X 256 GB Space Gray
+                    span
+                      em Memory:
+                      |  256 GB
+                    span
+                      em Color:
+                      |  Space Gray
+              td.text-center
+                .count-input
+                  select.form-control
+                    option 1
+                    option 2
+                    option 3
+                    option 4
+                    option 5
+              td.text-center.text-lg $1,450.00
+              td.text-center &mdash;
+              td.text-center
+                a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+                  i.icon-x
+            tr
+              td
+                .product-item
+                  a(href='shop-single.html').product-thumb
+                    img(src='img/shop/cart/03.jpg', alt='Product')
+                  .product-info
+                    h4.product-title
+                      a(href='shop-single.html') HP LaserJet Pro Laser Printer
+                    span
+                      em Type:
+                      |  Laser
+                    span
+                      em Color:
+                      |  White
+              td.text-center
+                .count-input
+                  select.form-control
+                    option 1
+                    option 2
+                    option 3
+                    option 4
+                    option 5
+              td.text-center.text-lg $188.50
+              td.text-center &mdash;
+              td.text-center
+                a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+                  i.icon-x
+    .shopping-cart-footer
+      .column
+        form(method='post').coupon-form
+          input(type='text' placeholder='Coupon code' required).form-control.form-control-sm
+          button(type='submit' class='btn btn-outline-primary btn-sm') Apply Coupon
+      .column.text-lg
+        span.text-muted Subtotal:&nbsp; 
+        span.text-gray-dark $2,548.50
+    .shopping-cart-footer
+      .column
+        a(href='shop-grid-ls.html' class='btn btn-outline-secondary')
+          i.icon-arrow-left
+          | &nbsp;Back to Shopping
+      .column
+        a(href='#' class='btn btn-secondary' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Your cart' data-toast-message='is updated successfully!') Update Cart
+        a(href='checkout-address.html' class='btn btn-primary') Checkout
+
+    include partials/related-products-carousel
+    

@@ -1,0 +1,88 @@
+//- To use only with sidebar-offcanvas
+.sidebar-toggle.position-left
+  i.icon-filter
+
+aside.sidebar.sidebar-offcanvas.position-left
+  //- To use only with sidebar-offcanvas
+  span.sidebar-close
+    i.icon-x
+
+  // Widget Search
+  section.widget
+    form(method='get').input-group.form-group
+      span.input-group-btn
+        button(type='submit')
+          i.icon-search
+      input(type='search' placeholder='Search blog').form-control
+
+  // Widget Categories
+  section.widget.widget-categories
+    h3.widget-title Top Categories
+    ul
+      li
+        a(href='#') Editor's Choice
+        <span>(24)</span>
+      li
+        a(href='#') Electronics
+        <span>(12)</span>
+      li
+        a(href='#') Industrial Design
+        <span>(5)</span>
+      li
+        a(href='#') Secure Payments Online
+        <span>(2)</span>
+      li
+        a(href='#') Smart Gadgets
+        <span>(19)</span>
+      li
+        a(href='#') Online Shopping
+        <span>(7)</span>
+
+  // Widget Featured Posts
+  section.widget.widget-featured-posts
+    h3.widget-title Featured Posts
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='blog-single-rs.html')
+          img(src='img/blog/widget/01.jpg', alt='Post')
+      .entry-content
+        h4.entry-title
+          a(href='blog-single-rs.html') Factors Behind Wearable Gadgets Popularity
+        span.entry-meta by Olivia Reyes
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='blog-single-rs.html')
+          img(src='img/blog/widget/02.jpg', alt='Post')
+      .entry-content
+        h4.entry-title
+          a(href='blog-single-rs.html') Smartphones in Every Day Life 
+        span.entry-meta by Logan Coleman
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='blog-single-rs.html')
+          img(src='img/blog/widget/03.jpg', alt='Post')
+      .entry-content
+        h4.entry-title
+          a(href='blog-single-rs.html') Retro Cameras are Trending. Why so Popular?
+        span.entry-meta by Cynthia Gomez
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='blog-single-rs.html')
+          img(src='img/blog/widget/05.jpg', alt='Post')
+      .entry-content
+        h4.entry-title
+          a(href='blog-single-rs.html') Smart Homes Become Even More Smart
+        span.entry-meta by Cedric Diggory
+
+  // Widget Tags
+  section.widget.widget-tags
+    h3.widget-title Popular Tags
+    a(href='#').tag #electronics
+    a(href='#').tag #cpu
+    a(href='#').tag #gadgets
+    a(href='#').tag #wearables
+    a(href='#').tag #smartphones

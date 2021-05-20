@@ -1,0 +1,108 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Post Left Sidebar'
+  - var isGallery = true
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'Post Left Sidebar'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Blog', 'link': 'blog-rs.html'}, {'title': 'Post Left Sidebar'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row  
+
+      // Content
+      .col-xl-9.col-lg-8.order-lg-2
+
+        // Post Meta
+        ul.post-meta.mb-4
+          li
+            i.icon-clock
+            a(href='#') Mar 15, 2018
+          li
+            i.icon-user
+            a(href='#') Gregory Smith
+          li
+            i.icon-tag
+            a(href='#') Gadgets
+          li
+            i.icon-message-square
+            a(href='#comments').scroll-to 12
+        
+        // Gallery
+        .gallery-wrapper
+          .gallery-item
+            a(href='img/blog/single/01.jpg' data-size='1000x353')
+              img(src='img/blog/single/th01.jpg' alt='Image')
+            span.caption Blog single post caption 1
+        .gallery-wrapper
+          .row
+            .col-md-4.col-sm-6
+              .gallery-item
+                a(href='img/blog/single/01.jpg' data-type='video' data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube-nocookie.com/embed/zpLVsR8cSFo?rel=0" frameborder="0" allowfullscreen></iframe></div></div>')
+                  img(src='img/blog/single/th02.jpg' alt='Image')
+                span.caption Blog single post caption 2
+            .col-md-4.col-sm-6
+              .gallery-item
+                a(href='img/blog/single/02.jpg' data-size='900x600')
+                  img(src='img/blog/single/th03.jpg' alt='Image')
+                span.caption Blog single post caption 3
+            .col-md-4.col-sm-6
+              .gallery-item
+                a(href='img/blog/single/03.jpg' data-size='900x600')
+                  img(src='img/blog/single/th04.jpg' alt='Image')
+                span.caption Blog single post caption 4
+
+        h2.pt-4 Smartphones in Every Day Life
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minima veniam, quis nostrum exercitationem.
+        p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minima veniam.
+        .row.pt-3.pb-2
+          .col-xl-10.offset-xl-1
+            blockquote.margin-top-1x.margin-bottom-1x
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.
+              cite Someone famous
+        p.mt-2 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+        p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minima veniam.
+
+        // Post Tags + Share
+        .d-flex.flex-wrap.justify-content-between.align-items-center.pt-3.pb-4
+          .pb-2
+            a(href='#').text-sm.text-muted.navi-link #electronics,
+            a(href='#').text-sm.text-muted.navi-link &nbsp;#gadgets&nbsp;
+          .pb-2
+            span.d-inline-block.align-middle.text-sm.text-muted Share post:&nbsp;&nbsp;&nbsp;
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-rounded.sb-facebook
+              i.socicon-facebook
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-rounded.sb-twitter
+              i.socicon-twitter
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-rounded.sb-instagram
+              i.socicon-instagram
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-rounded.sb-google-plus
+              i.socicon-googleplus
+        
+        // Post Navigation
+        .entry-navigation
+          .column.text-left
+            a(href='#' class='btn btn-outline-secondary btn-sm')
+              i.icon-arrow-left
+              | &nbsp;Prev
+          .column
+            a(href='blog-rs.html' class='btn btn-outline-secondary view-all' data-toggle='tooltip' data-placement='top' title='All posts')
+              i.icon-menu
+          .column.text-right
+            a(href='#' class='btn btn-outline-secondary btn-sm')
+              | Next&nbsp;
+              i.icon-arrow-right
+
+        // Relevant Posts
+        include partials/related-posts-carousel
+
+        // Comments
+        include partials/blog-comments
+
+
+      // Sidebar          
+      .col-xl-3.col-lg-4.order-lg-1
+        include partials/blog-sidebar

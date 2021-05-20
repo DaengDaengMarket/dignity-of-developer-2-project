@@ -1,0 +1,33 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Font Icons'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Font Icons
+        p.mb-4 I used multiple packs of font icons in this template.
+        h6.mb-3 Adding Material Icons:
+        pre.mb-4
+          | &lt;i class="material-icons <strong>icon_name</strong>"&gt;&lt;/i&gt;
+        h6.mb-3 Adding Socicon Icons (Social networks):
+        pre.mb-4
+          | &lt;a href="#" class="sb-<strong>brandName</strong>"&gt;&lt;i class="socicon-<strong>brandName</strong>"&gt;&lt;/i&gt;&lt;/a&gt;
+          br
+          span.text-muted &lt;!-- For example --&gt;
+          br
+          | &lt;a href="#" class="sb-facebook"&gt;&lt;i class="socicon-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+        p: a(href='https://material.io/icons/' target='_blank') Complete list of Material Icons
+        a(href='http://www.socicon.com/chart.php' target='_blank') Complete list of Socicon Icons
+
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

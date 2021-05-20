@@ -1,0 +1,156 @@
+//
+// Gallery (Photoswipe)
+// --------------------------------------------------
+
+// Gallery Item
+.gallery-item {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+
+  .caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: ($grid-vertical-step / 1.2);
+    transform: translate3d(0, 100%, 0);
+    transition: all .4s;
+    background-color: $white-color;
+    color: $body-color;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  > a {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    overflow: hidden;
+    > img {
+      display: block;
+      width: 100%;
+      transform: translate3d(0, 0, 0);
+      transition: all .45s;
+    }
+    &[data-type='video'] {
+      &::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 46px;
+        height: 46px;
+        margin: {
+          top: -22px;
+          left: -22px;
+        }
+        transform: none;
+        border-radius: 50%;
+        background-color: $white-color;
+        color: $gray-darker;
+        font: {
+          family: 'Material Icons';
+          size: 22px;
+        }
+        line-height: 46px;
+        text-align: center;
+        box-shadow: 0 4px 15px 0 rgba($black-color, .25);
+        content: '\e037';
+      }
+    }
+  }
+  &:hover {
+    > a > img { transform: translate3d(0, -25px, 0); }
+    .caption { transform: translate3d(0, 0, 0); }
+  }
+}
+
+.grid-no-gap .gallery-item {
+  margin-bottom: 0;
+  > a { border-radius: 0; }
+}
+.owl-carousel .gallery-item { margin-bottom: 0; }
+
+// Photoswipe
+.pswp__zoom-wrap {
+  text-align: center;
+  &::before {
+    display: inline-block;
+    height: 100%;
+    content: '';
+    vertical-align: middle;
+  }
+}
+.wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 0;
+  text-align: left;
+  vertical-align: middle;
+  z-index: 1045;
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 56.25%; /* 16:9 */
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+video {
+  width: 100% !important;
+  height: auto !important;
+}
+.pswp__caption__center {
+  padding: 20px 10px;
+  font: {
+    size: $font-size-sm;
+    weight: 500;
+  }
+  text-align: center;
+}
+
+// Video Button
+.video-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  cursor: pointer;
+  > a {
+    display: inline-block;
+    width: $video-btn-shape-size;
+    height: $video-btn-shape-size;
+    margin-bottom: $grid-vertical-step;
+    border-radius: 50%;
+    background-color: $white-color;
+    color: $gray-dark;
+    box-shadow: $sub-menu-shadow;
+    &::after {
+      transition: color .35s;
+      background-color: transparent !important;
+      font-size: $video-btn-icon-size !important;
+      box-shadow: none !important;
+    }
+  }
+  .caption {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    transform: none;
+    transition: none;
+    background: 0;
+    text-align: left;
+  }
+  &:hover > a::after { color: $brand-primary; }
+}

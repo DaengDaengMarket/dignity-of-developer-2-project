@@ -1,0 +1,198 @@
+//
+// Alert
+// --------------------------------------------------
+
+// Base class
+.alert {
+  display: block;
+  position: relative;
+  padding: $grid-vertical-step;
+  border: 5px solid transparent;
+  border-radius: 0;
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+    clip: padding-box;
+  }
+  i {
+    display: inline-block;
+    margin-top: -2px;
+    vertical-align: middle;
+  }
+  > *,
+  h1, h2, h3, h4, h5, h6, p, ul, ol, a {
+    &:last-child:not(.btn) { margin: 0; }
+  }
+  &::before {
+    display: block;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    content: '';
+    z-index: -1;
+  }
+
+  // Alert Dismissible
+  .alert-dismissible {
+    transition: opacity .4s;
+    &.fade.show { opacity: 1; }
+  }
+  .alert-close {
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    font: {
+      family: 'Material Icons';
+      size: $font-size-base;
+    }
+    cursor: pointer;
+    &::before { content: '\e5cd'; }
+  }
+}
+
+// Color Variants
+.alert-default {
+  @include alert-variant($gray-dark, rgba($gray-dark, .05), rgba($gray-dark, .13));
+}
+.alert-primary {
+  @include alert-variant($brand-primary, rgba($brand-primary, .12), rgba($brand-primary, .25));
+}
+.alert-info {
+  @include alert-variant($brand-info, rgba($brand-info, .12), rgba($brand-info, .3));
+}
+.alert-success {
+  @include alert-variant(darken($brand-success, 3%), rgba($brand-success, .12), rgba($brand-success, .25));
+}
+.alert-warning {
+  @include alert-variant(darken($brand-warning, 3%), rgba($brand-warning, .12), rgba($brand-warning, .25));
+}
+.alert-danger {
+  @include alert-variant($brand-danger, rgba($brand-danger, .12), rgba($brand-danger, .25));
+}
+
+// With Background Image
+.alert-image-bg {
+  border: 0;
+  &::before { display: none; }
+}
+
+// Toast Notifications
+.iziToast {
+  border: 0;
+  border-radius: 0;
+  background: $gray-darker;
+  color: $white-color;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 0 8px 10px -4px rgba($black-color, .2);
+    content: '';
+    z-index: -1;
+  }
+  > .iziToast-body {
+    margin-left: 15px;
+    > .iziToast-icon { margin-top: -10px; }
+  }
+  > .iziToast-icon { color: $white-color; }
+  > .iziToast-close {
+    width: 40px;
+    transition: opacity .25s;
+    background: none;
+    color: $white-color;
+    &::before {
+      display: block;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      font: {
+        family: 'Material Icons';
+        size: $font-size-sm;
+      }
+      text-align: center;
+      content: '\e5cd';
+    }
+  }
+  &.iziToast-info {
+    background-color: lighten($brand-info, 12%);
+    color: darken($brand-info, 12%);
+    > .iziToast-close {
+      color: darken($brand-info, 25%);
+    }
+  }
+  &.iziToast-success {
+    background-color: lighten($brand-success, 30%);
+    color: darken($brand-success, 12%);
+    > .iziToast-close {
+      color: darken($brand-success, 20%);
+    }
+  }
+  &.iziToast-warning {
+    background-color: lighten($brand-warning, 28%);
+    color: darken($brand-warning, 14%);
+    > .iziToast-close {
+      color: darken($brand-warning, 25%);
+    }
+  }
+  &.iziToast-danger {
+    background-color: lighten($brand-danger, 32%);
+    color: $brand-danger;
+    > .iziToast-close {
+      color: darken($brand-danger, 10%);
+    }
+  }
+}
+.toast {
+  border-color: $border-color;
+  border-radius: 0;
+}
+.toast.position-fixed {
+  min-width: 300px;
+  z-index: 9900;
+  &.top-center {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.top-right {
+    top: 30px;
+    right: 30px;
+  }
+  &.top-left {
+    top: 30px;
+    left: 30px;
+  }
+  &.bottom-center {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.bottom-right {
+    bottom: 30px;
+    right: 30px;
+  }
+  &.bottom-left {
+    bottom: 30px;
+    left: 30px;
+  }
+  @media (max-width: $screen-xs) {
+    &.top-right,
+    &.top-left,
+    &.bottom-right,
+    &.bottom-left {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

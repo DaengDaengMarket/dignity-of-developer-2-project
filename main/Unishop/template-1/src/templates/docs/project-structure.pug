@@ -1,0 +1,51 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Project Structure'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Project Structure
+        .table-responsive
+          table.table.table-striped
+            thead
+              tr
+                th.w-25 Folder / File name
+                th.w-75 Description
+            tbody
+              tr
+                td.w-25: span.text-medium Docs
+                td.w-75 Folder contains file with link to this documentation.
+              tr
+                td.w-25: span.text-medium PSD
+                td.w-75 Folder contains PSD file with Unishop design mockups.
+              tr
+                td.w-25: span.text-medium Unishop
+                td.w-75 Folder contains all template source and production files.
+              tr
+                td.w-25: span.text-medium Unishop / src
+                td.w-75 This folder holds all template source files like .pug, .scss, .js that are then processed (compiled / minified) to <code>dist</code> folder.
+              tr
+                td.w-25: span.text-medium Unishop / dist
+                td.w-75 Folder contains all template distribution files like .html, .css, .js that have been processed (compiled / minified) from <code>src</code> folder using Node.js and Grunt.
+              tr
+                td.w-25: span.text-medium Unishop / package.json
+                td.w-75 File contains meta data about your app or module. Most importantly, it includes the list of dependencies to install from npm when running <kbd>npm install</kbd>.
+              tr
+                td.w-25: span.text-medium Unishop / gruntfile.js
+                td.w-75 Configuration file for Grunt library. It contains all tasks you want to perform with Grunt. Learn more about it from <a href='working-with-grunt.html'>Working with Grunt</a> section or <a href='https://gruntjs.com/getting-started' target='_blank'>official Grunt documentation</a>.
+        .alert.alert-info.mt-3.mb-4
+          | <strong>Note:</strong> if you do not use Pro Front-End setup with Node.js and Grunt and want directly edit html / css / js files you should be looking in <strong>dist</strong> folder.
+        p Whether you work with Node.js and Grunt or not you can still take advantage of preprocessors for HTML and CSS. In this case you might want to learn <a href='using-preprocessors.html'>how to use Pug and Sass.</a>
+
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

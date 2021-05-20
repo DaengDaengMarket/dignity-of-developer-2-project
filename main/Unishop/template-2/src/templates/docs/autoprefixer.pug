@@ -1,0 +1,25 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Browser Support (Autoprefixer)'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Browser Support (Autoprefixer)
+        p Since <strong>version 1.4</strong> all vendor prefixes were removed from SCSS files and <a href='https://github.com/postcss/autoprefixer' target='_blank'>Autoprefixer</a> is used instead. Now after compilation CSS styles are passed through Autoprefixer to add necessary vendor prefixes. As you know vendor prefixes are important to ensure cross-browser compatibility of latets CSS3 features. 
+        h3.mb-3 Customize browser support via Autoprefixer settings
+        p Autoprefixer is integral part of Grunt building process. So to customize its settings you need to go to <code>gruntfile.js</code> and found <code>autoprefixer</code> task. You will see <code>browsers</code> settings under <code>options</code>. It's currently set to <code>['> 5%', 'last 3 versions', 'ie 10', 'ie 11']</code> which reflects the browser set I retrieved from my Google analytics. Generally it's a good practice to collect some analytics about what Browsers/OSs your visitors use. And then customize Autoprefixer settings based on this data.
+        p For more information about available Browserlist options visit <a href='https://github.com/ai/browserslist' target='_blank'>https://github.com/ai/browserslist</a>.
+        img(src='../img/docs/autoprefixer.jpg' alt='Autoprefixer').d-block.img-thumbnail.rounded.mt-4
+
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

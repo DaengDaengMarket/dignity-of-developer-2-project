@@ -1,0 +1,132 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Our Blog'
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'Blog List'
+  - var isGallery = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Our Blog'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-2x.mb-4
+
+    // Post
+    article.row.mb-4
+      .col-lg-3.col-md-4
+        .blog-post-meta
+          .column
+            span by&nbsp;
+            a(href='#') Rokaux
+            span.divider
+            a(href='blog-single.html') Jul 24
+          .column
+            a(href='#')
+              i.material-icons.chat_bubble_outline
+              | &nbsp;13
+        h2.blog-post-title
+          a(href='blog-single.html') Post Article Title
+      .offset-lg-1.col-md-8
+        a(href='blog-single.html').blog-post-thumb
+          img(src='img/blog/th01.jpg' alt='Blog Post')
+        p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione...
+        .blog-post-meta.mt-3
+          .column
+            span in&nbsp;
+            a(href='#') Category name
+            span.divider
+            a(href='#') #tagname
+          .column
+            a(href='blog-single.html').read-more Read more
+    hr
+
+    // Post
+    article.row.mt-5.mb-4
+      .col-lg-3.col-md-4
+        .blog-post-meta
+          .column
+            span by&nbsp;
+            a(href='#') Admin
+            span.divider
+            a(href='blog-single.html') May 09
+          .column
+            a(href='#')
+              i.material-icons.chat_bubble_outline
+              | &nbsp;7
+        h2.blog-post-title
+          a(href='blog-single.html') Long Post Article Title in Two Lines
+      .offset-lg-1.col-md-8
+        p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae...
+        .blog-post-meta.mt-3
+          .column
+            span in&nbsp;
+            a(href='#') Category name
+            span.divider
+            a(href='#') #tagname
+          .column
+            a(href='blog-single.html').read-more Read more
+    hr
+
+    // Post
+    article.row.mt-5.mb-4
+      .col-lg-3.col-md-4
+        .blog-post-meta
+          .column
+            span by&nbsp;
+            a(href='#') Rokaux
+            span.divider
+            a(href='blog-single.html') Apr 18
+          .column
+            a(href='#')
+              i.material-icons.chat_bubble_outline
+              | &nbsp;5
+        h2.blog-post-title
+          a(href='blog-single.html') Post Article Title
+      .offset-lg-1.col-md-8
+        a(href='blog-single.html').blog-post-thumb
+          img(src='img/blog/th02.jpg' alt='Blog Post')
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+        .blog-post-meta.mt-3
+          .column
+            span in&nbsp;
+            a(href='#') Category name
+            span.divider
+            a(href='#') #tagname
+          .column
+            a(href='blog-single.html').read-more Read more
+    hr
+
+    // Post
+    article.row.mt-5.mb-4
+      .col-lg-3.col-md-4
+        .blog-post-meta
+          .column
+            span by&nbsp;
+            a(href='#') Admin
+            span.divider
+            a(href='blog-single.html') Mar 21
+          .column
+            a(href='#')
+              i.material-icons.chat_bubble_outline
+              | &nbsp;16
+        h2.blog-post-title
+          a(href='blog-single.html') Post Article Featuring Vimeo Video
+      .offset-lg-1.col-md-8
+        .blog-post-thumb
+          .fw-section(style='background-image: url(img/backgrounds/video_popup.jpg);').padding-top-6x.padding-bottom-4x
+            .gallery-wrapper.text-center
+              .gallery-item.video-btn.text-center
+                a(href='#' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://player.vimeo.com/video/67001156?color=dc9814&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe></div></div>')
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+        .blog-post-meta.mt-3
+          .column
+            span in&nbsp;
+            a(href='#') Category name
+            span.divider
+            a(href='#') #tagname
+          .column
+            a(href='blog-single.html').read-more Read more
+    
+    // Pagination
+    include partials/pagination

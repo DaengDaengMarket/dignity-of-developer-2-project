@@ -1,0 +1,43 @@
+//
+// Footer
+// --------------------------------------------------
+
+.site-footer {
+  display: flex;
+  width: 100%;
+  .column {
+    width: 100%;
+    padding: 45px 25px;
+    background-color: $gray-lighter;
+    &:nth-of-type(even) {
+      background-color: darken($gray-lighter, 2%);
+    }
+  }
+  .subscribe-form {
+    max-width: 365px;
+    margin: 0 auto;
+    .form-control {
+      border-color: $white-color;
+      &:focus {
+        border-color: $brand-primary;
+      }
+    }
+  }
+  .footer-cards {
+    width: 100%;
+    max-width: 187px;
+    margin: 0 auto;
+  }
+  @media (max-width: $screen-lg) {
+    display: block;
+    .column { padding: 45px 15px; }
+  }
+  &.footer-dark {
+    .column {
+      background-color: $gray-darker;
+      &:nth-of-type(even) {
+        background-color: darken($gray-darker, 2%);
+      }
+    }
+  }
+}

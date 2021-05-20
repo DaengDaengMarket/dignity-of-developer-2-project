@@ -1,0 +1,19 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = false
+  - var parentMenu = 'Pages'
+  - var menuTitle = '404 Not Found'
+
+//- Page Content
+block content
+  .container.padding-top-3x.padding-bottom-3x.mb-1
+    h1.display-404.text-center 404
+    .text-center
+      h2 Page Not Found
+      p.text-sm
+        | It seems we can’t find the page you are looking for. 
+        a(href='index.html') Go back to Homepage
+        br
+        | Or try using search at the top right corner of the page.

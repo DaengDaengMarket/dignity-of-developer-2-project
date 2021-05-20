@@ -1,0 +1,67 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Countdown'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Countdown'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-lg.text-uppercase On Light Background
+        hr.margin-bottom-1x
+        .countdown(data-date-time='12/30/2019 12:00:00')
+          .item
+            .days 00
+            span.days_ref Days
+          .item
+            .hours 00
+            span.hours_ref Hours
+          .item
+            .minutes 00
+            span.minutes_ref Mins
+          .item
+            .seconds 00
+            span.seconds_ref Secs
+
+        h6.text-muted.text-lg.text-uppercase.padding-top-2x On Gray Background
+        hr.margin-bottom-1x
+        div(style='padding: 30px 20px 20px 20px;').bg-secondary
+          .countdown(data-date-time='12/30/2019 12:00:00')
+            .item
+              .days 00
+              span.days_ref Days
+            .item
+              .hours 00
+              span.hours_ref Hours
+            .item
+              .minutes 00
+              span.minutes_ref Mins
+            .item
+              .seconds 00
+              span.seconds_ref Secs
+
+        h6.text-muted.text-lg.text-uppercase.padding-top-2x On Dark Background
+        hr.margin-bottom-1x
+        div(style='padding: 30px 20px 20px 20px;').bg-dark
+          .countdown.countdown-inverse(data-date-time='12/30/2019 12:00:00')
+            .item
+              .days 00
+              span.days_ref Days
+            .item
+              .hours 00
+              span.hours_ref Hours
+            .item
+              .minutes 00
+              span.minutes_ref Mins
+            .item
+              .seconds 00
+              span.seconds_ref Secs
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

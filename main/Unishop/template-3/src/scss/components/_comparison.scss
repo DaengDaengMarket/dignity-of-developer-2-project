@@ -1,0 +1,63 @@
+//
+// Comparison Table
+// --------------------------------------------------
+
+.comparison-table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  table {
+    min-width: 650px;
+    table-layout: fixed;
+  }
+  .comparison-item {
+    position: relative;
+    padding: 13px 12px 18px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-base;
+    background-color: $white-color;
+    text-align: center;
+    .comparison-item-thumb {
+      display: block;
+      width: 80px;
+      margin: {
+        right: auto;
+        bottom: 12px;
+        left: auto;
+      }
+      > img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .comparison-item-title {
+      display: block;
+      width: 100%;
+      margin-bottom: 14px;
+      transition: color .25s;
+      color: $body-color;
+      font: {
+        size: $font-size-md;
+        weight: 500;
+      }
+      text-decoration: none;
+      &:hover { color: $nav-link-hover-color; }
+    }
+    .btn { margin: 0; }
+    .remove-item {
+      display: block;
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: $brand-danger;
+      color: $white-color;
+      line-height: 25px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}

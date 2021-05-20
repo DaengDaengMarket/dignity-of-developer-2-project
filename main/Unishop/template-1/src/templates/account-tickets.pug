@@ -1,0 +1,97 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'My Tickets'
+  - var parentMenu = 'Account'
+  - var isModalTicket = true
+  - var menuTitle = 'My Tickets'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}, {'title': 'My Tickets'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-4
+        aside.user-info-wrapper
+          .user-cover(style='background-image: url(img/account/user-cover-img.jpg);')
+            .info-label(data-toggle='tooltip', title='You currently have 290 Reward Points to spend')
+              i.icon-medal
+              | 290 points
+          .user-info
+            .user-avatar
+              a(href='#').edit-avatar
+              img(src='img/account/user-ava.jpg', alt='User')
+            .user-data
+              h4 Daniel Adams
+              span Joined February 06, 2017
+        nav.list-group
+          a(href='account-orders.html').list-group-item.with-badge
+            i.icon-bag
+            | Orders
+            span.badge.badge-primary.badge-pill 6
+          a(href='account-profile.html').list-group-item
+            i.icon-head
+            | Profile
+          a(href='account-address.html').list-group-item
+            i.icon-map
+            | Addresses
+          a(href='account-wishlist.html').list-group-item.with-badge
+            i.icon-heart
+            | Wishlist
+            span.badge.badge-primary.badge-pill 3
+          a(href='account-tickets.html').list-group-item.with-badge.active
+            i.icon-tag
+            | My Tickets
+            span.badge.badge-primary.badge-pill 4
+      .col-lg-8
+        .padding-top-2x.mt-2.hidden-lg-up
+        .table-responsive
+          table.table.table-hover.margin-bottom-none
+            thead
+              tr
+                th Ticket Subject
+                th Date Submitted | Updated
+                th Type
+                th Priority
+                th Status
+            tbody
+              tr
+                td
+                  a(href='account-single-ticket.html').text-medium.navi-link My new ticket
+                td 08/08/2017 | 08/14/2017
+                td Website problem
+                td
+                  span.text-warning High
+                td
+                  span.text-primary Open
+              tr
+                td
+                  a(href='account-single-ticket.html').text-medium.navi-link Another ticket
+                td 07/21/2017 | 07/23/2017
+                td Partner request
+                td
+                  span.text-info Medium
+                td
+                  span.text-muted Closed
+              tr
+                td
+                  a(href='account-single-ticket.html').text-medium.navi-link Yet another ticket
+                td 05/19/2017 | 05/20/2017
+                td Complaint
+                td
+                  span.text-danger Urgent
+                td
+                  span.text-muted Closed
+              tr
+                td
+                  a(href='account-single-ticket.html').text-medium.navi-link My old ticket
+                td 05/19/2017 | 05/20/2017
+                td Info inquiry
+                td
+                  span.text-success Low
+                td
+                  span.text-muted Closed
+        hr.mb-4
+        .text-right
+          button(class='btn btn-primary margin-bottom-none' data-toggle='modal' data-target='#openTicket') Submit New Ticket

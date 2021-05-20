@@ -1,0 +1,178 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Typography'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': '../index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Typography'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-lg.text-uppercase Headings & Body text
+        hr.margin-bottom-1x
+        h1 H1. Heading
+        p.lead
+          | <span class='text-medium'>Lead text.</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et <a href='#'>explicabo assumenda</a> fugiat deserunt in, facilis laborum excepturi aliquid nobis ipsam deleniti aut? Aliquid sit hic id velit qui fuga nemo suscipit obcaecati.
+        hr.margin-top-1x.margin-bottom-1x
+        h2 H2. Heading
+        p.text-lg
+          | <span class='text-medium'>Large text.</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et explicabo <a href='#'>assumenda fugiat</a> deserunt in, facilis laborum excepturi aliquid nobis ipsam deleniti aut? Aliquid sit hic id velit qui fuga nemo suscipit obcaecati.
+        hr.margin-top-1x.margin-bottom-1x
+        h3 H3. Heading
+        p
+          | <span class='text-medium'>Regular text.</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et explicabo assumenda fugiat deserunt in, facilis <a href='#'>laborum excepturi</a> aliquid nobis ipsam deleniti aut? Aliquid sit hic id velit qui fuga nemo suscipit obcaecati. Officia nisi quaerat minus nulla saepe aperiam sint possimus magni veniam provident.
+        hr.margin-top-1x.margin-bottom-1x
+        h4 H4. Heading
+        p.text-sm
+          | <span class='text-medium'>Small text.</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et explicabo assumenda fugiat deserunt in, facilis laborum <a href='#'>excepturi aliquid nobis</a> ipsam deleniti aut? Aliquid sit hic id velit qui fuga nemo suscipit obcaecati. Officia nisi quaerat minus nulla saepe aperiam sint possimus magni veniam provident.
+        hr.margin-top-1x.margin-bottom-1x
+        h5 H5. Heading
+        p.text-xs
+          | <span class='text-medium'>Extra small text.</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et explicabo assumenda fugiat deserunt in, facilis laborum <a href='#'>excepturi aliquid nobis</a> ipsam deleniti aut? Aliquid sit hic id velit qui fuga nemo suscipit obcaecati. Officia nisi quaerat minus nulla saepe aperiam sint possimus magni veniam provident.
+        hr.margin-top-1x.margin-bottom-1x
+        h6 H6. Heading
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et explicabo assumenda fugiat deserunt in, facilis laborum <a href='#'>excepturi aliquid nobis</a> ipsam deleniti aut? Aliquid sit hic id velit qui fuga nemo suscipit obcaecati. Officia nisi quaerat minus nulla saepe aperiam sint possimus magni veniam provident.
+        hr.margin-top-1x.margin-bottom-1x
+        h2.display-1 Display 1
+        hr.margin-top-1x.margin-bottom-1x
+        h2.display-2 Display 2
+        hr.margin-top-1x.margin-bottom-1x
+        h2.display-3 Display 3
+        hr.margin-top-1x.margin-bottom-1x
+        h2.display-4 Display 4
+        hr.margin-top-1x.margin-bottom-1x
+
+        .row
+          .col-md-6.margin-top-2x
+            h6.text-muted.text-lg.text-uppercase Contextual colors
+            hr.margin-bottom-1x
+            ul.list-unstyled
+              li.text-md.text-primary
+                | <strong>Primary.</strong> Lorem ipsum dolor sit amet consectetur.
+              li.text-md.text-info
+                | <strong>Info.</strong> Lorem ipsum dolor sit amet consectetur.
+              li.text-md.text-success
+                | <strong>Success.</strong> Lorem ipsum dolor sit amet consectetur.
+              li.text-md.text-warning
+                | <strong>Warning.</strong> Lorem ipsum dolor sit amet consectetur.
+              li.text-md.text-danger
+                | <strong>Danger.</strong> Lorem ipsum dolor sit amet consectetur.
+              li.text-md.text-muted
+                | <strong>Muted.</strong> Lorem ipsum dolor sit amet consectetur.
+          .col-md-6.margin-top-2x
+            h6.text-muted.text-lg.text-uppercase Contextual backgrounds
+            hr.margin-bottom-1x
+            p.text-md
+              | <span class='bg-primary text-white'>Ipsum saepe nam</span> labore, quidem explicabo dolor dolorum hic aperiam <span class='bg-success text-white'>aspernatur. Tenetur maiores</span> impedit neque tempore suscipit velit ea corrupti aperiam dicta? Lorem <span class='bg-info text-white'>ipsum dolor sit amet</span>, consectetur <span class='bg-warning text-white'>adipisicing elit. Reiciendis</span> suscipit natus, incidunt unde accusantium, obcaecati <span class='bg-danger text-white'>consequatur, possimus</span> saepe <span class='bg-inverse text-white'>voluptate quia nobis</span> tempore dolores nesciunt quaerat excepturi <span class='bg-faded'>quo veniam est corporis.</span>
+        .row
+          .col-md-6.margin-top-2x
+            h6.text-muted.text-lg.text-uppercase Unordered list
+            hr.margin-bottom-1x
+            ul
+              li Architecto nobis deleniti iure eaque explicabo animi.
+              li Lorem ipsum dolor sit amet consectetur quia alias.
+              li Nemo mollitia labore, ipsam nesciunt excepturi sequi.
+              li Excepturi perferendis voluptatum mollitia nesciunt.
+          .col-md-6.margin-top-2x
+            h6.text-muted.text-lg.text-uppercase Ordered list
+            hr.margin-bottom-1x
+            ol
+              li Architecto nobis deleniti iure eaque explicabo animi.
+              li Lorem ipsum dolor sit amet consectetur quia alias.
+              li Nemo mollitia labore, ipsam nesciunt excepturi sequi.
+              li Excepturi perferendis voluptatum mollitia nesciunt.
+        .row
+          .col-md-6.margin-top-2x
+            h6.text-muted.text-lg.text-uppercase Icon list
+            hr.margin-bottom-1x
+            ul.list-icon
+              li 
+                i.icon-check.text-success
+                | Architecto nobis deleniti iure eaque explicabo animi.
+              li 
+                i.icon-x.text-danger
+                | Lorem ipsum dolor sit amet consectetur quia alias.
+              li 
+                i.icon-sun.text-muted
+                | Nemo mollitia labore, ipsam nesciunt excepturi sequi.
+              li 
+                i.icon-share
+                | Excepturi perferendis voluptatum mollitia nesciunt.
+          .col-md-6.margin-top-2x
+            h6.text-muted.text-lg.text-uppercase Unstyled list
+            hr.margin-bottom-1x
+            ol.list-unstyled
+              li Architecto nobis deleniti iure eaque explicabo animi.
+              li Lorem ipsum dolor sit amet consectetur quia alias.
+              li Nemo mollitia labore, ipsam nesciunt excepturi sequi.
+              li Excepturi perferendis voluptatum mollitia nesciunt.
+        .row
+          .col-md-6.margin-top-2x
+            h6.text-muted.text-lg.text-uppercase Inline text elements
+            hr.margin-bottom-1x
+            <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+            <p><del>This line of text is meant to be treated as deleted text.</del></p>
+            <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+            <p><u>This line of text will render as underlined</u></p>
+            <p><small>This line of text is meant to be treated as fine print.</small></p>
+            <p><strong>This line rendered as bold text.</strong></p>
+            <p><em>This line rendered as italicized text.</em></p>
+          .col-md-6.margin-top-2x
+            h6.text-muted.text-lg.text-uppercase Description list
+            hr.margin-bottom-1x
+            dl
+              dt Description lists
+              dd A description list is perfect for defining terms.
+              dt Malesuada porta
+              dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit porto fegut.
+              dt Lorem ipsum dolor sit amet
+              dd Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+        .margin-top-2x
+          h6.text-muted.text-lg.text-uppercase Blockquotes
+          hr.margin-bottom-1x
+          blockquote
+            p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+            cite Someone famous
+          blockquote.blockquote-reverse
+            p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+            cite.cite-avatar
+              img(src='../img/components/blockquote.jpg' alt='Quotation author')
+              | Someone famous
+
+        .margin-top-2x
+          h6.text-muted.text-lg.text-uppercase Inline Code
+          hr.margin-bottom-1x
+          p
+            | Wrap inline snippets of code with 
+            code &lt;code&gt;
+            | . Be sure to escape HTML angle brackets.
+
+        .margin-top-2x
+          h6.text-muted.text-lg.text-uppercase User Input
+          hr.margin-bottom-1x
+          p
+            | To switch directories, type 
+            kbd cd
+            |  followed by the name of the directory.
+          p
+            | To edit settings, press 
+            kbd ctrl + ,
+
+        .margin-top-2x
+          h6.text-muted.text-lg.text-uppercase Code Blocks
+          hr.margin-bottom-1x
+          pre
+            code 
+              | &lt;p&gt;Sample text here...&lt;/p&gt;
+              |  &lt;p&gt;And another line of sample text here...&lt;/p&gt;
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu
+        .mb-2.hidden-md-up

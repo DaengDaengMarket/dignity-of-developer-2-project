@@ -1,0 +1,43 @@
+// Account Section
+#account.toolbar-section
+  ul(class='nav nav-tabs nav-justified' role='tablist')
+    li.nav-item: a(href='#login' class='nav-link active' data-toggle='tab' role='tab') Log In
+    li.nav-item: a(href='#signup' class='nav-link' data-toggle='tab' role='tab') Sign Up
+
+  .tab-content
+
+    div(id='login' class='tab-pane fade show active' role='tabpanel')
+      form(autocomplete='off')#login-form
+        .form-group.input-group
+          input(type='email' placeholder='Email' required).form-control
+          span.input-group-addon
+            i.material-icons.mail
+        .form-group.input-group
+          input(type='password' placeholder='Password' required).form-control
+          span.input-group-addon
+            i.material-icons.lock
+        .custom-control.custom-checkbox.form-group
+          input(type='checkbox' id='logged' checked).custom-control-input
+          label(for='logged').custom-control-label Keep me logged in
+        button(type='submit').btn.btn-primary.btn-block Log In
+    div(id='signup' class='tab-pane fade' role='tabpanel')
+      form(autocomplete='off')#signup-form
+        .form-group
+          input(type='text' placeholder='Full Name' required).form-control
+        .form-group
+          input(type='email' placeholder='Email' required).form-control
+        .form-group
+          input(type='password' placeholder='Password' required).form-control
+        .form-group
+          input(type='password' placeholder='Confirm Password' required).form-control
+        button(type='submit').btn.btn-primary.btn-block Sign Up
+        p.text-muted.text-sm.mt-4 OR sign up with your social account
+        a(href='#').media-btn.media-facebook
+          i.socicon-facebook
+          span Signup with Facebook
+        a(href='#').media-btn.media-google
+          i.socicon-googleplus
+          span Signup with Google+
+        a(href='#').media-btn.media-twitter
+          i.socicon-twitter
+          span Signup with Twitter

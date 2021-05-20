@@ -1,0 +1,104 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Checkout'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Payment'
+  - var isCardScript = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Checkout'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+
+      // Checkout Adress
+      .col-xl-9.col-lg-8
+        .steps.flex-sm-nowrap.mb-5
+          a(href='checkout-address.html').step
+            h4.step-title
+              i.icon-check-circle
+              | 1. Address
+          a(href='checkout-shipping.html').step
+            h4.step-title
+              i.icon-check-circle
+              | 2. Shipping
+          a(href='checkout-payment.html').step.active
+            h4.step-title 3. Payment
+          a(href='checkout-review.html').step
+            h4.step-title 4. Review
+
+        h4 Choose Payment Method
+        hr.padding-bottom-1x
+        div(id='accordion' class='accordion' role='tablist')
+          .card
+            .card-header(role='tab')
+              h6
+                a(href='#card' data-toggle='collapse')
+                  i.icon-credit-card
+                  | Pay with Credit Card
+            div(id='card' class='collapse show' data-parent='#accordion' role='tabpanel')
+              .card-body
+                p
+                  | We accept following credit cards:&nbsp;&nbsp;
+                  img(src='img/credit-cards.png' style='width: 120px;' alt='Cerdit Cards').d-inline-block.align-middle
+                .card-wrapper
+                form.interactive-credit-card.row
+                  .form-group.col-sm-6
+                    input(type='text' name='number' placeholder='Card Number' required).form-control
+                  .form-group.col-sm-6
+                    input(type='text' name='name' placeholder='Full Name' required).form-control
+                  .form-group.col-sm-3
+                    input(type='text' name='expiry' placeholder='MM/YY' required).form-control
+                  .form-group.col-sm-3
+                    input(type='text' name='cvc' placeholder='CVC' required).form-control
+                  .col-sm-6
+                    button(type='submit').btn.btn-outline-primary.btn-block.mt-0 Submit
+          .card
+            .card-header(role='tab')
+              h6
+                a(href='#paypal' class='collapsed' data-toggle='collapse')
+                  i.socicon-paypal
+                  | Pay with PayPal
+            div(id='paypal' class='collapse' data-parent='#accordion' role='tabpanel')
+              .card-body
+                p PayPal - the safer, easier way to pay
+                form(method='post').row
+                  .col-sm-6
+                    .form-group
+                      input(type='email' placeholder='E-mail' required).form-control
+                  .col-sm-6
+                    .form-group
+                      input(type='password' placeholder='Password' required).form-control
+                  .col-12
+                    .d-flex.flex-wrap.justify-content-between.align-items-center
+                      a(href='#').navi-link <u>Forgot password?</u>
+                      button(type='submit').btn.btn-outline-primary.margin-top-none Log In
+          .card
+            .card-header(role='tab')
+              h6
+                a(href='#points' class='collapsed' data-toggle='collapse')
+                  i.icon-award
+                  | Redeem Reward Points
+            div(id='points' class='collapse' data-parent='#accordion' role='tabpanel')
+              .card-body
+                p
+                  | You currently have
+                  span.text-medium  2,549
+                  |  Reward Points to spend.
+                .custom-control.custom-checkbox.d-block
+                  input(type='checkbox' id='use_points').custom-control-input
+                  label(for='use_points').custom-control-label Use my Reward Points to pay for this order.
+
+        .d-flex.justify-content-between.paddin-top-1x.mt-4
+          a(href='checkout-shipping.html' class='btn btn-outline-secondary')
+            i.icon-arrow-left
+            span.hidden-xs-down &nbsp;Back
+          a(href='checkout-review.html' class='btn btn-primary')
+            span.hidden-xs-down Continue&nbsp;
+            i.icon-arrow-right
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        include partials/checkout-sidebar    

@@ -1,0 +1,55 @@
+aside.sidebar
+  .padding-top-2x.hidden-lg-up
+
+  // Order Summary Widget
+  section.widget.widget-order-summary.bg-secondary.border-0.p-4
+    h3.widget-title Order Summary
+    table.table.text-sm.mb-0
+      tr
+        td Cart Subtotal:
+        td.text-medium $622.40
+      tr
+        td Shipping:
+        td.text-medium $35.50
+      tr
+        td Estimated tax:
+        td.text-medium $7.42
+      tr
+        td
+        td.text-lg.text-medium $665.32
+
+  // Featured Products Widget
+  section.widget.widget-featured-products.border-0
+    h3.widget-title Recently Viewed
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/01.png', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') Max Task Chair
+        span.entry-meta $299.00
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/02.png', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') Drawer File Cabinet
+        span.entry-meta $265.00
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/03.png', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') Campfire Paper Table
+        span.entry-meta $570.00
+
+  // Promo Banner
+  div(style='background-image: url(img/banners/alert-bg.jpg);').fw-section.mt-1.px-4.py-5.text-center
+    h3.text-white Check our <br><span class='text-bold'>Latest Offers.</span><br> Save up to <span class='text-bold'>50%</span>
+    a(href='#').btn.btn-primary.btn-sm View Offers

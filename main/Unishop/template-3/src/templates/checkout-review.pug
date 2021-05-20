@@ -1,0 +1,129 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Checkout'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Review'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Checkout'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+
+      // Checkout Adress
+      .col-xl-9.col-lg-8
+        .steps.flex-sm-nowrap.mb-5
+          a(href='checkout-address.html').step
+            h4.step-title
+              i.icon-check-circle
+              | 1. Address
+          a(href='checkout-shipping.html').step
+            h4.step-title
+              i.icon-check-circle
+              | 2. Shipping
+          a(href='checkout-payment.html').step
+            h4.step-title
+              i.icon-check-circle
+              | 3. Payment
+          a(href='checkout-review.html').step.active
+            h4.step-title 4. Review
+
+        h4.padding-bottom-1x Review Your Order
+        .table-responsive.shopping-cart
+          table.table
+            thead
+              tr
+                th Product Name
+                th.text-center Subtotal
+                th
+            tbody
+              tr
+                td
+                  .product-item
+                    a(href='shop-single.html').product-thumb
+                      img(src='img/shop/cart/01.jpg', alt='Product')
+                    .product-info
+                      h4.product-title
+                        a(href='shop-single.html')
+                          | Canon EOS M50 Mirrorless Camera
+                          small x 1
+                      span
+                        em Type:
+                        |  Mirrorless
+                      span
+                        em Color:
+                        |  Black
+                td.text-center.text-lg $910.00
+                td.text-center: a(href='cart.html').btn.btn-outline-primary.btn-sm Edit
+              tr
+                td
+                  .product-item
+                    a(href='shop-single.html').product-thumb
+                      img(src='img/shop/cart/02.jpg', alt='Product')
+                    .product-info
+                      h4.product-title
+                        a(href='shop-single.html')
+                          | Apple iPhone X 256 GB Space Gray
+                          small x 1
+                      span
+                        em Memory:
+                        |  256 GB
+                      span
+                        em Color:
+                        |  Space Gray
+                td.text-center.text-lg $1,450.00
+                td.text-center: a(href='cart.html').btn.btn-outline-primary.btn-sm Edit
+              tr
+                td
+                  .product-item
+                    a(href='shop-single.html').product-thumb
+                      img(src='img/shop/cart/03.jpg', alt='Product')
+                    .product-info
+                      h4.product-title
+                        a(href='shop-single.html')
+                          | HP LaserJet Pro Laser Printer
+                          small x 1
+                      span
+                        em Type:
+                        |  Laser
+                      span
+                        em Color:
+                        |  White
+                td.text-center.text-lg $188.50
+                td.text-center: a(href='cart.html').btn.btn-outline-primary.btn-sm Edit
+        .shopping-cart-footer
+          .column
+          .column.text-lg
+            span.text-muted Subtotal:&nbsp; 
+            span.text-gray-dark $2,548.50
+        .row.padding-top-1x.mt-3
+          .col-sm-6
+            h5 Shipping to:
+            ul.list-unstyled
+              li
+                span.text-muted Client:&nbsp; 
+                | Daniel Adams
+              li
+                span.text-muted Address:&nbsp; 
+                | 44 Shirley Ave. West Chicago, IL 60185, USA
+              li
+                span.text-muted Phone:&nbsp; 
+                | +1(808) 764 554 330
+          .col-sm-6
+            h5 Payment method:
+            ul.list-unstyled
+              li
+                span.text-muted Credit Card:&nbsp; 
+                | **** **** **** 5300
+        .d-flex.justify-content-between.paddin-top-1x.mt-4
+          a(href='checkout-payment.html' class='btn btn-outline-secondary')
+            i.icon-arrow-left
+            span.hidden-xs-down &nbsp;Back
+          a(href='checkout-complete.html' class='btn btn-primary') Complete Order
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        include partials/checkout-sidebar    
+    

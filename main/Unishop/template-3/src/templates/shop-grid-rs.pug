@@ -1,0 +1,330 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Shop Grid Right Sidebar'
+  - var isModalShopFilters = true
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Grid Right Sidebar'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop Grid Right Sidebar'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+
+      // Products
+      .col-lg-9.order-lg-1
+
+        // Promo banner
+        include partials/shop-banner
+
+        // Shop Toolbar
+        .shop-toolbar.padding-bottom-1x.mb-2
+          .column
+            .shop-sorting
+              label(for='sorting') Sort by:
+              select(id='sorting').form-control
+                option Popularity
+                option Low - High Price
+                option High - Low Price
+                option Average Rating
+                option A - Z Order
+                option Z - A Order
+              span.text-muted Showing:&nbsp;
+              span 1 - 12 items
+          .column
+            .shop-view
+              a(href='shop-grid-rs.html' class='grid-view active')
+                span
+                span
+                span
+              a(href='shop-list-rs.html' class='list-view')
+                span
+                span
+                span
+    
+        // Products Grid
+        .row
+          .col-md-4.col-sm-6
+            .product-card.mb-30
+              .product-badge.bg-danger Sale
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/01.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Smart home
+                h3.product-title
+                  a(href='shop-single.html') Echo Dot (2nd Generation)
+                h4.product-price
+                  del $62.00
+                  | $49.99
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-md-4.col-sm-6
+            .product-card.mb-30
+              +rating-stars([
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star'}
+              ])
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/02.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Photo cameras
+                h3.product-title
+                  a(href='shop-single.html') Aberg Best 21 Mega Pixels
+                h4.product-price $35.00
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-md-4.col-sm-6
+            .product-card.mb-30
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/05.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Headphones
+                h3.product-title
+                  a(href='shop-single.html') Zeus Bluetooth Headphones
+                h4.product-price $28.99
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-md-4.col-sm-6
+            .product-card.mb-30
+              +rating-stars([
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'}
+              ])
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/06.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Video games
+                h3.product-title
+                  a(href='shop-single.html') Xbox One S White
+                h4.product-price $298.99
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-md-4.col-sm-6
+            .product-card.mb-30
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/07.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Smartphones
+                h3.product-title
+                  a(href='shop-single.html') Samsung Galaxy S9+
+                h4.product-price $839.99
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-md-4.col-sm-6
+            .product-card.mb-30
+              .product-badge.bg-secondary.border-default.text-body Out of stock
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/03.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Computers, laptops
+                h3.product-title
+                  a(href='shop-single.html') Microsoft Surface Pro 4
+                h4.product-price $1,049.10
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='shop-single.html').product-button
+                  i.icon-arrow-right
+                  span Details
+          .col-md-4.col-sm-6      
+            .product-card.mb-30
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/08.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') TV, Video &amp; Audio
+                h3.product-title
+                  a(href='shop-single.html') Sony 55-Inch 4K Smart TV
+                h4.product-price $1,195.00
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-md-4.col-sm-6      
+            .product-card.mb-30
+              .product-badge.bg-danger Sale
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/09.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Action cameras
+                h3.product-title
+                  a(href='shop-single.html') Samsung Gear 360 Camera
+                h4.product-price
+                  del $74.00
+                  | $68.00
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-md-4.col-sm-6
+            .product-card.mb-30
+              +rating-stars([
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star'}
+              ])
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/10.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Printers &amp; Ink
+                h3.product-title
+                  a(href='shop-single.html') HP LaserJet Pro Printer
+                h4.product-price $249.50
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-md-4.col-sm-6
+            .product-card.mb-30
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/04.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Smartphones
+                h3.product-title
+                  a(href='shop-single.html') Apple iPhone X 64GB
+                h4.product-price $939.99
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-md-4.col-sm-6
+            .product-card.mb-30
+              +rating-stars([
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star'},
+                {'class': 'icon-star'}
+              ])
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/11.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Headphones
+                h3.product-title
+                  a(href='shop-single.html') Edifier W855BT Bluetooth
+                h4.product-price $99.75
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='#' data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-check-circle' data-toast-title='Product' data-toast-message='successfuly added to cart!').product-button
+                  i.icon-shopping-cart
+                  span To Cart
+          .col-md-4.col-sm-6
+            .product-card.mb-30
+              .product-badge.bg-secondary.border-default.text-body Out of stock
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/12.jpg' alt='Product')
+              .product-card-body
+                .product-category
+                  a(href='#') Wearable electornics
+                h3.product-title
+                  a(href='shop-single.html') Apple Watch Series 3
+                h4.product-price $329.10
+              .product-button-group
+                a( href='#').product-button.btn-wishlist
+                  i.icon-heart
+                  span Wishlist
+                a( href='#').product-button.btn-compare
+                  i.icon-repeat
+                  span Compare
+                a( href='shop-single.html').product-button
+                  i.icon-arrow-right
+                  span Details
+
+        include partials/pagination
+
+      // Sidebar          
+      .col-lg-3.order-lg-2
+        include partials/shop-sidebar

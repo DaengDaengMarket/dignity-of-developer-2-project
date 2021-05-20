@@ -1,0 +1,238 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Single Product'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Single Product'
+  - var isGallery = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop', 'link': 'shop-grid-ls.html'}, {'title': 'Single Product'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+
+      // Poduct Gallery
+      .col-md-6
+        .product-gallery
+          span.product-badge.text-danger 30% Off
+          .gallery-wrapper
+            .gallery-item.video-btn.text-center
+              a(href='#' data-toggle='tooltip' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="//www.youtube.com/embed/B81qd2v6alw?rel=0" frameborder="0" allowfullscreen></iframe></div></div>' title='Watch video')
+          .product-carousel.owl-carousel.gallery-wrapper
+            .gallery-item(data-hash='one')
+              a(href='img/shop/single/01.jpg' data-size='1000x667')
+                img(src='img/shop/single/01.jpg' alt='Product')
+            .gallery-item(data-hash='two')
+              a(href='img/shop/single/02.jpg' data-size='1000x667')
+                img(src='img/shop/single/02.jpg' alt='Product')
+            .gallery-item(data-hash='three')
+              a(href='img/shop/single/03.jpg' data-size='1000x667')
+                img(src='img/shop/single/03.jpg' alt='Product')
+            .gallery-item(data-hash='four')
+              a(href='img/shop/single/04.jpg' data-size='1000x667')
+                img(src='img/shop/single/04.jpg' alt='Product')
+            .gallery-item(data-hash='five')
+              a(href='img/shop/single/05.jpg' data-size='1000x667')
+                img(src='img/shop/single/05.jpg' alt='Product')
+          ul.product-thumbnails
+            li.active
+              a(href='#one'): img(src='img/shop/single/th01.jpg' alt='Product')
+            li
+              a(href='#two'): img(src='img/shop/single/th02.jpg' alt='Product')
+            li
+              a(href='#three'): img(src='img/shop/single/th03.jpg' alt='Product')
+            li
+              a(href='#four'): img(src='img/shop/single/th04.jpg' alt='Product')
+            li
+              a(href='#five'): img(src='img/shop/single/th05.jpg' alt='Product')
+
+      // Product Info
+      .col-md-6
+        .padding-top-2x.mt-2.hidden-md-up
+        +rating-stars([
+          {'class': 'icon-star filled'},
+          {'class': 'icon-star filled'},
+          {'class': 'icon-star filled'},
+          {'class': 'icon-star filled'},
+          {'class': 'icon-star'}
+        ])
+        span.text-muted.align-middle &nbsp;&nbsp;4.2 | 3 customer reviews
+        h2.padding-top-1x.text-normal Reebok Royal CL Jogger 2
+        span.h2.d-block
+          del.text-muted.text-normal $68.00
+          | &nbsp; $47.60
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et explicabo assumenda fugiat deserunt in, facilis laborum excepturi aliquid nobis ipsam deleniti aut? Aliquid sit hic id velit qui fuga nemo suscipit obcaecati. Officia nisi quaerat minus nulla saepe aperiam sint possimus magni veniam provident.
+        .row.margin-top-1x
+          .col-sm-4
+            .form-group
+              label(for='size') Men's size
+              select(id='size').form-control
+                option Chooze size
+                option 11.5
+                option 11
+                option 10.5
+                option 10
+                option 9.5
+                option 9
+                option 8.5
+          .col-sm-5
+            .form-group
+              label(for='color') Choose color
+              select(id='color').form-control
+                option White/Red/Blue
+                option Black/Orange/Green
+                option Gray/Purple/White
+          .col-sm-3
+            .form-group
+              label(for='quantity') Quantity
+              select(id='quantity').form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+        .pt-1.mb-2
+          span.text-medium SKU:
+          |  #21457832
+        .padding-bottom-1x.mb-2
+          span.text-medium Categories:&nbsp;
+          a(href='#').navi-link Men’s shoes,
+          a(href='#').navi-link  Snickers,
+          a(href='#').navi-link  Sport shoes
+        hr.mb-3
+        .d-flex.flex-wrap.justify-content-between
+          .entry-share.mt-2.mb-2
+            span.text-muted Share:
+            .share-links
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-circle.sb-facebook
+                i.socicon-facebook
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+                i.socicon-twitter
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-circle.sb-instagram
+                i.socicon-instagram
+              a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-circle.sb-google-plus
+                i.socicon-googleplus
+          .sp-buttons.mt-2.mb-2
+            button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+              i.icon-heart
+            button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-primary
+              i.icon-bag
+              |  Add to Cart
+    
+    // Product Tabs
+    .row.padding-top-3x.mb-3
+      .col-lg-10.offset-lg-1
+        ul(class='nav nav-tabs' role='tablist')
+          li.nav-item: a(href='#description' class='nav-link active' data-toggle='tab' role='tab') Description
+          li.nav-item: a(href='#reviews' class='nav-link' data-toggle='tab' role='tab') Reviews (3)
+        .tab-content
+          div(id='description' class='tab-pane fade show active' role='tabpanel')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error blanditiis a, deserunt magnam pariatur quam suscipit quae. Veniam, deserunt reprehenderit quasi hic recusandae itaque omnis fugiat animi architecto facilis repellendus. Commodi dolorem, eius consectetur. Amet maiores nemo at nobi s aspernatur velit, sequi odio, a veritatis inventore autem esse provident in? Placeat, sunt!
+            p.mb-30 Iste assumenda, vitae, aliquam excepturi libero quia ullam quisquam tenetur id sint labore. Pariatur praesentium velit, fugit facere maxime voluptates optio qui? Quidem obcaecati necessitatibus rem aspernatur, mollitia, assumenda explicabo numquam minus eos sapiente totam dicta, laborum dolorum! Vitae distinctio quos non ut fugiat.
+            .row
+              .col-sm-6
+                dl
+                  dt Materials:
+                  dd Leather, Cotton, Rubber, Foam
+                  dt Available Sizes:
+                  dd 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5
+                  dt Available Colors:
+                  dd White/Red/Blue, Black/Orange/Green
+              .col-sm-6
+                dl
+                  dt Model Year:
+                  dd 2016
+                  dt Manufacturer:
+                  dd Reebok Inc.
+                  dt Made In:
+                  dd Taiwan
+          div(id='reviews' class='tab-pane fade' role='tabpanel')
+            // Review
+            .comment
+              .comment-author-ava
+                img(src='img/reviews/01.jpg' alt='Review author')
+              .comment-body
+                .comment-header.d-flex.flex-wrap.justify-content-between
+                  h4.comment-title Average quality for the price
+                  .mb-2
+                    +rating-stars([
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star'},
+                      {'class': 'icon-star'}
+                    ])
+                p.comment-text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                .comment-footer
+                  span.comment-meta Francis Burton
+            // Review
+            .comment
+              .comment-author-ava
+                img(src='img/reviews/02.jpg' alt='Review author')
+              .comment-body
+                .comment-header.d-flex.flex-wrap.justify-content-between
+                  h4.comment-title My husband love his new...
+                  .mb-2
+                    +rating-stars([
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star filled'}
+                    ])
+                p.comment-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .comment-footer
+                  span.comment-meta Maggie Scott
+            // Review
+            .comment
+              .comment-author-ava
+                img(src='img/reviews/03.jpg' alt='Review author')
+              .comment-body
+                .comment-header.d-flex.flex-wrap.justify-content-between
+                  h4.comment-title Soft, comfortable, quite durable...
+                  .mb-2
+                    +rating-stars([
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star filled'},
+                      {'class': 'icon-star'}
+                    ])
+                p.comment-text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                .comment-footer
+                  span.comment-meta Jacob Hammond
+
+            // Review Form
+            h5.mb-30.padding-top-1x Leave Review
+            form(method='post').row
+              .col-sm-6
+                .form-group
+                  label(for='review_name') Your Name
+                  input(type='text' id='review_name' required).form-control.form-control-rounded
+              .col-sm-6
+                .form-group
+                  label(for='review_email') Your Email
+                  input(type='email' id='review_email' required).form-control.form-control-rounded
+              .col-sm-6
+                .form-group
+                  label(for='review_subject') Subject
+                  input(type='text' id='review_subject' required).form-control.form-control-rounded
+              .col-sm-6
+                .form-group
+                  label(for='review_rating') Rating
+                  select(id='review_rating').form-control.form-control-rounded
+                    option 5 Stars
+                    option 4 Stars
+                    option 3 Stars
+                    option 2 Stars
+                    option 1 Star
+              .col-12
+                .form-group
+                  label(for='review_text') Review 
+                  textarea(id='review_text' rows='8' required).form-control.form-control-rounded
+              .col-12.text-right
+                button(type='submit').btn.btn-outline-primary Submit Review
+                      
+    include partials/related-products-carousel

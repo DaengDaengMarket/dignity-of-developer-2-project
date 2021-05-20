@@ -1,0 +1,239 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Cards'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Cards'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-2x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        .row
+          .col-sm-6.margin-bottom-2x.pb-2
+            h6.text-muted.text-normal.text-uppercase Image on top
+            hr.margin-bottom-1x
+            .card
+              img(src='../img/components/img04.jpg' alt='Card image').card-img-top
+              .card-body
+                h4.card-title Card title
+                p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                a(href='#').btn.btn-primary.btn-sm Go somewhere
+          .col-sm-6.margin-bottom-2x.pb-3
+            h6.text-muted.text-normal.text-uppercase Image on bottom
+            hr.margin-bottom-1x
+            .card
+              .card-body
+                h4.card-title Card title
+                p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                a(href='#').btn.btn-primary.btn-sm Go somewhere
+              img(src='../img/components/img06.jpg' alt='Card image').card-img-bottom
+        h6.text-muted.text-normal.text-uppercase Header and Footer
+        hr.margin-bottom-1x
+        .card.text-center
+          .card-header
+            span.text-lg Featured
+          .card-body
+            h3.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+            a(href='#').btn.btn-primary Go somewhere
+          .card-footer.text-muted
+            | 3 days ago
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Content Alignment
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4.margin-bottom-1x
+            .card
+              .card-body
+                h4.card-title Card title
+                p.card-text With supporting text below as a natural lead-in to additional content.
+                a(href='#').btn.btn-outline-primary.btn-sm Go somewhere
+          .col-lg-4.margin-bottom-1x
+            .card.text-center
+              .card-body
+                h4.card-title Card title
+                p.card-text With supporting text below as a natural lead-in to additional content.
+                a(href='#').btn.btn-outline-primary.btn-sm Go somewhere
+          .col-lg-4.margin-bottom-1x
+            .card.text-right
+              .card-body
+                h4.card-title Card title
+                p.card-text With supporting text below as a natural lead-in to additional content.
+                a(href='#').btn.btn-outline-primary.btn-sm Go somewhere
+        h6.text-muted.text-normal.text-uppercase.padding-top-1x.mt-1 Navigation: Tabs
+        hr.margin-bottom-1x
+        .card.text-center
+          .card-header
+            ul.nav.nav-tabs.card-header-tabs
+              li.nav-item: a(href='#').nav-link.active Active
+              li.nav-item: a(href='#').nav-link Link
+              li.nav-item: a(href='#').nav-link.disabled Disabled
+          .card-body
+            h3.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+            a(href='#').btn.btn-primary Go somewhere
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-1 Navigation: Pills
+        hr.margin-bottom-1x
+        .card.text-center
+          .card-header
+            ul.nav.nav-pills.card-header-pills
+              li.nav-item: a(href='#').nav-link.active Active
+              li.nav-item: a(href='#').nav-link Link
+              li.nav-item: a(href='#').nav-link.disabled Disabled
+          .card-body
+            h3.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+            a(href='#').btn.btn-outline-primary Go somewhere
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-1 Background Colors
+        hr.margin-bottom-1x
+        .card.text-white.bg-primary.text-center.mb-3
+          .card-header.text-lg Header
+          .card-body
+            h4.card-title Primary card title
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.bg-secondary.text-center.mb-3
+          .card-header.text-lg Header
+          .card-body
+            h4.card-title Secondary card title
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.text-white.bg-success.text-center.mb-3
+          .card-header.text-lg Header
+          .card-body
+            h4.card-title Success card title
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.text-white.bg-info.text-center.mb-3
+          .card-header.text-lg Header
+          .card-body
+            h4.card-title Info card title
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.text-white.bg-warning.text-center.mb-3
+          .card-header.text-lg Header
+          .card-body
+            h4.card-title Warning card title
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.text-white.bg-danger.text-center.mb-3
+          .card-header.text-lg Header
+          .card-body
+            h4.card-title Danger card title
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.text-white.bg-dark.text-center.mb-2
+          .card-header.text-lg Header
+          .card-body
+            h4.card-title Dark card title
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Outline Cards
+        hr.margin-bottom-1x
+        .card.border-primary.text-center.mb-3
+          .card-body
+            h4.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.border-success.text-center.mb-3
+          .card-body
+            h4.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.border-info.text-center.mb-3
+          .card-body
+            h4.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.border-warning.text-center.mb-3
+          .card-body
+            h4.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.border-danger.text-center.mb-3
+          .card-body
+            h4.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        .card.border-dark.text-center
+          .card-body
+            h4.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Layout: Cards Group
+        hr.margin-bottom-1x
+        .card-group
+          .card.margin-bottom-1x
+            img(src='../img/components/img04.jpg' alt='Card image').card-img-top
+            .card-body
+              h4.card-title Card title
+              p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            .card-footer.text-muted
+              | Last updated 3mins ago
+          .card.margin-bottom-1x
+            img(src='../img/components/img05.jpg' alt='Card image').card-img-top
+            .card-body
+              h4.card-title Card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+            .card-footer.text-muted
+              | Last updated 3mins ago
+          .card.margin-bottom-1x
+            img(src='../img/components/img06.jpg' alt='Card image').card-img-top
+            .card-body
+              h4.card-title Card title
+              p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+            .card-footer.text-muted
+              | Last updated 3mins ago
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Layout: Cards Deck
+        hr.margin-bottom-1x
+        .card-deck
+          .card.margin-bottom-1x
+            img(src='../img/components/img04.jpg' alt='Card image').card-img-top
+            .card-body
+              h4.card-title Card title
+              p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            .card-footer.text-muted
+              | Last updated 3mins ago
+          .card.margin-bottom-1x
+            img(src='../img/components/img05.jpg' alt='Card image').card-img-top
+            .card-body
+              h4.card-title Card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+            .card-footer.text-muted
+              | Last updated 3mins ago
+          .card.margin-bottom-1x
+            img(src='../img/components/img06.jpg' alt='Card image').card-img-top
+            .card-body
+              h4.card-title Card title
+              p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+            .card-footer.text-muted
+              | Last updated 3mins ago
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Layout: Cards Columns
+        hr.margin-bottom-1x
+        .card-columns
+          .card.margin-bottom-1x
+            img(src='../img/components/img04.jpg' alt='Card image').card-img-top
+            .card-body
+              h4.card-title Card title that wraps to a new line
+              p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+              span.text-muted Last updated 3mins ago
+          .card.margin-bottom-1x
+            .card-body
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+              span.text-muted Last updated 3mins ago
+          .card.margin-bottom-1x
+            img(src='../img/components/img05.jpg' alt='Card image').card-img-top
+            .card-body
+              h4.card-title Card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+              span.text-muted Last updated 3mins ago
+          .card.text-white.bg-primary.text-center.margin-bottom-1x
+            .card-body
+              p.card-text.text-medium.text-white Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+              span.opacity-75 Last updated 3mins ago
+          .card.margin-bottom-1x
+            img(src='../img/components/img06.jpg' alt='Card image').card-img-top
+          .card.text-center.margin-bottom-1x
+            .card-body
+              h4.card-title Card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+              span.text-muted Last updated 3mins ago
+          .card.text-right.margin-bottom-1x
+            .card-body
+              p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+              span.text-muted Last updated 3mins ago
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu
+        .padding-bottom-1x.hidden-md-up

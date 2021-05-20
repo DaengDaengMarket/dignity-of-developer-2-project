@@ -1,0 +1,37 @@
+// Leave a Review
+form(method='post' id='leaveReview' tabindex='-1').modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Leave a Review
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        .row
+          .col-sm-6
+            .form-group
+              label(for='review-name') Your Name
+              input(type='text' id='review-name' required).form-control
+          .col-sm-6
+            .form-group
+              label(for='review-email') Your Email
+              input(type='email' id='review-email' required).form-control
+        .row
+          .col-sm-6
+            .form-group
+              label(for='review-subject') Subject
+              input(type='text' id='review-subject' required).form-control
+          .col-sm-6
+            .form-group
+              label(for='review-rating') Rating
+              select(id='review-rating').form-control
+                option 5 Stars
+                option 4 Stars
+                option 3 Stars
+                option 2 Stars
+                option 1 Star
+        .form-group
+          label(for='review-message') Review
+          textarea(id='review-message' rows='8' required).form-control
+      .modal-footer
+        button(type='submit' class='btn btn-primary') Submit Review

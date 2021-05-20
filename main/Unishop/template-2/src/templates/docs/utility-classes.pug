@@ -1,0 +1,25 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Utility Classes'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Utility Classes
+        blockquote.mb-4
+          p Bootstrap includes dozens of utilities—classes with a single purpose to reduce the frequency of highly repetitive declarations.
+        p Along with <a href='http://getbootstrap.com/docs/4.0/utilities/borders/' target='_blank'>default Bootstrap 4 utility classes</a> Unishop introduces its own. They all live inside <code>Unishop/src/scss/base/_utilities.scss</code> file.
+        p.mb-4: u For your reference I included screenshot of this file below:
+        img(src='../img/docs/utilities.jpg' alt='Utility Classes').d-block
+
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

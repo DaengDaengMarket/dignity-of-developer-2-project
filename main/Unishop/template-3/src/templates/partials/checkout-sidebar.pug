@@ -1,0 +1,70 @@
+aside.sidebar
+  .padding-top-2x.hidden-lg-up
+
+  // Order Summary Widget
+  section.widget.widget-order-summary
+    h3.widget-title Order Summary
+    table.table
+      tr
+        td Cart Subtotal:
+        td.text-gray-dark $2,548.50
+      tr
+        td Shipping:
+        td.text-gray-dark $26.50
+      tr
+        td Estimated tax:
+        td.text-gray-dark $9.72
+      tr
+        td
+        td.text-lg.text-gray-dark $2,584.72
+
+  // Featured Products Widget
+  section.widget.widget-featured-products
+    h3.widget-title Recently Viewed
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/01.jpg', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') GoPro Hero4 Silver
+        span.entry-meta $287.99
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/02.jpg', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') Puro Sound Labs BT2200
+        span.entry-meta $95.99
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/03.jpg', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') HP OfficeJet Pro 8710
+        span.entry-meta $89.70
+    // Entry
+    .entry.pb-2
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/05.jpg', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') iPhone X 256 GB Space Gray
+        span.entry-meta $1,450.00
+
+  // Promo Banner
+  a(href='shop-grid-ls.html').card.border-0.bg-secondary
+    .card-body
+      span.d-block.text-lg.text-thin.mb-2 Limited Time Deals
+      h3 Surface Pro 4
+      p.d-inline-block.bg-warning.text-white
+        | &nbsp;&nbsp;Shop Now&nbsp;
+        i.icon-chevron-right.d-inline-block.align-middle
+        | &nbsp;
+    img(src='img/shop/widget/promo.jpg' alt='Surface Pro').d-block.mx-auto

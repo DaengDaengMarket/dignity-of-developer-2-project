@@ -1,0 +1,56 @@
+// Search Section
+#search.toolbar-section
+  form(method='get').search-form.mb-2
+    input(type='search' placeholder='Type search query')
+    i.material-icons.search
+  // Products
+  .widget.widget-featured-products
+    h3.widget-title Found in Products
+    // Entry
+    .entry
+      .entry-thumb
+        a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+          +image('img/shop/widget/01.png', 'Product')
+      .entry-content
+        h4.entry-title
+          a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) Max <span class='text-highlighted'>Task Chair</span>
+        span.entry-meta $299.00
+    // Entry
+    .entry
+      .entry-thumb
+        a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+          +image('img/shop/widget/02.png', 'Product')
+      .entry-content
+        h4.entry-title
+          a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) <span class='text-highlighted'>Drawer</span> File Cabinet
+        span.entry-meta $265.00
+    // Entry
+    .entry
+      .entry-thumb
+        a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
+          +image('img/shop/widget/03.png', 'Product')
+      .entry-content
+        h4.entry-title
+          a&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) Campfire <span class='text-highlighted'>Paper</span> Table
+        span.entry-meta $570.00
+  // Blog
+  .widget.widget-featured-products
+    h3.widget-title Found in Blog
+    // Entry
+    .entry
+      .entry-thumb
+        a&attributes(isNestedFile ? {'href': '../blog-single.html'} : {'href': 'blog-single.html'})
+          +image('img/blog/widget/01.jpg', 'Post')
+      .entry-content
+        h4.entry-title
+          a&attributes(isNestedFile ? {'href': '../blog-single.html'} : {'href': 'blog-single.html'}) <span class='text-highlighted'>Modern</span> Working Space
+        span.entry-meta May 09
+    // Entry
+    .entry
+      .entry-thumb
+        a&attributes(isNestedFile ? {'href': '../blog-single.html'} : {'href': 'blog-single.html'})
+          +image('img/blog/widget/02.jpg', 'Post')
+      .entry-content
+        h4.entry-title
+          a&attributes(isNestedFile ? {'href': '../blog-single.html'} : {'href': 'blog-single.html'}) Interior <span class='text-highlighted'>Design</span> Tricks
+        span.entry-meta April 18

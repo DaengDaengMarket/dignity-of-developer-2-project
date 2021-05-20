@@ -1,0 +1,112 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'My Orders'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'Orders List'
+  - var isModalOrder = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}, {'title': 'My Orders'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-4
+        aside.user-info-wrapper
+          .user-cover(style='background-image: url(img/account/user-cover-img.jpg);')
+            .info-label(data-toggle='tooltip', title='You currently have 622 Reward Points to spend')
+              i.material-icons.redeem
+              | 622 points
+          .user-info
+            .user-avatar
+              a(href='#').edit-avatar
+                i.material-icons.edit
+                | Edit
+              img(src='img/account/user-ava.jpg', alt='User')
+            .user-data
+              h5 Daniel Adams
+              span Joined February 06, 2017
+        nav.list-group
+          a(href='account-orders.html').list-group-item.with-badge.active
+            i.icon-bag
+            | Orders
+            span.badge.badge-default.badge-pill 6
+          a(href='account-profile.html').list-group-item
+            i.icon-head
+            | Profile
+          a(href='account-address.html').list-group-item
+            i.icon-map
+            | Addresses
+          a(href='account-wishlist.html').list-group-item.with-badge
+            i.icon-heart
+            | Wishlist
+            span.badge.badge-default.badge-pill 3
+          a(href='account-tickets.html').list-group-item.with-badge
+            i.icon-tag
+            | My Tickets
+            span.badge.badge-default.badge-pill 4
+      .col-lg-8
+        .padding-top-2x.mt-2.hidden-lg-up
+        .table-responsive.text-sm
+          table.table.table-hover.margin-bottom-none
+            thead
+              tr
+                th Order #
+                th Date Purchased
+                th Status
+                th Total
+            tbody
+              tr
+                td.align-middle
+                  a(href='#' data-toggle='modal' data-target='#orderDetails').text-medium.navi-link 78A643CD409
+                td.align-middle August 08, 2017
+                td.align-middle
+                  span.d-inline-block.bg-danger.text-white.text-xs.p-1 Canceled
+                td.align-middle
+                  span.text-medium $760.50
+              tr
+                td.align-middle
+                  a(href='#' data-toggle='modal' data-target='#orderDetails').text-medium.navi-link 34VB5540K83
+                td.align-middle July 21, 2017
+                td.align-middle
+                  span.d-inline-block.bg-info.text-white.text-xs.p-1 In Progress
+                td.align-middle
+                  span.text-medium $665.32
+              tr
+                td.align-middle
+                  a(href='#' data-toggle='modal' data-target='#orderDetails').text-medium.navi-link 112P45A90V2
+                td.align-middle June 15, 2017
+                td.align-middle
+                  span.d-inline-block.bg-warning.text-white.text-xs.p-1 Delayed
+                td.align-middle
+                  span.text-medium $1,264.00
+              tr
+                td.align-middle
+                  a(href='#' data-toggle='modal' data-target='#orderDetails').text-medium.navi-link 28BA67U0981
+                td.align-middle May 19, 2017
+                td.align-middle
+                  span.d-inline-block.bg-success.text-white.text-xs.p-1 Delivered
+                td.align-middle
+                  span.text-medium $198.35
+              tr
+                td.align-middle
+                  a(href='#' data-toggle='modal' data-target='#orderDetails').text-medium.navi-link 502TR872W2
+                td.align-middle April 04, 2017
+                td.align-middle
+                  span.d-inline-block.bg-success.text-white.text-xs.p-1 Delivered
+                td.align-middle
+                  span.text-medium $2,133.90
+              tr
+                td.align-middle
+                  a(href='#' data-toggle='modal' data-target='#orderDetails').text-medium.navi-link 47H76G09F33
+                td.align-middle March 30, 2017
+                td.align-middle
+                  span.d-inline-block.bg-success.text-white.text-xs.p-1 Delivered
+                td.align-middle
+                  span.text-medium $86.40
+        hr.mb-3
+        .text-right
+          a(href='#' class='btn btn-outline-secondary mb-0')
+            i.material-icons.file_download
+            | &nbsp;Order Details

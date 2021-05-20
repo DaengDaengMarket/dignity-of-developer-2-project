@@ -1,0 +1,308 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+//
+//## Gray and brand colors for use across Theme.
+//---------------------------------------------------
+
+// Grayscale
+$gray-darker:            #232323;
+$gray-dark:            	 #505050;
+$gray:                   #999999;
+$gray-light:             #e5e5e5;
+$gray-lighter:           #f5f5f5;
+$white-color:            #ffffff;
+$black-color:            #000000;
+
+// Brand colors
+$brand-primary:         #0055ff;
+$brand-info:		        #2196f3;
+$brand-success:         #4caf50;
+$brand-warning:         #ffa000;
+$brand-danger:          #f44336;
+
+// Body
+$body-bg: 							$white-color;
+$body-color: 						$gray-dark;
+
+// Inline links
+$link-color: 						$brand-primary;
+$link-hover-color: 			$brand-primary;
+
+// Hedings
+$headings-color:	 			$gray-darker;
+
+// Borders
+$border-color:          $gray-light;
+$border-light-color:    rgba($white-color, .13);
+
+// Highlight color
+$highlight-color:       #fff8b0;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+// -------------------------------------------------------
+
+$font-family-base: 			  'Rubik', Helvetica, Arial, sans-serif;
+$font-family-headings: 	  inherit;
+
+// Font sizes
+$font-size-base:          16px;
+$font-size-lead:          floor(($font-size-base * 1.125)); // ~18px
+$font-size-md: 				    floor(($font-size-base * .875)); // ~14px
+$font-size-sm:         		floor(($font-size-base * .8125)); // ~13px
+$font-size-xs:         		floor(($font-size-base * .75)); // ~12px
+
+// Headings
+$font-size-h1:            floor(($font-size-base * 2.25)); // ~36px
+$font-size-h2:            floor(($font-size-base * 2)); // ~32px
+$font-size-h3:            floor(($font-size-base * 1.75)); // ~28px
+$font-size-h4:            floor(($font-size-base * 1.5)); // ~24px
+$font-size-h5:            floor(($font-size-base * 1.25)); // ~20px
+$font-size-h6:            floor(($font-size-base * 1.125)); // ~18px
+
+// Display headings
+$display-1:               floor(($font-size-base * 4.5)); // ~72px
+$display-2:               floor(($font-size-base * 3.75)); // ~60px
+$display-3:               floor(($font-size-base * 3.125)); // ~50px
+$display-4:               floor(($font-size-base * 2.5)); // ~40px
+$display-404:             floor(($font-size-base * 15)); // ~240px
+
+// Font styles
+$font-style-base:         normal;
+$font-style-headings:     normal;
+
+// Font weights
+$font-weight-base:         normal;
+$font-weight-h1:           300;
+$font-weight-h2:           300;
+$font-weight-h3:           300;
+$font-weight-h4:           300;
+$font-weight-h5:           normal;
+$font-weight-h6:           normal;
+$font-weight-display:      300;
+
+// Text transforms
+$text-transform-base:     none;
+$text-transform-headings: none;
+
+// Line heights
+$line-height-base:       1.5;
+$line-height-h1:         1.15;
+$line-height-h2:         1.2;
+$line-height-h3:         1.25;
+$line-height-h4:         1.3;
+$line-height-h5:         1.35;
+$line-height-h6:         1.4;
+$line-height-display:    1.15;
+
+
+//== Grid Vertical Step
+// -------------------------------------------------------
+
+$grid-vertical-step:     24px;
+
+
+//== Border Radius
+// -------------------------------------------------------
+
+$border-radius-lg: 		6px;
+$border-radius-base: 	5px;
+$border-radius-sm: 		4px;
+$border-radius-xs: 		3px;
+
+
+//== Forms
+// -------------------------------------------------------
+
+$input-height-lg:							54px;
+$input-height:								46px;
+$input-height-sm:							36px;
+$input-color-placeholder:     $gray;
+$input-focus-color:           $brand-primary;
+
+
+//== Buttons
+// -------------------------------------------------------
+
+$btn-lg-font-size: 						$font-size-base;
+$btn-font-size: 							$font-size-md;
+$btn-sm-font-size: 						$font-size-xs;
+$btn-text-transform:          none;
+$btn-font-weight: 						400;
+$btn-text-color:              $gray-dark;
+
+$btn-lg-height: 							54px;
+$btn-height: 									46px;
+$btn-sm-height: 							36px;
+
+$btn-margin:                  floor($grid-vertical-step / 2); //~12px
+$social-btn-size: 						$font-size-xs;
+
+
+//== Tables
+// -------------------------------------------------------
+
+$table-border-color: 					$border-color;
+$table-cell-padding:					15px;
+$table-bg-accent: 						$gray-lighter;
+
+
+//== Navbar / Logo
+//
+
+$logo-width: 				          136px;
+$navbar-stuck-shadow:         0 7px 30px -6px rgba(0, 0, 0, .15);
+
+
+//== Navigation
+//
+
+$nav-link-font-size: 				ceil($font-size-base * .9375); // 15px
+$nav-link-font-weight: 			normal;
+$nav-link-color: 						$gray-dark;
+$nav-link-hover-color: 			$brand-primary;
+$nav-link-active-color: 		$brand-primary;
+
+// Sub Menu / Mega Menu
+$sub-menu-width:            200px;
+$sub-menu-shadow:           0 7px 22px -5px rgba($black-color, .2);
+$sub-menu-link-font-size:   $font-size-md;
+
+
+//== Tabs
+//
+
+$nav-tabs-font-size:								ceil($font-size-base * .9375); // 15px
+$nav-tabs-link-color: 							$gray;
+$nav-tabs-link-active-color:  			$gray-dark;
+
+
+//== Progress
+//
+
+$progress-height:     18px;
+$progress-bg:         $brand-primary;
+
+
+// == Shop
+//
+
+// Product
+$product-title-font-size:     $font-size-base;
+$product-title-color:         $gray-darker;
+$product-title-hover-color:   $brand-primary;
+$product-price-font-size:     $font-size-base;
+$product-price-color:         $gray-darker;
+$product-price-bg-color:      #fff6e3;
+
+// Shop View
+$shop-view-size:            43px;
+$shop-view-color:           $gray-dark;
+$shop-view-bg-color:        $white-color;
+$shop-view-hover-bg-color:  $gray-lighter;
+$shop-view-active-bg-color: $brand-primary;
+
+// Cart
+$cart-thumb-size:         110px;
+
+// Account
+$cover-height:            120px;
+$user-ava-size:           115px;
+
+
+// == Blog
+//
+
+$blog-post-meta-color:          $gray-dark;
+$blog-post-meta-icon-color:     $gray;
+$blog-post-meta-font-size:      $font-size-xs;
+$blog-post-meta-icon-font-size: $font-size-sm;
+$blog-post-title-color:         $headings-color;
+$blog-post-body-color:          $gray;
+$blog-post-title-font-size:     $font-size-h6;
+$blog-post-hover-color:         $brand-primary;
+
+
+// == Comments
+//
+
+$comment-author-ava-size:   50px;
+$comment-title-size:        $font-size-base;
+$comment-title-weight:      normal;
+
+
+//== Widgets
+//
+
+// $sidebar-max-width:          400px;
+$sidebar-offcanvas-width:    320px;
+$widget-title-color:         $gray-darker;
+$widget-title-font-size:     ceil($font-size-base * .9375); // 15px
+$widget-link-font-size:      $font-size-md;
+$widget-meta-color:          $gray;
+$widget-meta-font-size:      $font-size-xs; //~12px
+$widget-entry-thumb-size:    50px;
+
+// Tags
+$widget-tags-height:              28px;
+$widget-tags-font-size:           $font-size-xs;
+
+
+//== Pagination
+//
+
+$pagination-link-size:         $btn-sm-height;
+$pagination-link-font-size:    $font-size-md;
+$pagination-link-font-weight:  400;
+$pagination-link-color:        $gray-dark;
+$pagination-link-active-color: $white-color;
+$pagination-link-hover-bg:     $gray-lighter;
+$pagination-link-active-bg:    $brand-primary;
+
+
+//== Tooltips
+//
+
+$tooltip-opacity:    		1;
+$tooltip-bg: 				 		darken($gray-darker, 4%);
+$tooltip-color:         $white-color;
+$tooltip-arrow-color: 	$tooltip-bg;
+
+
+//== Carousel
+//
+
+$carousel-navs-size: 				  $btn-height;
+$carousel-navs-icon-size: 	  22px;
+$carousel-navs-bg:            $white-color;
+$carousel-navs-color: 			  $gray-darker;
+$carousel-dots-size: 				  6px;
+$carousel-dots-color: 	  	  $gray-dark;
+
+// Hero Slider
+$hero-slider-min-height:      580px;
+
+
+//== Countdown
+//
+
+$countdown-box-size:          48px;
+$countdown-font-size:         floor(($font-size-base * 1.25)); // ~20px
+$countdown-label-size:        floor(($font-size-base * .75)); // ~12px
+
+
+//== Media queries (responsive breackpoints)
+//## Descktop, Tablet, Mobile
+
+$screen-xl: 1200px;
+$screen-lg: 991px;
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xs: 360px;
+
+$nav-collapse:     $screen-lg;

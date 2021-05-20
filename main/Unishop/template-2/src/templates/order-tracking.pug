@@ -1,0 +1,44 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Order Tracking'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Order Tracking'
+  - var isModalOrder = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Order Tracking'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .card.mb-3
+      .p-4.text-center.text-white.text-lg.bg-dark
+        span.text-uppercase Tracking Order No - 
+        span.text-medium 34VB5540K83
+      .d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.py-3.px-2
+        div.w-100.text-center.py-1.px-2 <span class='text-medium'>Shipped Via:</span> UPS Ground
+        div.w-100.text-center.py-1.px-2 <span class='text-medium'>Status:</span> Processing Order
+        div.w-100.text-center.py-1.px-2 <span class='text-medium'>Expected Date:</span> JAN 19, 2018
+      .card-body
+        .steps.flex-sm-nowrap.padding-top-1x.padding-bottom-1x
+          .step.active
+            i.material-icons.shopping_basket
+            h4.step-title Confirmed Order
+          .step.active
+            i.material-icons.settings
+            h4.step-title Processing Order
+          .step
+            i.material-icons.star
+            h4.step-title Quality Check
+          .step
+            i.material-icons.flight_takeoff
+            h4.step-title Product Dispatched
+          .step
+            i.material-icons.home
+            h4.step-title Product Delivered
+    .d-flex.flex-wrap.flex-md-nowrap.justify-content-center.justify-content-sm-between.align-items-center
+      .custom-control.custom-checkbox.mr-3
+        input(type='checkbox' id='notify_me' checked).custom-control-input
+        label(for='notify_me').custom-control-label Notify me when order is delivered
+      .text-left.text-sm-right
+        a(href='orderDetails' data-toggle='modal' data-target='#orderDetails').btn.btn-primary.btn-sm View Order Details

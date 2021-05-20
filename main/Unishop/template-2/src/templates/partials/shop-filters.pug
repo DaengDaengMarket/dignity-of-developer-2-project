@@ -1,0 +1,86 @@
+// Filter Panes
+.filters-wrap
+
+  // Widgets
+  #filters.filters-pane.pb-3
+    .row
+      .col-md-3
+        // Widget Sorting
+        section.widget.widget-icon-list
+          h3.widget-title Sort By
+          ul
+            li
+              a(href='#')
+                i.material-icons.sort
+                | Default
+            li
+              a(href='#')
+                i.material-icons.favorite_border
+                | Popularity
+            li
+              a(href='#')
+                i.material-icons.vertical_align_top
+                | Last entries
+            li
+              a(href='#')
+                i.material-icons.star_border
+                | Average rating
+            li
+              a(href='#')
+                i.material-icons.sort_by_alpha
+                | Alphabetically
+      .col-md-2
+        // Widget Colors
+        section.widget.widget-colors
+          h3.widget-title Color Filter
+          ul
+            li
+              a(href='#')
+                span(style='background-color: #93c4ef;').color
+                | Blue
+            li
+              a(href='#')
+                span(style='background-color: #a7c04d;').color
+                | Green
+            li
+              a(href='#')
+                span(style='background-color: #ef0568;').color
+                | Red
+            li
+              a(href='#')
+                span(style='background-color: #ffce2b;').color
+                | Yellow
+      .col-md-3
+        // Widget Price Range
+        section.widget.widget-categories
+          h3.widget-title Price Range
+          form(method='post' data-start-min='250' data-start-max='650' data-min='0' data-max='1000' data-step='1').price-range-slider
+            .ui-range-slider
+            footer.ui-range-slider-footer
+              .column
+                button(type='submit').btn.btn-outline-primary.btn-sm Filter
+              .column
+                .ui-range-values
+                  .ui-range-value-min
+                    | $<span></span>
+                    input(type='hidden')
+                  | &nbsp;-&nbsp;
+                  .ui-range-value-max
+                    | $<span></span>
+                    input(type='hidden')
+      .col-lg-3.col-md-4.offset-lg-1
+        // Widget Tags
+        section.widget.widget-tags
+          h3.widget-title Popular
+          a(href='#').tag #furniture
+          a(href='#').tag #lighting
+          a(href='#').tag #LED
+          a(href='#').tag #interior
+          a(href='#').tag #another tag
+          a(href='#').tag #office supplies
+          a(href='#').tag #storage
+
+  // Search Box
+  form#search-box.filters-pane.pb-3
+    .form-group
+      input(type='text' placeholder='Type and hit enter').form-control
