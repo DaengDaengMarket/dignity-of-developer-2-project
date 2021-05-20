@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <title>Home</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      .header {
+        width: 100%;
+        height: 100px;
+        background-color: blanchedalmond;
+      }
+
+      .title {
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .header-title {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+      .search-textbox {
+        width: 500px;
+        margin-right: 0;
+      }
+
+      .search-btn {
+        margin-left: 0;
+      }
+
+      .card-img {
+        max-width: 100%;
+        max-height: 225px;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="title">
+          <div class="header-title">댕댕마켓</div>
+          <div class="search">
+            <input type="text" class="search-textbox" placeholder="찾을 물품을 입력하세요" />
+            <button type="button" class="search-btn btn btn-primary">검색</button>
+          </div>
+          <p><a href="">로그인</a>/<a href="">회원가입</a></p>
+        </div>
+        <p style="width: 100%; background-color: red">네비바</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-5 text-center container">
+        <img src="/img/ad1.jpg" alt="ad_banner" />
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <!-- card -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img" src="/img/하네스.jpg" alt="판매물품 이미지" />
+                <div class="card-body">
+                  <p class="card-text">제목: 하네스 팔아요!</p>
+                  <p class="card-text">가격: 2만원</p>
+                  <p class="card-text">지역: 역삼1동</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">9 mins ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img" src="/img/사료.jpg" alt="판매물품 이미지" />
+                <div class="card-body">
+                  <p class="card-text">제목: 사료(새거) 팝니다</p>
+                  <p class="card-text">가격: 3만원</p>
+                  <p class="card-text">지역: 삼성2동</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">2 hours ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img" src="/img/구찌 이동장.jpg" alt="판매물품 이미지" />
+                <div class="card-body">
+                  <p class="card-text">제목: 구찌 이동장</p>
+                  <p class="card-text">가격: 100만원</p>
+                  <p class="card-text">지역: 논현1동</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">21.05.19</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" />
+                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                </svg>
+                <div class="card-body">
+                  <p class="card-text">제목:</p>
+                  <p class="card-text">가격:</p>
+                  <p class="card-text">지역:</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">9 mins ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" />
+                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                </svg>
+                <div class="card-body">
+                  <p class="card-text">제목:</p>
+                  <p class="card-text">가격:</p>
+                  <p class="card-text">지역:</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">9 mins ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" />
+                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                </svg>
+                <div class="card-body">
+                  <p class="card-text">제목:</p>
+                  <p class="card-text">가격:</p>
+                  <p class="card-text">지역:</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">9 mins ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /card -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">맨 위로</a>
+        </p>
+        <p><strong>고객문의</strong> cs@dangmarket.com &nbsp;&nbsp;&nbsp; <strong>광고문의</strong> ad@dangmarket.com</p>
+        <p>서울특별시 강남구 테헤란로2길 &nbsp;&nbsp;&nbsp; 사업자 등록번호 : 123-12-12345</p>
+        <p class="mb-1">&copy; Dangdang Market Inc.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
