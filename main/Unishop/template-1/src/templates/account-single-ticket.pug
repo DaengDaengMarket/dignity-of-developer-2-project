@@ -1,0 +1,97 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Single Ticket'
+  - var parentMenu = 'Account'
+  - var isModalTicket = true
+  - var menuTitle = 'Single Ticket'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}, {'title': 'My Tickets', 'link': 'account-tickets.html'}, {'title': 'Single Ticket'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-4
+        aside.user-info-wrapper
+          .user-cover(style='background-image: url(img/account/user-cover-img.jpg);')
+            .info-label(data-toggle='tooltip', title='You currently have 290 Reward Points to spend')
+              i.icon-medal
+              | 290 points
+          .user-info
+            .user-avatar
+              a(href='#').edit-avatar
+              img(src='img/account/user-ava.jpg', alt='User')
+            .user-data
+              h4 Daniel Adams
+              span Joined February 06, 2017
+        nav.list-group
+          a(href='account-orders.html').list-group-item.with-badge
+            i.icon-bag
+            | Orders
+            span.badge.badge-primary.badge-pill 6
+          a(href='account-profile.html').list-group-item
+            i.icon-head
+            | Profile
+          a(href='account-address.html').list-group-item
+            i.icon-map
+            | Addresses
+          a(href='account-wishlist.html').list-group-item.with-badge
+            i.icon-heart
+            | Wishlist
+            span.badge.badge-primary.badge-pill 3
+          a(href='account-tickets.html').list-group-item.with-badge.active
+            i.icon-tag
+            | My Tickets
+            span.badge.badge-primary.badge-pill 4
+      .col-lg-8
+        .padding-top-2x.mt-2.hidden-lg-up
+        .table-responsive.margin-bottom-2x
+          table.table.margin-bottom-none
+            thead
+              tr
+                th Date Submitted
+                th Last Updated
+                th Type
+                th Priority
+                th Status
+            tbody
+              tr
+                td 08/08/2017
+                td 08/14/2017
+                td Website problem
+                td
+                  span.text-warning High
+                td
+                  span.text-primary Open
+        
+        // Messages
+        .comment
+          .comment-author-ava
+            img(src='img/reviews/01.jpg' alt='Avatar')
+          .comment-body
+            p.comment-text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.
+            .comment-footer
+              span.comment-meta Daniel Adams
+        .comment
+          .comment-author-ava
+            img(src='img/reviews/03.jpg' alt='Avatar')
+          .comment-body
+            p.comment-text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            .comment-footer
+              span.comment-meta Jacob Hammond, Staff
+        .comment
+          .comment-author-ava
+            img(src='img/reviews/03.jpg' alt='Avatar')
+          .comment-body
+            p.comment-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .comment-footer
+              span.comment-meta Jacob Hammond, Staff
+        
+        // Reply Form
+        h5.mb-30.padding-top-1x Leave Message
+        form(method='post')
+          .form-group
+            textarea(id='review_text' rows='8' placeholder='Write your message here...' required).form-control.form-control-rounded
+          .text-right
+            button(type='submit').btn.btn-outline-primary Submit Message

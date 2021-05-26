@@ -1,0 +1,80 @@
+//- To use only with sidebar-offcanvas
+button(data-toggle='modal' data-target='#modalBlogSidebar').sidebar-toggle.position-left
+  i.icon-layout
+
+aside.sidebar.sidebar-offcanvas
+
+  // Widget Search
+  section.widget
+    form(method='get').input-group.form-group
+      span.input-group-btn
+        button(type='submit')
+          i.icon-search
+      input(type='search' placeholder='Search blog').form-control
+
+  // Widget Categories
+  section.widget.widget-categories
+    h3.widget-title Categories
+    ul
+      li
+        a(href='#') Editor's Choice
+        <span>(24)</span>
+      li
+        a(href='#') Fashion
+        <span>(12)</span>
+      li
+        a(href='#') Travel
+        <span>(5)</span>
+      li
+        a(href='#') Online Shopping
+        <span>(7)</span>
+      li
+        a(href='#') Closing Design
+        <span>(3)</span>
+
+  // Widget Featured Posts
+  section.widget.widget-featured-posts
+    h3.widget-title Featured Posts
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='blog-single-rs.html')
+          img(src='img/blog/widget/01.jpg', alt='Post')
+      .entry-content
+        h4.entry-title
+          a(href='blog-single-rs.html') Trending Winter Boots
+        span.entry-meta by Olivia Reyes
+    // Entry
+    .entry
+      .entry-content
+        h4.entry-title
+          a(href='blog-single-rs.html') Global Travel And Vacations Luxury Travel On A Tight Budget
+        span.entry-meta by Logan Coleman
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='blog-single-rs.html')
+          img(src='img/blog/widget/02.jpg', alt='Post')
+      .entry-content
+        h4.entry-title
+          a(href='blog-single-rs.html') Hoop Earrings A Style From History
+        span.entry-meta by Cynthia Gomez
+
+  // Widget Tags
+  section.widget.widget-tags
+    h3.widget-title Popular Tags
+    a(href='#').tag #design
+    a(href='#').tag #fashion
+    a(href='#').tag #travelling
+    span.tag.active #active tag
+    a(href='#').tag #shopping
+  
+  // Promo Banner
+  section(style='background-image: url(img/banners/01.jpg);').promo-box
+    // Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.
+    span(style='opacity: .35;').overlay-dark
+    .promo-box-content.text-center.padding-top-2x.padding-bottom-2x
+      h3.text-bold.text-light.text-shadow
+        | New 2017<br>Handbag Collection
+      h4.text-light.text-thin.text-shadow has just arrived!
+      a(href='shop-grid-ls.html').btn.btn-sm.btn-primary Shop Now

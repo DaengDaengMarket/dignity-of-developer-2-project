@@ -1,0 +1,106 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'My Wishlist'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'Wishlist'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}, {'title': 'My Wishlist'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-4
+        aside.user-info-wrapper
+          .user-cover(style='background-image: url(img/account/user-cover-img.jpg);')
+            .info-label(data-toggle='tooltip', title='You currently have 290 Reward Points to spend')
+              i.icon-medal
+              | 290 points
+          .user-info
+            .user-avatar
+              a(href='#').edit-avatar
+              img(src='img/account/user-ava.jpg', alt='User')
+            .user-data
+              h4 Daniel Adams
+              span Joined February 06, 2017
+        nav.list-group
+          a(href='account-orders.html').list-group-item.with-badge
+            i.icon-bag
+            | Orders
+            span.badge.badge-primary.badge-pill 6
+          a(href='account-profile.html').list-group-item
+            i.icon-head
+            | Profile
+          a(href='account-address.html').list-group-item
+            i.icon-map
+            | Addresses
+          a(href='account-wishlist.html').list-group-item.with-badge.active
+            i.icon-heart
+            | Wishlist
+            span.badge.badge-primary.badge-pill 3
+          a(href='account-tickets.html').list-group-item.with-badge
+            i.icon-tag
+            | My Tickets
+            span.badge.badge-primary.badge-pill 4
+      .col-lg-8
+        .padding-top-2x.mt-2.hidden-lg-up
+
+        // Wishlist Table
+        .table-responsive.wishlist-table.margin-bottom-none
+            table.table
+              thead
+                tr
+                  th Product Name
+                  th.text-center
+                    a(href='#').btn.btn-sm.btn-outline-danger Clear Wishlist
+              tbody
+                tr
+                  td
+                    .product-item
+                      a(href='shop-single.html').product-thumb
+                        img(src='img/shop/cart/01.jpg', alt='Product')
+                      .product-info
+                        h4.product-title
+                          a(href='shop-single.html') Unionbay Park
+                        .text-lg.text-medium.text-muted $43.90
+                        div
+                          | Availability:
+                          .d-inline.text-success In Stock
+                  td.text-center
+                    a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+                      i.icon-cross
+                tr
+                  td
+                    .product-item
+                      a(href='shop-single.html').product-thumb
+                        img(src='img/shop/cart/02.jpg', alt='Product')
+                      .product-info
+                        h4.product-title
+                          a(href='shop-single.html') Daily Fabric Cap
+                        .text-lg.text-medium.text-muted $24.70
+                        div
+                          | Availability:
+                          .d-inline.text-warning 2 - 3 Weeks
+                  td.text-center
+                    a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+                      i.icon-cross
+                tr
+                  td
+                    .product-item
+                      a(href='shop-single.html').product-thumb
+                        img(src='img/shop/cart/03.jpg', alt='Product')
+                      .product-info
+                        h4.product-title
+                          a(href='shop-single.html') Cole Haan Crossbody
+                        .text-lg.text-medium.text-muted $200.00
+                        div
+                          | Availability:
+                          .d-inline.text-success In Stock
+                  td.text-center
+                    a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+                      i.icon-cross
+        hr.mb-4
+        .custom-control.custom-checkbox
+          input(type='checkbox' id='inform_me' checked).custom-control-input
+          label(for='inform_me').custom-control-label Inform me when item from my wishlist is available

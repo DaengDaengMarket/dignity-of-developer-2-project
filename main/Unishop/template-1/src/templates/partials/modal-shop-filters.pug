@@ -1,0 +1,178 @@
+// Shop Filters Modal
+div(id='modalShopFilters' tabindex='-1').modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4.modal-title Shop Filters
+        button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+
+        // Widget Categories
+        section.widget.widget-categories
+          h3.widget-title Shop Categories
+          ul
+            li.has-children.expanded
+              a(href='#') Shoes
+              span (1138)
+              ul
+                li
+                  a(href='#') Women's
+                  span (508)
+                  ul
+                    li: a(href='#') Sneakers
+                    li: a(href='#') Heels
+                    li: a(href='#') Loafers
+                    li: a(href='#') Sandals
+                li
+                  a(href='#') Men's
+                  span (423)
+                  ul
+                    li: a(href='#') Boots
+                    li: a(href='#') Oxfords
+                    li: a(href='#') Loafers
+                    li: a(href='#') Sandals
+                li
+                  a(href='#') Boy's Shoes
+                  span (97)
+                li
+                  a(href='#') Girl's Shoes
+                  span (110)
+            li.has-children
+              a(href='#') Clothing
+              span (2356)
+              ul
+                li
+                  a(href='#') Women's
+                  span (1032)
+                  ul
+                    li: a(href='#') Dresses
+                    li: a(href='#') Shirts &amp; Tops
+                    li: a(href='#') Swimwear
+                    li: a(href='#') Shorts
+                li
+                  a(href='#') Men's
+                  span (937)
+                  ul
+                    li: a(href='#') Shirts &amp; Tops
+                    li: a(href='#') Shorts
+                    li: a(href='#') Swimwear
+                    li: a(href='#') Pants
+                li
+                  a(href='#') Kid's Clothing
+                  span (386)
+            li.has-children
+              a(href='#') Bags
+              span (420)
+              ul
+                li
+                  a(href='#') Handbags
+                  span (180)
+                li
+                  a(href='#') Backpacks
+                  span (132)
+                li
+                  a(href='#') Wallets &amp; Accessories
+                  span (47)
+                li
+                  a(href='#') Luggage
+                  span (61)
+            li.has-children
+              a(href='#') Accessories
+              span (874)
+              ul
+                li
+                  a(href='#') Sunglasses
+                  span (211)
+                li
+                  a(href='#') Hats
+                  span (195)
+                li
+                  a(href='#') Watches
+                  span (159)
+                li
+                  a(href='#') Jewelry
+                  span (203)
+                li
+                  a(href='#') Belts
+                  span (106)
+
+        // Widget Price Range
+        section.widget.widget-categories
+          h3.widget-title Price Range
+          form(method='post' data-start-min='250' data-start-max='650' data-min='0' data-max='1000' data-step='1').price-range-slider
+            .ui-range-slider
+            footer.ui-range-slider-footer
+              .column
+                button(type='submit').btn.btn-outline-primary.btn-sm Filter
+              .column
+                .ui-range-values
+                  .ui-range-value-min
+                    | $<span></span>
+                    input(type='hidden')
+                  | &nbsp;-&nbsp;
+                  .ui-range-value-max
+                    | $<span></span>
+                    input(type='hidden')
+
+        // Widget Brand Filter
+        section.widget
+          h3.widget-title Filter by Brand
+          .custom-control.custom-checkbox
+            input(type='checkbox' id='adidas2').custom-control-input
+            label(for='adidas2').custom-control-label
+              | Adidas&nbsp;
+              span.text-muted (254)
+          .custom-control.custom-checkbox
+            input(type='checkbox' id='bilabong2').custom-control-input
+            label(for='bilabong2').custom-control-label
+              | Bilabong&nbsp;
+              span.text-muted (39)
+          .custom-control.custom-checkbox
+            input(type='checkbox' id='klein2').custom-control-input
+            label(for='klein2').custom-control-label
+              | Calvin Klein&nbsp;
+              span.text-muted (128)
+          .custom-control.custom-checkbox
+            input(type='checkbox' id='nike2').custom-control-input
+            label(for='nike2').custom-control-label
+              | Nike&nbsp;
+              span.text-muted (310)
+          .custom-control.custom-checkbox
+            input(type='checkbox' id='bahama2').custom-control-input
+            label(for='bahama2').custom-control-label
+              | Tommy Bahama&nbsp;
+              span.text-muted (42)
+
+        // Widget Size Filter
+        section.widget
+          h3.widget-title Filter by Size
+          .custom-control.custom-checkbox
+            input(type='checkbox' id='xl2').custom-control-input
+            label(for='xl2').custom-control-label
+              | XL&nbsp;
+              span.text-muted (208)
+          .custom-control.custom-checkbox
+            input(type='checkbox' id='l2').custom-control-input
+            label(for='l2').custom-control-label
+              | L&nbsp;
+              span.text-muted (311)
+          .custom-control.custom-checkbox
+            input(type='checkbox' id='m2').custom-control-input
+            label(for='m2').custom-control-label
+              | M&nbsp;
+              span.text-muted (485)
+          .custom-control.custom-checkbox
+            input(type='checkbox' id='s2').custom-control-input
+            label(for='s2').custom-control-label
+              | S&nbsp;
+              span.text-muted (213)
+        
+        // Promo Banner
+        section(style='background-image: url(img/banners/02.jpg);').promo-box
+          // Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.
+          span(style='opacity: .45;').overlay-dark
+          .promo-box-content.text-center.padding-top-3x.padding-bottom-2x
+            h4.text-light.text-thin.text-shadow New Collection of
+            h3.text-bold.text-light.text-shadow Sunglassess
+            a(href='#').btn.btn-sm.btn-primary Shop Now

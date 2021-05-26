@@ -1,0 +1,54 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Using Preprocessors (Pug & Sass)'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Using Preprocessors (Pug & Sass)
+        dl
+          dt Sass (Syntactically Awesome Style Sheets)
+          dd Sass is a scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). It is the most mature, stable, and powerful professional grade CSS extension language in the world. Sass gives you the power of variables, mixins, functions, etc.
+          dt Pug (former Jade)
+          dd.mb-4 Pug is a high performance Node.js Templating Engine. Just like SASS, Pug is a prepocessor and, as such it helps you accomplishing tasks like wrapping away repetitive work by providing features not available in plain HTML like variables, includes, mixins, functions, etc.
+        h3 Compiling Sass and Pug
+        p.mb-4 Again, if you are not using Node.js and Grunt setup, don't like command line interface there is another way to work with preprocessors. There is a popular software (GUI) for compiling Sass and Pug called <strong>"Prepross"</strong>. Visit it's website at <a href='https://prepros.io/' target='_blank'>https://prepros.io/</a>. Basic version is completely free and available for Mac and Windows.
+        img(src='../img/docs/prepros.png' alt='Prepros').d-block.img-thumbnail.rounded.mb-4
+        h3.pt-1 Sass files structure
+        .table-responsive
+          table.table.table-striped
+            thead
+              tr
+                th.w-25 Folder / File name
+                th.w-75 Description
+            tbody
+              tr
+                td.w-25: span.text-medium base folder
+                td.w-75 Folder contains <code>_scaffolding.scss</code> and <code>_utilities.scss</code> files. Most basic styles and commonly used classes. More about utility classes learn in <a href='utility-classes.html'>Utility Classes</a> section.
+              tr
+                td.w-25: span.text-medium helpers folder
+                td.w-75 As name stands this folder holds helper Sass files namely: <code>_variables.scss</code>, <code>_mixins.scss</code>, <code>_placeholders.scss</code>.
+              tr
+                td.w-25: span.text-medium layout folder
+                td.w-75 Main structural components of the template: <code>_footer.scss</code>, <code>_grid.scss</code>, <code>_header.scss</code>, <code>_page-title.scss</code>, <code>_section.scss</code>, <code>_offcanvas-menu.scss</code>.
+              tr
+                td.w-25: span.text-medium modules folder
+                td.w-75 Template modules: <code>_account.scss</code>, <code>_blog.scss</code>, <code>_shop.scss</code>.
+              tr
+                td.w-25: span.text-medium components folder
+                td.w-75 All components used accross the template. Learn more about available components in <a href='components.html'>Components</a> section.
+              tr
+                td.w-25: span.text-medium styles.scss
+                td.w-75 Main Sass file that imports all other files and is compiled to <code>styles.min.css</code>.
+                
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

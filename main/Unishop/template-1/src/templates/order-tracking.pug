@@ -1,0 +1,49 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Order Tracking'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Order Tracking'
+  - var isModalOrder = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Order Tracking'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .card.mb-3
+      .p-4.text-center.text-white.text-lg.bg-dark.rounded-top
+        span.text-uppercase Tracking Order No - 
+        span.text-medium 34VB5540K83
+      .d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.py-3.px-2.bg-secondary
+        div.w-100.text-center.py-1.px-2 <span class='text-medium'>Shipped Via:</span> UPS Ground
+        div.w-100.text-center.py-1.px-2 <span class='text-medium'>Status:</span> Checking Quality
+        div.w-100.text-center.py-1.px-2 <span class='text-medium'>Expected Date:</span> SEP 09, 2017
+      .card-body
+        .steps.d-flex.flex-wrap.flex-sm-nowrap.justify-content-between.padding-top-2x.padding-bottom-1x
+          .step.completed
+            .step-icon-wrap
+              .step-icon: i.pe-7s-cart
+            h4.step-title Confirmed Order
+          .step.completed
+            .step-icon-wrap
+              .step-icon: i.pe-7s-config
+            h4.step-title Processing Order
+          .step.completed
+            .step-icon-wrap
+              .step-icon: i.pe-7s-medal
+            h4.step-title Quality Check
+          .step
+            .step-icon-wrap
+              .step-icon: i.pe-7s-car
+            h4.step-title Product Dispatched
+          .step
+            .step-icon-wrap
+              .step-icon: i.pe-7s-home
+            h4.step-title Product Delivered
+    .d-flex.flex-wrap.flex-md-nowrap.justify-content-center.justify-content-sm-between.align-items-center
+      .custom-control.custom-checkbox.mr-3
+        input(type='checkbox' id='notify_me' checked).custom-control-input
+        label(for='notify_me').custom-control-label Notify me when order is delivered
+      .text-left.text-sm-right
+        a(href='orderDetails' data-toggle='modal' data-target='#orderDetails').btn.btn-outline-primary.btn-rounded.btn-sm View Order Details

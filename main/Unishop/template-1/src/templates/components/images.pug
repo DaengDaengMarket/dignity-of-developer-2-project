@@ -1,0 +1,45 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Images & Figures'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Images & Figures'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Image Shapes
+        hr.margin-bottom-1x
+        .row
+          .col-sm-4
+            img(src='../img/components/img07.jpg' alt='Image').d-block.mx-auto.mb-3
+          .col-sm-4
+            img(src='../img/components/img09.jpg' alt='Image').d-block.mx-auto.rounded.mb-3
+          .col-sm-4
+            img(src='../img/components/img08.jpg' alt='Image').d-block.mx-auto.rounded-circle.mb-3
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Image Thumbnails
+        hr.margin-bottom-1x
+        .row
+          .col-sm-4
+            img(src='../img/components/img07.jpg' alt='Image').d-block.mx-auto.img-thumbnail.mb-3
+          .col-sm-4
+            img(src='../img/components/img08.jpg' alt='Image').d-block.mx-auto.img-thumbnail.rounded-circle.mb-3
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Figures with Caption
+        hr.margin-bottom-1x
+        .row
+          .col-sm-6
+            figure.figure.mb-3
+              img(src='../img/components/img04.jpg' alt='Image')
+              figcaption.figure-caption Image caption
+          .col-sm-6
+            figure.figure.mb-3
+              img(src='../img/components/img06.jpg' alt='Image')
+              figcaption.figure-caption.text-right Image caption
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

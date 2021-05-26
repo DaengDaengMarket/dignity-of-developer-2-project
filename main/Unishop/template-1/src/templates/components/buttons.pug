@@ -1,0 +1,183 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Buttons'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Buttons'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Shapes
+        hr.margin-bottom-1x
+        button(type='button' class='btn btn-secondary') Pill Button
+        button(type='button' class='btn btn-rounded btn-secondary') Rounded Button
+        button(type='button' class='btn btn-square btn-secondary') Square Button
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Sizes
+        hr.margin-bottom-1x
+        button(type='button' class='btn btn-lg btn-secondary') Large Button
+        button(type='button' class='btn btn-secondary') Normal Button
+        button(type='button' class='btn btn-sm btn-secondary') Small Button
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Types &amp; Colors
+        hr.margin-bottom-1x
+        a(href='#' class='btn btn-primary') Primary
+        a(href='#' class='btn btn-secondary') Secondary
+        a(href='#' class='btn btn-success') Success
+        a(href='#' class='btn btn-info') Info
+        a(href='#' class='btn btn-warning') Warning
+        a(href='#' class='btn btn-danger') Danger
+        hr.margin-top-1x.margin-bottom-1x
+        a(href='#' class='btn btn-outline-primary') Primary
+        a(href='#' class='btn btn-outline-secondary') Secondary
+        a(href='#' class='btn btn-outline-success') Success
+        a(href='#' class='btn btn-outline-info') Info
+        a(href='#' class='btn btn-outline-warning') Warning
+        a(href='#' class='btn btn-outline-danger') Danger
+        hr.margin-top-1x.margin-bottom-1x
+        button(type='button' class='btn btn-link-primary') Primary
+        button(type='button' class='btn btn-link-secondary') Secondary
+        button(type='button' class='btn btn-link-success') Success
+        button(type='button' class='btn btn-link-info') Info
+        button(type='button' class='btn btn-link-warning') Warning
+        button(type='button' class='btn btn-link-danger') Danger
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x White Buttons
+        hr.margin-bottom-1x
+        div(style='padding: 20px;').bg-dark
+          button(type='button' class='btn btn-white') White Solid
+          button(type='button' class='btn btn-outline-white') White Outline
+          button(type='button' class='btn btn-link-white') White Link
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Disabled State
+        hr.margin-bottom-1x
+        button(type='button' class='btn btn-primary' disabled) Primary
+        button(type='button' class='btn btn-secondary' disabled) Secondary
+        button(type='button' class='btn btn-outline-primary' disabled) Primary
+        button(type='button' class='btn btn-outline-secondary' disabled) Secondary
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Block Buttons
+        hr.margin-bottom-1x
+        div.row
+          div.col-sm-4
+            button(type='button' class='btn btn-outline-primary btn-block') Block Button
+          div.col-sm-4
+            button(type='button' class='btn btn-outline-primary btn-block') Block Button
+          div.col-sm-4
+            button(type='button' class='btn btn-outline-primary btn-block') Block Button
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Icon Position
+        hr.margin-bottom-1x
+        button(type='button' class='btn btn-outline-primary')
+          i.icon-unlock
+          | &nbsp;Primary
+        button(type='button' class='btn btn-outline-secondary')
+          | Secondary&nbsp;
+          i.icon-signal
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Alignment
+        hr.margin-bottom-1x
+        div.text-left
+          button(type='button' class='btn btn-secondary') Left Aligned
+        div.text-center
+          button(type='button' class='btn btn-secondary') Center Aligned
+        div.text-right
+          button(type='button' class='btn btn-secondary') Right Aligned
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Button Dropdowns
+        hr.margin-bottom-1x
+        div.btn-group
+          button(type='button' class='btn btn-primary dropdown-toggle' data-toggle='dropdown') Primary
+          div.dropdown-menu
+            a(href='#' class='dropdown-item') Action
+            a(href='#' class='dropdown-item') Another Action
+            a(href='#' class='dropdown-item') Something else here
+            div.dropdown-divider
+            a(href='#' class='dropdown-item') Separated link
+        div.btn-group
+          button(type='button' class='btn btn-secondary dropdown-toggle' data-toggle='dropdown') Secondary
+          div.dropdown-menu
+            a(href='#' class='dropdown-item') Action
+            a(href='#' class='dropdown-item') Another Action
+            a(href='#' class='dropdown-item') Something else here
+            div.dropdown-divider
+            a(href='#' class='dropdown-item') Separated link
+        div.btn-group
+          button(type='button' class='btn btn-outline-primary dropdown-toggle' data-toggle='dropdown') Primary
+          div.dropdown-menu
+            a(href='#' class='dropdown-item') Action
+            a(href='#' class='dropdown-item') Another Action
+            a(href='#' class='dropdown-item') Something else here
+            div.dropdown-divider
+            a(href='#' class='dropdown-item') Separated link
+        div.btn-group
+          button(type='button' class='btn btn-outline-secondary dropdown-toggle' data-toggle='dropdown') Secondary
+          div.dropdown-menu
+            a(href='#' class='dropdown-item') Action
+            a(href='#' class='dropdown-item') Another Action
+            a(href='#' class='dropdown-item') Something else here
+            div.dropdown-divider
+            a(href='#' class='dropdown-item') Separated link
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Split Button Dropdowns
+        hr.margin-bottom-1x
+        div.btn-group
+          button(type='button' class='btn btn-primary') Primary
+          button(type='button' class='btn btn-primary dropdown-toggle dropdown-toggle-split' data-toggle='dropdown')
+            span.sr-only Toggle Dropdown
+          div.dropdown-menu
+            a(href='#' class='dropdown-item') Action
+            a(href='#' class='dropdown-item') Another Action
+            a(href='#' class='dropdown-item') Something else here
+            div.dropdown-divider
+            a(href='#' class='dropdown-item') Separated link
+        div.btn-group
+          button(type='button' class='btn btn-secondary') Secondary
+          button(type='button' class='btn btn-secondary dropdown-toggle dropdown-toggle-split' data-toggle='dropdown')
+            span.sr-only Toggle Dropdown
+          div.dropdown-menu
+            a(href='#' class='dropdown-item') Action
+            a(href='#' class='dropdown-item') Another Action
+            a(href='#' class='dropdown-item') Something else here
+            div.dropdown-divider
+            a(href='#' class='dropdown-item') Separated link
+        div.btn-group
+          button(type='button' class='btn btn-outline-primary') Primary
+          button(type='button' class='btn btn-outline-primary dropdown-toggle dropdown-toggle-split' data-toggle='dropdown')
+            span.sr-only Toggle Dropdown
+          div.dropdown-menu
+            a(href='#' class='dropdown-item') Action
+            a(href='#' class='dropdown-item') Another Action
+            a(href='#' class='dropdown-item') Something else here
+            div.dropdown-divider
+            a(href='#' class='dropdown-item') Separated link
+        div.btn-group
+          button(type='button' class='btn btn-outline-secondary') Secondary
+          button(type='button' class='btn btn-outline-secondary dropdown-toggle dropdown-toggle-split' data-toggle='dropdown')
+            span.sr-only Toggle Dropdown
+          div.dropdown-menu
+            a(href='#' class='dropdown-item') Action
+            a(href='#' class='dropdown-item') Another Action
+            a(href='#' class='dropdown-item') Something else here
+            div.dropdown-divider
+            a(href='#' class='dropdown-item') Separated link
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Dropup Variation
+        hr.margin-bottom-1x
+        div.btn-group.dropup
+          button(type='button' class='btn btn-outline-primary dropdown-toggle' data-toggle='dropdown') Primary
+          div.dropdown-menu
+            a(href='#' class='dropdown-item') Action
+            a(href='#' class='dropdown-item') Another Action
+            a(href='#' class='dropdown-item') Something else here
+            div.dropdown-divider
+            a(href='#' class='dropdown-item') Separated link
+        div.btn-group.dropup
+          button(type='button' class='btn btn-outline-primary') Primary
+          button(type='button' class='btn btn-outline-primary dropdown-toggle dropdown-toggle-split' data-toggle='dropdown')
+            span.sr-only Toggle Dropdown
+          div.dropdown-menu
+            a(href='#' class='dropdown-item') Action
+            a(href='#' class='dropdown-item') Another Action
+            a(href='#' class='dropdown-item') Something else here
+            div.dropdown-divider
+            a(href='#' class='dropdown-item') Separated link
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

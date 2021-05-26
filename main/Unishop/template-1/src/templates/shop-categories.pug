@@ -1,0 +1,162 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Shop Categories'
+  - var parentMenu = 'Shop'
+  - var isModalShopCategories = true
+  - var menuTitle = 'Shop Categories'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop Categories'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-2x.mb-2
+    .row
+
+      // Sidebar          
+      .col-lg-3
+        //- To use only with sidebar-offcanvas
+        button(data-toggle='modal' data-target='#modalShopCategories').sidebar-toggle.position-left
+          i.icon-layout 
+        aside.sidebar.sidebar-offcanvas
+          section.widget.widget-categories
+            h3.widget-title Popular Brands
+            ul
+              li
+                a(href='#') Adidas
+                <span>(254)</span>
+              li
+                a(href='#') Bilabong
+                <span>(39)</span>
+              li
+                a(href='#') Brooks
+                <span>(205)</span>
+              li
+                a(href='#') Calvin Klein
+                <span>(128)</span>
+              li
+                a(href='#') Cole Haan
+                <span>(104)</span>
+              li
+                a(href='#') Columbia
+                <span>(217)</span>
+              li
+                a(href='#') New Balance
+                <span>(95)</span>
+              li
+                a(href='#') Nike
+                <span>(310)</span>
+              li
+                a(href='#') Nine West
+                <span>(134)</span>
+              li
+                a(href='#') Oakley
+                <span>(73)</span>
+              li
+                a(href='#') Puma
+                <span>(446)</span>
+              li
+                a(href='#') Scechers
+                <span>(87)</span>
+              li
+                a(href='#') Tommy Bahama
+                <span>(42)</span>
+              li
+                a(href='#') Tommy Hilfiger
+                <span>(289)</span>
+              li
+                a(href='#') Valentino
+                <span>(68)</span>
+
+      // Categories
+      .col-lg-9
+
+        // Promo banner
+        div(style='background-image: url(img/banners/alert-bg.jpg)').alert.alert-image-bg.alert-dismissible.fade.show.text-center.mb-4
+          span(data-dismiss='alert').alert-close.text-white
+          .h3.text-medium.text-white.padding-top-1x.padding-bottom-1x
+            i(style='font-size: 33px; margin-top: -5px;').icon-clock
+            | &nbsp;&nbsp;Check our Limited Offers. Save up to 50%&nbsp;&nbsp;&nbsp;
+            .mt-3.hidden-xl-up
+            a(href='#').btn.btn-primary View Offers
+
+        .row
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/01.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/02.jpg' alt='Category')
+                    img(src='img/shop/categories/03.jpg' alt='Category')
+              .card-body.text-center
+                h4.card-title Clothing
+                p.text-muted Starting from $49.99
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/04.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/05.jpg' alt='Category')
+                    img(src='img/shop/categories/06.jpg' alt='Category')
+              .card-body.text-center
+                h4.card-title Shoes
+                p.text-muted Starting from $56.00
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/07.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/08.jpg' alt='Category')
+                    img(src='img/shop/categories/09.jpg' alt='Category')
+              .card-body.text-center
+                h4.card-title Bags
+                p.text-muted Starting from $27.00
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/10.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/11.jpg' alt='Category')
+                    img(src='img/shop/categories/12.jpg' alt='Category')
+              .card-body.text-center
+                h4.card-title Hats
+                p.text-muted Starting from $14.50
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/13.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/14.jpg' alt='Category')
+                    img(src='img/shop/categories/15.jpg' alt='Category')
+              .card-body.text-center
+                h4.card-title Sunglasses
+                p.text-muted Starting from $35.99
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6
+            .card.mb-30
+              a(href='shop-grid-ls.html').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='img/shop/categories/16.jpg' alt='Category')
+                  .thumblist
+                    img(src='img/shop/categories/17.jpg' alt='Category')
+                    img(src='img/shop/categories/18.jpg' alt='Category')
+              .card-body.text-center
+                h4.card-title Watches
+                p.text-muted Starting from $79.99
+                a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+          

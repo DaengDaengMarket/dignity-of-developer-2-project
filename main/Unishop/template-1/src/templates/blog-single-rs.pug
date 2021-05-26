@@ -1,0 +1,197 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Post Right Sidebar'
+  - var isModalBlogSidebar = true
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'Post Right Sidebar'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Blog', 'link': 'blog-rs.html'}, {'title': 'Post Right Sidebar'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row  
+
+      // Content
+      .col-xl-9.col-lg-8
+
+        // Post
+        .single-post-meta
+          .column
+            .meta-link
+              span by
+              | John Doe
+            .meta-link
+              span in
+              a(href='#') Fashion,&nbsp;
+              a(href='#') Travel
+          .column
+            .meta-link
+              a(href='#')
+                i.icon-clock
+                | Feb 11, 2017
+            .meta-link
+              a(href='#comments').scroll-to
+                i.icon-speech-bubble
+                | 3
+        .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true }')
+          figure
+            img(src='img/blog/single/01.jpg', alt='Image')
+            figcaption.text-white Image Caption
+          figure
+            img(src='img/blog/single/02.jpg', alt='Image')
+            figcaption.text-white Image Caption
+          figure
+            img(src='img/blog/single/03.jpg', alt='Image')
+            figcaption.text-white Image Caption
+        h2.padding-top-2x New Trends in Suburban Fashion
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minima veniam, quis nostrum exercitationem.
+        p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minima veniam.
+        .row
+          .col-xl-10.offset-xl-1
+            blockquote.margin-top-1x.margin-bottom-1x
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.
+              cite Someone famous
+        p.mt-2 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+        .single-post-footer
+          .column
+            a(href='#').sp-tag #design,
+            a(href='#').sp-tag &nbsp;#fashion,
+            a(href='#').sp-tag &nbsp;#travelling
+          .column
+            .entry-share
+              span.text-muted Share post:
+              .share-links
+                a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-circle.sb-facebook
+                  i.socicon-facebook
+                a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-circle.sb-twitter
+                  i.socicon-twitter
+                a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-circle.sb-instagram
+                  i.socicon-instagram
+                a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-circle.sb-google-plus
+                  i.socicon-googleplus
+        
+        // Post Navigation
+        .entry-navigation
+          .column.text-left
+            a(href='#' class='btn btn-outline-secondary btn-sm')
+              i.icon-arrow-left
+              | &nbsp;Prev
+          .column
+            a(href='blog-rs.html' class='btn btn-outline-secondary view-all' data-toggle='tooltip' data-placement='top' title='All posts')
+              i.icon-menu
+          .column.text-right
+            a(href='#' class='btn btn-outline-secondary btn-sm')
+              | Next&nbsp;
+              i.icon-arrow-right
+
+        // Relevant Posts
+        h3.padding-top-3x.padding-bottom-1x You May Also Like
+        .owl-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": false, "autoHeight": true, "margin": 30, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+          .widget.widget-featured-posts
+            .entry
+              .entry-thumb
+                a(href='#')
+                  img(src='img/blog/widget/01.jpg', alt='Post')
+              .entry-content
+                h4.entry-title
+                  a(href='#') Trending Winter Boots
+                span.entry-meta by Olivia Reyes
+          .widget.widget-featured-posts
+            .entry
+              .entry-content
+                h4.entry-title
+                  a(href='#') Global Travel And Vacations Luxury Travel On A Tight Budget
+                span.entry-meta by Logan Coleman
+          .widget.widget-featured-posts
+            .entry
+              .entry-thumb
+                a(href='#')
+                  img(src='img/blog/widget/03.jpg', alt='Post')
+              .entry-content
+                h4.entry-title
+                  a(href='#') Perfect Shoes for Yamakasi
+                span.entry-meta by Edward Solo
+          .widget.widget-featured-posts
+            .entry
+              .entry-thumb
+                a(href='#')
+                  img(src='img/blog/widget/02.jpg', alt='Post')
+              .entry-content
+                h4.entry-title
+                  a(href='#') Hoop Earrings A Style From History
+                span.entry-meta by Cynthia Gomez
+          .widget.widget-featured-posts
+            .entry
+              .entry-content
+                h4.entry-title
+                  a(href='#') How Fashion Industry Leads To A Melting Ice In Antarctica
+                span.entry-meta by Johnathan Doe
+
+        // Comments
+        section#comments.padding-top-3x
+          h3.padding-bottom-1x Comments
+          // Comment
+          .comment
+            .comment-author-ava
+              img(src='img/reviews/01.jpg' alt='Comment author')
+            .comment-body
+              .comment-header
+                h4.comment-title Francis Burton
+              p.comment-text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+              .comment-footer
+                .column
+                  span.comment-meta 2 days ago
+                .column
+                  a(href='#' class='reply-link')
+                    i.icon-reply
+                    | Reply
+              // Comment reply
+              .comment.comment-reply
+                .comment-author-ava
+                  img(src='img/reviews/02.jpg' alt='Comment author')
+                .comment-body
+                  .comment-header
+                    h4.comment-title Maggie Scott
+                  p.comment-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  .comment-footer
+                    span.comment-meta 1 day ago
+          // Comment
+          .comment
+            .comment-author-ava
+              img(src='img/reviews/03.jpg' alt='Comment author')
+            .comment-body
+              .comment-header
+                h4.comment-title Jacob Hammond
+              p.comment-text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+              .comment-footer
+                .column
+                  span.comment-meta 5 days ago
+                .column
+                  a(href='#' class='reply-link')
+                    i.icon-reply
+                    | Reply
+
+        // Comment Form
+        h4.padding-top-2x.padding-bottom-1x Leave a Comment
+        form(method='post').row
+          .col-sm-6
+            .form-group
+              label(for='comment-name') Name
+              input(type='text' id='comment-name' placeholder='John Doe' required).form-control.form-control-rounded
+          .col-sm-6
+            .form-group
+              label(for='comment-email') E-mail
+              input(type='email' id='comment-email' placeholder='johndoe@email.com' required).form-control.form-control-rounded
+          .col-12
+            .form-group
+              label(for='comment-text') Comment
+              textarea(rows='7' id='comment-text' placeholder='Write your comment here...' required).form-control.form-control-rounded
+          .col-12.text-right
+            button(type='submit').btn.btn-pill.btn-primary Post Comment
+
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        include partials/blog-sidebar

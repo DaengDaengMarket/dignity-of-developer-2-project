@@ -1,0 +1,26 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Documentation'
+  - var isNestedFile = true
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Documentation'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-9.col-md-8
+        h2.mb-4 Components
+        blockquote.mb-4
+          p Component - is a snippet of HTML code with assosiated CSS classes and sometimes attached JavaScript functionality that is rendered by the browser as standalone website element. They can be mixed together to produce more complex components.
+          cite definition by rokaux
+        p Along with all Bootstrap 4 components Unishop introduces new elements you can use across website.
+        p: a(href='../components/accordion.html' target='_blank') List of all Components and their visual reference can be found here.
+        p: a(href='http://getbootstrap.com/docs/4.0/components/alerts/' target='_blank') Bootstrap 4 Components and documentation.
+
+      .col-lg-3.col-md-4
+        //- Side Menu
+        include ../partials/docs-menu

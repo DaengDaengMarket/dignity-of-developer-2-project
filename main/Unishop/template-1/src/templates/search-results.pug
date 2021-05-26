@@ -1,0 +1,166 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Search Results for: Lorem ipsum'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'Search Results'
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      // Results
+      .col-xl-9.col-lg-8
+        .card.mb-4
+          .card-header
+            span.badge.badge-pill.badge-primary Product
+          .card-body
+            .d-flex
+              a(href='shop-single.html' style='max-width: 225px;').pr-4.hidden-xs-down
+                img(src='img/shop/products/01.jpg' alt='Product')
+              div
+                h5: a(href='shop-single.html').navi-link Unionbay Park 
+                h6
+                  del.text-muted $99.99
+                  |  $49.99
+                p Consequatur omnis <span class='text-highlighted'>lorem ipsum</span> reprehenderit suscipit voluptatem blanditiis aliquid rerum animi aliquam, dicta quas nesciunt commodi sequi minima totam architecto.
+        .card.mb-4
+          .card-header
+            span.badge.badge-pill.badge-warning Blog post
+          .card-body
+            h5: a(href='blog-single-rs.html').navi-link How To Choose Perfect Summer Suit
+            p <span class='text-highlighted'>Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <span class='text-highlighted'>lorem ipsum</span> aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. Aliquid id nobis, amet dolorum earum maxime.
+        .card.mb-4
+          .card-header
+            span.badge.badge-pill.badge-primary Product
+          .card-body
+            .d-flex
+              a(href='shop-single.html' style='max-width: 225px;').pr-4.hidden-xs-down
+                img(src='img/shop/products/03.jpg' alt='Product')
+              div
+                h5: a(href='shop-single.html').navi-link Oakley Kickback
+                h6 $155.00
+                p Ut enim ad minim veniam, <span class='text-highlighted'>lorem ipsum</span> reprehenderit suscipit voluptatem blanditiis aliquid rerum animi aliquam, dicta quas nesciunt commodi sequi minima totam architecto.
+        .card.mb-4
+          .card-header
+            span.badge.badge-pill.badge-warning Blog post
+          .card-body
+            h5: a(href='blog-single-rs.html').navi-link <span class='text-highlighted'>Lorem Ipsum</span> Trends in Suburban Fashion
+            p Ut enim ad minim veniam, <span class='text-highlighted'>lorem ipsum</span> reprehenderit suscipit voluptatem blanditiis aliquid rerum animi aliquam, dicta quas nesciunt commodi sequi minima totam architecto.
+
+        include partials/pagination
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        aside.sidebar
+          .padding-top-2x.hidden-lg-up
+
+          // Shop Categories
+          section.widget.widget-categories
+            h3.widget-title Shop Categories
+            ul
+              li.has-children.expanded
+                a(href='#') Shoes
+                span (1138)
+                ul
+                  li
+                    a(href='#') Women's
+                    span (508)
+                    ul
+                      li: a(href='#') Sneakers
+                      li: a(href='#') Heels
+                      li: a(href='#') Loafers
+                      li: a(href='#') Sandals
+                  li
+                    a(href='#') Men's
+                    span (423)
+                    ul
+                      li: a(href='#') Boots
+                      li: a(href='#') Oxfords
+                      li: a(href='#') Loafers
+                      li: a(href='#') Sandals
+                  li
+                    a(href='#') Boy's Shoes
+                    span (97)
+                  li
+                    a(href='#') Girl's Shoes
+                    span (110)
+              li.has-children
+                a(href='#') Clothing
+                span (2356)
+                ul
+                  li
+                    a(href='#') Women's
+                    span (1032)
+                    ul
+                      li: a(href='#') Dresses
+                      li: a(href='#') Shirts &amp; Tops
+                      li: a(href='#') Swimwear
+                      li: a(href='#') Shorts
+                  li
+                    a(href='#') Men's
+                    span (937)
+                    ul
+                      li: a(href='#') Shirts &amp; Tops
+                      li: a(href='#') Shorts
+                      li: a(href='#') Swimwear
+                      li: a(href='#') Pants
+                  li
+                    a(href='#') Kid's Clothing
+                    span (386)
+              li.has-children
+                a(href='#') Bags
+                span (420)
+                ul
+                  li
+                    a(href='#') Handbags
+                    span (180)
+                  li
+                    a(href='#') Backpacks
+                    span (132)
+                  li
+                    a(href='#') Wallets &amp; Accessories
+                    span (47)
+                  li
+                    a(href='#') Luggage
+                    span (61)
+              li.has-children
+                a(href='#') Accessories
+                span (874)
+                ul
+                  li
+                    a(href='#') Sunglasses
+                    span (211)
+                  li
+                    a(href='#') Hats
+                    span (195)
+                  li
+                    a(href='#') Watches
+                    span (159)
+                  li
+                    a(href='#') Jewelry
+                    span (203)
+                  li
+                    a(href='#') Belts
+                    span (106)
+
+          // Blog Categories
+          section.widget.widget-categories.margin-bottom-none
+            h3.widget-title Blog Categories
+            ul
+              li
+                a(href='#') Editor's Choice
+                <span>(24)</span>
+              li
+                a(href='#') Fashion
+                <span>(12)</span>
+              li
+                a(href='#') Travel
+                <span>(5)</span>
+              li
+                a(href='#') Online Shopping
+                <span>(7)</span>
+              li
+                a(href='#') Closing Design
+                <span>(3)</span>

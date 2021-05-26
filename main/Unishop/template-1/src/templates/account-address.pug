@@ -1,0 +1,96 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Contact / Shipping Address'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'Contact / Shipping Address'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}, {'title': 'Contact Address'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+      .col-lg-4
+        aside.user-info-wrapper
+          .user-cover(style='background-image: url(img/account/user-cover-img.jpg);')
+            .info-label(data-toggle='tooltip', title='You currently have 290 Reward Points to spend')
+              i.icon-medal
+              | 290 points
+          .user-info
+            .user-avatar
+              a(href='#').edit-avatar
+              img(src='img/account/user-ava.jpg', alt='User')
+            .user-data
+              h4 Daniel Adams
+              span Joined February 06, 2017
+        nav.list-group
+          a(href='account-orders.html').list-group-item.with-badge
+            i.icon-bag
+            | Orders
+            span.badge.badge-primary.badge-pill 6
+          a(href='account-profile.html').list-group-item
+            i.icon-head
+            | Profile
+          a(href='account-address.html').list-group-item.active
+            i.icon-map
+            | Addresses
+          a(href='account-wishlist.html').list-group-item.with-badge
+            i.icon-heart
+            | Wishlist
+            span.badge.badge-primary.badge-pill 3
+          a(href='account-tickets.html').list-group-item.with-badge
+            i.icon-tag
+            | My Tickets
+            span.badge.badge-primary.badge-pill 4
+      .col-lg-8
+        .padding-top-2x.mt-2.hidden-lg-up
+        h4 Contact Address
+        hr.padding-bottom-1x
+        form.row
+          .col-md-6
+            .form-group
+              label(for='account-company') Company
+              input(type='text' id='account-company' value='Bets Company Ltd.').form-control
+          .col-md-6
+            .form-group
+              label(for='account-country') Country
+              select(id='account-country').form-control
+                option Choose country
+                option Australia
+                option Canada
+                option France
+                option Germany
+                option Switzerland
+                option(selected) United States
+          .col-md-6
+            .form-group
+              label(for='account-city') City
+              select(id='account-city').form-control
+                option Choose city
+                option Amsterdam
+                option Berlin
+                option Geneve
+                option(selected) New York
+                option Paris
+          .col-md-6
+            .form-group
+              label(for='account-zip') ZIP Code
+              input(type='text' id='account-zip' required).form-control
+          .col-md-6
+            .form-group
+              label(for='account-address1') Address 1
+              input(type='text' id='account-address1' required).form-control
+          .col-md-6
+            .form-group
+              label(for='account-address2') Address 2
+              input(type='text' id='account-address2').form-control
+          .col-12.padding-top-1x
+            h4 Shipping Address
+            hr.padding-bottom-1x
+            .custom-control.custom-checkbox.d-block
+              input(type='checkbox' id='same_address' checked).custom-control-input
+              label(for='same_address').custom-control-label Same as Contact Address
+            hr.margin-top-1x.margin-bottom-1x
+            .text-right
+              button(type='button' class='btn btn-primary margin-bottom-none' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='icon-circle-check' data-toast-title='Success!' data-toast-message='Your address updated successfuly.') Update Address

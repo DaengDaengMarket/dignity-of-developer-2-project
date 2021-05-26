@@ -1,0 +1,76 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Login / Register Account'
+  - var parentMenu = 'Account'
+  - var menuTitle = 'Login / Register'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Account', 'link': 'account-orders.html'}, {'title': 'Login / Register'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-md-6
+        form(method='post').login-box
+          .row.margin-bottom-1x
+            .col-xl-4.col-md-6.col-sm-4
+              a(href='#' class='btn btn-sm btn-block facebook-btn')
+                i.socicon-facebook
+                | &nbsp;Facebook login
+            .col-xl-4.col-md-6.col-sm-4
+              a(href='#' class='btn btn-sm btn-block twitter-btn')
+                i.socicon-twitter
+                | &nbsp;Twitter login
+            .col-xl-4.col-md-6.col-sm-4
+              a(href='#' class='btn btn-sm btn-block google-btn')
+                i.socicon-googleplus
+                | &nbsp;Google+ login
+          h4.margin-bottom-1x Or using form below
+          .form-group.input-group
+            input(type='email' placeholder='Email' required).form-control
+            span.input-group-addon
+              i.icon-mail
+          .form-group.input-group
+            input(type='password' placeholder='Password' required).form-control
+            span.input-group-addon
+              i.icon-lock
+          .d-flex.flex-wrap.justify-content-between.padding-bottom-1x
+            .custom-control.custom-checkbox
+              input(type='checkbox' id='remember_me' checked).custom-control-input
+              label(for='remember_me').custom-control-label Remember me
+            a(href='account-password-recovery.html').navi-link Forgot password?
+          .text-center.text-sm-right
+            button(type='submit' class='btn btn-primary margin-bottom-none') Login
+
+      .col-md-6
+        .padding-top-3x.hidden-md-up
+        h3.margin-bottom-1x No Account? Register
+        p Registration takes less than a minute but gives you full control over your orders.
+        form(method='post').row
+          .col-sm-6
+            .form-group
+              label(for='reg-fn') First Name
+              input(type='text' id='reg-fn' required).form-control
+          .col-sm-6
+            .form-group
+              label(for='reg-ln') Last Name
+              input(type='text' id='reg-ln' required).form-control
+          .col-sm-6
+            .form-group
+              label(for='reg-email') E-mail Address
+              input(type='email' id='reg-email' required).form-control
+          .col-sm-6
+            .form-group
+              label(for='reg-phone') Phone Number
+              input(type='text' id='reg-phone' required).form-control
+          .col-sm-6
+            .form-group
+              label(for='reg-pass') Password
+              input(type='password' id='reg-pass' required).form-control
+          .col-sm-6
+            .form-group
+              label(for='reg-pass-confirm') Confirm Password
+              input(type='password' id='reg-pass-confirm' required).form-control
+          .col-12.text-center.text-sm-right
+            button(type='submit' class='btn btn-primary margin-bottom-none') Register

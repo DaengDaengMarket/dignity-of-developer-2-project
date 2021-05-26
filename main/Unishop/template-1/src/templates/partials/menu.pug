@@ -1,0 +1,85 @@
+// Main Navigation
+nav.site-menu
+  ul
+    li()&attributes((parentMenu === 'Home') ? {'class': 'has-megamenu active'} : {'class': 'has-megamenu'})
+      +menu-link('index.html', 'Home')
+      include mega-menu-home
+
+    li()&attributes((parentMenu === 'Shop') ? {'class': 'active'} : '')
+      +menu-link('shop-grid-ls.html', 'Shop')
+      ul.sub-menu
+        +submenu-item('shop-categories.html', 'Shop Categories')
+        li()&attributes((menuTitle === 'Grid Right Sidebar' || menuTitle === 'Grid Left Sidebar' || menuTitle === 'Grid No Sidebar') ? {'class': 'active has-children'} : {'class': 'has-children'})
+          +menu-link('shop-grid-ls.html', 'Shop Grid')
+          ul.sub-menu
+            +submenu-item('shop-grid-ls.html', 'Grid Left Sidebar')
+            +submenu-item('shop-grid-rs.html', 'Grid Right Sidebar')
+            +submenu-item('shop-grid-ns.html', 'Grid No Sidebar')
+        li()&attributes((menuTitle === 'List Right Sidebar' || menuTitle === 'List Left Sidebar' || menuTitle === 'List No Sidebar') ? {'class': 'active has-children'} : {'class': 'has-children'})
+          +menu-link('shop-list-ls.html', 'Shop List')
+          ul.sub-menu
+            +submenu-item('shop-list-ls.html', 'List Left Sidebar')
+            +submenu-item('shop-list-rs.html', 'List Right Sidebar')
+            +submenu-item('shop-list-ns.html', 'List No Sidebar')
+        +submenu-item('shop-single.html', 'Single Product')
+        +submenu-item('cart.html', 'Cart')
+        li()&attributes((menuTitle === 'Address' || menuTitle === 'Shipping' || menuTitle === 'Payment' || menuTitle === 'Review' || menuTitle === 'Complete') ? {'class': 'active has-children'} : {'class': 'has-children'})
+          +menu-link('checkout-address.html', 'Checkout')
+          ul.sub-menu              
+            +submenu-item('checkout-address.html', 'Address')
+            +submenu-item('checkout-shipping.html', 'Shipping')
+            +submenu-item('checkout-payment.html', 'Payment')
+            +submenu-item('checkout-review.html', 'Review')
+            +submenu-item('checkout-complete.html', 'Complete')
+      
+    li.has-megamenu
+      a(href='#')
+        span Mega Menu
+      include mega-menu
+
+    li()&attributes((parentMenu === 'Account') ? {'class': 'active'} : '')
+      +menu-link('account-orders.html', 'Account')
+      ul.sub-menu
+        +submenu-item('account-login.html', 'Login / Register')
+        +submenu-item('account-password-recovery.html', 'Password Recovery')
+        +submenu-item('account-orders.html', 'Orders List')
+        +submenu-item('account-wishlist.html', 'Wishlist')
+        +submenu-item('account-profile.html', 'Profile Page')
+        +submenu-item('account-address.html', 'Contact / Shipping Address')
+        +submenu-item('account-tickets.html', 'My Tickets')
+        +submenu-item('account-single-ticket.html', 'Single Ticket')
+
+    li()&attributes((parentMenu === 'Blog') ? {'class': 'active'} : '')
+      +menu-link('blog-rs.html', 'Blog')
+      ul.sub-menu
+        li()&attributes((menuTitle === 'Blog Right Sidebar' || menuTitle === 'Blog Left Sidebar' || menuTitle === 'Blog No Sidebar') ? {'class': 'active has-children'} : {'class': 'has-children'})
+          +menu-link('blog-rs.html', 'Blog Layout')
+          ul.sub-menu
+            +submenu-item('blog-rs.html', 'Blog Right Sidebar')
+            +submenu-item('blog-ls.html', 'Blog Left Sidebar')
+            +submenu-item('blog-ns.html', 'Blog No Sidebar')
+        li()&attributes((menuTitle === 'Post Right Sidebar' || menuTitle === 'Post Left Sidebar' || menuTitle === 'Post No Sidebar') ? {'class': 'active has-children'} : {'class': 'has-children'})
+          +menu-link('blog-single-rs.html', 'Single Post Layout')
+          ul.sub-menu
+            +submenu-item('blog-single-rs.html', 'Post Right Sidebar')
+            +submenu-item('blog-single-ls.html', 'Post Left Sidebar')
+            +submenu-item('blog-single-ns.html', 'Post No Sidebar')
+
+    li()&attributes((parentMenu === 'Pages') ? {'class': 'active'} : '')
+      a(href='#')
+        span Pages
+      ul.sub-menu
+        +submenu-item('about.html', 'About Us')
+        +submenu-item('contacts.html', 'Contacts')
+        +submenu-item('faq.html', 'Help / FAQ')
+        +submenu-item('order-tracking.html', 'Order Tracking')
+        +submenu-item('search-results.html', 'Search Results')
+        +submenu-item('404.html', '404 Not Found')
+        +submenu-item('coming-soon.html', 'Coming Soon')
+        li
+          a(class='text-danger')&attributes(isNestedFile ? {'href': '../docs/dev-setup.html'} : {'href': 'docs/dev-setup.html'}) Documentation
+
+    li()&attributes((parentMenu === 'Components') ? {'class': 'has-megamenu active'} : {'class': 'has-megamenu'})
+      +menu-link('components/accordion.html', 'Components')
+      include mega-menu-components
+      

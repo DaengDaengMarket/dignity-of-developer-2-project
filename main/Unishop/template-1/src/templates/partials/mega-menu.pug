@@ -1,0 +1,36 @@
+ul.mega-menu
+  li
+    span.mega-menu-title Top Categories
+    ul.sub-menu
+      li: a(href='#') Men's Shoes
+      li: a(href='#') Women's Shoes
+      li: a(href='#') Shirts and Tops
+      li: a(href='#') Swimwear
+      li: a(href='#') Shorts and Pants
+      li: a(href='#') Accessories
+  li
+    span.mega-menu-title Specialty Shops
+    ul.sub-menu
+      li: a(href='#') Junior's Shop
+      li: a(href='#') Swim Shop
+      li: a(href='#') Athletic Shop
+      li: a(href='#') Outdoor Shop
+      li: a(href='#') Luxury Shop
+      li: a(href='#') Accessories Shop
+  li
+    section()&attributes(isNestedFile ? {'style': 'background-image: url(../img/banners/02.jpg);'} : {'style': 'background-image: url(img/banners/02.jpg);'}).promo-box
+      span(style='opacity: .4;').overlay-dark
+      .promo-box-content.text-center.padding-top-2x.padding-bottom-2x
+        h4.text-light.text-thin.text-shadow New Collection of
+        h3.text-bold.text-light.text-shadow
+          | Sunglasses
+        a(href='#').btn.btn-sm.btn-primary Shop Now
+  li
+    section()&attributes(isNestedFile ? {'style': 'background-image: url(../img/banners/03.jpg);'} : {'style': 'background-image: url(img/banners/03.jpg);'}).promo-box
+      // Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.
+      span(style='opacity: .45;').overlay-dark
+      .promo-box-content.text-center.padding-top-2x.padding-bottom-2x
+        h3.text-bold.text-light.text-shadow
+          | Limited Offer
+        h4.text-light.text-thin.text-shadow save up to 50%!
+        a(href='#').btn.btn-sm.btn-primary Learn More

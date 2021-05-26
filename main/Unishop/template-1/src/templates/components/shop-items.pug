@@ -1,0 +1,116 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Shop Items'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Shop Items'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-2x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Product Card
+        hr.margin-bottom-1x
+        .row
+          .col-lg-4.col-md-6.col-sm-6
+            .product-card.mb-30
+              .product-badge.text-danger 50% Off
+              a(href='#').product-thumb
+                img(src='../img/shop/products/01.jpg' alt='Product')
+              h3.product-title
+                a(href='#') Unionbay Park
+              h4.product-price
+                del $99.99
+                | $49.99
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+          .col-lg-4.col-md-6.col-sm-6
+            .product-card.mb-30
+              +rating-stars([
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star'}
+              ])
+              a(href='#').product-thumb
+                img(src='../img/shop/products/03.jpg' alt='Product')
+              h3.product-title
+                a(href='#') Oakley Kickback
+              h4.product-price $155.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+          .col-lg-4.col-md-6.col-sm-6
+            .product-card.mb-30
+              .product-badge.text-muted Out of stock
+              a(href='#').product-thumb
+                img(src='../img/shop/products/04.jpg' alt='Product')
+              h3.product-title
+                a(href='#') Waist Leather Belt
+              h4.product-price $47.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                a(href='#').btn.btn-outline-secondary.btn-sm View Details
+        h6.text-muted.text-normal.text-uppercase.padding-top-1x.mt-1 Product List View
+        hr.margin-bottom-1x
+        .product-card.product-list.margin-bottom-none
+          a(href='#').product-thumb
+            +rating-stars([
+              {'class': 'icon-star filled'},
+              {'class': 'icon-star filled'},
+              {'class': 'icon-star filled'},
+              {'class': 'icon-star filled'},
+              {'class': 'icon-star filled'}
+            ])
+            img(src='../img/shop/products/11.jpg' alt='Product')
+          .product-info
+            h3.product-title
+              a(href='#') Top-Sider Fathom
+            h4.product-price $90.00
+            p.hidden-xs-down Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore odit officiis illo perferendis deserunt, ipsam dolor ad dolorem eaque veritatis harum facilis aliquid id doloribus incidunt quam beatae, soluta magni alori sedum quanto.
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Category Card
+        hr.margin-bottom-1x
+        .row
+          .col-sm-6.mb-30
+            .card
+              a(href='#').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='../img/shop/categories/01.jpg' alt='Category')
+                  .thumblist
+                    img(src='../img/shop/categories/02.jpg' alt='Category')
+                    img(src='../img/shop/categories/03.jpg' alt='Category')
+              .card-body.text-center
+                h4.card-title Clothing
+                p.text-muted Starting from $49.99
+                a(href='#').btn.btn-outline-primary.btn-sm View Products
+          .col-sm-6.mb-30
+            .card
+              a(href='#').card-img-tiles
+                .inner
+                  .main-img
+                    img(src='../img/shop/categories/07.jpg' alt='Category')
+                  .thumblist
+                    img(src='../img/shop/categories/08.jpg' alt='Category')
+                    img(src='../img/shop/categories/09.jpg' alt='Category')
+              .card-body.text-center
+                h4.card-title Bags
+                p.text-muted Starting from $27.00
+                a(href='#').btn.btn-outline-primary.btn-sm View Products
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu
+        .padding-bottom-1x.hidden-md-up

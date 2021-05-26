@@ -1,0 +1,95 @@
+// Navbar
+// Remove "navbar-sticky" class to make navigation bar scrollable with the page.
+header()&attributes(isGhostHeader ? {'class': ['navbar', 'navbar-sticky', 'navbar-ghost']} : {'class': ['navbar', 'navbar-sticky']})
+
+  // Search
+  form(method='get').site-search
+    input(type='text', name='site_search' placeholder='Type to search...')
+    .search-tools
+      span.clear-search Clear
+      span.close-search
+        i.icon-cross
+
+  .site-branding
+    .inner
+
+      // Off-Canvas Toggle (#shop-categories)
+      a(href='#shop-categories' data-toggle='offcanvas').offcanvas-toggle.cats-toggle
+      // Off-Canvas Toggle (#mobile-menu)
+      a(href='#mobile-menu' data-toggle='offcanvas').offcanvas-toggle.menu-toggle
+      
+      // Site Logo
+      if isGhostHeader
+        a()&attributes(isNestedFile ? {'href': '../index.html'} : {'href': 'index.html'}).site-logo.light-logo
+          +image('img/logo/logo-light.png', 'Unishop')
+        a()&attributes(isNestedFile ? {'href': '../index.html'} : {'href': 'index.html'}).site-logo.logo-stuck
+          +image('img/logo/logo.png', 'Unishop')
+      else
+        a()&attributes(isNestedFile ? {'href': '../index.html'} : {'href': 'index.html'}).site-logo
+          +image('img/logo/logo.png', 'Unishop')
+  
+  //-Site Menu
+  include menu
+
+  // Toolbar
+  .toolbar
+    .inner
+      .tools
+        .search
+          i.icon-search
+        .account
+          a()&attributes(isNestedFile ? {'href': '../account-orders.html'} : {'href': 'account-orders.html'})
+          i.icon-head
+          ul.toolbar-dropdown
+            li.sub-menu-user
+              .user-ava
+                +image('img/account/user-ava-sm.jpg', 'Daniel Adams')
+              .user-info
+                h6.user-name Daniel Adams
+                span.text-xs.text-muted 290 Reward points
+            +submenu-item('account-profile.html', 'My Profile')
+            +submenu-item('account-orders.html', 'Orders List')
+            +submenu-item('account-wishlist.html', 'Wishlist')
+            li.sub-menu-separator
+            li
+              a(href='#') 
+                i.icon-unlock
+                | Logout
+        .cart
+          a()&attributes(isNestedFile ? {'href': '../cart.html'} : {'href': 'cart.html'})
+          i.icon-bag
+          span.count 3
+          span.subtotal $289.68
+          .toolbar-dropdown
+            .dropdown-product-item
+              span.dropdown-product-remove: i.icon-cross
+              a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}).dropdown-product-thumb
+                +image('img/cart-dropdown/01.jpg', 'Product')
+              .dropdown-product-info
+                a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}).dropdown-product-title
+                  | Unionbay Park
+                span.dropdown-product-details 1 x $43.90
+            .dropdown-product-item
+              span.dropdown-product-remove: i.icon-cross
+              a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}).dropdown-product-thumb
+                +image('img/cart-dropdown/02.jpg', 'Product')
+              .dropdown-product-info
+                a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}).dropdown-product-title
+                  | Daily Fabric Cap
+                span.dropdown-product-details 2 x $24.89
+            .dropdown-product-item
+              span.dropdown-product-remove: i.icon-cross
+              a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}).dropdown-product-thumb
+                +image('img/cart-dropdown/03.jpg', 'Product')
+              .dropdown-product-info
+                a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}).dropdown-product-title
+                  | Haan Crossbody
+                span.dropdown-product-details 1 x $200.00
+            .toolbar-dropdown-group
+              .column: span.text-lg Total:
+              .column.text-right: span.text-lg.text-medium $289.68&nbsp;
+            .toolbar-dropdown-group
+              .column
+                a()&attributes(isNestedFile ? {'href': '../cart.html'} : {'href': 'cart.html'}).btn.btn-sm.btn-block.btn-secondary View Cart
+              .column
+                a()&attributes(isNestedFile ? {'href': '../checkout-address.html'} : {'href': 'checkout-address.html'}).btn.btn-sm.btn-block.btn-success Checkout

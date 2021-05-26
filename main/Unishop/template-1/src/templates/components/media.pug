@@ -1,0 +1,70 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Media Object'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Media Object'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Order (Position)
+        hr.margin-bottom-1x
+        .row
+          .col-lg-6
+            .media.mb-4
+              img(src='../img/components/img13.jpg' width='64' alt='Media').d-flex.rounded.mr-3
+              .media-body
+                h6.mt-0.mb-1 Media heading
+                span.d-block.text-sm.text-muted Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+          .col-lg-6
+            .media.mb-4
+              .media-body.text-right
+                h6.mt-0.mb-1 Media heading
+                span.d-block.text-sm.text-muted Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+              img(src='../img/components/img15.jpg' width='64' alt='Media').d-flex.rounded.ml-3
+        h6.text-muted.text-normal.text-uppercase.padding-top-1x.mt-1 Alignment
+        hr.margin-bottom-1x
+        .media.mb-4
+          img(src='../img/components/img13.jpg' width='64' alt='Media').d-flex.rounded.align-self-start.mr-4
+          .media-body
+            h6.mt-0.mb-1 Top-aligned media
+            span.d-block.text-sm.text-muted Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec lacinia congue felis in faucibus.
+        .media.mb-4
+          img(src='../img/components/img14.jpg' width='64' alt='Media').d-flex.rounded.align-self-center.mr-4
+          .media-body
+            h6.mt-0.mb-1 Center-aligned media
+            span.d-block.text-sm.text-muted Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec lacinia congue felis in faucibus.
+        .media.mb-4
+          img(src='../img/components/img15.jpg' width='64' alt='Media').d-flex.rounded.align-self-end.mr-4
+          .media-body
+            h6.mt-0.mb-1 Bottom-aligned media
+            span.d-block.text-sm.text-muted Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec lacinia congue felis in faucibus.
+        h6.text-muted.text-normal.text-uppercase.padding-top-1x.mt-1 Media List
+        hr.margin-bottom-1x
+        .row
+          .col-lg-6
+            ul.list-unstyled
+              li.media.mb-3
+                img(src='../img/components/img13.jpg' width='64' alt='Media').d-flex.rounded-circle.align-self-end.mr-3
+                .media-body
+                  h6.mt-0.mb-1 List-based media object
+                  span.d-block.text-sm.text-muted Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+              li.media.mb-3
+                img(src='../img/components/img14.jpg' width='64' alt='Media').d-flex.rounded-circle.align-self-end.mr-3
+                .media-body
+                  h6.mt-0.mb-1 List-based media object
+                  span.d-block.text-sm.text-muted Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+              li.media.mb-3
+                img(src='../img/components/img15.jpg' width='64' alt='Media').d-flex.rounded-circle.align-self-end.mr-3
+                .media-body
+                  h6.mt-0.mb-1 List-based media object
+                  span.d-block.text-sm.text-muted Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

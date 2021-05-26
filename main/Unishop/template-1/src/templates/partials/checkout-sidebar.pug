@@ -1,0 +1,68 @@
+aside.sidebar
+  .padding-top-2x.hidden-lg-up
+
+  // Order Summary Widget
+  section.widget.widget-order-summary
+    h3.widget-title Order Summary
+    table.table
+      tr
+        td Cart Subtotal:
+        td.text-medium $289.68
+      tr
+        td Shipping:
+        td.text-medium $22.50
+      tr
+        td Estimated tax:
+        td.text-medium $3.42
+      tr
+        td
+        td.text-lg.text-medium $315.60
+
+  // Featured Products Widget
+  section.widget.widget-featured-products
+    h3.widget-title Recently Viewed
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/01.jpg', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') Oakley Kickback
+        span.entry-meta $155.00
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/02.jpg', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') Top-Sider Fathom
+        span.entry-meta $90.00
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/03.jpg', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') Vented Straw Fedora
+        span.entry-meta $49.50
+    // Entry
+    .entry
+      .entry-thumb
+        a(href='shop-single.html')
+          img(src='img/shop/widget/04.jpg', alt='Product')
+      .entry-content
+        h4.entry-title
+          a(href='shop-single.html') Big Wordmark Tote
+        span.entry-meta $29.99
+
+  // Promo Banner
+  section(style='background-image: url(img/banners/02.jpg);').promo-box
+    span(style='opacity: .4;').overlay-dark
+    .promo-box-content.text-center.padding-top-2x.padding-bottom-2x
+      h4.text-light.text-thin.text-shadow New Collection of
+      h3.text-bold.text-light.text-shadow
+        | Sunglasses
+      a(href='shop-grid-ls.html').btn.btn-outline-white.btn-sm Shop Now

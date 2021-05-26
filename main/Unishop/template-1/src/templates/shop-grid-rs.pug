@@ -1,0 +1,237 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Shop Grid Right Sidebar'
+  - var isModalShopFilters = true
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Grid Right Sidebar'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Shop Grid Right Sidebar'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-1
+    .row
+
+      // Products
+      .col-xl-9.col-lg-8
+
+        // Shop Toolbar
+        .shop-toolbar.padding-bottom-1x.mb-2
+          .column
+            .shop-sorting
+              label(for='sorting') Sort by:
+              select(id='sorting').form-control
+                option Popularity
+                option Low - High Price
+                option High - Low Price
+                option Avarage Rating
+                option A - Z Order
+                option Z - A Order
+              span.text-muted Showing:&nbsp;
+              span 1 - 12 items
+          .column
+            .shop-view
+              a(href='shop-grid-rs.html' class='grid-view active')
+                span
+                span
+                span
+              a(href='shop-list-rs.html' class='list-view')
+                span
+                span
+                span
+    
+        // Products Grid
+        .isotope-grid.cols-3.mb-2
+          .gutter-sizer
+          .grid-sizer
+
+          // Product
+          .grid-item
+            .product-card
+              .product-badge.text-danger 50% Off
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/01.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Unionbay Park
+              h4.product-price
+                del $99.99
+                | $49.99
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+          // Product
+          .grid-item
+            .product-card
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/02.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Cole Haan Crossbody
+              h4.product-price $200.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+          // Product
+          .grid-item
+            .product-card
+              +rating-stars([
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star'}
+              ])
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/03.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Oakley Kickback
+              h4.product-price $155.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+          // Product
+          .grid-item
+            .product-card
+              .product-badge.text-muted Out of stock
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/08.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Off the Shoulder Top
+              h4.product-price $128.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                a(href='shop-single.html').btn.btn-outline-secondary.btn-sm View Details
+
+          // Product
+          .grid-item
+            .product-card
+              +rating-stars([
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star'},
+                {'class': 'icon-star'}
+              ])
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/05.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Jordan City Man's Hoodie
+              h4.product-price $65.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+          // Product
+          .grid-item
+            .product-card
+              .product-badge.text-danger 40% Off
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/06.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Palace Shell Track Jacket
+              h4.product-price
+                del $60.00
+                | $36.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+          // Product
+          .grid-item
+            .product-card
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/04.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Waist Leather Belt
+              h4.product-price $47.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+          // Product
+          .grid-item
+            .product-card
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/10.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Daily Fabric Cap
+              h4.product-price $31.99
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+          // Product
+          .grid-item
+            .product-card
+              +rating-stars([
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'},
+                {'class': 'icon-star filled'}
+              ])
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/11.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Top-Sider Fathom
+              h4.product-price $90.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+          // Product
+          .grid-item
+            .product-card
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/16.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Big Wordmark Tote
+              h4.product-price $29.99
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+          // Product
+          .grid-item
+            .product-card
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/14.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Skagen Holst Watch
+              h4.product-price $145.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+          // Product
+          .grid-item
+            .product-card
+              a(href='shop-single.html').product-thumb
+                img(src='img/shop/products/15.jpg' alt='Product')
+              h3.product-title
+                a(href='shop-single.html') Metal Star Earings
+              h4.product-price $90.00
+              .product-buttons
+                button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                  i.icon-heart
+                button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        include partials/pagination
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        include partials/shop-sidebar

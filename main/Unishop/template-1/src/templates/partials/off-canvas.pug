@@ -1,0 +1,271 @@
+// Off-Canvas Category Menu
+#shop-categories.offcanvas-container
+  .offcanvas-header
+    h3.offcanvas-title Shop Categories
+  nav.offcanvas-menu
+    ul.menu
+      li.has-children
+        span
+          a(href='#') Men's Shoes
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          li: a(href='#') Sneakers
+          li: a(href='#') Loafers
+          li: a(href='#') Boat Shoes
+          li: a(href='#') Sandals
+          li: a(href='#') View All
+      li.has-children
+        span
+          a(href='#') Women's Shoes
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          li: a(href='#') Sandals
+          li: a(href='#') Flats
+          li: a(href='#') Sneakers
+          li: a(href='#') Heels
+          li: a(href='#') View All
+      li.has-children
+        span
+          a(href='#') Men's Clothing
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          li: a(href='#') Shirts &amp; Tops
+          li: a(href='#') Pants
+          li: a(href='#') Jackets
+          li: a(href='#') View All
+      li.has-children
+        span
+          a(href='#') Women's Clothing
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          li: a(href='#') Dresses
+          li: a(href='#') Shirts &amp; Tops
+          li: a(href='#') Shorts
+          li: a(href='#') Swimwear
+          li: a(href='#') View All
+      li.has-children
+        span
+          a(href='#') Kid's Shoes
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          li: a(href='#') Boots
+          li: a(href='#') Sandals
+          li: a(href='#') Crib Shoes
+          li: a(href='#') Loafers
+          li: a(href='#') View All
+      li.has-children
+        span
+          a(href='#') Bags
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          li: a(href='#') Handbags
+          li: a(href='#') Backpacks
+          li: a(href='#') Luggage
+          li: a(href='#') Wallets
+          li: a(href='#') View All
+      li.has-children
+        span
+          a(href='#') Accessories
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          li: a(href='#') Sunglasses
+          li: a(href='#') Hats
+          li: a(href='#') Watches
+          li: a(href='#') Jewelry
+          li: a(href='#') Belts
+          li: a(href='#') View All
+
+
+// Off-Canvas Mobile Menu
+#mobile-menu.offcanvas-container
+  a(class='account-link')&attributes(isNestedFile ? {'href': '../account-orders.html'} : {'href': 'account-orders.html'})
+    .user-ava
+      +image('img/account/user-ava-md.jpg', 'Daniel Adams')
+    .user-info
+      h6.user-name Daniel Adams
+      span.text-sm.text-white.opacity-60 290 Reward points
+  nav.offcanvas-menu
+    ul.menu
+      li()&attributes((parentMenu === 'Home') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          +menu-link('index.html', 'Home')
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          +submenu-item('index.html', 'Featured Products Slider')
+          +submenu-item('home-featured-categories.html', 'Featured Categories')
+          +submenu-item('home-collection-showcase.html', 'Products Collection Showcase')
+          +submenu-item('home-dark-header.html', 'Dark Header')
+      li()&attributes((parentMenu === 'Shop') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          +menu-link('shop-grid-ls.html', 'Shop')
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          +submenu-item('shop-categories.html', 'Shop Categories')
+          li()&attributes((menuTitle === 'Grid Right Sidebar' || menuTitle === 'Grid Left Sidebar' || menuTitle === 'Grid No Sidebar') ? {'class': 'active has-children'} : {'class': 'has-children'})
+            span
+              +menu-link('shop-grid-ls.html', 'Shop Grid')
+              span.sub-menu-toggle
+            ul.offcanvas-submenu
+              +submenu-item('shop-grid-ls.html', 'Grid Left Sidebar')
+              +submenu-item('shop-grid-rs.html', 'Grid Right Sidebar')
+              +submenu-item('shop-grid-ns.html', 'Grid No Sidebar')
+          li()&attributes((menuTitle === 'List Right Sidebar' || menuTitle === 'List Left Sidebar' || menuTitle === 'List No Sidebar') ? {'class': 'active has-children'} : {'class': 'has-children'})
+            span
+              +menu-link('shop-list-ls.html', 'Shop List')
+              span.sub-menu-toggle
+            ul.offcanvas-submenu
+              +submenu-item('shop-list-ls.html', 'List Left Sidebar')
+              +submenu-item('shop-list-rs.html', 'List Right Sidebar')
+              +submenu-item('shop-list-ns.html', 'List No Sidebar')
+          +submenu-item('shop-single.html', 'Single Product')
+          +submenu-item('cart.html', 'Cart')
+          +submenu-item('checkout.html', 'Checkout')
+      li.has-children
+        span
+          a(href='#') Categories
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          li.has-children
+            span
+              a(href='#') Men's Shoes
+              span.sub-menu-toggle
+            ul.offcanvas-submenu
+              li: a(href='#') Sneakers
+              li: a(href='#') Loafers
+              li: a(href='#') Boat Shoes
+              li: a(href='#') Sandals
+              li: a(href='#') View All
+          li.has-children
+            span
+              a(href='#') Women's Shoes
+              span.sub-menu-toggle
+            ul.offcanvas-submenu
+              li: a(href='#') Sandals
+              li: a(href='#') Flats
+              li: a(href='#') Sneakers
+              li: a(href='#') Heels
+              li: a(href='#') View All
+          li.has-children
+            span
+              a(href='#') Men's Clothing
+              span.sub-menu-toggle
+            ul.offcanvas-submenu
+              li: a(href='#') Shirts &amp; Tops
+              li: a(href='#') Pants
+              li: a(href='#') Jackets
+              li: a(href='#') View All
+          li.has-children
+            span
+              a(href='#') Women's Clothing
+              span.sub-menu-toggle
+            ul.offcanvas-submenu
+              li: a(href='#') Dresses
+              li: a(href='#') Shirts &amp; Tops
+              li: a(href='#') Shorts
+              li: a(href='#') Swimwear
+              li: a(href='#') View All
+          li.has-children
+            span
+              a(href='#') Bags
+              span.sub-menu-toggle
+            ul.offcanvas-submenu
+              li: a(href='#') Handbags
+              li: a(href='#') Backpacks
+              li: a(href='#') Luggage
+              li: a(href='#') Wallets
+              li: a(href='#') View All
+          li.has-children
+            span
+              a(href='#') Accessories
+              span.sub-menu-toggle
+            ul.offcanvas-submenu
+              li: a(href='#') Sunglasses
+              li: a(href='#') Hats
+              li: a(href='#') Watches
+              li: a(href='#') Jewelry
+              li: a(href='#') Belts
+              li: a(href='#') View All
+      li()&attributes((parentMenu === 'Account') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          +menu-link('account-orders.html', 'Account')
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          +submenu-item('account-login.html', 'Login / Register')
+          +submenu-item('account-password-recovery.html', 'Password Recovery')
+          +submenu-item('account-orders.html', 'Orders List')
+          +submenu-item('account-wishlist.html', 'Wishlist')
+          +submenu-item('account-profile.html', 'Profile Page')
+          +submenu-item('account-address.html', 'Contact / Shipping Address')
+          +submenu-item('account-open-ticket.html', 'Open Ticket')
+          +submenu-item('account-tickets.html', 'My Tickets')
+          +submenu-item('account-single-ticket.html', 'Single Ticket')
+      li()&attributes((parentMenu === 'Blog') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          +menu-link('blog-rs.html', 'Blog')
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          li()&attributes((menuTitle === 'Blog Right Sidebar' || menuTitle === 'Blog Left Sidebar' || menuTitle === 'Blog No Sidebar') ? {'class': 'active has-children'} : {'class': 'has-children'})
+            span
+              +menu-link('blog-rs.html', 'Blog Layout')
+              span.sub-menu-toggle
+            ul.offcanvas-submenu
+              +submenu-item('blog-rs.html', 'Blog Right Sidebar')
+              +submenu-item('blog-ls.html', 'Blog Left Sidebar')
+              +submenu-item('blog-ns.html', 'Blog No Sidebar')
+          li()&attributes((menuTitle === 'Post Right Sidebar' || menuTitle === 'Post Left Sidebar' || menuTitle === 'Post No Sidebar') ? {'class': 'active has-children'} : {'class': 'has-children'})
+            span
+              +menu-link('blog-single-rs.html', 'Single Post Layout')
+              span.sub-menu-toggle
+            ul.offcanvas-submenu
+              +submenu-item('blog-single-rs.html', 'Post Right Sidebar')
+              +submenu-item('blog-single-ls.html', 'Post Left Sidebar')
+              +submenu-item('blog-single-ns.html', 'Post No Sidebar')
+      li()&attributes((parentMenu === 'Pages') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          a(href='#')
+            span Pages
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          +submenu-item('about.html', 'About Us')
+          +submenu-item('mobile-app.html', 'Unishop Mobile App')
+          +submenu-item('services.html', 'Services')
+          +submenu-item('contacts.html', 'Contacts')
+          +submenu-item('faq.html', 'Help / FAQ')
+          +submenu-item('order-tracking.html', 'Order Tracking')
+          +submenu-item('search-results.html', 'Search Results')
+          +submenu-item('404.html', '404')
+          +submenu-item('coming-soon.html', 'Coming Soon')
+          li
+            a(class='text-danger')&attributes(isNestedFile ? {'href': '../docs/dev-setup.html'} : {'href': 'docs/dev-setup.html'}) Documentation
+      li()&attributes((parentMenu === 'Components') ? {'class': 'has-children active'} : {'class': 'has-children'})
+        span
+          +menu-link('components/accordion.html', 'Components')
+          span.sub-menu-toggle
+        ul.offcanvas-submenu
+          +submenu-component-item('accordion.html', 'Accordion')
+          +submenu-component-item('alerts.html', 'Alerts')
+          +submenu-component-item('buttons.html', 'Buttons')
+          +submenu-component-item('cards.html', 'Cards')
+          +submenu-component-item('carousel.html', 'Carousel')
+          +submenu-component-item('countdown.html', 'Countdown')
+          +submenu-component-item('forms.html', 'Forms')
+          +submenu-component-item('gallery.html', 'Gallery')
+          +submenu-component-item('google-maps.html', 'Google Maps')
+          +submenu-component-item('images.html', 'Images & Figures')
+          +submenu-component-item('list-group.html', 'List Group')
+          +submenu-component-item('market-social-buttons.html', 'Market & Social Buttons')
+          +submenu-component-item('media.html', 'Media Object')
+          +submenu-component-item('modal.html', 'Modal')
+          +submenu-component-item('pagination.html', 'Pagination')
+          +submenu-component-item('pills.html', 'Pills')
+          +submenu-component-item('progress-bars.html', 'Progress Bars')
+          +submenu-component-item('shop-items.html', 'Shop Items')
+          +submenu-component-item('steps.html', 'Steps')
+          +submenu-component-item('tables.html', 'Tables')
+          +submenu-component-item('tabs.html', 'Tabs')
+          +submenu-component-item('team.html', 'Team')
+          +submenu-component-item('toasts.html', 'Toast Notifications')
+          +submenu-component-item('tooltips-popovers.html', 'Tooltips & Popovers')
+          +submenu-component-item('typography.html', 'Typography')
+          +submenu-component-item('video-player.html', 'Video Player')
+          +submenu-component-item('widgets.html', 'Widgets')

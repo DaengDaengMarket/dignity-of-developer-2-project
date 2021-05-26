@@ -1,0 +1,230 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isGhostHeader = true
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Products Collection Showcase'
+  - var isGallery = true
+
+//- Page Content
+block content
+
+  // Hero
+  section(style='background-image: url(img/hero/hero-bg.jpg);').fw-section.padding-top-10x.padding-bottom-10x
+    .container.padding-top-2x.text-center
+      .d-inline-block.mb-30
+        img(src='img/hero/logo-braun.png', alt='Braun').d-block.w-150
+      h2.text-white.text-normal.mb-2 Braun premium watch collection
+      h6.text-white.text-normal.opacity-80.mb-4 Check our new collection of watches that represents true quality and functionality
+      a(href='#collections').btn.btn-primary.scroll-to View Collection
+
+  // Video Carousel
+  section#collections.container.padding-top-3x
+    h3.text-center.mb-30 Featured Collections (Video)
+    .row.pt-1.justify-content-center
+      .col-xl-10
+        .gallery-wrapper.owl-carousel(data-owl-carousel='{ "nav": false, "dots": true }')
+          .gallery-item.no-hover-effect
+            a(href='#'  data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://player.vimeo.com/video/138235312?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe></div></div>')
+              img(src='img/video-covers/01.jpg' alt='Cover')
+            span.caption Classic Collection
+          .gallery-item.no-hover-effect
+            a(href='#'  data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://player.vimeo.com/video/138290617?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe></div></div>')
+              img(src='img/video-covers/02.jpg' alt='Cover')
+            span.caption Prestige Collection
+          .gallery-item.no-hover-effect
+            a(href='#'  data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://player.vimeo.com/video/138235312?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe></div></div>')
+              img(src='img/video-covers/03.jpg' alt='Cover')
+            span.caption Sports Collection
+
+  // Products Grid
+  section.bg-secondary.padding-top-3x.padding-bottom-2x.margin-top-3x
+    .container
+      h3.text-center.mb-30 Explore Watches
+      ul.nav.nav-pills.justify-content-center.pb-2
+        li.nav-item: a(href='#' data-filter='*' class='nav-link active') All
+        li.nav-item: a(href='#' data-filter='.classic' class='nav-link') Classic
+        li.nav-item: a(href='#' data-filter='.digital' class='nav-link') Digital
+        li.nav-item: a(href='#' data-filter='.prestige' class='nav-link') Prestige
+        li.nav-item: a(href='#' data-filter='.sport' class='nav-link') Sport
+      .isotope-grid.filter-grid.cols-4.mt-4
+        .gutter-sizer
+        .grid-sizer
+
+        // Product
+        .grid-item.classic
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/17.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Gents BN0024 Classic
+            h4.product-price €185.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.digital
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/21.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Gents BN0106 Digital 
+            h4.product-price €655.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.prestige
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/25.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Gents BN0095 Prestige
+            h4.product-price €725.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.classic
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/19.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Gents BN0211 Classic
+            h4.product-price €350.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.digital
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/22.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Gents BN0076 Digital
+            h4.product-price €225.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.sport
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/26.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Ladies BN0111 Sport
+            h4.product-price €140.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.prestige
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/28.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Gents BN0221 Prestige
+            h4.product-price €435.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.classic
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/18.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Gents BN0142 Classic
+            h4.product-price €215.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.prestige
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/24.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Gents BN0095 Prestige
+            h4.product-price €655.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.classic
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/20.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Gents BN0032 Classic
+            h4.product-price €185.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.digital
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/23.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Gents BN0106 Digital
+            h4.product-price €585.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+        // Product
+        .grid-item.sport
+          .product-card
+            a(href='shop-single.html').product-thumb
+              img(src='img/shop/products/27.jpg' alt='Product')
+            h3.product-title
+              a(href='shop-single.html') Ladies BN0111 Sport
+            h4.product-price €140.00
+            .product-buttons
+              button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+                i.icon-heart
+              button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+  
+  // Services
+  section.container.padding-top-3x.padding-bottom-2x
+    .row
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/services/01.png' alt='Shipping').d-block.w-90.img-thumbnail.rounded-circle.mx-auto.mb-3
+        h6 Free Worldwide Shipping
+        p.text-muted.margin-bottom-none Free shipping for all orders over $100
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/services/02.png' alt='Money Back').d-block.w-90.img-thumbnail.rounded-circle.mx-auto.mb-3
+        h6 Money Back Guarantee
+        p.text-muted.margin-bottom-none We return money within 30 days
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/services/03.png' alt='Support').d-block.w-90.img-thumbnail.rounded-circle.mx-auto.mb-3
+        h6 24/7 Customer Support
+        p.text-muted.margin-bottom-none Friendly 24/7 customer support
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/services/04.png' alt='Payment').d-block.w-90.img-thumbnail.rounded-circle.mx-auto.mb-3
+        h6 Secure Online Payment
+        p.text-muted.margin-bottom-none We posess SSL / Secure Certificate

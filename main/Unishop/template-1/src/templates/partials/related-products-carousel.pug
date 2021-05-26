@@ -1,0 +1,102 @@
+// Related Products Carousel
+h3.text-center.padding-top-2x.mt-2.padding-bottom-1x You May Also Like
+// Carousel
+.owl-carousel(data-owl-carousel='{ "nav": false, "dots": true, "margin": 30, "responsive": {"0":{"items":1},"576":{"items":2},"768":{"items":3},"991":{"items":4},"1200":{"items":4}} }')
+
+  // Product
+  .grid-item
+    .product-card
+      .product-badge.text-danger 22% Off
+      a(href='shop-single.html').product-thumb
+        img(src='img/shop/products/09.jpg' alt='Product')
+      h3.product-title
+        a(href='shop-single.html') Rocket Dog
+      h4.product-price
+        del $44.95
+        | $34.99
+      .product-buttons
+        button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+          i.icon-heart
+        button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+  // Product
+  .grid-item
+    .product-card
+      +rating-stars([
+        {'class': 'icon-star filled'},
+        {'class': 'icon-star filled'},
+        {'class': 'icon-star filled'},
+        {'class': 'icon-star filled'},
+        {'class': 'icon-star'}
+      ])
+      a(href='shop-single.html').product-thumb
+        img(src='img/shop/products/03.jpg' alt='Product')
+      h3.product-title
+        a(href='shop-single.html') Oakley Kickback
+      h4.product-price $155.00
+      .product-buttons
+        button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+          i.icon-heart
+        button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+  // Product
+  .grid-item
+    .product-card
+      a(href='shop-single.html').product-thumb
+        img(src='img/shop/products/12.jpg' alt='Product')
+      h3.product-title
+        a(href='shop-single.html') Vented Straw Fedora
+      h4.product-price $49.50
+      .product-buttons
+        button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+          i.icon-heart
+        button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+  // Product
+  .grid-item
+    .product-card
+      +rating-stars([
+        {'class': 'icon-star filled'},
+        {'class': 'icon-star filled'},
+        {'class': 'icon-star filled'},
+        {'class': 'icon-star filled'},
+        {'class': 'icon-star filled'}
+      ])
+      a(href='shop-single.html').product-thumb
+        img(src='img/shop/products/11.jpg' alt='Product')
+      h3.product-title
+        a(href='shop-single.html') Top-Sider Fathom
+      h4.product-price $90.00
+      .product-buttons
+        button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+          i.icon-heart
+        button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+  // Product
+  .grid-item
+    .product-card
+      a(href='shop-single.html').product-thumb
+        img(src='img/shop/products/04.jpg' alt='Product')
+      h3.product-title
+        a(href='shop-single.html') Waist Leather Belt
+      h4.product-price $47.00
+      .product-buttons
+        button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+          i.icon-heart
+        button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+  // Product
+  .grid-item
+    .product-card
+      .product-badge.text-danger 50% Off
+      a(href='shop-single.html').product-thumb
+        img(src='img/shop/products/01.jpg' alt='Product')
+      h3.product-title
+        a(href='shop-single.html') Unionbay Park
+      h4.product-price
+        del $99.99
+        | $49.99
+      .product-buttons
+        button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+          i.icon-heart
+        button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart

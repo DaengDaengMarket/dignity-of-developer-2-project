@@ -1,0 +1,70 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Carousel'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Carousel'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        p You can alter carousel look and behaviour via flexible data API 
+          code data-owl-carousel = {}
+          | :
+        ul.list-unstyled
+          li
+            code "items": 1
+            span.text-gray  How many items to display
+          li
+            code "nav": true/false
+            span.text-gray  Enable/disable control arrows
+          li
+            code "dots": true/false
+            span.text-gray  Enable/disable dots control
+          li
+            code "loop": true/false
+            span.text-gray  Enable/disable infinite loop
+          li
+            code "autoplay": true/false
+            span.text-gray  Enable/disable automatic slides transition
+          li
+            code "autoplayTimeout": 3000
+            span.text-gray  Timeou between transition. Value in ms | 1000ms = 1s
+          li
+            code "margin": 30
+            span.text-gray  Space between carousel items (in px)
+          li
+            code "autoHeight": true/false
+            span.text-gray  Enable/disable smooth height transition. If items have different height
+          li
+            code "responsive": {"0": {"items": 1}, "768": {"items": 2}, ...}
+            span.text-gray  How many items to display on each screen size
+        h6.text-muted.text-normal.text-uppercase.padding-top-1x.mt-4 One Item + Arrows + Dots Outside + Loop
+        hr.margin-bottom-1x
+        .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true }')
+          img(src='../img/components/img01.jpg', alt='Image')
+          img(src='../img/components/img02.jpg', alt='Image')
+          img(src='../img/components/img03.jpg', alt='Image')
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x One Item + Arrows + Dots Inside + No Loop
+        hr.margin-bottom-1x
+        .owl-carousel.dots-inside(data-owl-carousel='{ "nav": true, "dots": true, "loop": false }')
+          img(src='../img/blog/single/02.jpg', alt='Image')
+          img(src='../img/blog/single/03.jpg', alt='Image')
+          img(src='../img/blog/single/01.jpg', alt='Image')
+        h6.text-muted.text-normal.text-uppercase.margin-top-3x Multiple Items + Dots + Loop + Autoplay
+        hr.margin-bottom-1x
+        .owl-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "autoplay": true, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+          img(src='../img/components/img04.jpg', alt='Image')
+          img(src='../img/components/img05.jpg', alt='Image')
+          img(src='../img/components/img06.jpg', alt='Image')
+          img(src='../img/components/img10.jpg', alt='Image')
+          img(src='../img/components/img11.jpg', alt='Image')
+          img(src='../img/components/img12.jpg', alt='Image')
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

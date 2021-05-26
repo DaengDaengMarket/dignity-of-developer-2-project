@@ -1,0 +1,132 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Checkout'
+  - var parentMenu = 'Shop'
+  - var menuTitle = 'Shipping'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Checkout'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+
+      // Checkout Adress
+      .col-xl-9.col-lg-8
+        .checkout-steps
+          a(href='checkout-review.html') 4. Review
+          a(href='checkout-payment.html')
+            span.angle
+            | 3. Payment
+          a(href='checkout-shipping.html' class='active')
+            span.angle
+            | 2. Shipping
+          a(href='checkout-address.html' class='completed')
+            span.angle
+            span.step-indicator.icon-circle-check
+            | 1. Address
+
+        h4 Choose Shipping Method
+        hr.padding-bottom-1x
+        .table-responsive
+          table.table.table-hover
+            thead.thead-default
+              tr
+                th
+                th Shipping method
+                th Delivery time
+                th Handling fee
+            tbody
+              tr
+                td.align-middle
+                  .custom-control.custom-radio.mb-0
+                    input(type='radio' id='courier' name='shipping-method' checked).custom-control-input
+                    label(for='courier').custom-control-label
+                td.align-middle
+                  span.text-medium Courier
+                  br
+                  span.text-muted.text-sm All Addresses(default zone), United States & Canada
+                td.align-middle 2 - 4 days
+                td.align-middle $22.50
+              tr
+                td.align-middle
+                  .custom-control.custom-radio.mb-0
+                    input(type='radio' id='local' name='shipping-method').custom-control-input
+                    label(for='local').custom-control-label
+                td.align-middle
+                  span.text-medium Local Shipping
+                  br
+                  span.text-muted.text-sm All Addresses(default zone), United States & Canada
+                td.align-middle up to one week
+                td.align-middle $10.00
+              tr
+                td.align-middle
+                  .custom-control.custom-radio.mb-0
+                    input(type='radio' id='flat' name='shipping-method').custom-control-input
+                    label(for='flat').custom-control-label
+                td.align-middle
+                  span.text-medium Flat Rate
+                  br
+                  span.text-muted.text-sm All Addresses(default zone)
+                td.align-middle 5 - 7 days
+                td.align-middle $33.85
+              tr
+                td.align-middle
+                  .custom-control.custom-radio.mb-0
+                    input(type='radio' id='ups' name='shipping-method').custom-control-input
+                    label(for='ups').custom-control-label
+                td.align-middle
+                  span.text-medium UPS Ground Shipping
+                  br
+                  span.text-muted.text-sm All Addresses(default zone)
+                td.align-middle 4 - 6 days
+                td.align-middle $18.00
+              tr
+                td.align-middle
+                  .custom-control.custom-radio.mb-0
+                    input(type='radio' id='pickup' name='shipping-method').custom-control-input
+                    label(for='pickup').custom-control-label
+                td.align-middle
+                  span.text-medium Local Pickup from store
+                  br
+                  span.text-muted.text-sm All Addresses(default zone)
+                td.align-middle &mdash;
+                td.align-middle $0.00
+              tr
+                td.align-middle
+                  .custom-control.custom-radio.mb-0
+                    input(type='radio' id='locker' name='shipping-method').custom-control-input
+                    label(for='locker').custom-control-label
+                td.align-middle
+                  span.text-medium Pick Up at Unishop Locker
+                  br
+                  span.text-muted.text-sm All Addresses(default zone), United States & Canada
+                td.align-middle &mdash;
+                td.align-middle $9.99
+              tr
+                td.align-middle
+                  .custom-control.custom-radio.mb-0
+                    input(type='radio' id='global' name='shipping-method').custom-control-input
+                    label(for='global').custom-control-label
+                td.align-middle
+                  span.text-medium Unishop Global Export
+                  br
+                  span.text-muted.text-sm All Addresses(default zone), outside United States
+                td.align-middle 3 - 4 days;
+                td.align-middle $25.00
+
+        .checkout-footer.margin-top-1x
+          .column
+            a(href='checkout-address.html' class='btn btn-outline-secondary')
+              i.icon-arrow-left
+              span.hidden-xs-down &nbsp;Back
+          .column
+            a(href='checkout-payment.html' class='btn btn-primary')
+              span.hidden-xs-down Continue&nbsp;
+              i.icon-arrow-right
+
+      // Sidebar          
+      .col-xl-3.col-lg-4
+        include partials/checkout-sidebar    
+    

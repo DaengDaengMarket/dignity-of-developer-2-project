@@ -1,0 +1,48 @@
+// Topbar
+div()&attributes(isGhostHeader ? {'class': ['topbar', 'topbar-ghost']} : {'class': 'topbar'})
+  .topbar-column
+    a(href='mailto:support@unishop.com').hidden-md-down
+      i.icon-mail
+      | &nbsp; support@unishop.com
+    a(href='tel:00331697720').hidden-md-down
+      i.icon-bell
+      | &nbsp; 00 33 169 7720
+    if isGhostHeader
+      +social-buttons([
+        {'link': '#', 'icon': 'facebook'},
+        {'link': '#', 'icon': 'twitter'},
+        {'link': '#', 'icon': 'instagram'},
+        {'link': '#', 'icon': 'pinterest'}
+      ], 'none', 'light-skin')
+    else
+      +social-buttons([
+        {'link': '#', 'icon': 'facebook'},
+        {'link': '#', 'icon': 'twitter'},
+        {'link': '#', 'icon': 'instagram'},
+        {'link': '#', 'icon': 'pinterest'}
+      ], 'none', 'dark')
+  .topbar-column
+    a(href='#').hidden-md-down
+      i.icon-download
+      | &nbsp; Get mobile app
+    .lang-currency-switcher-wrap
+      div.lang-currency-switcher.dropdown-toggle
+        span.language
+          img(alt='English')&attributes(isNestedFile ? {'src': '../img/flags/GB.png'} : {'src': 'img/flags/GB.png'})
+        span.currency $ USD
+      .dropdown-menu
+        .currency-select
+          select.form-control.form-control-rounded.form-control-sm
+            option(value='usd') $ USD
+            option(value='usd') € EUR
+            option(value='usd') £ UKP
+            option(value='usd') ¥ JPY
+        a(href='#').dropdown-item
+          img()&attributes(isNestedFile ? {'src': '../img/flags/FR.png', 'alt': 'Français'} : {'src': 'img/flags/FR.png', 'alt': 'Français'})
+          | Français
+        a(href='#').dropdown-item
+          img()&attributes(isNestedFile ? {'src': '../img/flags/DE.png', 'alt': 'Deutsch'} : {'src': 'img/flags/DE.png', 'alt': 'Deutsch'})
+          | Deutsch
+        a(href='#').dropdown-item
+          img()&attributes(isNestedFile ? {'src': '../img/flags/IT.png', 'alt': 'Italiano'} : {'src': 'img/flags/IT.png', 'alt': 'Italiano'})
+          | Italiano

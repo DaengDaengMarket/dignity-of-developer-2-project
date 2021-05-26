@@ -1,0 +1,370 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Featured Products Slider'
+
+//- Page Content
+block content
+
+  // Main Slider
+  section.hero-slider(style='background-image: url(img/hero-slider/main-bg.jpg);')
+    .owl-carousel.large-controls.dots-inside(data-owl-carousel='{ "nav": true, "dots": true, "loop": true, "autoplay": true, "autoplayTimeout": 7000 }')
+      .item
+        .container.padding-top-3x
+          .row.justify-content-center.align-items-center
+            .col-lg-5.col-md-6.padding-bottom-2x.text-md-left.text-center
+              .from-bottom
+                img(src='img/hero-slider/logo02.png' alt='Puma').d-inline-block.w-150.mb-4
+                .h2.text-body.text-normal.mb-2.pt-1 Puma Backpacks Collection
+                .h2.text-body.text-normal.mb-4.pb-1
+                  | starting at 
+                  span.text-bold $37.99
+              a(href='shop-grid-ls.html').btn.btn-primary.scale-up.delay-1 View Offers
+            .col-md-6.padding-bottom-2x.mb-3
+              img(src='img/hero-slider/02.png' alt='Puma Backpack').d-block.mx-auto
+      .item
+        .container.padding-top-3x
+          .row.justify-content-center.align-items-center
+            .col-lg-5.col-md-6.padding-bottom-2x.text-md-left.text-center
+              .from-bottom
+                img(src='img/hero-slider/logo01.png' alt='Converse').d-inline-block.w-200.mb-4
+                .h2.text-body.text-normal.mb-2.pt-1 Chuck Taylor All Star II
+                .h2.text-body.text-normal.mb-4.pb-1
+                  | for only 
+                  span.text-bold $59.99
+              a(href='shop-single.html').btn.btn-primary.scale-up.delay-1 Shop Now
+            .col-md-6.padding-bottom-2x.mb-3
+              img(src='img/hero-slider/01.png' alt='Chuck Taylor All Star II').d-block.mx-auto
+      .item
+        .container.padding-top-3x
+          .row.justify-content-center.align-items-center
+            .col-lg-5.col-md-6.padding-bottom-2x.text-md-left.text-center
+              .from-bottom
+                img(src='img/hero-slider/logo03.png' style='width: 125px;' alt='Motorola').d-inline-block.mb-4
+                .h2.text-body.text-normal.mb-2.pt-1 Smart Watch Moto 360 2nd
+                .h2.text-body.text-normal.mb-4.pb-1
+                  | for only 
+                  span.text-bold $299.99
+              a(href='shop-single.html').btn.btn-primary.scale-up.delay-1 Shop Now
+            .col-md-6.padding-bottom-2x.mb-3
+              img(src='img/hero-slider/03.png' alt='Moto 360').d-block.mx-auto
+
+  // Top Categories
+  section.container.padding-top-3x
+    h3.text-center.mb-30 Top Categories
+    .row
+      .col-md-4.col-sm-6
+        .card.mb-30
+          a(href='shop-grid-ls.html').card-img-tiles
+            .inner
+              .main-img
+                img(src='img/shop/categories/01.jpg' alt='Category')
+              .thumblist
+                img(src='img/shop/categories/02.jpg' alt='Category')
+                img(src='img/shop/categories/03.jpg' alt='Category')
+          .card-body.text-center
+            h4.card-title Clothing
+            p.text-muted Starting from $49.99
+            a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+      .col-md-4.col-sm-6
+        .card.mb-30
+          a(href='shop-grid-ls.html').card-img-tiles
+            .inner
+              .main-img
+                img(src='img/shop/categories/04.jpg' alt='Category')
+              .thumblist
+                img(src='img/shop/categories/05.jpg' alt='Category')
+                img(src='img/shop/categories/06.jpg' alt='Category')
+          .card-body.text-center
+            h4.card-title Shoes
+            p.text-muted Starting from $56.00
+            a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+      .col-md-4.col-sm-6
+        .card.mb-30
+          a(href='shop-grid-ls.html').card-img-tiles
+            .inner
+              .main-img
+                img(src='img/shop/categories/07.jpg' alt='Category')
+              .thumblist
+                img(src='img/shop/categories/08.jpg' alt='Category')
+                img(src='img/shop/categories/09.jpg' alt='Category')
+          .card-body.text-center
+            h4.card-title Bags
+            p.text-muted Starting from $27.00
+            a(href='shop-grid-ls.html').btn.btn-outline-primary.btn-sm View Products
+    .text-center
+      a(href='shop-categories.html').btn.btn-outline-secondary.margin-top-none All Categories
+
+  // Promo #1
+  section.container-fluid.padding-top-3x
+    .row.justify-content-center
+      .col-xl-5.col-lg-6.mb-30
+        .rounded.bg-faded.position-relative.padding-top-3x.padding-bottom-3x
+          span(style='top: 24px; left: 24px;').product-badge.text-danger Limited Offer
+          .text-center
+            h3.h2.text-normal.mb-1 New
+            h2.display-2.text-bold.mb-2 Sunglasses
+            h4.h3.text-normal.mb-4 collection at discounted price!
+            .countdown(data-date-time='12/30/2019 12:00:00').mb-3
+              .item
+                .days 00
+                span.days_ref Days
+              .item
+                .hours 00
+                span.hours_ref Hours
+              .item
+                .minutes 00
+                span.minutes_ref Mins
+              .item
+                .seconds 00
+                span.seconds_ref Secs
+            br
+            a(href='#').btn.btn-primary.margin-bottom-none View Offers
+      div(style='min-height: 270px;').col-xl-5.col-lg-6.mb-30
+        div(style='background-image: url(img/banners/home01.jpg);').img-cover.rounded
+
+  // Promo #2
+  section.container-fluid
+    .row.justify-content-center
+      .col-xl-10.col-lg-12
+        div(style='background-image: url(img/banners/home02.jpg);').fw-section.rounded.padding-top-4x.padding-bottom-4x
+          span(style='opacity: .35;').overlay.rounded
+          .text-center
+            h3.display-4.text-normal.text-white.text-shadow.mb-1 Old Collection
+            h2.display-2.text-bold.text-white.text-shadow HUGE SALE!
+            h4.d-inline-block.h2.text-normal.text-white.text-shadow.border-default.border-left-0.border-right-0.mb-4 at our outlet stores
+            br
+            a(href='contacts.html').btn.btn-primary.margin-bottom-none Locate Stores
+
+  // Featured Products Carousel
+  section.container.padding-top-3x.padding-bottom-3x
+    h3.text-center.mb-30 Featured Products
+    .owl-carousel(data-owl-carousel='{ "nav": false, "dots": true, "margin": 30, "responsive": {"0":{"items":1},"576":{"items":2},"768":{"items":3},"991":{"items":4},"1200":{"items":4}} }')
+
+      // Product
+      .grid-item
+        .product-card
+          .product-badge.text-danger 22% Off
+          a(href='shop-single.html').product-thumb
+            img(src='img/shop/products/09.jpg' alt='Product')
+          h3.product-title
+            a(href='shop-single.html') Rocket Dog
+          h4.product-price
+            del $44.95
+            | $34.99
+          .product-buttons
+            button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+              i.icon-heart
+            button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+      // Product
+      .grid-item
+        .product-card
+          +rating-stars([
+            {'class': 'icon-star filled'},
+            {'class': 'icon-star filled'},
+            {'class': 'icon-star filled'},
+            {'class': 'icon-star filled'},
+            {'class': 'icon-star'}
+          ])
+          a(href='shop-single.html').product-thumb
+            img(src='img/shop/products/03.jpg' alt='Product')
+          h3.product-title
+            a(href='shop-single.html') Oakley Kickback
+          h4.product-price $155.00
+          .product-buttons
+            button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+              i.icon-heart
+            button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+      // Product
+      .grid-item
+        .product-card
+          a(href='shop-single.html').product-thumb
+            img(src='img/shop/products/12.jpg' alt='Product')
+          h3.product-title
+            a(href='shop-single.html') Vented Straw Fedora
+          h4.product-price $49.50
+          .product-buttons
+            button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+              i.icon-heart
+            button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+      // Product
+      .grid-item
+        .product-card
+          +rating-stars([
+            {'class': 'icon-star filled'},
+            {'class': 'icon-star filled'},
+            {'class': 'icon-star filled'},
+            {'class': 'icon-star filled'},
+            {'class': 'icon-star filled'}
+          ])
+          a(href='shop-single.html').product-thumb
+            img(src='img/shop/products/11.jpg' alt='Product')
+          h3.product-title
+            a(href='shop-single.html') Top-Sider Fathom
+          h4.product-price $90.00
+          .product-buttons
+            button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+              i.icon-heart
+            button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+      // Product
+      .grid-item
+        .product-card
+          a(href='shop-single.html').product-thumb
+            img(src='img/shop/products/04.jpg' alt='Product')
+          h3.product-title
+            a(href='shop-single.html') Waist Leather Belt
+          h4.product-price $47.00
+          .product-buttons
+            button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+              i.icon-heart
+            button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+      // Product
+      .grid-item
+        .product-card
+          .product-badge.text-danger 50% Off
+          a(href='shop-single.html').product-thumb
+            img(src='img/shop/products/01.jpg' alt='Product')
+          h3.product-title
+            a(href='shop-single.html') Unionbay Park
+          h4.product-price
+            del $99.99
+            | $49.99
+          .product-buttons
+            button(data-toggle='tooltip' title='Whishlist').btn.btn-outline-secondary.btn-sm.btn-wishlist
+              i.icon-heart
+            button(data-toast data-toast-type='success' data-toast-position='topRight' data-toast-icon='icon-circle-check' data-toast-title='Product' data-toast-message='successfuly added to cart!').btn.btn-outline-primary.btn-sm Add to Cart
+
+  // Product Widgets
+  section.container.padding-bottom-2x
+    .row
+      .col-md-4.col-sm-6
+        .widget.widget-featured-products
+          h3.widget-title Top Sellers
+          // Entry
+          .entry
+            .entry-thumb
+              a(href='shop-single.html')
+                img(src='img/shop/widget/01.jpg', alt='Product')
+            .entry-content
+              h4.entry-title
+                a(href='shop-single.html') Oakley Kickback
+              span.entry-meta $155.00
+          // Entry
+          .entry
+            .entry-thumb
+              a(href='shop-single.html')
+                img(src='img/shop/widget/03.jpg', alt='Product')
+            .entry-content
+              h4.entry-title
+                a(href='shop-single.html') Vented Straw Fedora
+              span.entry-meta $49.50
+          // Entry
+          .entry
+            .entry-thumb
+              a(href='shop-single.html')
+                img(src='img/shop/widget/04.jpg', alt='Product')
+            .entry-content
+              h4.entry-title
+                a(href='shop-single.html') Big Wordmark Tote
+              span.entry-meta $29.99
+      .col-md-4.col-sm-6
+        .widget.widget-featured-products
+          h3.widget-title New Arrivals
+          // Entry
+          .entry
+            .entry-thumb
+              a(href='shop-single.html')
+                img(src='img/shop/widget/05.jpg', alt='Product')
+            .entry-content
+              h4.entry-title
+                a(href='shop-single.html') Union Park
+              span.entry-meta $49.99
+          // Entry
+          .entry
+            .entry-thumb
+              a(href='shop-single.html')
+                img(src='img/shop/widget/06.jpg', alt='Product')
+            .entry-content
+              h4.entry-title
+                a(href='shop-single.html') Cole Haan Crossbody
+              span.entry-meta $200.00
+          // Entry
+          .entry
+            .entry-thumb
+              a(href='shop-single.html')
+                img(src='img/shop/widget/07.jpg', alt='Product')
+            .entry-content
+              h4.entry-title
+                a(href='shop-single.html') Skagen Holst Watch
+              span.entry-meta $145.00
+      .col-md-4.col-sm-6
+        .widget.widget-featured-products
+          h3.widget-title Best Rated
+          // Entry
+          .entry
+            .entry-thumb
+              a(href='shop-single.html')
+                img(src='img/shop/widget/08.jpg', alt='Product')
+            .entry-content
+              h4.entry-title
+                a(href='shop-single.html') Jordan's City Hoodie
+              span.entry-meta $65.00
+          // Entry
+          .entry
+            .entry-thumb
+              a(href='shop-single.html')
+                img(src='img/shop/widget/09.jpg', alt='Product')
+            .entry-content
+              h4.entry-title
+                a(href='shop-single.html') Palace Shell Track Jacket
+              span.entry-meta $36.99
+          // Entry
+          .entry
+            .entry-thumb
+              a(href='shop-single.html')
+                img(src='img/shop/widget/10.jpg', alt='Product')
+            .entry-content
+              h4.entry-title
+                a(href='shop-single.html') Off the Shoulder Top
+              span.entry-meta $128.00
+
+  // Popular Brands
+  section.bg-faded.padding-top-3x.padding-bottom-3x
+    .container
+      h3.text-center.mb-30.pb-2 Popular Brands
+      .owl-carousel(data-owl-carousel='{ "nav": false, "dots": false, "loop": true, "autoplay": true, "autoplayTimeout": 4000, "responsive": {"0":{"items":2}, "470":{"items":3},"630":{"items":4},"991":{"items":5},"1200":{"items":6}} }')
+        img(src='img/brands/01.png', alt='Adidas').d-block.w-110.opacity-75.m-auto
+        img(src='img/brands/02.png', alt='Brooks').d-block.w-110.opacity-75.m-auto
+        img(src='img/brands/03.png', alt='Valentino').d-block.w-110.opacity-75.m-auto
+        img(src='img/brands/04.png', alt='Nike').d-block.w-110.opacity-75.m-auto
+        img(src='img/brands/05.png', alt='Puma').d-block.w-110.opacity-75.m-auto
+        img(src='img/brands/06.png', alt='New Balance').d-block.w-110.opacity-75.m-auto
+        img(src='img/brands/07.png', alt='Dior').d-block.w-110.opacity-75.m-auto
+  
+  // Services
+  section.container.padding-top-3x.padding-bottom-2x
+    .row
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/services/01.png' alt='Shipping').d-block.w-90.img-thumbnail.rounded-circle.mx-auto.mb-3
+        h6 Free Worldwide Shipping
+        p.text-muted.margin-bottom-none Free shipping for all orders over $100
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/services/02.png' alt='Money Back').d-block.w-90.img-thumbnail.rounded-circle.mx-auto.mb-3
+        h6 Money Back Guarantee
+        p.text-muted.margin-bottom-none We return money within 30 days
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/services/03.png' alt='Support').d-block.w-90.img-thumbnail.rounded-circle.mx-auto.mb-3
+        h6 24/7 Customer Support
+        p.text-muted.margin-bottom-none Friendly 24/7 customer support
+      .col-md-3.col-sm-6.text-center.mb-30
+        img(src='img/services/04.png' alt='Payment').d-block.w-90.img-thumbnail.rounded-circle.mx-auto.mb-3
+        h6 Secure Online Payment
+        p.text-muted.margin-bottom-none We posess SSL / Secure Certificate

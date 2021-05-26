@@ -1,0 +1,68 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Tooltips & Popovers'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Tooltips & Popovers'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Static Tooltips
+        hr.margin-bottom-1x
+        .example-tooltip
+          .tooltip.bs-tooltip-top.bs-tooltip-top-demo(role='tooltip')
+            .arrow
+            .tooltip-inner Tooltip on the top
+          .tooltip.bs-tooltip-right.bs-tooltip-right-demo(role='tooltip')
+            .arrow
+            .tooltip-inner Tooltip on the right
+          .tooltip.bs-tooltip-bottom.bs-tooltip-bottom-demo(role='tooltip')
+            .arrow
+            .tooltip-inner Tooltip on the bottom
+          .tooltip.bs-tooltip-left.bs-tooltip-left-demo(role='tooltip')
+            .arrow
+            .tooltip-inner Tooltip on the left
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Live Demo
+        hr.margin-bottom-1x
+        button(type='button' class='btn btn-outline-secondary' data-toggle='tooltip' data-placement='top' title='Tooltip on top') Tooltip on top
+        button(type='button' class='btn btn-outline-secondary' data-toggle='tooltip' data-placement='right' title='Tooltip on right') Tooltip on right
+        button(type='button' class='btn btn-outline-secondary' data-toggle='tooltip' data-placement='bottom' title='Tooltip on bottom') Tooltip on bottom
+        button(type='button' class='btn btn-outline-secondary' data-toggle='tooltip' data-placement='left' title='Tooltip on left') Tooltip on left
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Static Popovers
+        hr.margin-bottom-1x
+        .example-popover.clearfix
+          .popover.bs-popover-top.bs-popover-top-demo
+            .arrow
+            h3.popover-header Popover top
+            .popover-body
+              p Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          .popover.bs-popover-right.bs-popover-right-demo
+            .arrow
+            h3.popover-header Popover right
+            .popover-body
+              p Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          .popover.bs-popover-bottom.bs-popover-bottom-demo
+            .arrow
+            h3.popover-header Popover bottom
+            .popover-body
+              p Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          .popover.bs-popover-left.bs-popover-left-demo
+            .arrow
+            h3.popover-header Popover left
+            .popover-body
+              p Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x.mt-2 Live Demo
+        hr.margin-bottom-1x
+        button(type='button' class='btn btn-outline-secondary' data-container='body' data-toggle='popover' data-placement='top' data-trigger='hover' title='Popover on top' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Popover on top
+        button(type='button' class='btn btn-outline-secondary' data-container='body' data-toggle='popover' data-placement='right' data-trigger='hover' title='Popover on right' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Popover on right
+        button(type='button' class='btn btn-outline-secondary' data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover' title='Popover on bottom' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Popover on bottom
+        button(type='button' class='btn btn-outline-secondary' data-container='body' data-toggle='popover' data-placement='left' data-trigger='hover' title='Popover on left' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Popover on left
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu

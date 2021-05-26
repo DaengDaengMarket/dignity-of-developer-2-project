@@ -1,0 +1,53 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'Alerts'
+  - var isNestedFile = true
+  - var parentMenu = 'Components'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Components', 'link': 'accordion.html'}, {'title': 'Alerts'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+      .col-lg-9.col-md-8.order-md-2
+        h6.text-muted.text-normal.text-uppercase Color Variations
+        hr.margin-bottom-1x
+        .alert.alert-default.alert-dismissible.fade.show.margin-bottom-1x
+          span(data-dismiss='alert').alert-close
+          h3 Hello World!
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus sint optio explicabo eum perspiciatis ipsam adipisci, excepturi repellendus debitis fugit laborum quae, aspernatur ex neque hic nihil, reiciendis veritatis.
+        .alert.alert-primary.alert-dismissible.fade.show.text-center.margin-bottom-1x
+          span(data-dismiss='alert').alert-close
+          i.icon-camera
+          | &nbsp;&nbsp;<strong>Primary alert:</strong> Deserunt praesentium laboriosam <a href='#'>quaerat mollitia.</a>
+        .alert.alert-info.alert-dismissible.fade.show.text-center.margin-bottom-1x
+          span(data-dismiss='alert').alert-close
+          i.icon-layers
+          | &nbsp;&nbsp;<strong>Info alert:</strong> Deserunt praesentium laboriosam quaerat mollitia.
+        .alert.alert-success.alert-dismissible.fade.show.text-center.margin-bottom-1x
+          span(data-dismiss='alert').alert-close
+          i.icon-help
+          | &nbsp;&nbsp;<strong>Success alert:</strong> Deserunt praesentium laboriosam quaerat mollitia.
+        .alert.alert-warning.alert-dismissible.fade.show.text-center.margin-bottom-1x
+          span(data-dismiss='alert').alert-close
+          i.icon-bell
+          | &nbsp;&nbsp;<strong>Warning alert:</strong> Deserunt praesentium laboriosam quaerat mollitia.
+        .alert.alert-danger.alert-dismissible.fade.show.text-center.margin-bottom-1x
+          span(data-dismiss='alert').alert-close
+          i.icon-ban
+          | &nbsp;&nbsp;<strong>Danger alert:</strong> Deserunt praesentium laboriosam quaerat mollitia.
+        h6.text-muted.text-normal.text-uppercase.padding-top-2x Background Image Version
+        hr.margin-bottom-1x
+        div(style='background-image: url(../img/banners/alert-bg.jpg)').alert.alert-image-bg.alert-dismissible.fade.show.text-center
+          span(data-dismiss='alert').alert-close.text-white
+          .h3.text-medium.text-white.padding-top-1x.padding-bottom-1x
+            i(style='font-size: 33px; margin-top: -5px;').icon-clock
+            | &nbsp;&nbsp;Check our Limited Offers. Save up to 50%&nbsp;&nbsp;&nbsp;
+            .mt-3.hidden-xl-up
+            a(href='#').btn.btn-primary View Offers
+      
+      .col-lg-3.col-md-4.order-md-1
+        //- Side Menu
+        include ../partials/side-menu
