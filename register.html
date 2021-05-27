@@ -2,28 +2,21 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Unishop | Universal E-Commerce Template
-  </title>
+  <meta charset="utf-8" />
+  <title>댕댕마켓</title>
   <!-- SEO Meta Tags-->
-  <meta name="description" content="Unishop - Universal E-Commerce Template">
-  <meta name="keywords"
-    content="shop, e-commerce, modern, flat style, responsive, online store, business, mobile, blog, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean">
-  <meta name="author" content="Rokaux">
+  <meta name="description" content="댕댕마켓 - 반려견 용품 거래 사이트" />
+  <meta name="keywords" content="반려견, 중고거래, 반려견 커뮤니티" />
   <!-- Mobile Specific Meta Tag-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <!-- Favicon and Apple Icons-->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="touch-icon-iphone.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" href="favicon.png" />
   <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
-  <link rel="stylesheet" media="screen" href="css/vendor.min.css">
+  <link rel="stylesheet" media="screen" href="css/vendor.min.css" />
   <!-- Main Template Styles-->
-  <link id="mainStyles" rel="stylesheet" media="screen" href="css/styles.min.css">
-  <link rel="stylesheet" href="css/jspcss.css">
+  <link id="mainStyles" rel="stylesheet" media="screen" href="css/styles.min.css" />
+  <link id="customStyles" rel="stylesheet" media="screen" href="css/mycss.css" />
   <!-- Modernizr-->
   <script src="js/modernizr.min.js"></script>
 </head>
@@ -153,53 +146,45 @@
         <!-- Site Logo--><a class="site-logo" href="index.html"><img src="" alt="댕댕마켓"></a>
       </div>
     </div>
-    <!— 메인 네비바 —>
-      <nav class="site-menu">
-        <ul>
-          <li>
-            <a href="#"><span>댕댕거래</span></a>
-          </li>
+    <!-- 메인 네비바 -->
+    <nav class="site-menu">
+      <ul>
+        <li>
+          <a href="./register.html"><span>댕댕거래</span></a>
+        </li>
 
-          <li>
-            <a href="#"><span>댕댕피드</span></a>
-          </li>
-
-          <li class="has-megamenu">
-            <a href="#"><span>댕댕알림</span></a>
-          </li>
-          <li><a href="#"><span>공지사항</span></a>
-            <ul class="sub-menu">
-              <li><a href="new공지사항.html">공지사항</a></li>
-              <li><a href="new신고글목록.html">신고글목록</a></li>
-              <li><a href="new에드관리.html">에드관리</a></li>
+        <li>
+          <a href="#"><span>댕댕피드</span></a>
+        </li>
+        <li>
+          <a href="./사용자공지사항.html"><span>댕댕알림</span></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Toolbar-->
+    <div class="toolbar">
+      <div class="inner">
+        <div class="tools">
+          <div class="search"><i class="icon-search"></i></div>
+          <div class="account"><a href="account-orders.html"></a><i class="icon-head"></i>
+            <ul class="toolbar-dropdown">
+              <li class="sub-menu-user">
+                <div class="user-ava"><img src="img/account/user-ava-sm.jpg" alt="Daniel Adams">
+                </div>
+                <div class="user-info">
+                  <h6 class="user-name">Daniel Adams</h6><span class="text-xs text-muted">290 Reward points</span>
+                </div>
+              </li>
+              <li><a href="account-profile.html">My Profile</a></li>
+              <li><a href="account-orders.html">Orders List</a></li>
+              <li><a href="account-wishlist.html">Wishlist</a></li>
+              <li class="sub-menu-separator"></li>
+              <li><a href="#"> <i class="icon-unlock"></i>Logout</a></li>
             </ul>
-          </li>
-        </ul>
-      </nav>
-      <!-- Toolbar-->
-      <div class="toolbar">
-        <div class="inner">
-          <div class="tools">
-            <div class="search"><i class="icon-search"></i></div>
-            <div class="account"><a href="account-orders.html"></a><i class="icon-head"></i>
-              <ul class="toolbar-dropdown">
-                <li class="sub-menu-user">
-                  <div class="user-ava"><img src="img/account/user-ava-sm.jpg" alt="Daniel Adams">
-                  </div>
-                  <div class="user-info">
-                    <h6 class="user-name">Daniel Adams</h6><span class="text-xs text-muted">290 Reward points</span>
-                  </div>
-                </li>
-                <li><a href="account-profile.html">My Profile</a></li>
-                <li><a href="account-orders.html">Orders List</a></li>
-                <li><a href="account-wishlist.html">Wishlist</a></li>
-                <li class="sub-menu-separator"></li>
-                <li><a href="#"> <i class="icon-unlock"></i>Logout</a></li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
+    </div>
   </header>
   <!-- Off-Canvas Wrapper-->
   <div class="offcanvas-wrapper">

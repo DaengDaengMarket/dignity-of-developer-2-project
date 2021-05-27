@@ -163,9 +163,7 @@
     border-radius: 4px;
     align-items: center;
   }
-  .image-title{
-    /* border: 1px solid black; */
-  }
+  
   .image-image {
     margin: 3%;
     width: 200px;
@@ -384,3 +382,8 @@
   ::-webkit-scrollbar {
     width: 7px;
   }
+  
+  
+  
+
+
