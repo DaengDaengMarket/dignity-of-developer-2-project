@@ -122,14 +122,8 @@
 /* 신고글목록 */
 .black-border{
     border:1px solid #e1e7ec;
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> a83cdb343fdbc773292f82943604af2189dddc42
 /**********************************************/
 /* !!! 여기서 부터는 장성필님의 CSS 입니다 !!! */
 /**************************************** ******/
@@ -169,9 +163,7 @@
     border-radius: 4px;
     align-items: center;
   }
-  .image-title{
-    /* border: 1px solid black; */
-  }
+  
   .image-image {
     margin: 3%;
     width: 200px;
@@ -390,6 +382,8 @@
   ::-webkit-scrollbar {
     width: 7px;
   }
-=======
-}
->>>>>>> 5e5cf9cb3656ca7b23363b735153bb182b836691
+  
+  
+  
+
+
