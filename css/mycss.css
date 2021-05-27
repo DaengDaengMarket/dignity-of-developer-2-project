@@ -122,6 +122,7 @@
 /* 신고글목록 */
 .black-border{
     border:1px solid #e1e7ec;
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -389,3 +390,6 @@
   ::-webkit-scrollbar {
     width: 7px;
   }
+=======
+}
+>>>>>>> 5e5cf9cb3656ca7b23363b735153bb182b836691
