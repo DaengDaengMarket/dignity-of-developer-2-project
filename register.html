@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="utf-8" />
-  <title>댕댕마켓</title>
+  <title>마이페이지</title>
   <!-- SEO Meta Tags-->
   <meta name="description" content="댕댕마켓 - 반려견 용품 거래 사이트" />
   <meta name="keywords" content="반려견, 중고거래, 반려견 커뮤니티" />
@@ -128,14 +128,16 @@
       </ul>
     </nav>
   </div>
-  <!-- Navbar-->
+
+  <!-- 네비바 -->
   <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
   <header class="navbar navbar-sticky">
-    <!-- Search-->
+    <!-- 검색창 -->
     <form class="site-search" method="get">
-      <input type="text" name="site_search" placeholder="Type to search...">
-      <div class="search-tools"><span class="clear-search">Clear</span><span class="close-search"><i
-            class="icon-cross"></i></span></div>
+      <input type="text" name="site_search" placeholder="찾으시는 물품을 입력해주세요" />
+      <div class="search-tools">
+        <span class="clear-search">Clear</span><span class="close-search"><i class="icon-cross"></i></span>
+      </div>
     </form>
     <div class="site-branding">
       <div class="inner">
@@ -143,9 +145,11 @@
           data-toggle="offcanvas"></a>
         <!-- Off-Canvas Toggle (#mobile-menu)--><a class="offcanvas-toggle menu-toggle" href="#mobile-menu"
           data-toggle="offcanvas"></a>
-        <!-- Site Logo--><a class="site-logo" href="index.html"><img src="" alt="댕댕마켓"></a>
+        <!-- Site Logo 인라인 css 제거할것--><a class="site-logo" href="index.html"><img src="/img/header_logo.png" alt="댕댕마켓"
+            style="width: 55px" /></a>
       </div>
     </div>
+
     <!-- 메인 네비바 -->
     <nav class="site-menu">
       <ul>
@@ -161,31 +165,36 @@
         </li>
       </ul>
     </nav>
-    <!-- Toolbar-->
+
+    <!-- 네비바의 내정보 -->
     <div class="toolbar">
       <div class="inner">
         <div class="tools">
           <div class="search"><i class="icon-search"></i></div>
-          <div class="account"><a href="account-orders.html"></a><i class="icon-head"></i>
+          <div class="account">
+            <a href="account-orders.html"></a><i class="icon-head"></i>
             <ul class="toolbar-dropdown">
               <li class="sub-menu-user">
-                <div class="user-ava"><img src="img/account/user-ava-sm.jpg" alt="Daniel Adams">
-                </div>
+                <div class="user-ava"><img src="img/account/user-ava-sm.jpg" alt="Daniel Adams" /></div>
                 <div class="user-info">
-                  <h6 class="user-name">Daniel Adams</h6><span class="text-xs text-muted">290 Reward points</span>
+                  <h6 class="user-name">Admin</h6>
+                  <span class="text-xs text-muted">환영합니다!</span>
                 </div>
               </li>
-              <li><a href="account-profile.html">My Profile</a></li>
-              <li><a href="account-orders.html">Orders List</a></li>
-              <li><a href="account-wishlist.html">Wishlist</a></li>
+              <li><a href="account-profile.html">마이댕댕</a></li>
+              <li><a href="#" onclick="showPopup();">댕댕톡</a></li>
+              <li><a href="account-wishlist.html">찜 목록</a></li>
               <li class="sub-menu-separator"></li>
-              <li><a href="#"> <i class="icon-unlock"></i>Logout</a></li>
+              <li>
+                <a href="#"> <i class="icon-unlock"></i>로그아웃</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </header>
+  
   <!-- Off-Canvas Wrapper-->
   <div class="offcanvas-wrapper">
     <!-- Page Content-->
