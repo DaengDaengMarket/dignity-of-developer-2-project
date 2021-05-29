@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 
+<!--head-->
 <head>
   <meta charset="utf-8" />
   <title>댕댕마켓</title>
@@ -9,7 +10,6 @@
   <meta name="keywords" content="반려견, 중고거래, 반려견 커뮤니티" />
   <!-- Mobile Specific Meta Tag-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
   <!-- Favicon and Apple Icons-->
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -21,8 +21,8 @@
   <!-- Modernizr-->
   <script src="js/modernizr.min.js"></script>
 </head>
-<!-- Body-->
 
+<!--body-->
 <body>
   <!-- 햄버거버튼 -->
   <div class="offcanvas-container" id="shop-categories">
@@ -181,7 +181,7 @@
                   <span class="text-xs text-muted">환영합니다!</span>
                 </div>
               </li>
-              <li><a href="account-profile.html">마이댕댕</a></li>
+              <li><a href="마이페이지.html">마이댕댕</a></li>
               <li><a href="#" onclick="showPopup();">댕댕톡</a></li>
               <li><a href="account-wishlist.html">찜 목록</a></li>
               <li class="sub-menu-separator"></li>
@@ -485,12 +485,6 @@
   <a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
   <!-- Backdrop-->
   <div class="site-backdrop"></div>
-  <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
-  <script src="js/vendor.min.js"></script>
-  <script src="js/scripts.min.js"></script>
-
-
-
 
   <!-- 상품후기 모달 -->
   <div class="modal fade" id="review-modal" tabindex="-1" role="dialog">
@@ -502,17 +496,16 @@
           <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
               aria-hidden="true">&times;</span></button>
         </div>
-
         <div class="modal-body">
           <p>댕댕 정보: 금 목줄</p>
           <p style="display: inline-block;">평가:
-            <div class="rating-stars">
-              <i class="icon-star filled"></i>
-              <i class="icon-star filled"></i>
-              <i class="icon-star filled"></i>
-              <i class="icon-star filled"></i>
-              <i class="icon-star"></i>
-            </div>
+          <div class="rating-stars">
+            <i class="icon-star filled"></i>
+            <i class="icon-star filled"></i>
+            <i class="icon-star filled"></i>
+            <i class="icon-star filled"></i>
+            <i class="icon-star"></i>
+          </div>
           </p>
           <div class="form-group row">
             <div class="col-10">
@@ -520,19 +513,18 @@
             </div>
           </div>
         </div>
-
         <div class="modal-footer">
           <button class="btn btn-primary btn-sm" type="button">후기 작성 완료</button>
         </div>
-
       </div>
     </div>
   </div>
-
+  <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+  <script src="js/vendor.min.js"></script>
+  <script src="js/scripts.min.js"></script>
   <script language="javascript">
     function showPopup() { window.open("chat.html", "a", "width=800, height=880, left=100, top=50"); }
   </script>
-
 </body>
 
 </html>
