@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>공지등록</title>
+  <title>에드관리</title>
   <!-- SEO Meta Tags-->
   <meta name="description" content="댕댕마켓 - 반려견 용품 거래 사이트" />
   <meta name="keywords" content="반려견, 중고거래, 반려견 커뮤니티" />
@@ -161,7 +161,7 @@
           <a href="#"><span>댕댕피드</span></a>
         </li>
         <li>
-          <a href="./new공지사항.html"><span>댕댕알림</span></a>
+          <a href="./admin공지사항.html"><span>댕댕알림</span></a>
         </li>
       </ul>
     </nav>
@@ -197,21 +197,63 @@
   <!-- Off-Canvas Wrapper-->
   <div class="offcanvas-wrapper">
     <!-- main Content-->
-
-    <div class="container-fluid">
-      <div class="mb-6">
-        <label for="exampleFormControlInput1" class="form-label">제목</label>
-        <input class="form-control" id="exampleFormControlInput1" placeholder="제목">
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs nav-justified">
+          <li class="nav-item">
+            <a class="nav-link active" href="admin공지사항.html">공지사항</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="admin신고글목록.html">신고글처리</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="admin에드관리.html">에드관리</a>
+          </li>
+        </ul>
       </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">내용</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
-      </div>
-
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end" role="group">
-        <button type="button" class="btn btn-outline-primary">공지등록</button>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 margin-top-2x margin-bottom-2x">
+          <div class="card container" style="max-width: 17rem;">
+            <img src="x.jpeg" class="card-img-top margin-top-1x" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card 이름</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the
+                bulk
+                of
+                the card's content.</p>
+              <a href="#" class="btn btn-outline-primary">수정</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 margin-top-2x margin-bottom-2x">
+          <div class="card container" style="max-width: 20rem;">
+            <img src="x.jpeg" class="card-img-top margin-top-1x" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card 이름</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the
+                bulk
+                of
+                the card's content.</p>
+              <a href="#" class="btn btn-outline-primary">수정</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 margin-top-2x margin-bottom-2x">
+          <div class="card container" style="width: 17rem;">
+            <img src="x.jpeg" class="card-img-top margin-top-1x" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card 이름</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the
+                bulk
+                of
+                the card's content.</p>
+              <a href="#" class="btn btn-outline-primary">수정</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
   </div>
   <!-- footer -->
   <footer class="site-footer">
@@ -223,7 +265,8 @@
       <p class="mb-1">&copy; Dangdang Market Inc.</p>
     </div>
   </footer>
-  <!-- Back To Top Button--><a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
+  <!-- Back To Top Button-->
+  <a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
   <!-- Backdrop-->
   <div class="site-backdrop"></div>
   <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
@@ -233,5 +276,4 @@
     function showPopup() { window.open("chat.html", "a", "width=800, height=880, left=100, top=50"); }
   </script>
 </body>
-
 </html>
