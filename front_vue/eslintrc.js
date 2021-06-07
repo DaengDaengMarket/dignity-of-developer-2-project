@@ -1,7 +1,11 @@
 // .eslintrc.js
 module.exports = {
     // 현재 eslintrc 파일을 기준으로 ESLint 규칙을 적용
-    root: true,
+  root: true,
+  env: {
+    node: true,
+    jest:true
+  },
     // 추가적인 규칙들을 적용
     extends: [
       'eslint:recommended',
@@ -25,10 +29,9 @@ module.exports = {
           trailingComma: 'all',
           printWidth: 80,
           bracketSpacing: true,
-          arrowParens: 'avoid',
+          endOfLine:'auto'
         },
       ],
       'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     },
   };
-  

@@ -1,93 +1,83 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router'; // eslint-disable-line no-unused-vars
+import Home from '../views/Home.vue';
+import Trade from '../views/Trade.vue';
+import Feed from '../views/Feed.vue';
+import Notice from '../views/Notice.vue';
+import AdList from '../views/AdList.vue';
+import Chat from '../views/Chat.vue';
+import LoginJoin from '../views/LoginJoin.vue';
+import MyPage from '../views/MyPage.vue';
+import NoticeAdd from '../views/NoticeAdd.vue';
+import ProductAdd from '../views/ProductAdd.vue';
+import ProductDetail from '../views/ProductDetail.vue';
+import Report from '../views/Report.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
-    path: '/chat',
-    name: 'Chat',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Chat.vue')
+    path: '/trade',
+    name: 'Trade',
+    component: Trade,
   },
   {
-    path: '/adlist',
-    name: 'AdList',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AdList.vue')
-  },
-  {
-    path: '/loginjoin',
-    name: 'LoginJoin',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/LoginJoin.vue')
-  },
-  {
-    path: '/mypage',
-    name: 'MyPage',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/MyPage.vue')
+    path: '/feed',
+    name: 'Feed',
+    component: Feed,
   },
   {
     path: '/notice',
     name: 'Notice',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Notice.vue')
+    component: Notice,
+  },
+  {
+    path: '/adlist',
+    name: 'AdList',
+    component: AdList,
+  },
+  {
+    path: '/chat',
+    name: 'Chat',
+    component: Chat,
+  },
+  {
+    path: '/loginjoin',
+    name: 'LoginJoin',
+    component: LoginJoin,
+  },
+  {
+    path: '/mypage',
+    name: 'MyPage',
+    component: MyPage,
   },
   {
     path: '/noticeadd',
     name: 'NoticeAdd',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/NoticeAdd.vue')
+    component: NoticeAdd,
   },
   {
     path: '/productadd',
     name: 'ProductAdd',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ProductAdd.vue')
+    component: ProductAdd,
   },
   {
     path: '/productdetail',
     name: 'ProductDetail',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ProductDetail.vue')
+    component: ProductDetail,
   },
   {
     path: '/report',
     name: 'Report',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Report.vue')
-  }
-]
+    component: Report,
+  },
+];
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
+});
 
-export default router
+export default router;
