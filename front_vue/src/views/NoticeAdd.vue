@@ -1,5 +1,5 @@
 <template>
-  <div id="hello">helloworld</div>
+  <div id="nodiceadd">noticeadd</div>
 </template>
 
 <script>
