@@ -8,7 +8,6 @@ import Chat from '../views/Chat.vue';
 import LoginJoin from '../views/LoginJoin.vue';
 import MyPage from '../views/MyPage.vue';
 import NoticeAdd from '../views/NoticeAdd.vue';
-import ProductAdd from '../views/ProductAdd.vue';
 import ProductDetail from '../views/ProductDetail.vue';
 import Report from '../views/Report.vue';
 
@@ -57,11 +56,6 @@ const routes = [
     path: '/noticeadd',
     name: 'NoticeAdd',
     component: NoticeAdd,
-  },
-  {
-    path: '/productadd',
-    name: 'ProductAdd',
-    component: ProductAdd,
   },
   {
     path: '/productdetail',
