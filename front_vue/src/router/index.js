@@ -14,6 +14,7 @@ import Report from '../views/Report.vue';
 const routes = [
   {
     path: '/',
+    // redirect: '/',
     name: 'Home',
     component: Home,
   },

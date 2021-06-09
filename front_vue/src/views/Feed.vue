@@ -1,5 +1,6 @@
 <template>
-  <div id="feed">feed</div>
+  <div id="feed">
+  </div>
 </template>
 
 <script>

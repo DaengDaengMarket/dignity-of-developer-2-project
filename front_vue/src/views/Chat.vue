@@ -6,21 +6,21 @@
           <img
             src="img/km/pawprint.png"
             style="width: 40px; height: 40px"
-            alt=""
-          />댕댕톡
+            alt="" />댕댕톡
         </h2>
       </div>
       <div id="chat-container">
         <chat-aside>
           <chat-header>
-            <input type="text" placeholder="search" />
+            <input
+              type="text"
+              placeholder="search" />
           </chat-header>
           <ul>
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg"
-                alt=""
-              />
+                alt="" />
               <div>
                 <h2>Prénom Nom</h2>
                 <h3>
@@ -32,8 +32,7 @@
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_02.jpg"
-                alt=""
-              />
+                alt="" />
               <div>
                 <h2>Prénom Nom</h2>
                 <h3>
@@ -45,8 +44,7 @@
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_03.jpg"
-                alt=""
-              />
+                alt="" />
               <div>
                 <h2>Prénom Nom</h2>
                 <h3>
@@ -58,8 +56,7 @@
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_04.jpg"
-                alt=""
-              />
+                alt="" />
               <div>
                 <h2>Prénom Nom</h2>
                 <h3>
@@ -71,8 +68,7 @@
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_05.jpg"
-                alt=""
-              />
+                alt="" />
               <div>
                 <h2>Prénom Nom</h2>
                 <h3>
@@ -84,8 +80,7 @@
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_06.jpg"
-                alt=""
-              />
+                alt="" />
               <div>
                 <h2>Prénom Nom</h2>
                 <h3>
@@ -97,8 +92,7 @@
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_07.jpg"
-                alt=""
-              />
+                alt="" />
               <div>
                 <h2>Prénom Nom</h2>
                 <h3>
@@ -110,8 +104,7 @@
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg"
-                alt=""
-              />
+                alt="" />
               <div>
                 <h2>Prénom Nom</h2>
                 <h3>
@@ -123,8 +116,7 @@
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_09.jpg"
-                alt=""
-              />
+                alt="" />
               <div>
                 <h2>Prénom Nom</h2>
                 <h3>
@@ -136,8 +128,7 @@
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_10.jpg"
-                alt=""
-              />
+                alt="" />
               <div>
                 <h2>Prénom Nom</h2>
                 <h3>
@@ -150,27 +141,31 @@
         </chat-aside>
         <chat-main>
           <chat-header>
-            <div class="row col-12" style="margin: 0; padding: 0">
+            <div
+              class="row col-12"
+              style="margin: 0; padding: 0">
               <div class="row col-3">
                 <img
                   src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg"
                   width="50"
                   height="70"
-                  alt=""
-                />
+                  alt="" />
               </div>
-              <div class="row col-5" style="margin-top: 10px">
+              <div
+                class="row col-5"
+                style="margin-top: 10px">
                 <h2>Nickname<br />3분 전</h2>
               </div>
-              <div class="row col-5" style="margin-top: 10px">
+              <div
+                class="row col-5"
+                style="margin-top: 10px">
                 <p style="font-size: 11px">
                   Product Name<br />price: 12000
-                  <span style="margin-left: 10px"
-                    ><img
-                      src="img/km/01.jpg"
-                      style="width: 30px; height: 40px"
-                      alt=""
-                  /></span>
+                  <span
+                    style="margin-left: 10px"><img
+                    src="img/km/01.jpg"
+                    style="width: 30px; height: 40px"
+                    alt="" /></span>
                 </p>
               </div>
             </div>
@@ -184,7 +179,9 @@
                 <h3>10:12AM, Today</h3>
               </div>
               <div class="triangle"></div>
-              <div class="message">안녕하세요 반갑습니다</div>
+              <div class="message">
+                안녕하세요 반갑습니다
+              </div>
             </li>
             <li class="me">
               <div class="entete">
@@ -193,7 +190,9 @@
                 <span class="status blue"></span>
               </div>
               <div class="triangle"></div>
-              <div class="message">안녕하세요 저도 반가워요</div>
+              <div class="message">
+                안녕하세요 저도 반가워요
+              </div>
             </li>
             <li class="me">
               <div class="entete">
@@ -202,7 +201,9 @@
                 <span class="status blue"></span>
               </div>
               <div class="triangle"></div>
-              <div class="message">OK</div>
+              <div class="message">
+                OK
+              </div>
             </li>
             <li class="you">
               <div class="entete">
@@ -211,7 +212,9 @@
                 <h3>10:12AM, Today</h3>
               </div>
               <div class="triangle"></div>
-              <div class="message">반려견 목줄 구매하고 싶은데요</div>
+              <div class="message">
+                반려견 목줄 구매하고 싶은데요
+              </div>
             </li>
             <li class="me">
               <div class="entete">
@@ -220,7 +223,9 @@
                 <span class="status blue"></span>
               </div>
               <div class="triangle"></div>
-              <div class="message">2만원입니다</div>
+              <div class="message">
+                2만원입니다
+              </div>
             </li>
             <li class="me">
               <div class="entete">
@@ -229,19 +234,19 @@
                 <span class="status blue"></span>
               </div>
               <div class="triangle"></div>
-              <div class="message">OK</div>
+              <div class="message">
+                OK
+              </div>
             </li>
           </ul>
           <chat-footer>
             <textarea placeholder="Type your message"></textarea>
             <img
               src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png"
-              alt=""
-            />
+              alt="" />
             <img
               src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png"
-              alt=""
-            />
+              alt="" />
             <a href="#">Send</a>
           </chat-footer>
         </chat-main>
