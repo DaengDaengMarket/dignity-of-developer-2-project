@@ -1,4 +1,3 @@
-// .eslintrc.js
 module.exports = {
     // 현재 eslintrc 파일을 기준으로 ESLint 규칙을 적용
   root: true,
@@ -24,7 +23,7 @@ module.exports = {
         {
           singleQuote: true,
           semi: true,
-          useTabs: true,
+          useTabs: false,
           tabWidth: 2,
           trailingComma: 'all',
           printWidth: 80,
@@ -33,5 +32,5 @@ module.exports = {
         },
       ],
       'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    },
-  };
+  },
+};

@@ -1,4 +1,3 @@
-
 <template>
   <div id="trade">
     <!-- Off-Canvas Wrapper-->
@@ -123,10 +122,7 @@
           <div class="regist_container">
             <button type="button" class="btn btn-primary form-control">등록하기</button>
           </div>
-
-
         </div>
-
       </div>
     </section>
 
