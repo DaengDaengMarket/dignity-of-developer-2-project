@@ -1,5 +1,7 @@
 <template>
-  <div id="nodiceadd">noticeadd</div>
+  <div id="nodiceadd">
+    noticeadd
+  </div>
 </template>
 
 <script>

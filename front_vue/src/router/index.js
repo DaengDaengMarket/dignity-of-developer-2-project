@@ -10,6 +10,7 @@ import MyPage from '../views/MyPage.vue';
 import NoticeAdd from '../views/NoticeAdd.vue';
 import ProductDetail from '../views/ProductDetail.vue';
 import Report from '../views/Report.vue';
+import AdminNotice from '../views/AdminNotice.vue';
 
 const routes = [
   {
@@ -67,6 +68,11 @@ const routes = [
     path: '/report',
     name: 'Report',
     component: Report,
+  },
+  {
+    path: '/adminnotice',
+    name: 'adminnotice',
+    component: AdminNotice,
   },
 ];
 

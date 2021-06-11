@@ -1,13 +1,13 @@
 <template>
-  <div id="chat">
+  <div id="chatpage">
     <chat-sector>
-      <div>
-        <h2 style="text-align: center">
+      <div id="chatTitle">
+        <h1>
           <img
             src="img/km/pawprint.png"
             style="width: 40px; height: 40px"
             alt="" />댕댕톡
-        </h2>
+        </h1>
       </div>
       <div id="chat-container">
         <chat-aside>
@@ -255,8 +255,54 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
-<style></style>
+// <script>
+// export default {
+//   name: 'window-portal',
+//   props: {
+//     open: {
+//       type: Boolean,
+//       default: false,
+//     }
+//   },
+//   data() {
+//     return {
+//       windowRef: null,
+//     }
+//   },
+//   watch: {
+//     open(newOpen) {
+//       if(newOpen) {
+//         this.openPortal();
+//       } else {
+//         this.closePortal();
+//       }
+//     }
+//   },
+//   methods: {
+//     openPortal() {
+//       this.windowRef = window.open("http://localhost:2995/chat", "width=600,height=400,left=200,top=200");
+//       this.windowRef.addEventListener('beforeunload', this.closePortal);
+//       // magic!
+//       this.windowRef.document.body.appendChild(this.$el);
+//     },
+//     closePortal() {
+//       if(this.windowRef) {
+//         this.windowRef.close();
+//         this.windowRef = null;
+//         this.$emit('close');
+//       }
+//     }
+//   },
+//   mounted() {
+//     if(this.open) {
+//       this.openPortal();
+//     }
+//   },
+//   beforeUnmount() {
+//     if (this.windowRef) {
+//       this.closePortal();
+//     }
+//   }
+// }
+// </script>
+// <style></style>

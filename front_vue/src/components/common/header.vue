@@ -1,6 +1,5 @@
 <template>
-  <div class="header">
-    <!-- 햄버거버튼 -->
+  <div>
     <div
       class="offcanvas-container"
       id="shop-categories">
@@ -131,43 +130,28 @@
       </form>
       <div class="site-branding">
         <div class="inner">
-          <!-- Off-Canvas Toggle (#shop-categories)-->
-          <a
-            class="offcanvas-toggle cats-toggle"
-            href="#shop-categories"
-            data-toggle="offcanvas"></a>
-          <!-- Off-Canvas Toggle (#mobile-menu)-->
-          <a
+          <!-- Off-Canvas Toggle (#shop-categories)--><a
+                                                        class="offcanvas-toggle cats-toggle"
+                                                        href="#shop-categories"
+                                                        data-toggle="offcanvas"></a>
+          <!-- Off-Canvas Toggle (#mobile-menu)--><a
             class="offcanvas-toggle menu-toggle"
             href="#mobile-menu"
             data-toggle="offcanvas"></a>
-          <!-- Site Logo 인라인 css 제거할것-->
-          <router-link to="/">
-            <a
-              class="site-logo"><img
-              src="@/assets/header_logo.png"
-              alt="댕댕마켓"
-              style="width: 55px" /></a>
-          </router-link>
+          <router-link class="site-logo" to="/"><img src="/img/header_logo.png" alt="댕댕마켓" style="width: 55px" /></router-link>
         </div>
       </div>
       <!-- 메인 네비바 -->
       <nav class="site-menu">
         <ul>
           <li>
-            <router-link to="/trade">
-              <span>댕댕거래</span>
-            </router-link>
+            <router-link to="/trade"><span>댕댕거래</span></router-link>
           </li>
           <li>
-            <router-link to="/feed">
-              <span>댕댕피드</span>
-            </router-link>
+            <a href="#"><span>댕댕피드</span></a>
           </li>
           <li>
-            <router-link to="/notice">
-              <span>댕댕알림</span>
-            </router-link>
+           <router-link to="/notice"><span>댕댕알림</span></router-link>
           </li>
         </ul>
       </nav>
@@ -180,7 +164,7 @@
               <i class="icon-search"></i>
             </div>
             <div class="account">
-              <a href="account-orders.html"></a><i class="icon-head"></i>
+             <router-link to="/mypage"><i class="icon-head"></i></router-link>
               <ul class="toolbar-dropdown">
                 <li class="sub-menu-user">
                   <div class="user-ava">
@@ -195,13 +179,13 @@
                     <span class="text-xs text-muted">환영합니다!</span>
                   </div>
                 </li>
-                <li><a href="마이페이지.html">마이댕댕</a></li>
+                <li><router-link to="/mypage">마이댕댕</router-link></li>
                 <li>
                   <a
                     href="#"
-                    onclick="showPopup();">댕댕톡</a>
+                    @click="showPopup">댕댕톡</a>
                 </li>
-                <li><a href="account-wishlist.html">찜 목록</a></li>
+                <li><router-link to="/mypage">wishlist</router-link></li>
                 <li class="sub-menu-separator"></li>
                 <li>
                   <a href="#"> <i class="icon-unlock"></i>로그아웃</a>
@@ -215,14 +199,15 @@
   </div>
 </template>
 
-
 <script>
 export default {
-  
+  methods:{
+    showPopup() {
+      const host='http://'+window.location.host+'/chat';
+      window.open(host, "a", "width=800, height=880, left=100, top=50")
+    }
+  },
 }
+
+
 </script>
-
-
-<style>
-  
-</style>
