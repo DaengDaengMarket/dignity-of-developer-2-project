@@ -7,19 +7,25 @@
         <div class="card-header">
           <ul class="nav nav-tabs nav-justified">
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="admin공지사항.html">공지사항</a>
+              <div class="nav-link active">
+                <router-link to="/adminnotice">
+                  공지사항
+                </router-link>
+              </div>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="admin신고글목록.html">신고글처리</a>
+              <div class="nav-link active">
+                <router-link to="/adminreport">
+                  신고글처리
+                </router-link>
+              </div>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="admin에드관리.html">에드관리</a>
+              <div class="nav-link active">
+                <router-link to="/adlist">
+                  광고관리
+                </router-link>
+              </div>
             </li>
           </ul>
         </div>
@@ -116,11 +122,13 @@
             <div
               class="d-grid gap-2 d-md-flex justify-content-md-end"
               role="group">
-              <button
-                type="button"
-                class="btn btn-outline-primary">
-                <a href="admin공지등록.html">공지 등록</a>
-              </button>
+              <router-link to="/noticeadd">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary">
+                  공지 등록
+                </button>
+              </router-link>
               <button
                 type="button"
                 class="btn btn-outline-primary">

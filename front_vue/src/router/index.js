@@ -3,7 +3,7 @@ import Home from '../views/Home.vue';
 import Trade from '../views/Trade.vue';
 import Feed from '../views/Feed.vue';
 import Notice from '../views/Notice.vue';
-import AdList from '../views/AdList.vue';
+// import AdList from '../views/AdList.vue';
 import Chat from '../views/Chat.vue';
 import LoginJoin from '../views/LoginJoin.vue';
 import MyPage from '../views/MyPage.vue';
@@ -11,6 +11,8 @@ import NoticeAdd from '../views/NoticeAdd.vue';
 import ProductDetail from '../views/ProductDetail.vue';
 import Report from '../views/Report.vue';
 import AdminNotice from '../views/AdminNotice.vue';
+import AdminReport from '../views/AdminReport.vue';
+import AdList from '../views/AdList.vue';
 
 const routes = [
   {
@@ -33,11 +35,6 @@ const routes = [
     path: '/notice',
     name: 'Notice',
     component: Notice,
-  },
-  {
-    path: '/adlist',
-    name: 'AdList',
-    component: AdList,
   },
   {
     path: '/chat',
@@ -71,8 +68,18 @@ const routes = [
   },
   {
     path: '/adminnotice',
-    name: 'adminnotice',
+    name: 'AdminNotice',
     component: AdminNotice,
+  },
+  {
+    path: '/adminreport',
+    name: 'AdminReport',
+    component: AdminReport,
+  },
+  {
+    path: '/adlist',
+    name: 'AdList',
+    component: AdList,
   },
 ];
 

@@ -347,6 +347,10 @@ a {
   color: #0da9ef;
   text-decoration: underline;
 }
+a:visited {
+  color: #0da9ef;
+  text-decoration: none;
+}
 a:hover {
   color: #0da9ef;
   text-decoration: none;

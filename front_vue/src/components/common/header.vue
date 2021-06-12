@@ -130,28 +130,41 @@
       </form>
       <div class="site-branding">
         <div class="inner">
-          <!-- Off-Canvas Toggle (#shop-categories)--><a
-                                                        class="offcanvas-toggle cats-toggle"
-                                                        href="#shop-categories"
-                                                        data-toggle="offcanvas"></a>
-          <!-- Off-Canvas Toggle (#mobile-menu)--><a
+          <!-- Off-Canvas Toggle (#shop-categories)-->
+          <a
+            class="offcanvas-toggle cats-toggle"
+            href="#shop-categories"
+            data-toggle="offcanvas"></a>
+          <!-- Off-Canvas Toggle (#mobile-menu)-->
+          <a
             class="offcanvas-toggle menu-toggle"
             href="#mobile-menu"
             data-toggle="offcanvas"></a>
-          <router-link class="site-logo" to="/"><img src="/img/header_logo.png" alt="댕댕마켓" style="width: 55px" /></router-link>
+          <router-link
+            class="site-logo"
+            to="/">
+            <img
+              src="/img/header_logo.png"
+              alt="댕댕마켓"
+              style="width: 55px" />
+          </router-link>
         </div>
       </div>
       <!-- 메인 네비바 -->
       <nav class="site-menu">
         <ul>
           <li>
-            <router-link to="/trade"><span>댕댕거래</span></router-link>
+            <router-link to="/trade">
+              <span>댕댕거래</span>
+            </router-link>
           </li>
           <li>
             <a href="#"><span>댕댕피드</span></a>
           </li>
           <li>
-           <router-link to="/notice"><span>댕댕알림</span></router-link>
+            <router-link to="/notice">
+              <span>댕댕알림</span>
+            </router-link>
           </li>
         </ul>
       </nav>
@@ -164,7 +177,9 @@
               <i class="icon-search"></i>
             </div>
             <div class="account">
-             <router-link to="/mypage"><i class="icon-head"></i></router-link>
+              <router-link to="/mypage">
+                <i class="icon-head"></i>
+              </router-link>
               <ul class="toolbar-dropdown">
                 <li class="sub-menu-user">
                   <div class="user-ava">
@@ -173,19 +188,29 @@
                       alt="Daniel Adams" />
                   </div>
                   <div class="user-info">
-                    <h6 class="user-name">
-                      Admin
-                    </h6>
+                    <router-link to="/adminnotice">
+                      <h6 class="user-name">
+                        Admin
+                      </h6>
+                    </router-link>
                     <span class="text-xs text-muted">환영합니다!</span>
                   </div>
                 </li>
-                <li><router-link to="/mypage">마이댕댕</router-link></li>
+                <li>
+                  <router-link to="/mypage">
+                    마이댕댕
+                  </router-link>
+                </li>
                 <li>
                   <a
                     href="#"
                     @click="showPopup">댕댕톡</a>
                 </li>
-                <li><router-link to="/mypage">wishlist</router-link></li>
+                <li>
+                  <router-link to="/mypage">
+                    wishlist
+                  </router-link>
+                </li>
                 <li class="sub-menu-separator"></li>
                 <li>
                   <a href="#"> <i class="icon-unlock"></i>로그아웃</a>
