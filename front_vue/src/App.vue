@@ -31,7 +31,7 @@ export default {
   },
   components: {
     Header,
-    Footer
+    Footer,
   },
   methods:{
     fetchData () {

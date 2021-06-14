@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <div class="offcanvas-wrapper">
-      <!-- Page Content-->
-      <!-- 광고 배너 슬라이더 -->
+     <!-- 광고 배너 슬라이더 -->
       <section
         class="hero-slider"
         style="background-image: url(img/hero-slider/main-bg.jpg)">
@@ -114,6 +112,10 @@
           </div>
         </div>
       </section>
+
+    <div class="offcanvas-wrapper">
+      <!-- Page Content-->
+     
 
       <!-- 물품 리스트 -->
       <section class="container padding-top-3x padding-bottom-3x">
@@ -611,4 +613,16 @@
     </div>
   </div>
 </template>
+<script>
+
+
+
+
+export default {
+  name: 'home',
+  components: {
+
+  }
+}
+</script>
 

@@ -15,6 +15,7 @@ import AdminReport from '../views/AdminReport.vue';
 import AdList from '../views/AdList.vue';
 
 const routes = [
+
   {
     path: '/',
     // redirect: '/',
