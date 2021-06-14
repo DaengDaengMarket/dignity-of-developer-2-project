@@ -1,117 +1,52 @@
 <template>
   <div id="mypage">
-    <!-- 광고 배너 슬라이더 -->
-    <section
-      class="hero-slider"
-      style="background-image: url(img/hero-slider/main-bg.jpg)">
-      <div
-        class="owl-carousel large-controls dots-inside"
-        data-owl-carousel="{ &quot;nav&quot;: true, &quot;dots&quot;: true, &quot;loop&quot;: true, &quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 7000 }">
-        <div class="item">
-          <div class="container padding-top-3x">
-            <div class="row justify-content-center align-items-center">
-              <div
-                class="
-                    col-lg-5 col-md-6
-                    padding-bottom-2x
-                    text-md-left text-center
-                  ">
-                <div class="from-bottom">
-                  <img
-                    class="d-inline-block w-150 mb-4"
-                    src="../assets/img/hero-slider/logo02.png"
-                    alt="Puma" />
-                  <div class="h2 text-body text-normal mb-2 pt-1">
-                    사나운 강아지의 가방
-                  </div>
-                  <div class="h2 text-body text-normal mb-4 pb-1">
-                    단돈 <span class="text-bold">₩120,000</span>
-                  </div>
-                </div>
-                <a
-                  class="btn btn-primary scale-up delay-1"
-                  href="shop-grid-ls.html">제품 보러가기</a>
-              </div>
-              <div class="col-md-6 padding-bottom-2x mb-3">
-                <img
-                  class="d-block mx-auto"
-                  src="../assets/img/hero-slider/02.png"
-                  alt="Puma Backpack" />
-              </div>
-            </div>
+    <!-- 배너슬라이드  -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../public/img/banners/home02.jpg" class="d-block w-100"
+            alt="../../public/img/banners/home02.jpg" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
-        <div class="item">
-          <div class="container padding-top-3x">
-            <div class="row justify-content-center align-items-center">
-              <div
-                class="
-                    col-lg-5 col-md-6
-                    padding-bottom-2x
-                    text-md-left text-center
-                  ">
-                <div class="from-bottom">
-                  <img
-                    class="d-inline-block w-200 mb-4"
-                    src="../assets/img/hero-slider/logo01.png"
-                    alt="Converse" />
-                  <div class="h2 text-body text-normal mb-2 pt-1">
-                    반려견과의 원활한 산책을 돕는 신발!
-                  </div>
-                  <div class="h2 text-body text-normal mb-4 pb-1">
-                    당신에게만!<span class="text-bold">₩55,000</span>
-                  </div>
-                </div>
-                <a
-                  class="btn btn-primary scale-up delay-1"
-                  href="shop-single.html">보러가기</a>
-              </div>
-              <div class="col-md-6 padding-bottom-2x mb-3">
-                <img
-                  class="d-block mx-auto"
-                  src="../assets/img/hero-slider/01.png"
-                  alt="Chuck Taylor All Star II" />
-              </div>
-            </div>
+        <div class="carousel-item">
+          <img src="../../public/img/banners/home02.jpg" class="d-block w-100"
+            alt="../../public/img/banners/home02.jpg" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
-        <div class="item">
-          <div class="container padding-top-3x">
-            <div class="row justify-content-center align-items-center">
-              <div
-                class="
-                    col-lg-5 col-md-6
-                    padding-bottom-2x
-                    text-md-left text-center
-                  ">
-                <div class="from-bottom">
-                  <img
-                    class="d-inline-block mb-4"
-                    src="../assets/img/hero-slider/logo03.png"
-                    style="width: 125px"
-                    alt="Motorola" />
-                  <div class="h2 text-body text-normal mb-2 pt-1">
-                    댕댕의
-                  </div>
-                  <div class="h2 text-body text-normal mb-4 pb-1">
-                    댕댕에 의한, <span class="text-bold">댕댕을 의한</span>
-                  </div>
-                </div>
-                <a
-                  class="btn btn-primary scale-up delay-1"
-                  href="shop-single.html">후원하러 가기</a>
-              </div>
-              <div class="col-md-6 padding-bottom-2x mb-3">
-                <img
-                  class="d-block mx-auto"
-                  src="../assets/img/hero-slider/banner03.png"
-                  alt="Moto 360" />
-              </div>
-            </div>
+        <div class="carousel-item">
+          <img src="../../public/img/banners/home02.jpg" class="d-block w-100"
+            alt="../../public/img/banners/home02.jpg" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
       </div>
-    </section>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
     
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper">
@@ -513,10 +448,9 @@
             <button
               class="btn btn-outline-primary"
               type="button"
-              data-toggle="modal"
-              data-target="#review-modal">
-              Modal Test
-              btn
+              data-bs-toggle="modal"
+              data-bs-target="#review-modal">
+              상품 후기 등록
             </button>
           </div>
         </div>
@@ -549,7 +483,7 @@
           <button
             class="close"
             type="button"
-            data-dismiss="modal"
+            data-bs-dismiss="modal"
             aria-label="Close">
             <span
               aria-hidden="true">&times;</span>
@@ -596,30 +530,23 @@
   .card {
     padding: 20px;
   }
-
   .card-group {
     margin-bottom: 3%;
   }
-
   .card-body>*,
   .card-footer {
     display: flex;
     justify-content: center;
   }
-
-
   .dropdown>button {
     height: 35px;
     display: flex;
     align-items: center;
     
-
   }
-
   .card-button>button {
     margin-left: 10px;
   }
-
  
   .comment{
         width: 90%;
