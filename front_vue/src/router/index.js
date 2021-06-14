@@ -15,6 +15,7 @@ import AdminReport from '../views/AdminReport.vue';
 import AdList from '../views/AdList.vue';
 
 const routes = [
+
   {
     path: '/',
     redirect: '/home', // redirect는 페이지 열자마자 특정페이지로 나타냄
