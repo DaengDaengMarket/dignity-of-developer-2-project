@@ -115,436 +115,486 @@
         </div>
       </section>
 
-      <!-- 물품 리스트 -->
+      <!-- 메인 -->
       <section class="container padding-top-3x padding-bottom-3x">
-        <h2 class="text-center mb-30">
-          물품
-        </h2>
-        <div class="isotope-grid cols-4 mb-2">
-          <div class="gutter-sizer">
-            <div class="grid-sizer">
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="../assets/img/shop/products/01.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">강아지도 쓸 수 있는 집</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩20000
-                  </h4>
-                  <p class="product-title">
-                    삼성1동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    3분 전
+        <main class="mt-3">
+          <div class="container">
+            <div class="row mb-2">
+              <div class="col-12">
+                <!-- <select class="form-select">
+                <option selected>
+                  메뉴 선택
+                </option>
+                <option value="1">
+                  노트북
+                </option>
+                <option value="2">
+                  모니터
+                </option>
+                <option value="3">
+                  마우스/키보드
+                </option>
+              </select> -->
+                <h1 class="text-center mb-30">
+                  물품
+                </h1>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/01.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      강아지도 쓸 수 있는 집
+                    </h5>
+                    <p class="card-text">
+                      <span class="badge bg-dark">삼성 1동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      3분 전
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/02.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">목줄</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩30000
-                  </h4>
-                  <p class="product-title">
-                    삼성2동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    1시간 전
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/03.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">급수급식대</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩40000
-                  </h4>
-                  <p class="product-title">
-                    압구정동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    12분 전
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/02.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      목줄
+                    </h5>
+                    <p class="card-text">
+                      <span class="badge bg-dark">삼성 2동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      1시간 전
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/04.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">이동장 팔아요</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩50000
-                  </h4>
-                  <p class="product-title">
-                    신사동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    1분 전
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/05.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">소독 스프레이</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩60000
-                  </h4>
-                  <p class="product-title">
-                    대치동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    1분 전
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/03.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      급수급식대
+                    </h5>
+                    <p class="card-text">
+                      <span class="badge bg-dark">압구정동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      12분 전
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/06.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">빨간 지붕 개집</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩70000
-                  </h4>
-                  <p class="product-title">
-                    도곡1동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    8분 전
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/07.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">귀여운 과일 옷</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩5000
-                  </h4>
-                  <p class="product-title">
-                    역삼1동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    45분 전
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/04.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      이동장 팔아요
+                    </h5>
+                    <p class="card-text">
+                      <span class="badge bg-dark">신사동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      1분 전
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/08.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">1980 청바지</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩15800
-                  </h4>
-                  <p class="product-title">
-                    역삼2동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    32분 전
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/09.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">검정 하네스</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩500
-                  </h4>
-                  <p class="product-title">
-                    개포1동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    3시간 전
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/05.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      소독 스프레이
+                    </h5>
+                    <h4>₩60000</h4>
+                    <p class="card-text">
+                      <span class="badge bg-dark">삼성 1동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      3분 전
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/10.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">장난감 3개 팔아요</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩20000
-                  </h4>
-                  <p class="product-title">
-                    개포2동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    5시간 전
-                  </div>
-                </div>
-              </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/11.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">샤워기 거치대</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩9900
-                  </h4>
-                  <p class="product-title">
-                    잠실1동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
-                  </div>
-                  <div class="card-footer text-muted">
-                    6시간 전
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/06.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      빨간지붕개집
+                    </h5>
+                    <h4>₩60000</h4>
+                    <p class="card-text">
+                      <span class="badge bg-dark">도곡 1동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      8분 전
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Product-->
-              <div class="grid-item">
-                <div class="product-card">
-                  <a
-                    class="product-thumb"
-                    href="shop-single.html"><img
-                      src="img/shop/products/12.jpg"
-                      alt="Product" /></a>
-                  <h3 class="product-title">
-                    <a href="shop-single.html">옷 같은 하네스</a>
-                  </h3>
-                  <h4 class="product-price">
-                    ₩45000
-                  </h4>
-                  <p class="product-title">
-                    잠실2동
-                  </p>
-                  <div class="product-buttons">
-                    <button
-                      class="btn btn-outline-primary btn-sm"
-                      data-toast
-                      data-toast-type="success"
-                      data-toast-position="topRight"
-                      data-toast-icon="icon-circle-check"
-                      data-toast-title="Product"
-                      data-toast-message="successfuly added to cart!">
-                      상세 정보 보기
-                    </button>
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/07.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      귀여운 과일 옷
+                    </h5>
+                    <h4>₩60000</h4>
+                    <p class="card-text">
+                      <span class="badge bg-dark">역삼 1동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      8분 전
+                    </div>
                   </div>
-                  <div class="card-footer text-muted">
-                    6시간 전
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/08.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      1980 청바지
+                    </h5>
+                    <h4>₩60000</h4>
+                    <p class="card-text">
+                      <span class="badge bg-dark">역삼 2동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      8분 전
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/09.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      검정 하네스
+                    </h5>
+                    <h4>₩500</h4>
+                    <p class="card-text">
+                      <span class="badge bg-dark">개포 1동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      8분 전
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/10.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      옷 같은 하네스
+                    </h5>
+                    <h4>₩45000</h4>
+                    <p class="card-text">
+                      <span class="badge bg-dark">잠실 2동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      8분 전
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/11.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      샤워기 거치대
+                    </h5>
+                    <h4>₩9900</h4>
+                    <p class="card-text">
+                      <span class="badge bg-dark">잠실 1동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      8분 전
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div
+                  class="card"
+                  style="width: 18rem">
+                  <a href="product_detail.html"><img
+                    src="../assets/img/shop/products/12.jpg"
+                    class="card-img-top"
+                    alt="keyboard" /></a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      장난감 3개 팔아요
+                    </h5>
+                    <h4>₩20000</h4>
+                    <p class="card-text">
+                      <span class="badge bg-dark">개포 2동</span>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="col-md-12 text-center">
+                        <button
+                          class="btn btn-outline-primary btn-sm"
+                          data-toast
+                          data-toast-type="success"
+                          data-toast-position="topRight"
+                          data-toast-icon="icon-circle-check"
+                          data-toast-title="Product"
+                          data-toast-message="successfuly added to cart!">
+                          상세 정보 보기
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                      8분 전
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- 모달용 버튼 -->
-        <div class="modal-test">
-          <button
-            class="btn btn-outline-primary"
-            type="button"
-            data-toggle="modal"
-            data-target="#review-modal">
-            Modal Test btn
-          </button>
-        </div>
+          <!-- 모달용 버튼 -->
+          <div class="modal-test">
+            <button
+              class="btn btn-outline-primary"
+              type="button"
+              data-toggle="modal"
+              data-target="#review-modal">
+              Modal Test btn
+            </button>
+          </div>
+        </main>
       </section>
     </div>
     <!-- Back To Top Button-->

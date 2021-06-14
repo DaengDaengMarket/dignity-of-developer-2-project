@@ -5,6 +5,7 @@ module.exports = {
   devServer: {
     overlay: false,
   },
+  lintOnSave: false,
   configureWebpack: {
     resolve: {
         alias: {

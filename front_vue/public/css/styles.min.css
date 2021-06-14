@@ -1663,6 +1663,7 @@ select.form-control.form-control-sm:not([size]):not([multiple]) {
   margin: 0;
   margin-right: 3px;
   padding: 0;
+  text-align: center;
 }
 .input-group .input-group-btn ~ .form-control {
   padding-right: 35px;
