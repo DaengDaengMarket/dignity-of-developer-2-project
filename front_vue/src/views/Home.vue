@@ -150,13 +150,16 @@
                   <p class="card-text">
                     삼성1동
                   </p>
-                  <div class="card-button">
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-sm">
-                      상세 정보 보기
-                    </button>
-                  </div>
+
+                  <router-link to="/productdetail">
+                    <div class="card-button">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-sm">
+                        상세 정보 보기
+                      </button>
+                    </div>
+                  </router-link>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">1시간 전</small>
