@@ -1,0 +1,21 @@
+spring:
+
+  # H2 Repository Location
+  datasource:
+  #  url:
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+
+  # Spring Jpa ddl
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+    # Query show
+    show-sql: true
+
+    # Query pretty print
+    properties:
+      hibernate:
+        format_sql: true
