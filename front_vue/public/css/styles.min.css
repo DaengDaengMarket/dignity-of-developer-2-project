@@ -6749,7 +6749,7 @@ video {
   padding: 0 15px;
   transition: color 0.3s;
   color: #606975;
-  font-size: 14px;
+  font-size: 25px; /* 네비 바 메뉴 글자 크기 수정 */
   font-weight: 500;
   text-decoration: none;
 }

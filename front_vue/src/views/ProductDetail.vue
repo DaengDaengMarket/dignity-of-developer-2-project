@@ -3,7 +3,7 @@
     <!-- Page Content-->
     <div class="container padding-bottom-3x mb-1">
       <div class="row">
-        <!-- Poduct Gallery-->
+        <!-- Product Gallery-->
         <!-- 상품 정보 관련 -->
         <div class="col-md-6">
           <div class="product-gallery">
@@ -199,7 +199,7 @@
             <a
               class="product-thumb"
               href="shop-single.html"><img
-                src="img/shop/products/09.jpg"
+                src="../../public/img/shop/products/09.jpg"
                 alt="Product" /></a>
             <h3 class="product-title">
               <a href="shop-single.html">Rocket Dog</a>
@@ -414,5 +414,3 @@
 <script>
 export default {};
 </script>
-
-<style></style>
