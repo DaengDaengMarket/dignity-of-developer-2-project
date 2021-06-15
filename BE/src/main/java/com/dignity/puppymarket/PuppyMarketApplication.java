@@ -1,6 +1,5 @@
 package com.dignity.puppymarket;
 
-import com.dignity.puppymarket.domain.Item;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,7 +8,6 @@ public class PuppyMarketApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(PuppyMarketApplication.class, args);
-
     }
 
 }
