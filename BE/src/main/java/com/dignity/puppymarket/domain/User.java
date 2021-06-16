@@ -6,10 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Member {
+public class User {
 
     @Id @GeneratedValue
-    @Column(name = "member_id")
     private Long id;
 
     private String email;

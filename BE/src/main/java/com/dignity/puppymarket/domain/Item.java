@@ -15,7 +15,7 @@ public class Item {
     private int hit;
 
     @ManyToOne
-    private Member seller;
+    private User seller;
 
 //    private Member buyer;
 
