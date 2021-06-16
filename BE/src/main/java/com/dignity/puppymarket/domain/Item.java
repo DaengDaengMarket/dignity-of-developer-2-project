@@ -1,12 +1,23 @@
 package com.dignity.puppymarket.domain;
 
-import javax.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Item {
-
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
+    @Column(name = "item_id")
     private Long id;
 
     private String name;
@@ -17,10 +28,11 @@ public class Item {
     @ManyToOne
     private User seller;
 
-//    private Member buyer;
+    @ManyToOne
+    private User buyer;
 
-    private ItemStatus status;
-    private NegoStatus negoFlag;
+    private ItemStatus itemStatus;
+    private NegoStatus negoStatus;
     private Categories categoryMid;
     private LocalDateTime createAt;
     private LocalDateTime updatedAt;

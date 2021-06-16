@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,12 +16,17 @@ import javax.persistence.Id;
 public class Advertise {
     @Id
     @GeneratedValue
+    @Column(name = "advertise_id")
     private Long id;
+
     private String imagePath;
 
+    private int orders;
+
     @Builder
-    public Advertise(Long id, String imagePath) {
+    public Advertise(Long id, String imagePath, int orders) {
         this.id = id;
         this.imagePath = imagePath;
+        this.orders = orders;
     }
 }
