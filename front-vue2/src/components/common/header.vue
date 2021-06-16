@@ -8,11 +8,13 @@
       <!-- sidemenu --> 
       <form
         class="site-search"
-        method="get">
+        method="get"
+      >
         <input
           type="text"
           name="site_search"
-          placeholder="찾으시는 물품을 입력해주세요" />
+          placeholder="찾으시는 물품을 입력해주세요"
+        />
         <div class="search-tools">
           <span class="clear-search">Clear</span><span class="close-search"><i class="icon-cross"></i></span>
         </div>
@@ -32,11 +34,13 @@
           
           <router-link
             class="site-logo"
-            to="/">
+            to="/"
+          >
             <img
               src="@/assets/img/header_logo.png"
               alt="댕댕마켓"
-              style="width: 55px" />
+              style="width: 55px"
+            />
           </router-link>
         </div>
       </div>
@@ -58,17 +62,26 @@
           </li>
           <li class="searchmenu">
             <div class="form-outline">
-        <input id="search-input" type="search" class="form-control" />
-        <label class="form-label" for="form1">Search</label>
-      </div>
-      </li>
-      <li>
-          <button id="search-button" type="button" class="btn btn-primary">
-    <i class="fas fa-search"></i>
-  </button>
-      </li>
-
-          
+              <input
+                id="search-input"
+                type="search"
+                class="form-control"
+              />
+              <label
+                class="form-label"
+                for="form1"
+              >Search</label>
+            </div>
+          </li>
+          <li>
+            <button
+              id="search-button"
+              type="button"
+              class="btn btn-primary"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </li>
         </ul>
       </nav>
 
@@ -89,7 +102,8 @@
                   <div class="user-ava">
                     <img
                       src="@/assets/img/header_logo.png"
-                      alt="Daniel Adams" />
+                      alt="Daniel Adams"
+                    />
                   </div>
                   <div class="user-info">
                     <router-link to="/adminnotice">
@@ -108,7 +122,8 @@
                 <li>
                   <a
                     href="#"
-                    @click="showPopup">댕댕톡</a>
+                    @click="showPopup"
+                  >댕댕톡</a>
                 </li>
                 <li>
                   <router-link to="/mypage">
@@ -127,76 +142,81 @@
     </header>
     <sidebar>
       <span class="sidemenu-slide">
-       <div class="nav-container" tabindex="0" @click="checkSidebarVisibility" >
-            <div class="nav-toggle"></div>
-             <v-navigation-drawer v-if="showSidebar"
-      id="app-drawer"
-      v-model="drawer"
-      app
-      dark
-      :color="colors.menu_background_color"
-      floating
-      persistent
-      mobile-break-point="960"
-      width="280"
-    >
-      <div>
-        <v-layout
-          class="fill-height"
-          tag="v-list"
-          column
+        <div
+          class="nav-container"
+          tabindex="0"
+          @click="checkSidebarVisibility"
         >
-          <v-list>
-            <v-list-item v-on:click="showSidebar=false">
-              <v-toolbar-title><v-icon class="mr-2">fas fa-bars</v-icon>댕댕마켓</v-toolbar-title>
-            </v-list-item>
-            <hr class="mt-2 mb-2"/>
-            <v-list-item-group active-class="white--text">
-              <template v-for="menu in menus">
-                <template v-if="menu.childrens">
-                  <v-list-group
-                    :prepend-icon="menu.icon" 
-                    :key="menu.id" 
-                  >
-                    <template v-slot:activator>
-                      <v-list-item-title>{{menu.title}}</v-list-item-title>
-                    </template>
-                    <template v-for="children in menu.childrens">
-                      <v-list-item 
-                        @click="movePage(children.target);" 
-                        :key="children.id" 
-                        class="ml-2" 
-                        :active-class="`${colors.menu_selected_color} accent-4 white--text`"
-                      >
-                        <v-list-item-icon :active-class="`${colors.menu_selected_color} accent-4`">
-                          <v-icon>{{children.icon}}</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-title>
-                          {{children.title}}
-                        </v-list-item-title>
-                      </v-list-item>
-                    </template>
-                  </v-list-group>
-                </template>
-                <template v-else> 
-                  <v-list-item 
-                    @click="movePage(menu.target);" 
-                    :key="menu.id" 
-                  >
-                    <v-list-item-icon>
-                      <v-icon>{{menu.icon}}</v-icon>
-                    </v-list-item-icon>
-                    <v-list-item-title>{{menu.title}}</v-list-item-title>
+          <div class="nav-toggle"></div>
+          <v-navigation-drawer
+            v-if="showSidebar"
+            id="app-drawer"
+            v-model="drawer"
+            app
+            dark
+            :color="colors.menu_background_color"
+            floating
+            persistent
+            mobile-break-point="960"
+            width="280"
+          >
+            <div>
+              <v-layout
+                class="fill-height"
+                tag="v-list"
+                column
+              >
+                <v-list>
+                  <v-list-item @click="showSidebar=false">
+                    <v-toolbar-title><v-icon class="mr-2">fas fa-bars</v-icon>댕댕마켓</v-toolbar-title>
                   </v-list-item>
-                </template>
-              </template>
-            </v-list-item-group>
-          </v-list>
-        </v-layout>
-      </div>
-    </v-navigation-drawer>
-    </div>
-    </span>
+                  <hr class="mt-2 mb-2" />
+                  <v-list-item-group active-class="white--text">
+                    <template v-for="menu in menus">
+                      <template v-if="menu.childrens">
+                        <v-list-group
+                          :key="menu.id" 
+                          :prepend-icon="menu.icon" 
+                        >
+                          <template #activator>
+                            <v-list-item-title>{{ menu.title }}</v-list-item-title>
+                          </template>
+                          <template v-for="children in menu.childrens">
+                            <v-list-item 
+                              :key="children.id" 
+                              class="ml-2" 
+                              :active-class="`${colors.menu_selected_color} accent-4 white--text`" 
+                              @click="movePage(children.target);"
+                            >
+                              <v-list-item-icon :active-class="`${colors.menu_selected_color} accent-4`">
+                                <v-icon>{{ children.icon }}</v-icon>
+                              </v-list-item-icon>
+                              <v-list-item-title>
+                                {{ children.title }}
+                              </v-list-item-title>
+                            </v-list-item>
+                          </template>
+                        </v-list-group>
+                      </template>
+                      <template v-else> 
+                        <v-list-item 
+                          :key="menu.id" 
+                          @click="movePage(menu.target);" 
+                        >
+                          <v-list-item-icon>
+                            <v-icon>{{ menu.icon }}</v-icon>
+                          </v-list-item-icon>
+                          <v-list-item-title>{{ menu.title }}</v-list-item-title>
+                        </v-list-item>
+                      </template>
+                    </template>
+                  </v-list-item-group>
+                </v-list>
+              </v-layout>
+            </div>
+          </v-navigation-drawer>
+        </div>
+      </span>
     </sidebar>
   </div>
 </template>

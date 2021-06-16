@@ -1,18 +1,16 @@
 <template>
-<div>
-      <Header v-if="chatcheck"/>
-      <router-view/>
-      <Footer v-if="chatcheck"/>
-
-</div>
-      
+  <div>
+    <Header v-if="chatcheck" />
+    <router-view />
+    <Footer v-if="chatcheck" />
+  </div>
 </template>
 
 <script>
 import Header from '@/components/common/header.vue';
 import Footer from '@/components/common/footer.vue';
 export default {
-   mounted(){
+  mounted(){
     if (window.location.pathname === '/chat'){this.chatcheck=false; console.log(window.location.pathname)}
     else this.chatcheck=true;
   },
@@ -27,7 +25,7 @@ export default {
     created(){
     this.fetchData()
   },
-   watch:{
+  watch:{
     '$route':'fetchData'
   },
     components: {
