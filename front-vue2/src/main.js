@@ -1,3 +1,4 @@
+
 import Vue from 'vue'
 import App from './App.vue'
 import { router } from "./router/index.js";
@@ -12,24 +13,21 @@ import VueSidebarMenu from 'vue-sidebar-menu'
 import Slider from '@jeremyhamm/vue-slider'
 import vuetify from './plugins/vuetify'
 import sidemenu from '../public/css/sidemenu.css'
-//css 설정
-import '../public/css/sidemenu.css';
 
 // Vue.use(sidemenu)
 // Vue.use(Slider)
 // Vue.use(VueSidebarMenu)
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-  router,
-  store,
-  vuetify,
-  sidemenu,
-  Slider,
-  VueSidebarMenu,
-
-  components:{
-    'app':App
-  }
-}).$mount('#app')
+	components: {
+		app: App,
+	},
+	render: h => h(App),
+	router,
+	store,
+	vuetify,
+	sidemenu,
+	Slider,
+	VueSidebarMenu,
+}).$mount('#app');
