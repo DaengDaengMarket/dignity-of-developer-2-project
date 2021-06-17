@@ -17,6 +17,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -80,6 +81,10 @@ public class Item {
     //Item 1 : N ItemImage
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "item")
     List<ItemImage> itemImageList = new ArrayList<>();
+
+    //Item 1 : 1 Blame
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "item")
+    private Blame blame;
 
     public Item(Long id, String name, int price, String description, int hit, ItemStatus itemStatus,
                 NegoStatus negoStatus, BigCategory bigCategory, MidCategory midCategory, LocalDateTime createdAt,
