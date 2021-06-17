@@ -4,9 +4,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MainController {
+public class HomeController {
     @GetMapping("/")
-    public String Main() {
+    public String Home() {
         return "index";
     }
 }
