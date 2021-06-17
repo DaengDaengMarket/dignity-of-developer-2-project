@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -11,15 +12,18 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "user")
 public class User {
     @Id
     @GeneratedValue
+    @Column(name = "user_id")
     private Long id;
 
     private String email;
@@ -35,19 +39,19 @@ public class User {
     private Float rate;
 
     @Enumerated(EnumType.STRING)
-    private String si;
+    private Si si;
 
     @Enumerated(EnumType.STRING)
-    private String gu;
+    private Gu gu;
 
     @Enumerated(EnumType.STRING)
     private BigCategory bigCategory;
 
     //User(seller) 1 : N Item
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "seller")
-    List<Item> sellItemList = new ArrayList<>();
+    List<Item> sellerItemList = new ArrayList<>();
 
     //User(buyer) 1: N Item
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "buyer")
-    List<Item> buyItemList = new ArrayList<>();
+    List<Item> buyerItemList = new ArrayList<>();
 }

@@ -16,12 +16,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
+@Table(name = "item")
 public class Item {
     @Id
     @GeneratedValue
@@ -51,7 +56,7 @@ public class Item {
     private MidCategory midCategory;
 
     @CreatedDate
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
@@ -64,17 +69,21 @@ public class Item {
 
     //Item N : 1 User(seller)
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "seller_id", referencedColumnName="user_id")
     private User seller;
 
     //Item N : 1 User(buyer)
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "buyer_id")
+    @JoinColumn(name = "buyer_id", referencedColumnName="user_id")
     private User buyer;
 
+    //Item 1 : N ItemImage
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "item")
+    List<ItemImage> itemImageList = new ArrayList<>();
+
     public Item(Long id, String name, int price, String description, int hit, ItemStatus itemStatus,
-                NegoStatus negoStatus, BigCategory bigCategory, MidCategory midCategory, LocalDateTime createAt,
-                LocalDateTime updatedAt, Si si, Gu gu, User seller, User buyer) {
+                NegoStatus negoStatus, BigCategory bigCategory, MidCategory midCategory, LocalDateTime createdAt,
+                LocalDateTime updatedAt, Si si, Gu gu, User seller, User buyer, List<ItemImage> itemImageList) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -84,11 +93,12 @@ public class Item {
         this.negoStatus = negoStatus;
         this.bigCategory = bigCategory;
         this.midCategory = midCategory;
-        this.createAt = createAt;
+        this.createdAt = createdAt;
         this.updatedAt = updatedAt;
         this.si = si;
         this.gu = gu;
         this.seller = seller;
         this.buyer = buyer;
+        this.itemImageList = itemImageList;
     }
 }

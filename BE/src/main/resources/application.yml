@@ -13,7 +13,7 @@ spring:
 
   # Spring Jpa ddl
   jpa:
-    generate-ddl: false
+    generate-ddl: true
     hibernate:
       ddl-auto: update
 

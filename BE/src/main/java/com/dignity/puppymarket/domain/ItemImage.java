@@ -7,28 +7,37 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "advertise")
-public class Advertise {
+@Table(name = "item_image")
+public class ItemImage {
     @Id
     @GeneratedValue
-    @Column(name = "advertise_id")
+    @Column(name = "item_image_id")
     private Long id;
 
-    private String imagePath;
+    private String path;
 
     private int orders;
 
+    //ItemImage N : 1 Item
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "item_id")
+    private Item item;
+
     @Builder
-    public Advertise(Long id, String imagePath, int orders) {
+    public ItemImage(Long id, String path, int orders, Item item) {
         this.id = id;
-        this.imagePath = imagePath;
+        this.path = path;
         this.orders = orders;
+        this.item = item;
     }
 }
