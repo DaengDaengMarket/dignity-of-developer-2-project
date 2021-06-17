@@ -59,4 +59,8 @@ public class User {
     //User 1 : 1 Blame
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
     private Blame blame;
+
+    //User 1 : 1 Wish
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
+    private Wish wish;
 }

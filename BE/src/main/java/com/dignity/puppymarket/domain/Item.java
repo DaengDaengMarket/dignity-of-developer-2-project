@@ -86,6 +86,10 @@ public class Item {
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "item")
     private Blame blame;
 
+    //Item 1 : 1 Wish
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "item")
+    private Wish wish;
+
     public Item(Long id, String name, int price, String description, int hit, ItemStatus itemStatus,
                 NegoStatus negoStatus, BigCategory bigCategory, MidCategory midCategory, LocalDateTime createdAt,
                 LocalDateTime updatedAt, Si si, Gu gu, User seller, User buyer, List<ItemImage> itemImageList) {
