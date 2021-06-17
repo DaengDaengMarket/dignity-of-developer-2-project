@@ -9,6 +9,9 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended',
   ],
+    parserOptions: {
+    parser: "babel-eslint",
+  },
   // 코드 정리 플러그인 추가
   plugins: ['prettier'],
   // 사용자 편의 규칙 추가
