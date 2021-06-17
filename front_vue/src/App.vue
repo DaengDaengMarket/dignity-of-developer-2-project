@@ -2,6 +2,7 @@
   <div>
     <Header v-if="chatcheck" />
     <router-view />
+    <!-- <Sidemenu v-if="chatcheck" /> -->
     <Footer v-if="chatcheck" />
   </div>
 </template>
@@ -9,6 +10,8 @@
 <script>
 import Header from '@/components/common/header.vue';
 import Footer from '@/components/common/footer.vue';
+// import Sidemenu from '@/components/common/sidemenu.vue';
+
 
 export default {
   mounted(){
@@ -31,7 +34,8 @@ export default {
   },
   components: {
     Header,
-    Footer
+    Footer,
+    // Sidemenu
   },
   methods:{
     fetchData () {

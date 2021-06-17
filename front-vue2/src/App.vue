@@ -3,7 +3,6 @@
       <Header v-if="chatcheck"/>
       <router-view/>
       <Footer v-if="chatcheck"/>
-
 </div>
       
 </template>
@@ -50,5 +49,8 @@ export default {
 }
 .v-navigation-drawer__content{
   z-index:1
+}
+.toolbar{
+  z-index:3
 }
 </style>

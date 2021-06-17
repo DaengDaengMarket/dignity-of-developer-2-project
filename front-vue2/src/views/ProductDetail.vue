@@ -50,48 +50,31 @@
             style="float: right">&nbsp;&nbsp;카테고리 | 대형 | 강아지 옷 &nbsp;&nbsp;&nbsp;&nbsp;2분
             전<br />
           </span>
-          <div class="row">
-            <div
-              col-sm-6
+          
+          <v-row text-center>
+            <v-col cols="6"
               style="margin-left: 10px">
               <img
                 src="img/account/user-ava-md.jpg"
                 style="width: 50px; height: 50px"
                 alt="Daniel Adams" />
-            </div>
-            <div
-              col-sm-6
-              style="vertical-align: middle; margin-top: 10px">
-              Nickname
-            </div>
-            <div
-              class="dropdown"
-              style="margin-left: 20px">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenu2"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"></button>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="dropdownMenu2">
-                <button
-                  class="dropdown-item"
-                  type="button">
-                  프로필 보기
-                </button>
-                <button
-                  class="dropdown-item"
-                  type="button"
-                  data-toggle="modal"
-                  data-target="#report-Modal">
-                  신고하기
-                </button>
-              </div>
-            </div>
-          </div>
+                <span>&nbsp;Nickname</span>
+                 <span>
+                <b-dropdown id="dropdown-1" text="" class="m-md-2">
+                  <b-dropdown-item>프로필 보기</b-dropdown-item>
+                   <b-dropdown-item @click="toggleModal">신고하기</b-dropdown-item>
+                    <!-- 신고 모달  -->
+                    <b-modal id="modal-1" title="신고 정보" v-model="modalShown" @show="resetModal" @hidden="resetModal" @ok="handleOk">
+                      <form ref="form" @submit.stop.prevent="handleSubmit" > 
+                         <textarea class="form-control" id="textarea-input" rows="5" placeholder="상세 내용을 작성해주세요."></textarea>
+                      </form>
+
+                    </b-modal>                
+                    </b-dropdown>
+                </span>
+            </v-col>
+           
+          </v-row>
 
           <p style="margin-top: 50px">
             <span style="font-size: 30px">명품 강아지 옷 팝니다</span><span>
@@ -183,12 +166,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Related Products Carousel-->
-      <h3 class="text-center padding-top-2x mt-2 padding-bottom-1x">
-        You May Also Like
-      </h3>
-      <!-- Carousel-->
       <div
         class="owl-carousel"
         data-owl-carousel="{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;margin&quot;: 30, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;576&quot;:{&quot;items&quot;:2},&quot;768&quot;:{&quot;items&quot;:3},&quot;991&quot;:{&quot;items&quot;:4},&quot;1200&quot;:{&quot;items&quot;:4}} }">
@@ -410,11 +387,29 @@
         </div>
       </div>
     </div>
-  </div>
+
+</div>
+
 </template>
 
 <script>
-export default {};
+ export default {
+    data: () => ({
+      modalShown:false
+    }),
+    methods:{
+      toggleModal(){
+        this.modalShown=!this.modalShown
+      },
+    }
+  }
 </script>
 
-<style></style>
+<style scoped>
+.offcanvas-wrapper{
+  z-index:1;
+}
+.col-sm-6{
+  margin-left:10px;
+}
+</style>

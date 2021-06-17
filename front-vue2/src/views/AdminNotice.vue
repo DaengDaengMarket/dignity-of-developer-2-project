@@ -154,5 +154,7 @@ export default {
 </script>
 
 <style>
-
+  .offcanvas-wrapper{
+    z-index:1;
+  }
 </style>

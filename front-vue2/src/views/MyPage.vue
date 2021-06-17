@@ -1096,4 +1096,7 @@
   .comment{
         width: 90%;
   }
+.offcanvas-wrapper{
+  z-index:1
+}
 </style>

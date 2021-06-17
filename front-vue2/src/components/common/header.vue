@@ -76,13 +76,9 @@
       <div class="toolbar">
         <div class="inner">
           <div class="tools">
-            <!-- <div class="search">
-              <i class="icon-search"></i>
-            </div> -->
-            
             <div class="account">
               <router-link to="/mypage">
-                <i class="icon-head"></i>
+                <i class="far fa-user"></i>
               </router-link>
               <ul class="toolbar-dropdown">
                 <li class="sub-menu-user">
@@ -102,22 +98,24 @@
                 </li>
                 <li>
                   <router-link to="/mypage">
+                  <i class="fas fa-bone"></i>
                     마이댕댕
                   </router-link>
                 </li>
                 <li>
                   <a
                     href="#"
-                    @click="showPopup">댕댕톡</a>
+                    @click="showPopup"><i class="far fa-comment-dots"></i>댕댕톡</a>
                 </li>
                 <li>
                   <router-link to="/mypage">
+                  <i class="fas fa-shopping-basket"></i>
                     wishlist
                   </router-link>
                 </li>
                 <li class="sub-menu-separator"></li>
                 <li>
-                  <a href="#"> <i class="icon-unlock"></i>로그아웃</a>
+                  <a href="#"> <i class="fas fa-sign-out-alt"></i>로그아웃</a>
                 </li>
               </ul>
             </div>
@@ -267,5 +265,9 @@ header{
 .searchmenu{
   padding-left:200px;
   width:400px;
+}
+.toolbar{
+  z-index:7;
+  position:absolute
 }
 </style>

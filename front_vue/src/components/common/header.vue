@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div
+    <!-- <div
       class="offcanvas-container"
       id="shop-categories">
       <div class="offcanvas-header">
@@ -56,7 +56,7 @@
       </nav>
     </div>
 
-    <!-- 모바일용 햄버거 버튼 메뉴 -->
+    모바일용 햄버거 버튼 메뉴
     <div
       class="offcanvas-container"
       id="mobile-menu">
@@ -111,11 +111,29 @@
           </li>
         </ul>
       </nav>
-    </div>
+    </div> -->
 
     <!-- 네비바 -->
     <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
     <header class="navbar navbar-sticky">
+      <div
+        class="nav-container"
+        tabindex="0"
+        @click="menuItems">
+        <div class="nav-toggle"></div>
+
+        <nav class="nav-items">
+          <a
+            class="nav-item"
+            href="#">Яблоко</a>
+          <a
+            class="nav-item"
+            href="#">Вишня</a>
+          <a
+            class="nav-item"
+            href="#">Арбуз</a>
+        </nav>
+      </div>
       <!-- 검색창 -->
       <form
         class="site-search"
@@ -131,15 +149,15 @@
       <div class="site-branding">
         <div class="inner">
           <!-- Off-Canvas Toggle (#shop-categories)-->
-          <a
+          <!-- <a
             class="offcanvas-toggle cats-toggle"
             href="#shop-categories"
             data-toggle="offcanvas"></a>
-          <!-- Off-Canvas Toggle (#mobile-menu)-->
+          Off-Canvas Toggle (#mobile-menu)
           <a
             class="offcanvas-toggle menu-toggle"
             href="#mobile-menu"
-            data-toggle="offcanvas"></a>
+            data-toggle="offcanvas"></a> -->
           <router-link
             class="site-logo"
             to="/">
@@ -225,6 +243,26 @@
 </template>
 
 <script>
+const nav = document.querySelector(".nav-container");
+
+if (nav) {
+  const toggle = nav.querySelector(".nav-toggle");
+  
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      if (nav.classList.contains("is-active")) {
+        nav.classList.remove("is-active");
+      }
+      else {
+        nav.classList.add("is-active");
+      }
+    });
+    
+    nav.addEventListener("blur", () => {
+      nav.classList.remove("is-active");
+    });
+  }
+}
 export default {
   methods:{
     showPopup() {
