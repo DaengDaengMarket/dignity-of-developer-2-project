@@ -30,100 +30,13 @@
             href="#mobile-menu"
             data-toggle="offcanvas"></a> -->
 
-					<sidebar>
-						<span class="sidemenu-slide">
-							<div
-								class="nav-container"
-								tabindex="0"
-								@click="checkSidebarVisibility"
-							>
-								<div class="nav-toggle"></div>
-								<v-navigation-drawer
-									v-if="showSidebar"
-									id="app-drawer"
-									v-model="drawer"
-									app
-									dark
-									:color="colors.menu_background_color"
-									floating
-									persistent
-									mobile-break-point="960"
-									width="280"
-								>
-									<div>
-										<v-layout class="fill-height" tag="v-list" column>
-											<v-list>
-												<v-list-item @click="showSidebar = false">
-													<v-toolbar-title
-														><v-icon class="mr-2">fas fa-bars</v-icon
-														>댕댕마켓</v-toolbar-title
-													>
-												</v-list-item>
-												<hr class="mt-2 mb-2" />
-												<v-list-item-group active-class="white--text">
-													<template v-for="menu in menus">
-														<template v-if="menu.childrens">
-															<v-list-group
-																:key="menu.id"
-																:prepend-icon="menu.icon"
-															>
-																<template #activator>
-																	<v-list-item-title>{{
-																		menu.title
-																	}}</v-list-item-title>
-																</template>
-																<template v-for="children in menu.childrens">
-																	<v-list-item
-																		:key="children.id"
-																		class="ml-2"
-																		:active-class="
-																			`${colors.menu_selected_color} accent-4 white--text`
-																		"
-																		@click="movePage(children.target)"
-																	>
-																		<v-list-item-icon
-																			:active-class="
-																				`${colors.menu_selected_color} accent-4`
-																			"
-																		>
-																			<v-icon>{{ children.icon }}</v-icon>
-																		</v-list-item-icon>
-																		<v-list-item-title>
-																			{{ children.title }}
-																		</v-list-item-title>
-																	</v-list-item>
-																</template>
-															</v-list-group>
-														</template>
-														<template v-else>
-															<v-list-item
-																:key="menu.id"
-																@click="movePage(menu.target)"
-															>
-																<v-list-item-icon>
-																	<v-icon>{{ menu.icon }}</v-icon>
-																</v-list-item-icon>
-																<v-list-item-title>{{
-																	menu.title
-																}}</v-list-item-title>
-															</v-list-item>
-														</template>
-													</template>
-												</v-list-item-group>
-											</v-list>
-										</v-layout>
-									</div>
-								</v-navigation-drawer>
-							</div>
-						</span>
-					</sidebar>
-
 					<router-link class="site-logo" to="/">
 						<img
 							src="@/assets/img/header_logo.png"
 							alt="댕댕마켓"
 							style="width: 55px"
 						/>
+						<div class="title">댕댕마켓</div>
 					</router-link>
 				</div>
 			</div>
@@ -209,6 +122,87 @@
 				</div>
 			</div>
 		</header>
+
+		<sidebar>
+			<span class="sidemenu-slide">
+				<div class="nav-container" tabindex="0" @click="checkSidebarVisibility">
+					<div class="nav-toggle"></div>
+					<v-navigation-drawer
+						v-if="showSidebar"
+						id="app-drawer"
+						v-model="drawer"
+						app
+						dark
+						:color="colors.menu_background_color"
+						floating
+						persistent
+						mobile-break-point="960"
+						width="280"
+					>
+						<div>
+							<v-layout class="fill-height" tag="v-list" column>
+								<v-list>
+									<v-list-item @click="showSidebar = false">
+										<v-toolbar-title
+											><v-icon class="mr-2">fas fa-bars</v-icon
+											>댕댕마켓</v-toolbar-title
+										>
+									</v-list-item>
+									<hr class="mt-2 mb-2" />
+									<v-list-item-group active-class="white--text">
+										<template v-for="menu in menus">
+											<template v-if="menu.childrens">
+												<v-list-group :key="menu.id" :prepend-icon="menu.icon">
+													<template #activator>
+														<v-list-item-title>{{
+															menu.title
+														}}</v-list-item-title>
+													</template>
+													<template v-for="children in menu.childrens">
+														<v-list-item
+															:key="children.id"
+															class="ml-2"
+															:active-class="
+																`${colors.menu_selected_color} accent-4 white--text`
+															"
+															@click="movePage(children.target)"
+														>
+															<v-list-item-icon
+																:active-class="
+																	`${colors.menu_selected_color} accent-4`
+																"
+															>
+																<v-icon>{{ children.icon }}</v-icon>
+															</v-list-item-icon>
+															<v-list-item-title>
+																{{ children.title }}
+															</v-list-item-title>
+														</v-list-item>
+													</template>
+												</v-list-group>
+											</template>
+											<template v-else>
+												<v-list-item
+													:key="menu.id"
+													@click="movePage(menu.target)"
+												>
+													<v-list-item-icon>
+														<v-icon>{{ menu.icon }}</v-icon>
+													</v-list-item-icon>
+													<v-list-item-title>{{
+														menu.title
+													}}</v-list-item-title>
+												</v-list-item>
+											</template>
+										</template>
+									</v-list-item-group>
+								</v-list>
+							</v-layout>
+						</div>
+					</v-navigation-drawer>
+				</div>
+			</span>
+		</sidebar>
 	</div>
 </template>
 
@@ -282,5 +276,8 @@ header {
 .searchmenu {
 	padding-left: 200px;
 	width: 400px;
+}
+.title {
+	font-size: 18px;
 }
 </style>
