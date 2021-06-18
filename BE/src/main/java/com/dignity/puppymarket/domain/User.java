@@ -63,4 +63,8 @@ public class User {
     //User 1 : 1 Wish
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
     private Wish wish;
+
+    //User 1 : N chatRoom
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private List<ChatRoom> chatRoomList = new ArrayList<>();
 }

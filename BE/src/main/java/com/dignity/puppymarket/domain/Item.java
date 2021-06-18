@@ -94,6 +94,10 @@ public class Item {
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "item")
     private Review review;
 
+    //Item 1 : 1 chatRoom
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "item")
+    private ChatRoom chatRoom;
+
     public Item(Long id, String name, int price, String description, int hit, ItemStatus itemStatus,
                 NegoStatus negoStatus, BigCategory bigCategory, MidCategory midCategory, LocalDateTime createdAt,
                 LocalDateTime updatedAt, Si si, Gu gu, User seller, User buyer, List<ItemImage> itemImageList) {
