@@ -67,4 +67,8 @@ public class User {
     //User 1 : N chatRoom
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private List<ChatRoom> chatRoomList = new ArrayList<>();
+
+    //User(sender) 1 : N ChatMessage
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "sender")
+    private List<ChatMessage> chatMessageList = new ArrayList<>();
 }
