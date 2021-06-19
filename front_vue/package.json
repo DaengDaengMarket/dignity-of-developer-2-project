@@ -15,24 +15,17 @@
     "core-js": "^3.6.5",
     "fontawesome": "^5.6.3",
     "imagesloaded": "^4.1.4",
-<<<<<<< HEAD
-=======
     "jquery": "^3.6.0",
     "material-design-icons-iconfont": "^6.1.0",
     "next-redux-wrapper": "^7.0.1",
     "node-sass": "^6.0.0",
->>>>>>> 0317c0fde0a21ae45829b9d0386d202592a62cbe
     "popper.js": "^1.16.1",
     "sass-loader": "^10.2.0",
     "vue": "^3.1.1",
     "vue-router": "^4.0.8",
-<<<<<<< HEAD
-    "vuex": "^3.6.2"
-=======
     "vue-sidebar-menu": "^4.7.4",
     "vuetify": "^2.5.3",
     "vuex": "^4.0.1"
->>>>>>> 0317c0fde0a21ae45829b9d0386d202592a62cbe
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -53,13 +46,8 @@
     "postcss-loader": "^4.2.0",
     "prettier": "^2.3.1",
     "style-loader": "^2.0.0",
-<<<<<<< HEAD
-    "webpack": "^4.46.0",
-    "webpack-cli": "^4.7.2"
-=======
     "vue-cli-plugin-vuetify": "~2.4.1",
     "webpack": "^4.46.0"
->>>>>>> 0317c0fde0a21ae45829b9d0386d202592a62cbe
   },
   "eslintConfig": {
     "root": true,

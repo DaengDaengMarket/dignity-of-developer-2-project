@@ -35,10 +35,7 @@ export default {
   components: {
     Header,
     Footer,
-<<<<<<< HEAD
-=======
     // Sidemenu
->>>>>>> 0317c0fde0a21ae45829b9d0386d202592a62cbe
   },
   methods:{
     fetchData () {
