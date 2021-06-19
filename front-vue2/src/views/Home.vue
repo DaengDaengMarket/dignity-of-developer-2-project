@@ -101,24 +101,27 @@
 							</h2>
 						</div>
 
-						<!-- 상품 리스트 그룹 1  -->
+						<!-- 홈 상품 리스트 그룹-->
+						<!-- 카드 1열 -->
 						<div class="card-group">
-							<!-- 카드 1 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/01.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/01.jpg"
-								/>
+							<div
+								class="card"
+								v-for="item in this.$store.state.items1"
+								v-bind:key="item"
+							>
+								<img :src="item.path" class="card-img-top" alt="image" />
 								<div class="card-body">
+									<!-- <router-link v-bind:to="`/${itme.name}`"> -->
 									<h5 class="card-title">
-										강아지도 쓸 수 있는집
+										{{ item.name }}
 									</h5>
+									<!-- </router-link> -->
+
 									<p class="card-text">
-										20,000원
+										{{ item.price }}
 									</p>
 									<p class="card-text">
-										삼성1동
+										{{ item.wanted_location }}
 									</p>
 
 									<router-link to="/productdetail">
@@ -134,82 +137,37 @@
 								</div>
 							</div>
 							<!-- 카드 2 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/02.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/01.jpg"
-								/>
-								<div class="card-body">
-									<h5 class="card-title">
-										목줄
-									</h5>
-									<p class="card-text">
-										30,000원
-									</p>
-									<p class="card-text">
-										삼성2동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
-							<!-- 카드 3 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/03.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/01.jpg"
-								/>
-								<div class="card-body">
-									<h5 class="card-title">
-										급수급식대
-									</h5>
-									<p class="card-text">
-										40,000원
-									</p>
-									<p class="card-text">
-										압구정동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
+						</div>
 
-							<!-- 카드 4 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/04.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/04.jpg"
-								/>
+						<!-- 카드 2열 -->
+						<div class="card-group">
+							<div
+								class="card"
+								v-for="item in this.$store.state.items2"
+								v-bind:key="item"
+							>
+								<img :src="item.path" class="card-img-top" alt="image" />
 								<div class="card-body">
+									<!-- <router-link v-bind:to="`/${itme.name}`"> -->
 									<h5 class="card-title">
-										이동장
+										{{ item.name }}
 									</h5>
+									<!-- </router-link> -->
+
 									<p class="card-text">
-										50,000원
+										{{ item.price }}
 									</p>
 									<p class="card-text">
-										신사동
+										{{ item.wanted_location }}
 									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
+
+									<router-link to="/productdetail">
+										<div class="card-button">
+											<button type="button" class="btn btn-primary btn-sm">
+												상세 정보 보기
+											</button>
+										</div>
+									</router-link>
 								</div>
 								<div class="card-footer">
 									<small class="text-muted">1시간 전</small>
@@ -217,225 +175,35 @@
 							</div>
 						</div>
 
-						<!-- 상품 리스트 그룹 2  -->
+						<!-- 카드 3열 -->
 						<div class="card-group">
-							<!-- 카드 1 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/05.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/01.jpg"
-								/>
+							<div
+								class="card"
+								v-for="item in this.$store.state.items3"
+								v-bind:key="item"
+							>
+								<img :src="item.path" class="card-img-top" alt="image" />
 								<div class="card-body">
+									<!-- <router-link v-bind:to="`/${itme.name}`"> -->
 									<h5 class="card-title">
-										소독 스프레이
+										{{ item.name }}
 									</h5>
-									<p class="card-text">
-										60,000원
-									</p>
-									<p class="card-text">
-										대치동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
-							<!-- 카드 2 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/06.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/01.jpg"
-								/>
-								<div class="card-body">
-									<h5 class="card-title">
-										빨간 지붕 개집
-									</h5>
-									<p class="card-text">
-										70,000원
-									</p>
-									<p class="card-text">
-										도곡1동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
-							<!-- 카드 3 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/07.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/01.jpg"
-								/>
-								<div class="card-body">
-									<h5 class="card-title">
-										귀여운 과일 옷
-									</h5>
-									<p class="card-text">
-										5,000원
-									</p>
-									<p class="card-text">
-										역삼1동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
+									<!-- </router-link> -->
 
-							<!-- 카드 4 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/08.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/04.jpg"
-								/>
-								<div class="card-body">
-									<h5 class="card-title">
-										1980 청바지
-									</h5>
 									<p class="card-text">
-										15,800원
+										{{ item.price }}
 									</p>
 									<p class="card-text">
-										역삼2동
+										{{ item.wanted_location }}
 									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
-						</div>
 
-						<!-- 상품 리스트 그룹 3  -->
-						<div class="card-group">
-							<!-- 카드 1 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/09.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/09.jpg"
-								/>
-								<div class="card-body">
-									<h5 class="card-title">
-										강아지 타워
-									</h5>
-									<p class="card-text">
-										12,000원
-									</p>
-									<p class="card-text">
-										성수동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
-							<!-- 카드 2 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/10.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/10.jpg"
-								/>
-								<div class="card-body">
-									<h5 class="card-title">
-										강아지 타워
-									</h5>
-									<p class="card-text">
-										12,000원
-									</p>
-									<p class="card-text">
-										성수동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
-							<!-- 카드 3 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/11.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/11.jpg"
-								/>
-								<div class="card-body">
-									<h5 class="card-title">
-										강아지 타워
-									</h5>
-									<p class="card-text">
-										12,000원
-									</p>
-									<p class="card-text">
-										성수동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
-
-							<!-- 카드 4 -->
-							<div class="card">
-								<img
-									src="../../public/img/shop/products/12.jpg"
-									class="card-img-top"
-									alt="../../public/img/shop/products/12.jpg"
-								/>
-								<div class="card-body">
-									<h5 class="card-title">
-										강아지 타워
-									</h5>
-									<p class="card-text">
-										12,000원
-									</p>
-									<p class="card-text">
-										성수동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
+									<router-link to="/productdetail">
+										<div class="card-button">
+											<button type="button" class="btn btn-primary btn-sm">
+												상세 정보 보기
+											</button>
+										</div>
+									</router-link>
 								</div>
 								<div class="card-footer">
 									<small class="text-muted">1시간 전</small>
@@ -474,7 +242,11 @@
 
 <script>
 export default {
-
+	name: '',
+	components: {},
+	data() {
+		return {};
+	},
 };
 </script>
 
