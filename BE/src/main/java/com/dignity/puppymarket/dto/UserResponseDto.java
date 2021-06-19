@@ -7,6 +7,7 @@ import com.dignity.puppymarket.domain.ChatRoom;
 import com.dignity.puppymarket.domain.Gu;
 import com.dignity.puppymarket.domain.Item;
 import com.dignity.puppymarket.domain.Si;
+import com.dignity.puppymarket.domain.User;
 import com.dignity.puppymarket.domain.Wish;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -52,4 +53,25 @@ public class UserResponseDto {
     private List<ChatRoom> chatRoomList;
 
     private List<ChatMessage> chatMessageList;
+
+    public static UserResponseDto of(User user) {
+        return UserResponseDto.builder()
+                .id(user.getId())
+                .email(user.getEmail())
+                .password(user.getPassword())
+                .nickname(user.getNickname())
+                .imagePath(user.getImagePath())
+                .tel(user.getTel())
+                .rate(user.getRate())
+                .si(user.getSi())
+                .gu(user.getGu())
+                .bigCategory(user.getBigCategory())
+                .sellerItemList((user.getSellerItemList()))
+                .buyerItemList(user.getBuyerItemList())
+                .blame(user.getBlame())
+                .wish(user.getWish())
+                .chatRoomList(user.getChatRoomList())
+                .chatMessageList(user.getChatMessageList())
+                .build();
+    }
 }
