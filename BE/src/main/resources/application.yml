@@ -3,14 +3,19 @@ spring:
   # H2 Repository Location
   datasource:
   #  url:
-    url: jdbc:h2:tcp://localhost/~/test
-    username: sa
-    password:
+    #url: jdbc:h2:tcp://localhost/~/test
+    #username: sa
+    #password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/puppy?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: 1234
 
   # Spring Jpa ddl
   jpa:
+    generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 
     # Query show
     show-sql: true
