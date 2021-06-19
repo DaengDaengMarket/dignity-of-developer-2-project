@@ -115,6 +115,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .offcanvas-wrapper{
+    z-index:1;
+  }
 </style>

@@ -384,3 +384,9 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.offcanvas-wrapper{
+  z-index:1;
+}
+</style>
