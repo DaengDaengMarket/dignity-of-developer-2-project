@@ -100,7 +100,8 @@ public class Item {
 
     public Item(Long id, String name, int price, String description, int hit, ItemStatus itemStatus,
                 NegoStatus negoStatus, BigCategory bigCategory, MidCategory midCategory, LocalDateTime createdAt,
-                LocalDateTime updatedAt, Si si, Gu gu, User seller, User buyer, List<ItemImage> itemImageList) {
+                LocalDateTime updatedAt, Si si, Gu gu, User seller, User buyer, List<ItemImage> itemImageList,
+                Blame blame, Wish wish, Review review, ChatRoom chatRoom) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -117,5 +118,9 @@ public class Item {
         this.seller = seller;
         this.buyer = buyer;
         this.itemImageList = itemImageList;
+        this.blame = blame;
+        this.wish = wish;
+        this.review = review;
+        this.chatRoom = chatRoom;
     }
 }
