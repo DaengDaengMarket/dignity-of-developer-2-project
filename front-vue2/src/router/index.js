@@ -14,6 +14,8 @@ import Report from '../views/Report.vue';
 import AdminNotice from '../views/AdminNotice.vue';
 import AdminReport from '../views/AdminReport.vue';
 import AdList from '../views/AdList.vue';
+import SortedProduct from '../views/SortedProduct.vue';
+
 
 Vue.use(VueRouter)
 
@@ -84,6 +86,10 @@ const routes = [
     name: 'AdList',
     component: AdList,
   },
+  {
+    path:'/product/:id',
+    component:SortedProduct
+  }
 ];
 
 export const router = new VueRouter({
