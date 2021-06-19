@@ -1,5 +1,6 @@
 package com.dignity.puppymarket.service;
 
+import com.dignity.puppymarket.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
