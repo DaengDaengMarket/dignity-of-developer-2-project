@@ -4,12 +4,7 @@
 // import { router } from '../router/index.js';
 // import axios from "axios";
 
-import {
-	fetchNewsList,
-	fetchJobsList,
-	fetchAskList,
-	fetchUserInfo,
-	fetchCommentItem,
-} from '../api/index.js';
 
-export default {};
+export default {
+
+}

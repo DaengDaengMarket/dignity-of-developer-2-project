@@ -6,6 +6,17 @@
 			<!-- <Sidemenu></Sidemenu> -->
 			<!-- 검색창 -->
 			<!-- sidemenu -->
+			<form class="site-search" method="get">
+				<input
+					type="text"
+					name="site_search"
+					placeholder="찾으시는 물품을 입력해주세요"
+				/>
+				<div class="search-tools">
+					<span class="clear-search">Clear</span
+					><span class="close-search"><i class="icon-cross"></i></span>
+				</div>
+			</form>
 			<div class="site-branding">
 				<div class="inner">
 					<!-- Off-Canvas Toggle (#shop-categories)-->
@@ -53,7 +64,7 @@
 					</li>
 					<li>
 						<button id="search-button" type="button" class="btn btn-primary">
-							<i class="fas fa-search" id="searchIcon"></i>
+							<i class="fas fa-search"></i>
 						</button>
 					</li>
 				</ul>
@@ -277,10 +288,5 @@ header {
 
 .user__icon {
 	font-size: 30px;
-}
-#search-button{
-  margin-right:25px;
-  width:20px;
-  text-align:center;
 }
 </style>

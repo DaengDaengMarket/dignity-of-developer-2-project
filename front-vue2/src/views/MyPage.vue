@@ -21,33 +21,6 @@
               <h4>Daniel Adams</h4>
               <span>동네 : 용산구</span>
               <span>관심사 : 소형견</span>
-              <span class="afterButton">	<!-- 모달용 버튼 -->
-					<div class="modal-test">
-						<button
-							class="btn btn-outline-primary"
-							type="button"
-							@click="toggleModal"
-						>
-							상품 후기 등록
-						</button>
-					</div>
-					<b-modal
-										id="modal-1"
-										title="상품 후기"
-										v-model="modalShown"
-										@show="resetModal"
-										@hidden="resetModal"
-										@ok="handleOk"
-									>
-										<form ref="form" @submit.stop.prevent="handleSubmit">
-											<textarea
-												class="form-control"
-												id="textarea-input"
-												rows="5"
-												placeholder="상세 내용을 작성해주세요."
-											></textarea>
-										</form>
-									</b-modal></span>
             </div>
           </div>
         </aside>
@@ -1096,14 +1069,6 @@
 
 <script>
   export default {
-    data: () => ({
-		  modalShown: false,
-	}),
-	methods: {
-		toggleModal() {
-			this.modalShown = !this.modalShown;
-		},
-	},
   };
 </script>
 
@@ -1133,8 +1098,5 @@
   }
 .offcanvas-wrapper{
   z-index:1
-}
-.afterButton{
-  float:right;
 }
 </style>

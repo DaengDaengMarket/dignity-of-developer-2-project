@@ -1,5 +1,5 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 import Home from '../views/Home.vue';
 import Trade from '../views/Trade.vue';
 import Feed from '../views/Feed.vue';
@@ -14,10 +14,8 @@ import Report from '../views/Report.vue';
 import AdminNotice from '../views/AdminNotice.vue';
 import AdminReport from '../views/AdminReport.vue';
 import AdList from '../views/AdList.vue';
-import SortedProduct from '../views/SortedProduct.vue';
 
-
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
@@ -62,6 +60,11 @@ const routes = [
     component: NoticeAdd,
   },
   {
+    path: '/productdetail',
+    name: 'ProductDetail',
+    component: ProductDetail,
+  },
+  {
     path: '/report',
     name: 'Report',
     component: Report,
@@ -81,22 +84,12 @@ const routes = [
     name: 'AdList',
     component: AdList,
   },
-  {
-    path:'/product/:id',
-    component:SortedProduct
-  },
-	{
-		path: '/productdetail/:id', // 동적 라우트 매칭
-		name: 'ProductDetail',
-		component: ProductDetail,
-	},
-
 ];
 
 export const router = new VueRouter({
-	mode: 'history',
-	base: process.env.BASE_URL,
-	routes,
-});
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes,
+})
 
 export default router;
