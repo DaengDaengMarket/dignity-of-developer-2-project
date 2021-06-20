@@ -160,7 +160,7 @@
             data-toggle="offcanvas"></a> -->
           <router-link
             class="site-logo"
-            to="/">
+            to="/home">
             <img
               src="/img/header_logo.png"
               alt="댕댕마켓"
@@ -171,6 +171,11 @@
       <!-- 메인 네비바 -->
       <nav class="site-menu">
         <ul>
+          <li>
+            <router-link to="/home">
+              <span>댕댕마켓 홈</span>
+            </router-link>
+          </li>
           <li>
             <router-link to="/trade">
               <span>댕댕거래</span>

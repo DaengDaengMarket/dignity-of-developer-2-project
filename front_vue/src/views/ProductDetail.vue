@@ -1,5 +1,3 @@
-// 제품 상세 페이지 입니다.
-
 <template>
   <div id="productdetail">
     <!-- Page Content-->
@@ -16,26 +14,26 @@
                 class="gallery-item"
                 data-hash="one">
                 <a
-                  href="img/km/01.jpg"
+                  href="../../public/img/km/01.jpg"
                   data-size="1000x667"><img
-                    src="img/km/01.jpg"
+                    src="../../public/img/km/01.jpg"
                     alt="Product" /></a>
               </div>
             </div>
             <ul class="product-thumbnails">
               <li class="active">
                 <a href="#one"><img
-                  src="img/km/01.jpg"
+                  src="../../public/img/km/01.jpg"
                   alt="Product" /></a>
               </li>
               <li>
                 <a href="#two"><img
-                  src="img/km/02.jpg"
+                  src="../../public/img/km/02.jpg"
                   alt="Product" /></a>
               </li>
               <li>
                 <a href="#three"><img
-                  src="img/km/03.jpg"
+                  src="../../public/img/km/03.jpg"
                   alt="Product" /></a>
               </li>
             </ul>

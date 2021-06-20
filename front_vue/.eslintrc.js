@@ -4,6 +4,10 @@ module.exports = {
     browser: true,
     node: true,
   },
+  globals: {
+    $: true,
+    jQuery: true
+  },
   // 코드 검사 규칙
   extends: [
     // vue
