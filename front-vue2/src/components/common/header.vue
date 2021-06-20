@@ -124,7 +124,7 @@
 				</div>
 			</div>
 		</header>
-		<sidebar>
+		<div>
 			<span class="sidemenu-slide">
 				<div class="nav-container" tabindex="0" @click="checkSidebarVisibility">
 					<div class="nav-toggle"></div>
@@ -203,7 +203,7 @@
 					</v-navigation-drawer>
 				</div>
 			</span>
-		</sidebar>
+		</div>
 	</div>
 </template>
 
