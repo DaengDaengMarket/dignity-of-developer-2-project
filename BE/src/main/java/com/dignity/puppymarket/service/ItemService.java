@@ -1,6 +1,6 @@
 package com.dignity.puppymarket.service;
 
-import com.dignity.puppymarket.dto.ItemResponseDto;
+import com.dignity.puppymarket.dto.Item.ItemResponseDto;
 import com.dignity.puppymarket.repository.ItemRepository;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.dignity.puppymarket.dto;
+package com.dignity.puppymarket.dto.Item;
 
 import com.dignity.puppymarket.domain.BigCategory;
 import com.dignity.puppymarket.domain.Blame;

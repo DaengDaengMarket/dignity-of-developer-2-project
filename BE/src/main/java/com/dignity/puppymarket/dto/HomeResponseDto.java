@@ -1,5 +1,6 @@
 package com.dignity.puppymarket.dto;
 
+import com.dignity.puppymarket.dto.Item.ItemHomeGetResponseDto;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
