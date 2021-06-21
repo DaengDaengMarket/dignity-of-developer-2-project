@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,6 +25,7 @@ public class Wish {
     @Column(name = "wish_id")
     private Long id;
 
+    @Enumerated(EnumType.STRING)
     private WishStatus wishStatus;
 
     //Wish 1 : 1 User
