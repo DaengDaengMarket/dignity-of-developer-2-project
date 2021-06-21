@@ -52,7 +52,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 1. 자신이 작성한 파일을 커밋한 후 자신의 레퍼지토리 내 브랜치나 혹은 fork 후 본인 레퍼지토리에서 푸쉬한다
 2. 그 후 pull request를 날려준다
 
-### Todolist 작성 및 작업 완료 후 issue 등록
+### Todolist 작성 및 issue 등록
 - Todolist 작성
 본인이 하고 있는 작업에 대하여 간단하게 Todolist에 남길 것
 - 작업 완료 후 issue 등록
