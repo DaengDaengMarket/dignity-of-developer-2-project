@@ -57,6 +57,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 본인이 하고 있는 작업에 대하여 간단하게 Todolist에 남길 것
 - 작업 완료 후 issue 등록
 todolist에 간단하게 작성한 작업에 대하여 세부적으로 어떠한 부분을 바꿨는지 기록을 남길 것
+- 새롭게 추가해야 할 일이 생각나거나 예정하는 일이 있다면 issue에 등록하기
 
 ### 1주차 주요 내용
 - jQUery 파일 html,css,javascript 및 bootstrap을 이용하여 변경
