@@ -20,4 +20,11 @@ public class HomeResponseDto {
         this.itemList = itemList;
         this.advertiseList = advertiseList;
     }
+
+    public static HomeResponseDto of(List<ItemHomeGetResponseDto> itemList, List<AdvertiseResponseDto> advertiseList) {
+        return HomeResponseDto.builder()
+                .itemList(itemList)
+                .advertiseList(advertiseList)
+                .build();
+    }
 }
