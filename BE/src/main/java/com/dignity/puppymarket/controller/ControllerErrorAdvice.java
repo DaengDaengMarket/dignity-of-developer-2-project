@@ -1,5 +1,6 @@
 package com.dignity.puppymarket.controller;
 
+import com.dignity.puppymarket.dto.ErrorResponse;
 import com.dignity.puppymarket.error.UserNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
