@@ -1,5 +1,5 @@
 <template>
-	<div id="mypage">
+	<div id="home">
 		<!-- 배너슬라이드  -->
 		<div
 			id="carouselExampleIndicators"
@@ -101,135 +101,9 @@
 							</h2>
 						</div>
 
-						<!-- 상품 리스트 그룹 1  -->
-						<div class="card-group">
-							<div
-								class="card"
-								v-for="item in test.items1"
-								v-bind:key="item"
-							>
-								<img :src="item.path" class="card-img-top" alt="image" />
-								<div class="card-body">
-									<h5 class="card-title">
-										강아지도 쓸 수 있는집
-									</h5>
-									<p class="card-text">
-										20,000원
-									</p>
-									<p class="card-text">
-										삼성1동
-									</p>
-
-									<router-link to="/productdetail">
-										<div class="card-button">
-											<button type="button" class="btn btn-primary btn-sm">
-												상세 정보 보기
-											</button>
-										</div>
-									</router-link>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
-							
-							
-						</div>
-
-						<!-- 상품 리스트 그룹 2  -->
-						<div class="card-group">
-							<div
-								class="card"
-								v-for="item in test.items2"
-								v-bind:key="item"
-							>
-								<img :src="item.path" class="card-img-top" alt="image" />
-								<div class="card-body">
-									<h5 class="card-title">
-										소독 스프레이
-									</h5>
-									<p class="card-text">
-										60,000원
-									</p>
-									<p class="card-text">
-										대치동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
-							
-						</div>
-
-						<!-- 상품 리스트 그룹 3  -->
-						<div class="card-group">
-							<div
-								class="card"
-								v-for="item in test.items3"
-								v-bind:key="item"
-							>
-								<img :src="item.path" class="card-img-top" alt="image" />
-								<div class="card-body">
-									<h5 class="card-title">
-										강아지 타워
-									</h5>
-									<p class="card-text">
-										12,000원
-									</p>
-									<p class="card-text">
-										성수동
-									</p>
-									<div class="card-button">
-										<button type="button" class="btn btn-primary btn-sm">
-											상세 정보 보기
-										</button>
-									</div>
-								</div>
-								<div class="card-footer">
-									<small class="text-muted">1시간 전</small>
-								</div>
-							</div>
-						</div>
-
-						<!-- Pagination(무한스크롤)-->
-						<!-- <nav class="pagination">
-              <div class="column">
-                <ul class="pages">
-                  <li class="active">
-                    <a href="#">1</a>
-                  </li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li>...</li>
-                  <li><a href="#">12</a></li>
-                </ul>
-              </div>
-              <div class="column text-right hidden-xs-down">
-                <a
-                  class="btn btn-outline-secondary btn-sm"
-                  href="#">Next&nbsp;<i class="icon-arrow-right"></i></a>
-              </div>
-            </nav> -->
-					</div>
-
-					<!-- 모달용 버튼 -->
-					<div class="modal-test">
-						<button
-							class="btn btn-outline-primary"
-							type="button"
-							data-bs-toggle="modal"
-							data-bs-target="#review-modal"
-						>
-							상품 후기 등록
-						</button>
-					</div>
+						<Goods></Goods>
+						
+					</div>			
 				</div>
 			</div>
 		</div>
@@ -237,12 +111,12 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import _ from 'lodash';
+import Goods from '../components/common/goods.vue'
 export default {
-	computed: _.extend(mapState(['test'])),
 	name: '',
-	components: {},
+	components: {
+		Goods
+	},
 	data() {
 		return {};
 	},
