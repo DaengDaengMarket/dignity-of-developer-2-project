@@ -2,15 +2,14 @@ package com.dignity.puppymarket.dto.Item;
 
 import com.dignity.puppymarket.domain.Gu;
 import com.dignity.puppymarket.domain.Item;
-import com.dignity.puppymarket.domain.ItemImage;
 import com.dignity.puppymarket.domain.Si;
+import com.dignity.puppymarket.dto.ItemImageResponseDto;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -23,7 +22,7 @@ public class ItemHomeGetResponseDto {
 
     private LocalDateTime createdAt;
 
-    private List<ItemImage> itemImageList;
+    private ItemImageResponseDto itemImageResponseDto;
 
     private Si si;
 
@@ -31,12 +30,12 @@ public class ItemHomeGetResponseDto {
 
     @Builder
     public ItemHomeGetResponseDto(Long id, String name, int price, LocalDateTime createdAt,
-                                  List<ItemImage> itemImageList, Si si, Gu gu) {
+                                  ItemImageResponseDto itemImageResponseDto, Si si, Gu gu) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.createdAt = createdAt;
-        this.itemImageList = itemImageList;
+        this.itemImageResponseDto = itemImageResponseDto;
         this.si = si;
         this.gu = gu;
     }
@@ -47,7 +46,13 @@ public class ItemHomeGetResponseDto {
                 .name(item.getName())
                 .price(item.getPrice())
                 .createdAt(item.getCreatedAt())
-                .itemImageList(item.getItemImageList())
+                .itemImageResponseDto(
+                        item.getItemImageList().stream()
+                            .filter(itemImage -> itemImage.getOrders() == 1)
+                            .map(ItemImageResponseDto::of)
+                            .findFirst()
+                            .get()
+                )
                 .si(item.getSi())
                 .gu(item.getGu())
                 .build();
