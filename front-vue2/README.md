@@ -48,6 +48,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 💬 => 단순 텍스트 입력, 추가
 🍱 => assets 추가나 업데이트시
 
+* 사이트 참조 https://gitmoji.dev/
+
 ### 깃 브랜치 Merge 규칙
 1. 자신이 작성한 파일을 커밋한 후 자신의 레퍼지토리 내 브랜치나 혹은 fork 후 본인 레퍼지토리에서 푸쉬한다
 2. 그 후 pull request를 날려준다
