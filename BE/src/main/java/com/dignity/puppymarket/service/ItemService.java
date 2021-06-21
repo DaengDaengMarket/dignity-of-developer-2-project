@@ -11,7 +11,7 @@ public class ItemService {
     public ItemService(ItemRepository itemRepository) {
         this.itemRepository = itemRepository;
     }
-    
+
     public List<ItemResponseDto> getItems() {
         return itemRepository.findAll().stream()
                 .map(ItemResponseDto::of)
