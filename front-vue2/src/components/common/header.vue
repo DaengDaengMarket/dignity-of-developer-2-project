@@ -3,7 +3,6 @@
 		<!-- 네비바 -->
 		<!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
 		<header class="navbar navbar-sticky">
-			<!-- <Sidemenu></Sidemenu> -->
 			<!-- 검색창 -->
 			<!-- sidemenu -->
 			<form class="site-search" method="get">
@@ -138,7 +137,13 @@
 						floating
 						persistent
 						mobile-break-point="960"
-						width="280"
+						width="280"	
+						sm="3"
+                        xl="3"
+                        lg="3"
+                        xs="3"
+                        md="3"
+                        cols="12"					
 					>
 						<div>
 							<v-layout class="fill-height" tag="v-list" column>
@@ -255,7 +260,7 @@ export default {
 	},
 };
 </script>
-<style scoped>
+<style>
 .mr-2 {
 	padding-right: 10px;
 }
@@ -265,11 +270,14 @@ export default {
 	padding-right: 20px;
 	/* padding-top: 100px; */
 }
-header {
-	z-index: 2;
+/* .v-navigation-drawer__content{
+	z-index:20;
+} */
+.fill-height{
+	z-index:20;
 }
-.v-list-group {
-	z-index: 1;
+.nav-container{
+	z-index:10;
 }
 .menubar {
 	padding-left: 300px;

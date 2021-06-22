@@ -48,10 +48,4 @@ export default {
 .offcanvas-wrapper {
 	z-index: 5;
 }
-.v-navigation-drawer__content {
-	z-index: 1;
-}
-.toolbar{
-  z-index:3
-}
 </style>
